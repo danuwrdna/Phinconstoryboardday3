@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var foto: UIImageView!
     
-    
+    @IBOutlet weak var delete: UIView!
     @IBOutlet weak var Container: UIView!
     @IBOutlet weak var telepon: UILabel!
     @IBOutlet weak var Hobi: UILabel!
@@ -46,8 +46,24 @@ class ViewController: UIViewController {
         }
         Container.layer.cornerRadius = Container.frame.size.width / 15
         Container.clipsToBounds = true
+        
         button.layer.cornerRadius = button.frame.size.width / 5
         button.clipsToBounds = true
     }
+    
+    @IBAction func buttonlist(_ sender: Any) {
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let vc = storyboard.instantiateViewController(withIdentifier: "DetailStoryBoardID")
+//        self.navigationController?.pushViewController(vc, animated: true)
+        
+        performSegue(withIdentifier: "ListViewController", sender: self)
+    }
+    
+    @IBAction func update(_ sender: UIButton) {
+        performSegue(withIdentifier: "halamanupdate", sender: self)
+        
+    }
+
+    
     
 }
