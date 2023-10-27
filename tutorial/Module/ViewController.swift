@@ -11,8 +11,40 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var headline: UILabel!
+    @IBAction func TableButton(_ sender: Any) {
+        let tablebutton = UIStoryboard(name: "Main", bundle: nil)
+        
+        let destinasiviewcontroller = tablebutton.instantiateViewController(withIdentifier: "ListViewController")
+        
+        self.navigationController?.pushViewController(destinasiviewcontroller, animated: true)
+    }
     
     @IBOutlet weak var foto: UIImageView!
+    
+    //Buuton halaman baru
+    @IBAction func Halamanbaru(_ sender: Any) {
+        
+        let buttonhalamanbaru = UIStoryboard(name: "Main", bundle: nil)
+        
+        let destinasiviewcontroller = buttonhalamanbaru.instantiateViewController(withIdentifier: "NewHalamanStoryBoardID")
+        
+        self.navigationController?.pushViewController(destinasiviewcontroller, animated: true)
+    }
+    
+    //Button Collection View
+    
+    
+    @IBAction func koleksiview(_ sender: Any) {
+        
+        let collection = UIStoryboard(name: "Main", bundle: nil)
+        
+        let destinasikoleksi = collection.instantiateViewController(withIdentifier: "CollectionViewID")
+        
+        self.navigationController?.pushViewController(destinasikoleksi, animated: true)
+    }
+    
+    
+    
     
     @IBOutlet weak var delete: UIView!
     @IBOutlet weak var Container: UIView!
@@ -47,14 +79,12 @@ class ViewController: UIViewController {
         Container.layer.cornerRadius = Container.frame.size.width / 15
         Container.clipsToBounds = true
         
-        button.layer.cornerRadius = button.frame.size.width / 5
-        button.clipsToBounds = true
     }
     
     @IBAction func buttonlist(_ sender: Any) {
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        let vc = storyboard.instantiateViewController(withIdentifier: "DetailStoryBoardID")
-//        self.navigationController?.pushViewController(vc, animated: true)
+        //        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        //        let vc = storyboard.instantiateViewController(withIdentifier: "DetailStoryBoardID")
+        //        self.navigationController?.pushViewController(vc, animated: true)
         
         performSegue(withIdentifier: "ListViewController", sender: self)
     }
@@ -63,7 +93,7 @@ class ViewController: UIViewController {
         performSegue(withIdentifier: "halamanupdate", sender: self)
         
     }
-
+    
     
     
 }

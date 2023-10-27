@@ -20,6 +20,13 @@
 		36CF82F62AEA08CB0036595B /* UpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF82F52AEA08CB0036595B /* UpdateViewController.swift */; };
 		36CF82FA2AEA28210036595B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF82F92AEA28210036595B /* DetailViewController.swift */; };
 		36CF82FE2AEA5C440036595B /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF82FD2AEA5C440036595B /* ListViewController.swift */; };
+		36CF83032AEB55440036595B /* ListViewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF83022AEB55440036595B /* ListViewEntity.swift */; };
+		36CF830B2AEB747A0036595B /* bahasa.strings in Resources */ = {isa = PBXBuildFile; fileRef = 36CF830D2AEB747A0036595B /* bahasa.strings */; };
+		36CF83102AEB87750036595B /* HalamanBaruController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF830F2AEB87750036595B /* HalamanBaruController.swift */; };
+		36CF83122AEB96830036595B /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF83112AEB96830036595B /* CollectionViewController.swift */; };
+		36CF83152AEBA8E10036595B /* ExtCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF83142AEBA8E10036595B /* ExtCollectionView.swift */; };
+		36CF83192AEBAA680036595B /* FoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF83172AEBAA680036595B /* FoodCell.swift */; };
+		36CF831A2AEBAA680036595B /* FoodCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36CF83182AEBAA680036595B /* FoodCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +64,14 @@
 		36CF82F52AEA08CB0036595B /* UpdateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateViewController.swift; sourceTree = "<group>"; };
 		36CF82F92AEA28210036595B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		36CF82FD2AEA5C440036595B /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		36CF83022AEB55440036595B /* ListViewEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewEntity.swift; sourceTree = "<group>"; };
+		36CF830C2AEB747A0036595B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/bahasa.strings; sourceTree = "<group>"; };
+		36CF830E2AEB75250036595B /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/bahasa.strings; sourceTree = "<group>"; };
+		36CF830F2AEB87750036595B /* HalamanBaruController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalamanBaruController.swift; sourceTree = "<group>"; };
+		36CF83112AEB96830036595B /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		36CF83142AEBA8E10036595B /* ExtCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtCollectionView.swift; sourceTree = "<group>"; };
+		36CF83172AEBAA680036595B /* FoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCell.swift; sourceTree = "<group>"; };
+		36CF83182AEBAA680036595B /* FoodCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +127,7 @@
 				36CF83002AEA6C090036595B /* Module */,
 				36BD18832AE8EEB80080CC57 /* Main.storyboard */,
 				36BD188B2AE8EEBA0080CC57 /* Info.plist */,
+				36CF830D2AEB747A0036595B /* bahasa.strings */,
 			);
 			path = tutorial;
 			sourceTree = "<group>";
@@ -145,11 +161,15 @@
 		36CF83002AEA6C090036595B /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				36CF83162AEBAA4B0036595B /* cell */,
 				36CF82F32AEA077A0036595B /* halamanupdate.swift */,
 				36BD18812AE8EEB80080CC57 /* ViewController.swift */,
 				36CF82F52AEA08CB0036595B /* UpdateViewController.swift */,
 				36CF82F92AEA28210036595B /* DetailViewController.swift */,
 				36CF82FD2AEA5C440036595B /* ListViewController.swift */,
+				36CF83022AEB55440036595B /* ListViewEntity.swift */,
+				36CF830F2AEB87750036595B /* HalamanBaruController.swift */,
+				36CF83112AEB96830036595B /* CollectionViewController.swift */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -157,10 +177,28 @@
 		36CF83012AEA6C210036595B /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				36CF83132AEBA8D10036595B /* Extension */,
 				36BD18862AE8EEBA0080CC57 /* Assets.xcassets */,
 				36BD18882AE8EEBA0080CC57 /* LaunchScreen.storyboard */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		36CF83132AEBA8D10036595B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				36CF83142AEBA8E10036595B /* ExtCollectionView.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		36CF83162AEBAA4B0036595B /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				36CF83172AEBAA680036595B /* FoodCell.swift */,
+				36CF83182AEBAA680036595B /* FoodCell.xib */,
+			);
+			path = cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,6 +287,7 @@
 			knownRegions = (
 				en,
 				Base,
+				id,
 			);
 			mainGroup = 36BD18712AE8EEB80080CC57;
 			productRefGroup = 36BD187B2AE8EEB80080CC57 /* Products */;
@@ -268,6 +307,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				36BD188A2AE8EEBA0080CC57 /* LaunchScreen.storyboard in Resources */,
+				36CF830B2AEB747A0036595B /* bahasa.strings in Resources */,
+				36CF831A2AEBAA680036595B /* FoodCell.xib in Resources */,
 				36BD18872AE8EEBA0080CC57 /* Assets.xcassets in Resources */,
 				36BD18852AE8EEB80080CC57 /* Main.storyboard in Resources */,
 			);
@@ -294,10 +335,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36CF83152AEBA8E10036595B /* ExtCollectionView.swift in Sources */,
+				36CF83192AEBAA680036595B /* FoodCell.swift in Sources */,
 				36BD18822AE8EEB80080CC57 /* ViewController.swift in Sources */,
 				36BD187E2AE8EEB80080CC57 /* AppDelegate.swift in Sources */,
 				36BD18802AE8EEB80080CC57 /* SceneDelegate.swift in Sources */,
+				36CF83032AEB55440036595B /* ListViewEntity.swift in Sources */,
+				36CF83122AEB96830036595B /* CollectionViewController.swift in Sources */,
 				36CF82FA2AEA28210036595B /* DetailViewController.swift in Sources */,
+				36CF83102AEB87750036595B /* HalamanBaruController.swift in Sources */,
 				36CF82F42AEA077A0036595B /* halamanupdate.swift in Sources */,
 				36CF82F62AEA08CB0036595B /* UpdateViewController.swift in Sources */,
 				36CF82FE2AEA5C440036595B /* ListViewController.swift in Sources */,
@@ -353,6 +399,15 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		36CF830D2AEB747A0036595B /* bahasa.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				36CF830C2AEB747A0036595B /* en */,
+				36CF830E2AEB75250036595B /* id */,
+			);
+			name = bahasa.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -360,6 +415,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -420,6 +476,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";

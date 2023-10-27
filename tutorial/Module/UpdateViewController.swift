@@ -20,7 +20,17 @@ class UpdateViewController: UIViewController {
         
     }
     @IBOutlet weak var container: UIView!
-//    @IBAction func detail(_ sender: Any) {
+    
+    @IBAction func CancelStoryBoardID(_ sender: Any) {
+       
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let destinasiviewcontroller = storyboard.instantiateViewController(withIdentifier: "ViewStoryBoardController")
+        
+        self.navigationController?.pushViewController(destinasiviewcontroller, animated: true)
+        
+    }
+    //    @IBAction func detail(_ sender: Any) {
 //        performSegue(withIdentifier: "DetailViewController", sender: nil)
 //    }
     
@@ -31,18 +41,11 @@ class UpdateViewController: UIViewController {
         container.layer.cornerRadius = container.frame.size.width / 15
         container.clipsToBounds = true
 
-        // Do any additional setup after loading the view.
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
     }
-    */
+    
 
-}
+
