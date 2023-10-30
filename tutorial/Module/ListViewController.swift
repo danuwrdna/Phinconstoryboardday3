@@ -40,13 +40,6 @@ extension ListViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return nama.count
     }
-    func People() {
-        let person1 = Person(name: "Alice", age: 30)
-        print("Nama: \(person1.name), Usia: \(person1.age) tahun")
-        var person: [Person] = []
-        var person99 = Person(name: "danu", age: 2)
-                
-        print(person99)
-
+    
     }
-}
+

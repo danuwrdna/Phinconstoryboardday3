@@ -9,6 +9,14 @@ import UIKit
 
 
 class ViewController: UIViewController {
+    @IBAction func hewanbutton(_ sender: Any) {
+        
+        let hewanbutton = UIStoryboard(name: "Main", bundle: nil)
+        
+        let destinasiviewcontroller = hewanbutton.instantiateViewController(withIdentifier: "TableAndCollectionViewID")
+        
+        self.navigationController?.pushViewController(destinasiviewcontroller, animated: true)
+    }
     
     @IBOutlet weak var headline: UILabel!
     @IBAction func TableButton(_ sender: Any) {

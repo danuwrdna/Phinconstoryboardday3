@@ -11,10 +11,11 @@ class CollectionViewController: UIViewController {
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.registerCellWithNib(FoodCell.self)
+        collectionView.register(UINib(nibName: "YourCellNibName", bundle: nil), forCellWithReuseIdentifier: "YourCellIdentifier")
+       }
         
     }
-}
+
 
 
 extension CollectionViewController: UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{

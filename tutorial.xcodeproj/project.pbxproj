@@ -27,6 +27,10 @@
 		36CF83152AEBA8E10036595B /* ExtCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF83142AEBA8E10036595B /* ExtCollectionView.swift */; };
 		36CF83192AEBAA680036595B /* FoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF83172AEBAA680036595B /* FoodCell.swift */; };
 		36CF831A2AEBAA680036595B /* FoodCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36CF83182AEBAA680036595B /* FoodCell.xib */; };
+		36CF835C2AEF428B0036595B /* HewanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF835B2AEF428B0036595B /* HewanTableViewCell.swift */; };
+		36CF835E2AEF4D1F0036595B /* HewanCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF835D2AEF4D1F0036595B /* HewanCollectionViewCell.swift */; };
+		36CF83612AEF4FD10036595B /* DataHewan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF83602AEF4FD10036595B /* DataHewan.swift */; };
+		36CF83A32AEF6D310036595B /* koleksi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF83A22AEF6D310036595B /* koleksi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +76,11 @@
 		36CF83142AEBA8E10036595B /* ExtCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtCollectionView.swift; sourceTree = "<group>"; };
 		36CF83172AEBAA680036595B /* FoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCell.swift; sourceTree = "<group>"; };
 		36CF83182AEBAA680036595B /* FoodCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodCell.xib; sourceTree = "<group>"; };
+		36CF835B2AEF428B0036595B /* HewanTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HewanTableViewCell.swift; sourceTree = "<group>"; };
+		36CF835D2AEF4D1F0036595B /* HewanCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HewanCollectionViewCell.swift; sourceTree = "<group>"; };
+		36CF83602AEF4FD10036595B /* DataHewan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHewan.swift; sourceTree = "<group>"; };
+		36CF83622AEF539F0036595B /* Ecommercejson.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Ecommercejson.json; sourceTree = "<group>"; };
+		36CF83A22AEF6D310036595B /* koleksi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = koleksi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +131,7 @@
 		36BD187C2AE8EEB80080CC57 /* tutorial */ = {
 			isa = PBXGroup;
 			children = (
+				36CF835F2AEF4FB80036595B /* Models */,
 				36CF82FF2AEA6BFC0036595B /* App */,
 				36CF83012AEA6C210036595B /* Resource */,
 				36CF83002AEA6C090036595B /* Module */,
@@ -170,6 +180,7 @@
 				36CF83022AEB55440036595B /* ListViewEntity.swift */,
 				36CF830F2AEB87750036595B /* HalamanBaruController.swift */,
 				36CF83112AEB96830036595B /* CollectionViewController.swift */,
+				36CF83A22AEF6D310036595B /* koleksi.swift */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -197,8 +208,19 @@
 			children = (
 				36CF83172AEBAA680036595B /* FoodCell.swift */,
 				36CF83182AEBAA680036595B /* FoodCell.xib */,
+				36CF835B2AEF428B0036595B /* HewanTableViewCell.swift */,
+				36CF835D2AEF4D1F0036595B /* HewanCollectionViewCell.swift */,
+				36CF83622AEF539F0036595B /* Ecommercejson.json */,
 			);
 			path = cell;
+			sourceTree = "<group>";
+		};
+		36CF835F2AEF4FB80036595B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				36CF83602AEF4FD10036595B /* DataHewan.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -336,15 +358,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				36CF83152AEBA8E10036595B /* ExtCollectionView.swift in Sources */,
+				36CF835C2AEF428B0036595B /* HewanTableViewCell.swift in Sources */,
 				36CF83192AEBAA680036595B /* FoodCell.swift in Sources */,
 				36BD18822AE8EEB80080CC57 /* ViewController.swift in Sources */,
 				36BD187E2AE8EEB80080CC57 /* AppDelegate.swift in Sources */,
 				36BD18802AE8EEB80080CC57 /* SceneDelegate.swift in Sources */,
 				36CF83032AEB55440036595B /* ListViewEntity.swift in Sources */,
+				36CF83612AEF4FD10036595B /* DataHewan.swift in Sources */,
 				36CF83122AEB96830036595B /* CollectionViewController.swift in Sources */,
 				36CF82FA2AEA28210036595B /* DetailViewController.swift in Sources */,
+				36CF83A32AEF6D310036595B /* koleksi.swift in Sources */,
 				36CF83102AEB87750036595B /* HalamanBaruController.swift in Sources */,
 				36CF82F42AEA077A0036595B /* halamanupdate.swift in Sources */,
+				36CF835E2AEF4D1F0036595B /* HewanCollectionViewCell.swift in Sources */,
 				36CF82F62AEA08CB0036595B /* UpdateViewController.swift in Sources */,
 				36CF82FE2AEA5C440036595B /* ListViewController.swift in Sources */,
 			);
