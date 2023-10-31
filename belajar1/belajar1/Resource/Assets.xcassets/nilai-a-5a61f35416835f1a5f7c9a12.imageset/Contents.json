@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "nilai-a-5a61f35416835f1a5f7c9a12.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

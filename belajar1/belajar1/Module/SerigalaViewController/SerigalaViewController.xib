@@ -21,13 +21,15 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CPs-u8-uda">
                     <rect key="frame" x="0.0" y="0.0" width="393" height="420"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="low-res_ulv-foto-per-harald-olse-20211209021514" translatesAutoresizingMaskIntoConstraints="NO" id="ogb-PK-lsG">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="low-res_ulv-foto-per-harald-olse-20211209021514" translatesAutoresizingMaskIntoConstraints="NO" id="ogb-PK-lsG">
                             <rect key="frame" x="62" y="175" width="266" height="193"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="266" id="GYW-nl-hvC"/>
+                                <constraint firstAttribute="height" constant="193" id="qfS-qC-2lP"/>
+                            </constraints>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Serigala" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qFw-sA-ZYP">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Serigala" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qFw-sA-ZYP">
                             <rect key="frame" x="174" y="112" width="62" height="21"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -35,8 +37,14 @@
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
+                        <constraint firstAttribute="trailing" secondItem="ogb-PK-lsG" secondAttribute="trailing" constant="65" id="Ays-Gp-eyq"/>
+                        <constraint firstItem="qFw-sA-ZYP" firstAttribute="top" secondItem="CPs-u8-uda" secondAttribute="top" constant="112" id="BzL-yt-eUh"/>
                         <constraint firstAttribute="width" constant="393" id="KO8-fZ-ROj"/>
+                        <constraint firstItem="ogb-PK-lsG" firstAttribute="leading" secondItem="CPs-u8-uda" secondAttribute="leading" constant="62" id="Mcb-LN-qSE"/>
+                        <constraint firstAttribute="trailing" secondItem="qFw-sA-ZYP" secondAttribute="trailing" constant="157" id="OAl-pZ-aSz"/>
                         <constraint firstAttribute="height" constant="420" id="eCU-yg-8jO"/>
+                        <constraint firstItem="qFw-sA-ZYP" firstAttribute="leading" secondItem="CPs-u8-uda" secondAttribute="leading" constant="174" id="eZw-pF-drB"/>
+                        <constraint firstItem="ogb-PK-lsG" firstAttribute="top" secondItem="qFw-sA-ZYP" secondAttribute="bottom" constant="42" id="fRO-pZ-133"/>
                     </constraints>
                 </view>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="FGD-ph-yb7">
@@ -46,7 +54,7 @@
                         <constraint firstAttribute="width" constant="345" id="kbO-lQ-x4n"/>
                         <constraint firstAttribute="height" constant="196" id="nyU-GF-ryj"/>
                     </constraints>
-                    <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                     <color key="textColor" systemColor="labelColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>

@@ -28,6 +28,24 @@
 		368332682AEFA1CA00F78FFD /* SerigalaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 368332662AEFA1CA00F78FFD /* SerigalaViewController.xib */; };
 		3683326C2AEFA1F800F78FFD /* MacanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3683326A2AEFA1F800F78FFD /* MacanViewController.swift */; };
 		3683326D2AEFA1F800F78FFD /* MacanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3683326B2AEFA1F800F78FFD /* MacanViewController.xib */; };
+		368332712AF093E900F78FFD /* PickersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3683326F2AF093E900F78FFD /* PickersViewController.swift */; };
+		368332722AF093E900F78FFD /* PickersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 368332702AF093E900F78FFD /* PickersViewController.xib */; };
+		3683327B2AF0AFCD00F78FFD /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368332792AF0AFCD00F78FFD /* ProgressViewController.swift */; };
+		3683327C2AF0AFCD00F78FFD /* ProgressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3683327A2AF0AFCD00F78FFD /* ProgressViewController.xib */; };
+		368332802AF0BE6A00F78FFD /* PengaturanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3683327E2AF0BE6A00F78FFD /* PengaturanViewController.swift */; };
+		368332812AF0BE6A00F78FFD /* PengaturanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3683327F2AF0BE6A00F78FFD /* PengaturanViewController.xib */; };
+		368332852AF0DA6500F78FFD /* FotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368332832AF0DA6500F78FFD /* FotoViewController.swift */; };
+		368332862AF0DA6500F78FFD /* FotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 368332842AF0DA6500F78FFD /* FotoViewController.xib */; };
+		3683328B2AF0DC5200F78FFD /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368332892AF0DC5200F78FFD /* TableViewCell.swift */; };
+		3683328C2AF0DC5200F78FFD /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3683328A2AF0DC5200F78FFD /* TableViewCell.xib */; };
+		368332902AF0DC7900F78FFD /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3683328E2AF0DC7900F78FFD /* CollectionViewCell.swift */; };
+		368332912AF0DC7900F78FFD /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3683328F2AF0DC7900F78FFD /* CollectionViewCell.xib */; };
+		368332952AF0EBAD00F78FFD /* PopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368332932AF0EBAD00F78FFD /* PopViewController.swift */; };
+		368332962AF0EBAD00F78FFD /* PopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 368332942AF0EBAD00F78FFD /* PopViewController.xib */; };
+		368332992AF0EF7F00F78FFD /* TextFieldViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 368332982AF0EF7F00F78FFD /* TextFieldViewController.xib */; };
+		3683329B2AF0F13100F78FFD /* TextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3683329A2AF0F13100F78FFD /* TextFieldViewController.swift */; };
+		3683329F2AF0F44800F78FFD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3683329D2AF0F44800F78FFD /* LoginViewController.swift */; };
+		368332A02AF0F44800F78FFD /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3683329E2AF0F44800F78FFD /* LoginViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +91,24 @@
 		368332662AEFA1CA00F78FFD /* SerigalaViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SerigalaViewController.xib; sourceTree = "<group>"; };
 		3683326A2AEFA1F800F78FFD /* MacanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacanViewController.swift; sourceTree = "<group>"; };
 		3683326B2AEFA1F800F78FFD /* MacanViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MacanViewController.xib; sourceTree = "<group>"; };
+		3683326F2AF093E900F78FFD /* PickersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickersViewController.swift; sourceTree = "<group>"; };
+		368332702AF093E900F78FFD /* PickersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PickersViewController.xib; sourceTree = "<group>"; };
+		368332792AF0AFCD00F78FFD /* ProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
+		3683327A2AF0AFCD00F78FFD /* ProgressViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgressViewController.xib; sourceTree = "<group>"; };
+		3683327E2AF0BE6A00F78FFD /* PengaturanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PengaturanViewController.swift; sourceTree = "<group>"; };
+		3683327F2AF0BE6A00F78FFD /* PengaturanViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PengaturanViewController.xib; sourceTree = "<group>"; };
+		368332832AF0DA6500F78FFD /* FotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FotoViewController.swift; sourceTree = "<group>"; };
+		368332842AF0DA6500F78FFD /* FotoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FotoViewController.xib; sourceTree = "<group>"; };
+		368332892AF0DC5200F78FFD /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		3683328A2AF0DC5200F78FFD /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		3683328E2AF0DC7900F78FFD /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		3683328F2AF0DC7900F78FFD /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
+		368332932AF0EBAD00F78FFD /* PopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopViewController.swift; sourceTree = "<group>"; };
+		368332942AF0EBAD00F78FFD /* PopViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopViewController.xib; sourceTree = "<group>"; };
+		368332982AF0EF7F00F78FFD /* TextFieldViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldViewController.xib; sourceTree = "<group>"; };
+		3683329A2AF0F13100F78FFD /* TextFieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldViewController.swift; sourceTree = "<group>"; };
+		3683329D2AF0F44800F78FFD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		3683329E2AF0F44800F78FFD /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +208,13 @@
 		368332462AEF8E9000F78FFD /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				3683329C2AF0F43200F78FFD /* LoginViewController */,
+				368332972AF0EF6000F78FFD /* CustomViewController */,
+				368332922AF0EB8800F78FFD /* PopViewController */,
+				368332822AF0DA4C00F78FFD /* FotoViewController */,
+				3683327D2AF0BE4200F78FFD /* PengaturanViewController */,
+				368332782AF0AF8700F78FFD /* ProgressViewController */,
+				3683326E2AF093CE00F78FFD /* PickersViewController */,
 				368332692AEFA1DF00F78FFD /* MacanViewController */,
 				368332642AEFA1B200F78FFD /* SerigalaViewController */,
 				3683325F2AEFA18300F78FFD /* SingaViewController */,
@@ -273,6 +316,97 @@
 				3683326B2AEFA1F800F78FFD /* MacanViewController.xib */,
 			);
 			path = MacanViewController;
+			sourceTree = "<group>";
+		};
+		3683326E2AF093CE00F78FFD /* PickersViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3683326F2AF093E900F78FFD /* PickersViewController.swift */,
+				368332702AF093E900F78FFD /* PickersViewController.xib */,
+			);
+			path = PickersViewController;
+			sourceTree = "<group>";
+		};
+		368332782AF0AF8700F78FFD /* ProgressViewController */ = {
+			isa = PBXGroup;
+			children = (
+				368332792AF0AFCD00F78FFD /* ProgressViewController.swift */,
+				3683327A2AF0AFCD00F78FFD /* ProgressViewController.xib */,
+			);
+			path = ProgressViewController;
+			sourceTree = "<group>";
+		};
+		3683327D2AF0BE4200F78FFD /* PengaturanViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3683327E2AF0BE6A00F78FFD /* PengaturanViewController.swift */,
+				3683327F2AF0BE6A00F78FFD /* PengaturanViewController.xib */,
+			);
+			path = PengaturanViewController;
+			sourceTree = "<group>";
+		};
+		368332822AF0DA4C00F78FFD /* FotoViewController */ = {
+			isa = PBXGroup;
+			children = (
+				368332872AF0DBE200F78FFD /* cell */,
+				368332832AF0DA6500F78FFD /* FotoViewController.swift */,
+				368332842AF0DA6500F78FFD /* FotoViewController.xib */,
+			);
+			path = FotoViewController;
+			sourceTree = "<group>";
+		};
+		368332872AF0DBE200F78FFD /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				3683328D2AF0DC5900F78FFD /* CollectionViewCell */,
+				368332882AF0DC1A00F78FFD /* TableViewCell */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		368332882AF0DC1A00F78FFD /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				368332892AF0DC5200F78FFD /* TableViewCell.swift */,
+				3683328A2AF0DC5200F78FFD /* TableViewCell.xib */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		3683328D2AF0DC5900F78FFD /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				3683328E2AF0DC7900F78FFD /* CollectionViewCell.swift */,
+				3683328F2AF0DC7900F78FFD /* CollectionViewCell.xib */,
+			);
+			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		368332922AF0EB8800F78FFD /* PopViewController */ = {
+			isa = PBXGroup;
+			children = (
+				368332932AF0EBAD00F78FFD /* PopViewController.swift */,
+				368332942AF0EBAD00F78FFD /* PopViewController.xib */,
+			);
+			path = PopViewController;
+			sourceTree = "<group>";
+		};
+		368332972AF0EF6000F78FFD /* CustomViewController */ = {
+			isa = PBXGroup;
+			children = (
+				368332982AF0EF7F00F78FFD /* TextFieldViewController.xib */,
+				3683329A2AF0F13100F78FFD /* TextFieldViewController.swift */,
+			);
+			path = CustomViewController;
+			sourceTree = "<group>";
+		};
+		3683329C2AF0F43200F78FFD /* LoginViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3683329D2AF0F44800F78FFD /* LoginViewController.swift */,
+				3683329E2AF0F44800F78FFD /* LoginViewController.xib */,
+			);
+			path = LoginViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -382,11 +516,20 @@
 				368332212AEF8E7B00F78FFD /* LaunchScreen.storyboard in Resources */,
 				3683321E2AEF8E7B00F78FFD /* Assets.xcassets in Resources */,
 				368332552AEF8F8300F78FFD /* HomeViewController.xib in Resources */,
+				368332962AF0EBAD00F78FFD /* PopViewController.xib in Resources */,
+				368332992AF0EF7F00F78FFD /* TextFieldViewController.xib in Resources */,
+				368332722AF093E900F78FFD /* PickersViewController.xib in Resources */,
 				368332632AEFA19A00F78FFD /* SingaViewController.xib in Resources */,
 				368332502AEF8F3F00F78FFD /* HewanViewController.xib in Resources */,
+				368332A02AF0F44800F78FFD /* LoginViewController.xib in Resources */,
+				368332862AF0DA6500F78FFD /* FotoViewController.xib in Resources */,
+				3683327C2AF0AFCD00F78FFD /* ProgressViewController.xib in Resources */,
+				3683328C2AF0DC5200F78FFD /* TableViewCell.xib in Resources */,
 				368332682AEFA1CA00F78FFD /* SerigalaViewController.xib in Resources */,
+				368332812AF0BE6A00F78FFD /* PengaturanViewController.xib in Resources */,
 				3683321C2AEF8E7900F78FFD /* Main.storyboard in Resources */,
 				3683326D2AEFA1F800F78FFD /* MacanViewController.xib in Resources */,
+				368332912AF0DC7900F78FFD /* CollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,15 +555,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				368332542AEF8F8300F78FFD /* HomeViewController.swift in Sources */,
+				3683328B2AF0DC5200F78FFD /* TableViewCell.swift in Sources */,
+				368332902AF0DC7900F78FFD /* CollectionViewCell.swift in Sources */,
+				368332852AF0DA6500F78FFD /* FotoViewController.swift in Sources */,
+				3683329F2AF0F44800F78FFD /* LoginViewController.swift in Sources */,
+				368332952AF0EBAD00F78FFD /* PopViewController.swift in Sources */,
 				368332192AEF8E7900F78FFD /* ViewController.swift in Sources */,
 				3683325A2AEF939E00F78FFD /* maintabbar.swift in Sources */,
 				3683326C2AEFA1F800F78FFD /* MacanViewController.swift in Sources */,
+				3683329B2AF0F13100F78FFD /* TextFieldViewController.swift in Sources */,
+				3683327B2AF0AFCD00F78FFD /* ProgressViewController.swift in Sources */,
+				368332802AF0BE6A00F78FFD /* PengaturanViewController.swift in Sources */,
 				368332152AEF8E7900F78FFD /* AppDelegate.swift in Sources */,
 				3683324F2AEF8F3F00F78FFD /* HewanViewController.swift in Sources */,
 				368332622AEFA19A00F78FFD /* SingaViewController.swift in Sources */,
 				368332572AEF929200F78FFD /* constrant.swift in Sources */,
 				368332172AEF8E7900F78FFD /* SceneDelegate.swift in Sources */,
 				368332672AEFA1CA00F78FFD /* SerigalaViewController.swift in Sources */,
+				368332712AF093E900F78FFD /* PickersViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
