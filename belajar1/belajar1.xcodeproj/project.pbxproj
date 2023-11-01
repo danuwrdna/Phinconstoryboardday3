@@ -44,8 +44,14 @@
 		368332962AF0EBAD00F78FFD /* PopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 368332942AF0EBAD00F78FFD /* PopViewController.xib */; };
 		368332992AF0EF7F00F78FFD /* TextFieldViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 368332982AF0EF7F00F78FFD /* TextFieldViewController.xib */; };
 		3683329B2AF0F13100F78FFD /* TextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3683329A2AF0F13100F78FFD /* TextFieldViewController.swift */; };
-		3683329F2AF0F44800F78FFD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3683329D2AF0F44800F78FFD /* LoginViewController.swift */; };
-		368332A02AF0F44800F78FFD /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3683329E2AF0F44800F78FFD /* LoginViewController.xib */; };
+		36B729422AF1E85E00738F22 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B729402AF1E85E00738F22 /* ScanViewController.swift */; };
+		36B729432AF1E85E00738F22 /* ScanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36B729412AF1E85E00738F22 /* ScanViewController.xib */; };
+		36B729472AF1EC5300738F22 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B729452AF1EC5300738F22 /* GalleryViewController.swift */; };
+		36B729482AF1EC5300738F22 /* GalleryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36B729462AF1EC5300738F22 /* GalleryViewController.xib */; };
+		36B729832AF21E0A00738F22 /* MasukViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B729812AF21E0A00738F22 /* MasukViewController.swift */; };
+		36B729842AF21E0A00738F22 /* MasukViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36B729822AF21E0A00738F22 /* MasukViewController.xib */; };
+		36B7298D2AF2343E00738F22 /* LokasiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B7298B2AF2343E00738F22 /* LokasiViewController.swift */; };
+		36B7298E2AF2343E00738F22 /* LokasiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36B7298C2AF2343E00738F22 /* LokasiViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,8 +113,14 @@
 		368332942AF0EBAD00F78FFD /* PopViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopViewController.xib; sourceTree = "<group>"; };
 		368332982AF0EF7F00F78FFD /* TextFieldViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldViewController.xib; sourceTree = "<group>"; };
 		3683329A2AF0F13100F78FFD /* TextFieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldViewController.swift; sourceTree = "<group>"; };
-		3683329D2AF0F44800F78FFD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		3683329E2AF0F44800F78FFD /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		36B729402AF1E85E00738F22 /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
+		36B729412AF1E85E00738F22 /* ScanViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScanViewController.xib; sourceTree = "<group>"; };
+		36B729452AF1EC5300738F22 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
+		36B729462AF1EC5300738F22 /* GalleryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryViewController.xib; sourceTree = "<group>"; };
+		36B729812AF21E0A00738F22 /* MasukViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasukViewController.swift; sourceTree = "<group>"; };
+		36B729822AF21E0A00738F22 /* MasukViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MasukViewController.xib; sourceTree = "<group>"; };
+		36B7298B2AF2343E00738F22 /* LokasiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LokasiViewController.swift; sourceTree = "<group>"; };
+		36B7298C2AF2343E00738F22 /* LokasiViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LokasiViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,7 +220,10 @@
 		368332462AEF8E9000F78FFD /* Module */ = {
 			isa = PBXGroup;
 			children = (
-				3683329C2AF0F43200F78FFD /* LoginViewController */,
+				36B7298A2AF233F600738F22 /* LokasiViewController */,
+				36B729802AF21DD300738F22 /* MasukViewController */,
+				36B729442AF1EC3400738F22 /* GalleryViewController */,
+				36B7293F2AF1E84400738F22 /* ScanViewController */,
 				368332972AF0EF6000F78FFD /* CustomViewController */,
 				368332922AF0EB8800F78FFD /* PopViewController */,
 				368332822AF0DA4C00F78FFD /* FotoViewController */,
@@ -400,13 +415,40 @@
 			path = CustomViewController;
 			sourceTree = "<group>";
 		};
-		3683329C2AF0F43200F78FFD /* LoginViewController */ = {
+		36B7293F2AF1E84400738F22 /* ScanViewController */ = {
 			isa = PBXGroup;
 			children = (
-				3683329D2AF0F44800F78FFD /* LoginViewController.swift */,
-				3683329E2AF0F44800F78FFD /* LoginViewController.xib */,
+				36B729402AF1E85E00738F22 /* ScanViewController.swift */,
+				36B729412AF1E85E00738F22 /* ScanViewController.xib */,
 			);
-			path = LoginViewController;
+			path = ScanViewController;
+			sourceTree = "<group>";
+		};
+		36B729442AF1EC3400738F22 /* GalleryViewController */ = {
+			isa = PBXGroup;
+			children = (
+				36B729452AF1EC5300738F22 /* GalleryViewController.swift */,
+				36B729462AF1EC5300738F22 /* GalleryViewController.xib */,
+			);
+			path = GalleryViewController;
+			sourceTree = "<group>";
+		};
+		36B729802AF21DD300738F22 /* MasukViewController */ = {
+			isa = PBXGroup;
+			children = (
+				36B729812AF21E0A00738F22 /* MasukViewController.swift */,
+				36B729822AF21E0A00738F22 /* MasukViewController.xib */,
+			);
+			path = MasukViewController;
+			sourceTree = "<group>";
+		};
+		36B7298A2AF233F600738F22 /* LokasiViewController */ = {
+			isa = PBXGroup;
+			children = (
+				36B7298B2AF2343E00738F22 /* LokasiViewController.swift */,
+				36B7298C2AF2343E00738F22 /* LokasiViewController.xib */,
+			);
+			path = LokasiViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -520,12 +562,15 @@
 				368332992AF0EF7F00F78FFD /* TextFieldViewController.xib in Resources */,
 				368332722AF093E900F78FFD /* PickersViewController.xib in Resources */,
 				368332632AEFA19A00F78FFD /* SingaViewController.xib in Resources */,
+				36B729482AF1EC5300738F22 /* GalleryViewController.xib in Resources */,
 				368332502AEF8F3F00F78FFD /* HewanViewController.xib in Resources */,
-				368332A02AF0F44800F78FFD /* LoginViewController.xib in Resources */,
 				368332862AF0DA6500F78FFD /* FotoViewController.xib in Resources */,
+				36B729842AF21E0A00738F22 /* MasukViewController.xib in Resources */,
+				36B729432AF1E85E00738F22 /* ScanViewController.xib in Resources */,
 				3683327C2AF0AFCD00F78FFD /* ProgressViewController.xib in Resources */,
 				3683328C2AF0DC5200F78FFD /* TableViewCell.xib in Resources */,
 				368332682AEFA1CA00F78FFD /* SerigalaViewController.xib in Resources */,
+				36B7298E2AF2343E00738F22 /* LokasiViewController.xib in Resources */,
 				368332812AF0BE6A00F78FFD /* PengaturanViewController.xib in Resources */,
 				3683321C2AEF8E7900F78FFD /* Main.storyboard in Resources */,
 				3683326D2AEFA1F800F78FFD /* MacanViewController.xib in Resources */,
@@ -555,19 +600,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				368332542AEF8F8300F78FFD /* HomeViewController.swift in Sources */,
+				36B7298D2AF2343E00738F22 /* LokasiViewController.swift in Sources */,
 				3683328B2AF0DC5200F78FFD /* TableViewCell.swift in Sources */,
 				368332902AF0DC7900F78FFD /* CollectionViewCell.swift in Sources */,
 				368332852AF0DA6500F78FFD /* FotoViewController.swift in Sources */,
-				3683329F2AF0F44800F78FFD /* LoginViewController.swift in Sources */,
 				368332952AF0EBAD00F78FFD /* PopViewController.swift in Sources */,
 				368332192AEF8E7900F78FFD /* ViewController.swift in Sources */,
 				3683325A2AEF939E00F78FFD /* maintabbar.swift in Sources */,
+				36B729422AF1E85E00738F22 /* ScanViewController.swift in Sources */,
+				36B729832AF21E0A00738F22 /* MasukViewController.swift in Sources */,
 				3683326C2AEFA1F800F78FFD /* MacanViewController.swift in Sources */,
 				3683329B2AF0F13100F78FFD /* TextFieldViewController.swift in Sources */,
 				3683327B2AF0AFCD00F78FFD /* ProgressViewController.swift in Sources */,
 				368332802AF0BE6A00F78FFD /* PengaturanViewController.swift in Sources */,
 				368332152AEF8E7900F78FFD /* AppDelegate.swift in Sources */,
 				3683324F2AEF8F3F00F78FFD /* HewanViewController.swift in Sources */,
+				36B729472AF1EC5300738F22 /* GalleryViewController.swift in Sources */,
 				368332622AEFA19A00F78FFD /* SingaViewController.swift in Sources */,
 				368332572AEF929200F78FFD /* constrant.swift in Sources */,
 				368332172AEF8E7900F78FFD /* SceneDelegate.swift in Sources */,

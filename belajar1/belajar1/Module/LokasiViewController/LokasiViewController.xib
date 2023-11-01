@@ -3,13 +3,15 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="belajar1" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LokasiViewController" customModule="belajar1" customModuleProvider="target">
             <connections>
+                <outlet property="mapView" destination="J1B-p2-0Qz" id="AVQ-K4-hvA"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,22 +20,22 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s7h-tD-37w" customClass="TextFieldViewController" customModule="belajar1" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="183" width="393" height="294"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J1B-p2-0Qz">
+                    <rect key="frame" x="0.0" y="49" width="393" height="709"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="294" id="a2K-Mn-p4W"/>
+                        <constraint firstAttribute="height" constant="709" id="0IT-4c-lxa"/>
                     </constraints>
-                </view>
+                    <standardMapConfiguration key="preferredConfiguration"/>
+                </mapView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="s7h-tD-37w" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="124" id="BYE-EZ-LqX"/>
-                <constraint firstItem="s7h-tD-37w" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="aS6-Ta-x5w"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="s7h-tD-37w" secondAttribute="trailing" id="y5A-TK-vue"/>
+                <constraint firstItem="J1B-p2-0Qz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="3eb-a3-wRr"/>
+                <constraint firstItem="J1B-p2-0Qz" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="9j1-Vd-Pr6"/>
+                <constraint firstItem="J1B-p2-0Qz" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="49" id="C5f-v6-enC"/>
             </constraints>
-            <point key="canvasLocation" x="35.877862595419849" y="19.718309859154932"/>
+            <point key="canvasLocation" x="-25.190839694656489" y="19.718309859154932"/>
         </view>
     </objects>
     <resources>

@@ -21,30 +21,24 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dunia Binatang" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZBh-3X-30l">
-                    <rect key="frame" x="138" y="87" width="116" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" systemColor="secondarySystemGroupedBackgroundColor"/>
-                    <color key="highlightedColor" systemColor="systemBackgroundColor"/>
-                </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dHH-90-PcJ">
                     <rect key="frame" x="0.0" y="295" width="393" height="128"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="low-res_ulv-foto-per-harald-olse-20211209021514" translatesAutoresizingMaskIntoConstraints="NO" id="HMB-IU-Jww">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="low-res_ulv-foto-per-harald-olse-20211209021514" translatesAutoresizingMaskIntoConstraints="NO" id="HMB-IU-Jww">
                             <rect key="frame" x="0.0" y="0.0" width="131" height="128"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="131" id="XWs-kl-bf8"/>
                                 <constraint firstAttribute="height" constant="128" id="cZn-6a-YA4"/>
                             </constraints>
                         </imageView>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Harimau-sumatera-768x512" translatesAutoresizingMaskIntoConstraints="NO" id="cvh-tj-MRX">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Harimau-sumatera-768x512" translatesAutoresizingMaskIntoConstraints="NO" id="cvh-tj-MRX">
                             <rect key="frame" x="131" y="0.0" width="127" height="128"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="128" id="3b7-u3-sv9"/>
                                 <constraint firstAttribute="width" constant="127" id="Ssr-db-1Cr"/>
                             </constraints>
                         </imageView>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lion_waiting_in_Namibia" translatesAutoresizingMaskIntoConstraints="NO" id="Hxl-aw-KuD">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lion_waiting_in_Namibia" translatesAutoresizingMaskIntoConstraints="NO" id="Hxl-aw-KuD">
                             <rect key="frame" x="258" y="0.0" width="135" height="128"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="135" id="aDg-ZO-uwT"/>
@@ -114,39 +108,79 @@
                         <constraint firstAttribute="width" constant="393" id="TXf-cb-MZL"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kmQ-RA-sFs">
-                    <rect key="frame" x="-6" y="713" width="399" height="139"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="colorful-1616466_960_720" translatesAutoresizingMaskIntoConstraints="NO" id="U2C-Yk-GRT">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="128"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="399" id="Blf-7a-ymL"/>
-                        <constraint firstAttribute="height" constant="139" id="q40-34-dug"/>
+                        <constraint firstAttribute="height" constant="128" id="P7O-WY-I2E"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PXA-ey-wnA">
+                    <rect key="frame" x="0.0" y="59" width="149" height="50"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Halo Ka Nama" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cty-bL-RY8">
+                            <rect key="frame" x="22" y="21" width="119" height="21"/>
+                            <fontDescription key="fontDescription" type="system" weight="black" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Faa-4H-MeX"/>
+                        <constraint firstItem="Cty-bL-RY8" firstAttribute="top" secondItem="PXA-ey-wnA" secondAttribute="top" constant="21" id="Ke1-5t-aKN"/>
+                        <constraint firstItem="Cty-bL-RY8" firstAttribute="leading" secondItem="PXA-ey-wnA" secondAttribute="leading" constant="22" id="QZP-FI-Xxr"/>
+                        <constraint firstAttribute="trailing" secondItem="Cty-bL-RY8" secondAttribute="trailing" constant="8" id="Ugq-E6-ARs"/>
                     </constraints>
                 </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="images" translatesAutoresizingMaskIntoConstraints="NO" id="65Y-Kc-CEB">
+                    <rect key="frame" x="0.0" y="667" width="393" height="185"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="185" id="zSt-v9-YZB"/>
+                    </constraints>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="person.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="PJr-l1-iGJ">
+                    <rect key="frame" x="292" y="32" width="67" height="87"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="88.329999999999998" id="dix-ty-xuw"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" red="0.23880339114802204" green="0.36745272210826269" blue="0.86078912019729614" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="dHH-90-PcJ" firstAttribute="top" secondItem="ZBh-3X-30l" secondAttribute="bottom" constant="187" id="4JR-T7-gpz"/>
+                <constraint firstItem="U2C-Yk-GRT" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="2ZO-ul-alk"/>
+                <constraint firstItem="PXA-ey-wnA" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="59" id="355-8f-tRt"/>
                 <constraint firstItem="fcc-yh-CSI" firstAttribute="top" secondItem="dHH-90-PcJ" secondAttribute="bottom" constant="8" symbolic="YES" id="9Uq-XZ-2rQ"/>
                 <constraint firstItem="E0P-p9-83B" firstAttribute="leading" secondItem="7GX-Wd-bwt" secondAttribute="trailing" constant="57" id="9VY-We-VFL"/>
-                <constraint firstItem="kmQ-RA-sFs" firstAttribute="top" secondItem="7GX-Wd-bwt" secondAttribute="bottom" constant="247" id="9oq-Xe-iJU"/>
+                <constraint firstItem="7GX-Wd-bwt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="AoU-d3-RZK"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="E0P-p9-83B" secondAttribute="trailing" constant="159" id="Bqt-ol-Cyn"/>
-                <constraint firstItem="kmQ-RA-sFs" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="-6" id="CSL-XP-fic"/>
+                <constraint firstItem="U2C-Yk-GRT" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="E5q-wj-kbN"/>
+                <constraint firstItem="PJr-l1-iGJ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="31" id="El0-XB-uHw"/>
+                <constraint firstItem="E0P-p9-83B" firstAttribute="leading" secondItem="7GX-Wd-bwt" secondAttribute="trailing" constant="57" id="Gdw-Ni-HVp"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="PXA-ey-wnA" secondAttribute="trailing" constant="244" id="Ho8-GG-Uzf"/>
                 <constraint firstItem="dHH-90-PcJ" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="JaU-JS-c62"/>
                 <constraint firstItem="7GX-Wd-bwt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="JqC-CP-vqu"/>
                 <constraint firstItem="Vuf-Sq-nIu" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Kld-OR-D4d"/>
+                <constraint firstItem="Vuf-Sq-nIu" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="PWG-eT-xUh"/>
+                <constraint firstItem="65Y-Kc-CEB" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="R5c-cF-cFK"/>
+                <constraint firstItem="U2C-Yk-GRT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Tkt-Tm-gu7"/>
                 <constraint firstItem="fcc-yh-CSI" firstAttribute="leading" secondItem="E0P-p9-83B" secondAttribute="trailing" constant="58" id="U4U-SZ-0ZR"/>
                 <constraint firstItem="Vuf-Sq-nIu" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="VfP-65-6UE"/>
-                <constraint firstItem="Vuf-Sq-nIu" firstAttribute="top" secondItem="ZBh-3X-30l" secondAttribute="bottom" constant="109" id="Ydg-dJ-ScZ"/>
                 <constraint firstItem="7GX-Wd-bwt" firstAttribute="top" secondItem="dHH-90-PcJ" secondAttribute="bottom" constant="8" symbolic="YES" id="YlV-65-5B2"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="7GX-Wd-bwt" secondAttribute="trailing" constant="291" id="apm-A2-lrJ"/>
-                <constraint firstItem="ZBh-3X-30l" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="28" id="c28-F2-JDr"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fcc-yh-CSI" secondAttribute="trailing" constant="34" id="deK-95-HMM"/>
-                <constraint firstItem="kmQ-RA-sFs" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="g4w-gB-XwY"/>
-                <constraint firstItem="ZBh-3X-30l" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="138" id="hrc-sj-OEF"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ZBh-3X-30l" secondAttribute="trailing" constant="139" id="mEo-1C-vL9"/>
+                <constraint firstItem="65Y-Kc-CEB" firstAttribute="top" secondItem="7GX-Wd-bwt" secondAttribute="bottom" constant="201" id="dhU-9e-2UB"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="PJr-l1-iGJ" secondAttribute="trailing" constant="34" id="eoz-wR-zTt"/>
+                <constraint firstItem="dHH-90-PcJ" firstAttribute="top" secondItem="Vuf-Sq-nIu" secondAttribute="bottom" constant="21" id="iNY-a3-9oB"/>
+                <constraint firstItem="PJr-l1-iGJ" firstAttribute="leading" secondItem="PXA-ey-wnA" secondAttribute="trailing" constant="143" id="lsb-xc-NlB"/>
+                <constraint firstItem="65Y-Kc-CEB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="oez-oB-ICG"/>
+                <constraint firstItem="7GX-Wd-bwt" firstAttribute="top" secondItem="dHH-90-PcJ" secondAttribute="bottom" constant="8" symbolic="YES" id="p4x-uG-Qfu"/>
                 <constraint firstItem="E0P-p9-83B" firstAttribute="top" secondItem="dHH-90-PcJ" secondAttribute="bottom" constant="8" symbolic="YES" id="p6u-2h-IIU"/>
+                <constraint firstItem="Vuf-Sq-nIu" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="qQ7-4N-O0U"/>
+                <constraint firstItem="PXA-ey-wnA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="qrr-iT-2ma"/>
                 <constraint firstItem="dHH-90-PcJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="rYc-Fh-wTR"/>
+                <constraint firstItem="Vuf-Sq-nIu" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="158" id="wfQ-OO-SPV"/>
             </constraints>
             <point key="canvasLocation" x="20.610687022900763" y="19.718309859154932"/>
         </view>
@@ -154,7 +188,10 @@
     <resources>
         <image name="Harimau-sumatera-768x512" width="768" height="512"/>
         <image name="Lion_waiting_in_Namibia" width="800" height="600"/>
+        <image name="colorful-1616466_960_720" width="960" height="427"/>
+        <image name="images" width="503" height="342"/>
         <image name="low-res_ulv-foto-per-harald-olse-20211209021514" width="700" height="465"/>
+        <image name="person.circle.fill" catalog="system" width="128" height="123"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
