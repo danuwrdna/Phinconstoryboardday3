@@ -2,7 +2,7 @@ import UIKit
 
 class ProgressViewController: UIViewController {
     var imageView = UIImageView()
-    var size : CGFloat = 210
+    var size : CGFloat = 150
     
     @IBAction func slider(_ sender: UISlider) {
         let value = sender.value
@@ -11,7 +11,7 @@ class ProgressViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         imageView.backgroundColor = .blue
-        imageView.frame = CGRect(x: 200, y: 0, width: size, height: size)
+        imageView.frame = CGRect(x: 200, y: 200, width: size, height: size)
         imageView.center = view.center
         self.view.addSubview(imageView)
         

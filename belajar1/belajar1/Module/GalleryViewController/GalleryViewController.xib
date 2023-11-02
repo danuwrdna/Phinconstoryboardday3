@@ -20,14 +20,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="6bu-DU-j3F">
-                    <rect key="frame" x="46" y="105" width="300" height="242"/>
+                    <rect key="frame" x="87" y="116" width="222" height="231"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="242" id="yfK-wB-amd"/>
+                        <constraint firstAttribute="height" constant="231" id="yfK-wB-amd"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Klik gambar untuk ganti" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vkD-jq-shB">
-                    <rect key="frame" x="46" y="355" width="172" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Klik gambar untuk ganti" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vkD-jq-shB">
+                    <rect key="frame" x="46" y="399" width="172" height="21"/>
                     <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -36,9 +35,12 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6bu-DU-j3F" secondAttribute="trailing" constant="47" id="feZ-1a-NC8"/>
-                <constraint firstItem="6bu-DU-j3F" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="46" id="mQt-LC-aX7"/>
-                <constraint firstItem="6bu-DU-j3F" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="46" id="oLD-eY-zuF"/>
+                <constraint firstItem="vkD-jq-shB" firstAttribute="top" secondItem="6bu-DU-j3F" secondAttribute="bottom" constant="52" id="3q3-l1-pZV"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="vkD-jq-shB" secondAttribute="trailing" constant="175" id="Wy3-cD-4Sr"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6bu-DU-j3F" secondAttribute="trailing" constant="84" id="feZ-1a-NC8"/>
+                <constraint firstItem="6bu-DU-j3F" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="57" id="mQt-LC-aX7"/>
+                <constraint firstItem="vkD-jq-shB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="46" id="o7v-aZ-AZc"/>
+                <constraint firstItem="6bu-DU-j3F" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="87" id="oLD-eY-zuF"/>
             </constraints>
             <point key="canvasLocation" x="46.564885496183201" y="20.422535211267608"/>
         </view>

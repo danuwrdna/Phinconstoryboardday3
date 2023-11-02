@@ -2,10 +2,10 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
+    @IBOutlet weak var popup: UIView!
     @IBOutlet weak var image3: UIImageView!
     @IBOutlet weak var image2: UIImageView!
     @IBOutlet weak var image1: UIImageView!
-    
     @IBAction func serigalabutton(_ sender: Any) {
         let serigalabutton = SerigalaViewController()
         self.navigationController?.pushViewController(serigalabutton, animated: true)
@@ -20,8 +20,9 @@ class HomeViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                self.popup.isHidden = true
+            }
     }
 }
     

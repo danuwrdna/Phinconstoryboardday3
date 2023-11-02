@@ -13,6 +13,10 @@ class PengaturanViewController: UIViewController {
         let mapbutton = LokasiViewController()
         self.navigationController?.pushViewController(mapbutton, animated: true)
     }
+    @IBAction func animaButton(_ sender: Any) {
+        let animabutton = AnimasiViewController()
+        self.navigationController?.pushViewController(animabutton, animated: true)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
     }

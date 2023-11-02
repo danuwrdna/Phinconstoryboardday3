@@ -52,6 +52,14 @@
 		36B729842AF21E0A00738F22 /* MasukViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36B729822AF21E0A00738F22 /* MasukViewController.xib */; };
 		36B7298D2AF2343E00738F22 /* LokasiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B7298B2AF2343E00738F22 /* LokasiViewController.swift */; };
 		36B7298E2AF2343E00738F22 /* LokasiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36B7298C2AF2343E00738F22 /* LokasiViewController.xib */; };
+		36B729922AF333CB00738F22 /* GagalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B729902AF333CB00738F22 /* GagalViewController.swift */; };
+		36B729932AF333CB00738F22 /* GagalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36B729912AF333CB00738F22 /* GagalViewController.xib */; };
+		36B729972AF34F4A00738F22 /* AnimasiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B729952AF34F4A00738F22 /* AnimasiViewController.swift */; };
+		36B729982AF34F4A00738F22 /* AnimasiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36B729962AF34F4A00738F22 /* AnimasiViewController.xib */; };
+		36B7299C2AF393C200738F22 /* DaftarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B7299A2AF393C200738F22 /* DaftarViewController.swift */; };
+		36B7299D2AF393C200738F22 /* DaftarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36B7299B2AF393C200738F22 /* DaftarViewController.xib */; };
+		36B729A12AF3999C00738F22 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B7299F2AF3999C00738F22 /* SplashViewController.swift */; };
+		36B729A22AF3999C00738F22 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36B729A02AF3999C00738F22 /* SplashViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +129,14 @@
 		36B729822AF21E0A00738F22 /* MasukViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MasukViewController.xib; sourceTree = "<group>"; };
 		36B7298B2AF2343E00738F22 /* LokasiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LokasiViewController.swift; sourceTree = "<group>"; };
 		36B7298C2AF2343E00738F22 /* LokasiViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LokasiViewController.xib; sourceTree = "<group>"; };
+		36B729902AF333CB00738F22 /* GagalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GagalViewController.swift; sourceTree = "<group>"; };
+		36B729912AF333CB00738F22 /* GagalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GagalViewController.xib; sourceTree = "<group>"; };
+		36B729952AF34F4A00738F22 /* AnimasiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimasiViewController.swift; sourceTree = "<group>"; };
+		36B729962AF34F4A00738F22 /* AnimasiViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimasiViewController.xib; sourceTree = "<group>"; };
+		36B7299A2AF393C200738F22 /* DaftarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaftarViewController.swift; sourceTree = "<group>"; };
+		36B7299B2AF393C200738F22 /* DaftarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DaftarViewController.xib; sourceTree = "<group>"; };
+		36B7299F2AF3999C00738F22 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		36B729A02AF3999C00738F22 /* SplashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +236,10 @@
 		368332462AEF8E9000F78FFD /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				36B7299E2AF3997A00738F22 /* SplashViewController */,
+				36B729992AF393A700738F22 /* DaftarViewController */,
+				36B729942AF34F2700738F22 /* AnimasiViewController */,
+				36B7298F2AF3336500738F22 /* GagalViewController */,
 				36B7298A2AF233F600738F22 /* LokasiViewController */,
 				36B729802AF21DD300738F22 /* MasukViewController */,
 				36B729442AF1EC3400738F22 /* GalleryViewController */,
@@ -451,6 +471,42 @@
 			path = LokasiViewController;
 			sourceTree = "<group>";
 		};
+		36B7298F2AF3336500738F22 /* GagalViewController */ = {
+			isa = PBXGroup;
+			children = (
+				36B729902AF333CB00738F22 /* GagalViewController.swift */,
+				36B729912AF333CB00738F22 /* GagalViewController.xib */,
+			);
+			path = GagalViewController;
+			sourceTree = "<group>";
+		};
+		36B729942AF34F2700738F22 /* AnimasiViewController */ = {
+			isa = PBXGroup;
+			children = (
+				36B729952AF34F4A00738F22 /* AnimasiViewController.swift */,
+				36B729962AF34F4A00738F22 /* AnimasiViewController.xib */,
+			);
+			path = AnimasiViewController;
+			sourceTree = "<group>";
+		};
+		36B729992AF393A700738F22 /* DaftarViewController */ = {
+			isa = PBXGroup;
+			children = (
+				36B7299A2AF393C200738F22 /* DaftarViewController.swift */,
+				36B7299B2AF393C200738F22 /* DaftarViewController.xib */,
+			);
+			path = DaftarViewController;
+			sourceTree = "<group>";
+		};
+		36B7299E2AF3997A00738F22 /* SplashViewController */ = {
+			isa = PBXGroup;
+			children = (
+				36B7299F2AF3999C00738F22 /* SplashViewController.swift */,
+				36B729A02AF3999C00738F22 /* SplashViewController.xib */,
+			);
+			path = SplashViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -560,19 +616,23 @@
 				368332552AEF8F8300F78FFD /* HomeViewController.xib in Resources */,
 				368332962AF0EBAD00F78FFD /* PopViewController.xib in Resources */,
 				368332992AF0EF7F00F78FFD /* TextFieldViewController.xib in Resources */,
+				36B7299D2AF393C200738F22 /* DaftarViewController.xib in Resources */,
 				368332722AF093E900F78FFD /* PickersViewController.xib in Resources */,
 				368332632AEFA19A00F78FFD /* SingaViewController.xib in Resources */,
 				36B729482AF1EC5300738F22 /* GalleryViewController.xib in Resources */,
 				368332502AEF8F3F00F78FFD /* HewanViewController.xib in Resources */,
 				368332862AF0DA6500F78FFD /* FotoViewController.xib in Resources */,
 				36B729842AF21E0A00738F22 /* MasukViewController.xib in Resources */,
+				36B729982AF34F4A00738F22 /* AnimasiViewController.xib in Resources */,
 				36B729432AF1E85E00738F22 /* ScanViewController.xib in Resources */,
 				3683327C2AF0AFCD00F78FFD /* ProgressViewController.xib in Resources */,
 				3683328C2AF0DC5200F78FFD /* TableViewCell.xib in Resources */,
 				368332682AEFA1CA00F78FFD /* SerigalaViewController.xib in Resources */,
 				36B7298E2AF2343E00738F22 /* LokasiViewController.xib in Resources */,
 				368332812AF0BE6A00F78FFD /* PengaturanViewController.xib in Resources */,
+				36B729A22AF3999C00738F22 /* SplashViewController.xib in Resources */,
 				3683321C2AEF8E7900F78FFD /* Main.storyboard in Resources */,
+				36B729932AF333CB00738F22 /* GagalViewController.xib in Resources */,
 				3683326D2AEFA1F800F78FFD /* MacanViewController.xib in Resources */,
 				368332912AF0DC7900F78FFD /* CollectionViewCell.xib in Resources */,
 			);
@@ -606,6 +666,7 @@
 				368332852AF0DA6500F78FFD /* FotoViewController.swift in Sources */,
 				368332952AF0EBAD00F78FFD /* PopViewController.swift in Sources */,
 				368332192AEF8E7900F78FFD /* ViewController.swift in Sources */,
+				36B729972AF34F4A00738F22 /* AnimasiViewController.swift in Sources */,
 				3683325A2AEF939E00F78FFD /* maintabbar.swift in Sources */,
 				36B729422AF1E85E00738F22 /* ScanViewController.swift in Sources */,
 				36B729832AF21E0A00738F22 /* MasukViewController.swift in Sources */,
@@ -613,14 +674,17 @@
 				3683329B2AF0F13100F78FFD /* TextFieldViewController.swift in Sources */,
 				3683327B2AF0AFCD00F78FFD /* ProgressViewController.swift in Sources */,
 				368332802AF0BE6A00F78FFD /* PengaturanViewController.swift in Sources */,
+				36B7299C2AF393C200738F22 /* DaftarViewController.swift in Sources */,
 				368332152AEF8E7900F78FFD /* AppDelegate.swift in Sources */,
 				3683324F2AEF8F3F00F78FFD /* HewanViewController.swift in Sources */,
 				36B729472AF1EC5300738F22 /* GalleryViewController.swift in Sources */,
+				36B729A12AF3999C00738F22 /* SplashViewController.swift in Sources */,
 				368332622AEFA19A00F78FFD /* SingaViewController.swift in Sources */,
 				368332572AEF929200F78FFD /* constrant.swift in Sources */,
 				368332172AEF8E7900F78FFD /* SceneDelegate.swift in Sources */,
 				368332672AEFA1CA00F78FFD /* SerigalaViewController.swift in Sources */,
 				368332712AF093E900F78FFD /* PickersViewController.swift in Sources */,
+				36B729922AF333CB00738F22 /* GagalViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

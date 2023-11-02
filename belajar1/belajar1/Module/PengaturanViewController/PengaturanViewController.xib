@@ -98,6 +98,20 @@
                                 <action selector="mapButton:" destination="-1" eventType="touchUpInside" id="VMN-Xc-bgD"/>
                             </connections>
                         </button>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="moonphase.waning.crescent.inverse" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="xrx-EQ-mar">
+                            <rect key="frame" x="251" y="44" width="48" height="39.000000000000014"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40.329999999999998" id="nTS-kz-ynY"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Joj-2z-DyG">
+                            <rect key="frame" x="247" y="73" width="57" height="35"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Test"/>
+                            <connections>
+                                <action selector="animaButton:" destination="-1" eventType="touchUpInside" id="XP6-gC-voL"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemGray5Color"/>
                     <constraints>
@@ -110,16 +124,22 @@
                         <constraint firstAttribute="trailing" secondItem="af9-s2-Nze" secondAttribute="trailing" constant="323" id="IA5-hL-10r"/>
                         <constraint firstAttribute="trailing" secondItem="veZ-v2-pwD" secondAttribute="trailing" constant="235" id="LWh-7K-xl4"/>
                         <constraint firstItem="sTv-PZ-as2" firstAttribute="leading" secondItem="2eu-Fc-xTS" secondAttribute="leading" id="MeK-Cs-QCX"/>
+                        <constraint firstItem="xrx-EQ-mar" firstAttribute="top" secondItem="2eu-Fc-xTS" secondAttribute="top" constant="43" id="QOh-lG-CYO"/>
+                        <constraint firstAttribute="trailing" secondItem="xrx-EQ-mar" secondAttribute="trailing" constant="94" id="Ttw-vZ-Neb"/>
                         <constraint firstAttribute="height" constant="253" id="UEN-Pc-L0e"/>
                         <constraint firstItem="af9-s2-Nze" firstAttribute="top" secondItem="sTv-PZ-as2" secondAttribute="bottom" constant="29" id="VtI-Gm-v5p"/>
                         <constraint firstItem="exS-dP-VSv" firstAttribute="leading" secondItem="veZ-v2-pwD" secondAttribute="trailing" constant="10" id="ZVG-VG-J4r"/>
+                        <constraint firstAttribute="trailing" secondItem="Joj-2z-DyG" secondAttribute="trailing" constant="89" id="eWd-Hg-v11"/>
                         <constraint firstAttribute="trailing" secondItem="exS-dP-VSv" secondAttribute="trailing" constant="167" id="ecI-df-SNV"/>
                         <constraint firstAttribute="trailing" secondItem="yCh-bv-fGL" secondAttribute="trailing" constant="175" id="ehU-hD-gPR"/>
                         <constraint firstItem="veZ-v2-pwD" firstAttribute="leading" secondItem="af9-s2-Nze" secondAttribute="trailing" constant="10" id="ewI-6O-74F"/>
                         <constraint firstItem="d6f-Kf-05J" firstAttribute="top" secondItem="sTv-PZ-as2" secondAttribute="bottom" constant="0.99999999999999289" id="fWC-Zb-Oi9"/>
+                        <constraint firstItem="Joj-2z-DyG" firstAttribute="leading" secondItem="exS-dP-VSv" secondAttribute="trailing" constant="21" id="iiL-1U-AE1"/>
                         <constraint firstItem="veZ-v2-pwD" firstAttribute="top" secondItem="sTv-PZ-as2" secondAttribute="bottom" constant="29" id="kjR-gs-eTd"/>
                         <constraint firstItem="yCh-bv-fGL" firstAttribute="leading" secondItem="veZ-v2-pwD" secondAttribute="trailing" constant="16" id="kpm-pd-wRt"/>
                         <constraint firstItem="exS-dP-VSv" firstAttribute="top" secondItem="sTv-PZ-as2" secondAttribute="bottom" constant="29" id="lDA-Oe-RAm"/>
+                        <constraint firstItem="xrx-EQ-mar" firstAttribute="leading" secondItem="exS-dP-VSv" secondAttribute="trailing" constant="25" id="qoP-CN-nlC"/>
+                        <constraint firstItem="Joj-2z-DyG" firstAttribute="top" secondItem="sTv-PZ-as2" secondAttribute="bottom" constant="29" id="txa-VX-THC"/>
                         <constraint firstItem="d6f-Kf-05J" firstAttribute="leading" secondItem="2eu-Fc-xTS" secondAttribute="leading" constant="20" id="vuB-KC-xs3"/>
                         <constraint firstItem="af9-s2-Nze" firstAttribute="leading" secondItem="2eu-Fc-xTS" secondAttribute="leading" constant="8" id="vvH-XR-fIn"/>
                         <constraint firstItem="sTv-PZ-as2" firstAttribute="top" secondItem="2eu-Fc-xTS" secondAttribute="top" id="zmG-OA-tl4"/>
@@ -144,6 +164,7 @@
         <image name="camera.metering.matrix" catalog="system" width="128" height="93"/>
         <image name="doc.text.image.fill" catalog="system" width="115" height="128"/>
         <image name="images" width="503" height="342"/>
+        <image name="moonphase.waning.crescent.inverse" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
