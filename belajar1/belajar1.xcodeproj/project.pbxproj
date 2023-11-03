@@ -60,6 +60,19 @@
 		36B7299D2AF393C200738F22 /* DaftarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36B7299B2AF393C200738F22 /* DaftarViewController.xib */; };
 		36B729A12AF3999C00738F22 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B7299F2AF3999C00738F22 /* SplashViewController.swift */; };
 		36B729A22AF3999C00738F22 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36B729A02AF3999C00738F22 /* SplashViewController.xib */; };
+		36B729A62AF47FE800738F22 /* CellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B729A42AF47FE800738F22 /* CellTableViewCell.swift */; };
+		36B729A72AF47FE800738F22 /* CellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36B729A52AF47FE800738F22 /* CellTableViewCell.xib */; };
+		36B729B22AF4AA2600738F22 /* TestApiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B729B02AF4AA2600738F22 /* TestApiViewController.swift */; };
+		36B729B32AF4AA2600738F22 /* TestApiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36B729B12AF4AA2600738F22 /* TestApiViewController.xib */; };
+		36B729B52AF4AD0200738F22 /* PokemonResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B729B42AF4AD0200738F22 /* PokemonResource.swift */; };
+		36B729B92AF4ADC500738F22 /* PokemonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B729B72AF4ADC500738F22 /* PokemonTableViewCell.swift */; };
+		36B729BA2AF4ADC500738F22 /* PokemonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36B729B82AF4ADC500738F22 /* PokemonTableViewCell.xib */; };
+		36B729BD2AF4B3E700738F22 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 36B729BC2AF4B3E700738F22 /* Alamofire */; };
+		36B729C02AF4C15700738F22 /* TestApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B729BF2AF4C15700738F22 /* TestApiModel.swift */; };
+		36B729C22AF4C4D400738F22 /* ExtUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B729C12AF4C4D400738F22 /* ExtUIView.swift */; };
+		36B729C52AF4D0AE00738F22 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 36B729C42AF4D0AE00738F22 /* Kingfisher */; };
+		36B729D12AF4EFFA00738F22 /* KoleksiViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B729CF2AF4EFFA00738F22 /* KoleksiViewCell.swift */; };
+		36B729D22AF4EFFA00738F22 /* KoleksiViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36B729D02AF4EFFA00738F22 /* KoleksiViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,6 +150,17 @@
 		36B7299B2AF393C200738F22 /* DaftarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DaftarViewController.xib; sourceTree = "<group>"; };
 		36B7299F2AF3999C00738F22 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		36B729A02AF3999C00738F22 /* SplashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
+		36B729A42AF47FE800738F22 /* CellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellTableViewCell.swift; sourceTree = "<group>"; };
+		36B729A52AF47FE800738F22 /* CellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellTableViewCell.xib; sourceTree = "<group>"; };
+		36B729B02AF4AA2600738F22 /* TestApiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestApiViewController.swift; sourceTree = "<group>"; };
+		36B729B12AF4AA2600738F22 /* TestApiViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestApiViewController.xib; sourceTree = "<group>"; };
+		36B729B42AF4AD0200738F22 /* PokemonResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonResource.swift; sourceTree = "<group>"; };
+		36B729B72AF4ADC500738F22 /* PokemonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonTableViewCell.swift; sourceTree = "<group>"; };
+		36B729B82AF4ADC500738F22 /* PokemonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PokemonTableViewCell.xib; sourceTree = "<group>"; };
+		36B729BF2AF4C15700738F22 /* TestApiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestApiModel.swift; sourceTree = "<group>"; };
+		36B729C12AF4C4D400738F22 /* ExtUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtUIView.swift; sourceTree = "<group>"; };
+		36B729CF2AF4EFFA00738F22 /* KoleksiViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KoleksiViewCell.swift; sourceTree = "<group>"; };
+		36B729D02AF4EFFA00738F22 /* KoleksiViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KoleksiViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +168,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36B729C52AF4D0AE00738F22 /* Kingfisher in Frameworks */,
+				36B729BD2AF4B3E700738F22 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,10 +213,10 @@
 		368332132AEF8E7900F78FFD /* belajar1 */ = {
 			isa = PBXGroup;
 			children = (
+				368332442AEF8E8100F78FFD /* App */,
 				368332472AEF8E9A00F78FFD /* Resource */,
 				368332462AEF8E9000F78FFD /* Module */,
 				368332452AEF8E8800F78FFD /* Common */,
-				368332442AEF8E8100F78FFD /* App */,
 				3683321A2AEF8E7900F78FFD /* Main.storyboard */,
 				368332222AEF8E7B00F78FFD /* Info.plist */,
 			);
@@ -236,6 +262,7 @@
 		368332462AEF8E9000F78FFD /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				36B729AF2AF4A9FD00738F22 /* TestApiViewController */,
 				36B7299E2AF3997A00738F22 /* SplashViewController */,
 				36B729992AF393A700738F22 /* DaftarViewController */,
 				36B729942AF34F2700738F22 /* AnimasiViewController */,
@@ -244,7 +271,6 @@
 				36B729802AF21DD300738F22 /* MasukViewController */,
 				36B729442AF1EC3400738F22 /* GalleryViewController */,
 				36B7293F2AF1E84400738F22 /* ScanViewController */,
-				368332972AF0EF6000F78FFD /* CustomViewController */,
 				368332922AF0EB8800F78FFD /* PopViewController */,
 				368332822AF0DA4C00F78FFD /* FotoViewController */,
 				3683327D2AF0BE4200F78FFD /* PengaturanViewController */,
@@ -264,6 +290,7 @@
 		368332472AEF8E9A00F78FFD /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				36B729A92AF4901800738F22 /* Network */,
 				3683321F2AEF8E7B00F78FFD /* LaunchScreen.storyboard */,
 				3683321D2AEF8E7B00F78FFD /* Assets.xcassets */,
 			);
@@ -273,6 +300,7 @@
 		368332482AEF8EA800F78FFD /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				36B729C12AF4C4D400738F22 /* ExtUIView.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -287,6 +315,7 @@
 		3683324A2AEF8EBE00F78FFD /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				368332972AF0EF6000F78FFD /* CustomViewController */,
 				368332562AEF929200F78FFD /* constrant.swift */,
 			);
 			path = Component;
@@ -312,6 +341,7 @@
 		368332512AEF8F5A00F78FFD /* HomeViewController */ = {
 			isa = PBXGroup;
 			children = (
+				36B729A32AF47FC400738F22 /* cell */,
 				368332522AEF8F8300F78FFD /* HomeViewController.swift */,
 				368332532AEF8F8300F78FFD /* HomeViewController.xib */,
 			);
@@ -507,6 +537,61 @@
 			path = SplashViewController;
 			sourceTree = "<group>";
 		};
+		36B729A32AF47FC400738F22 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				36B729CE2AF4EFD500738F22 /* KoleksiViewCell */,
+				36B729A42AF47FE800738F22 /* CellTableViewCell.swift */,
+				36B729A52AF47FE800738F22 /* CellTableViewCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		36B729A92AF4901800738F22 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				36B729B42AF4AD0200738F22 /* PokemonResource.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		36B729AF2AF4A9FD00738F22 /* TestApiViewController */ = {
+			isa = PBXGroup;
+			children = (
+				36B729BE2AF4C13D00738F22 /* Model */,
+				36B729B62AF4ADAB00738F22 /* cell */,
+				36B729B02AF4AA2600738F22 /* TestApiViewController.swift */,
+				36B729B12AF4AA2600738F22 /* TestApiViewController.xib */,
+			);
+			path = TestApiViewController;
+			sourceTree = "<group>";
+		};
+		36B729B62AF4ADAB00738F22 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				36B729B72AF4ADC500738F22 /* PokemonTableViewCell.swift */,
+				36B729B82AF4ADC500738F22 /* PokemonTableViewCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		36B729BE2AF4C13D00738F22 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				36B729BF2AF4C15700738F22 /* TestApiModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		36B729CE2AF4EFD500738F22 /* KoleksiViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				36B729CF2AF4EFFA00738F22 /* KoleksiViewCell.swift */,
+				36B729D02AF4EFFA00738F22 /* KoleksiViewCell.xib */,
+			);
+			path = KoleksiViewCell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -523,6 +608,10 @@
 			dependencies = (
 			);
 			name = belajar1;
+			packageProductDependencies = (
+				36B729BC2AF4B3E700738F22 /* Alamofire */,
+				36B729C42AF4D0AE00738F22 /* Kingfisher */,
+			);
 			productName = belajar1;
 			productReference = 368332112AEF8E7900F78FFD /* belajar1.app */;
 			productType = "com.apple.product-type.application";
@@ -595,6 +684,10 @@
 				Base,
 			);
 			mainGroup = 368332082AEF8E7900F78FFD;
+			packageReferences = (
+				36B729BB2AF4B3E700738F22 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				36B729C32AF4D0AE00738F22 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 368332122AEF8E7900F78FFD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -612,9 +705,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				368332212AEF8E7B00F78FFD /* LaunchScreen.storyboard in Resources */,
+				36B729D22AF4EFFA00738F22 /* KoleksiViewCell.xib in Resources */,
 				3683321E2AEF8E7B00F78FFD /* Assets.xcassets in Resources */,
 				368332552AEF8F8300F78FFD /* HomeViewController.xib in Resources */,
 				368332962AF0EBAD00F78FFD /* PopViewController.xib in Resources */,
+				36B729A72AF47FE800738F22 /* CellTableViewCell.xib in Resources */,
 				368332992AF0EF7F00F78FFD /* TextFieldViewController.xib in Resources */,
 				36B7299D2AF393C200738F22 /* DaftarViewController.xib in Resources */,
 				368332722AF093E900F78FFD /* PickersViewController.xib in Resources */,
@@ -627,10 +722,12 @@
 				36B729432AF1E85E00738F22 /* ScanViewController.xib in Resources */,
 				3683327C2AF0AFCD00F78FFD /* ProgressViewController.xib in Resources */,
 				3683328C2AF0DC5200F78FFD /* TableViewCell.xib in Resources */,
+				36B729B32AF4AA2600738F22 /* TestApiViewController.xib in Resources */,
 				368332682AEFA1CA00F78FFD /* SerigalaViewController.xib in Resources */,
 				36B7298E2AF2343E00738F22 /* LokasiViewController.xib in Resources */,
 				368332812AF0BE6A00F78FFD /* PengaturanViewController.xib in Resources */,
 				36B729A22AF3999C00738F22 /* SplashViewController.xib in Resources */,
+				36B729BA2AF4ADC500738F22 /* PokemonTableViewCell.xib in Resources */,
 				3683321C2AEF8E7900F78FFD /* Main.storyboard in Resources */,
 				36B729932AF333CB00738F22 /* GagalViewController.xib in Resources */,
 				3683326D2AEFA1F800F78FFD /* MacanViewController.xib in Resources */,
@@ -664,9 +761,12 @@
 				3683328B2AF0DC5200F78FFD /* TableViewCell.swift in Sources */,
 				368332902AF0DC7900F78FFD /* CollectionViewCell.swift in Sources */,
 				368332852AF0DA6500F78FFD /* FotoViewController.swift in Sources */,
+				36B729B22AF4AA2600738F22 /* TestApiViewController.swift in Sources */,
 				368332952AF0EBAD00F78FFD /* PopViewController.swift in Sources */,
+				36B729A62AF47FE800738F22 /* CellTableViewCell.swift in Sources */,
 				368332192AEF8E7900F78FFD /* ViewController.swift in Sources */,
 				36B729972AF34F4A00738F22 /* AnimasiViewController.swift in Sources */,
+				36B729D12AF4EFFA00738F22 /* KoleksiViewCell.swift in Sources */,
 				3683325A2AEF939E00F78FFD /* maintabbar.swift in Sources */,
 				36B729422AF1E85E00738F22 /* ScanViewController.swift in Sources */,
 				36B729832AF21E0A00738F22 /* MasukViewController.swift in Sources */,
@@ -677,14 +777,18 @@
 				36B7299C2AF393C200738F22 /* DaftarViewController.swift in Sources */,
 				368332152AEF8E7900F78FFD /* AppDelegate.swift in Sources */,
 				3683324F2AEF8F3F00F78FFD /* HewanViewController.swift in Sources */,
+				36B729C22AF4C4D400738F22 /* ExtUIView.swift in Sources */,
 				36B729472AF1EC5300738F22 /* GalleryViewController.swift in Sources */,
+				36B729B92AF4ADC500738F22 /* PokemonTableViewCell.swift in Sources */,
 				36B729A12AF3999C00738F22 /* SplashViewController.swift in Sources */,
+				36B729C02AF4C15700738F22 /* TestApiModel.swift in Sources */,
 				368332622AEFA19A00F78FFD /* SingaViewController.swift in Sources */,
 				368332572AEF929200F78FFD /* constrant.swift in Sources */,
 				368332172AEF8E7900F78FFD /* SceneDelegate.swift in Sources */,
 				368332672AEFA1CA00F78FFD /* SerigalaViewController.swift in Sources */,
 				368332712AF093E900F78FFD /* PickersViewController.swift in Sources */,
 				36B729922AF333CB00738F22 /* GagalViewController.swift in Sources */,
+				36B729B52AF4AD0200738F22 /* PokemonResource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1020,6 +1124,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		36B729BB2AF4B3E700738F22 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		36B729C32AF4D0AE00738F22 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		36B729BC2AF4B3E700738F22 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 36B729BB2AF4B3E700738F22 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		36B729C42AF4D0AE00738F22 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 36B729C32AF4D0AE00738F22 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 368332092AEF8E7900F78FFD /* Project object */;
 }

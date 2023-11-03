@@ -55,19 +55,19 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kebersihan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7tZ-nG-eBh">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Materi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7tZ-nG-eBh">
                     <rect key="frame" x="38" y="259" width="85" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hewan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="02t-x4-hUe">
-                    <rect key="frame" x="38" y="345" width="53" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Metode Pembelajaran " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="02t-x4-hUe">
+                    <rect key="frame" x="38" y="345" width="168" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pelayanan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gHf-r0-Kt3">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ketepatan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gHf-r0-Kt3">
                     <rect key="frame" x="38" y="431" width="78" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
@@ -102,7 +102,7 @@
                 <constraint firstItem="gQe-Vw-JEI" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="63" id="1rH-hA-oRW"/>
                 <constraint firstItem="4af-Qz-lxh" firstAttribute="top" secondItem="75n-fo-jSa" secondAttribute="bottom" constant="8" symbolic="YES" id="3Ka-QF-rZT"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cFM-KX-FzJ" secondAttribute="trailing" constant="39" id="4wp-Q6-Xh4"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="02t-x4-hUe" secondAttribute="trailing" constant="302" id="5Gr-pi-ra5"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="02t-x4-hUe" secondAttribute="trailing" constant="187" id="5Gr-pi-ra5"/>
                 <constraint firstItem="fMZ-vq-o6c" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="111" id="5as-Se-TEa"/>
                 <constraint firstItem="9Oe-KH-X2V" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="38" id="6Pe-ZG-5CG"/>
                 <constraint firstItem="7tZ-nG-eBh" firstAttribute="top" secondItem="gQe-Vw-JEI" secondAttribute="bottom" constant="9" id="6QT-6p-3cJ"/>

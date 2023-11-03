@@ -11,5 +11,4 @@ enum TabBar{
     static let icon6 = UIImage(systemName: "thermometer.high")
     static let icon7 = UIImage(systemName: "thermometer.high")
     
-    
 }

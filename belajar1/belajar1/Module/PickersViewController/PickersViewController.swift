@@ -13,9 +13,9 @@ class PickersViewController: UIViewController {
         let kembalibutton = HomeViewController()
         self.navigationController?.pushViewController(kembalibutton, animated: true)
     }
-    let kebersihan = ["Bersih","Biasa Aja", "Tidak Bersih"]
-    let hewan = ["Membahayakan", "Tidak Membahayakn"]
-    let pelayanan = ["Ramah","Tidak Ramah"]
+    let kebersihan = ["Lengkap","Biasa Aja", "Tidak lengkap"]
+    let hewan = ["Efektif", "Tidak Efektif"]
+    let pelayanan = ["Tepat","Tidak Tepat"]
     
     var kebersihanPickerView = UIPickerView()
     var hewanPickerView = UIPickerView()
