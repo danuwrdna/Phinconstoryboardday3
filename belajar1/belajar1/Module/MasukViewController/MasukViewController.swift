@@ -15,6 +15,8 @@ class MasukViewController: UIViewController {
         self.navigationController?.pushViewController(serigalabutton, animated: true)
     }
     @IBAction func buttonLogin(_ sender: Any) {
+        // Set status login ke true saat berhasil login
+                
         let username = emailTextField.text
         let password = passwordTextField.text
         if username == "123" && password == "123" {
@@ -37,7 +39,6 @@ class MasukViewController: UIViewController {
         super.viewDidAppear(animated)
         animate()
     }
-    
     func setup() {
         navigationController?.isNavigationBarHidden = true
         emailTextField.placeholder = "Isi Dengan Benar"

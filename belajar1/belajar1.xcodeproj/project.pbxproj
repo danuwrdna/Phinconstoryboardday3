@@ -71,8 +71,6 @@
 		36B729C02AF4C15700738F22 /* TestApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B729BF2AF4C15700738F22 /* TestApiModel.swift */; };
 		36B729C22AF4C4D400738F22 /* ExtUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B729C12AF4C4D400738F22 /* ExtUIView.swift */; };
 		36B729C52AF4D0AE00738F22 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 36B729C42AF4D0AE00738F22 /* Kingfisher */; };
-		36B729D12AF4EFFA00738F22 /* KoleksiViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B729CF2AF4EFFA00738F22 /* KoleksiViewCell.swift */; };
-		36B729D22AF4EFFA00738F22 /* KoleksiViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36B729D02AF4EFFA00738F22 /* KoleksiViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -159,8 +157,6 @@
 		36B729B82AF4ADC500738F22 /* PokemonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PokemonTableViewCell.xib; sourceTree = "<group>"; };
 		36B729BF2AF4C15700738F22 /* TestApiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestApiModel.swift; sourceTree = "<group>"; };
 		36B729C12AF4C4D400738F22 /* ExtUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtUIView.swift; sourceTree = "<group>"; };
-		36B729CF2AF4EFFA00738F22 /* KoleksiViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KoleksiViewCell.swift; sourceTree = "<group>"; };
-		36B729D02AF4EFFA00738F22 /* KoleksiViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KoleksiViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -262,6 +258,7 @@
 		368332462AEF8E9000F78FFD /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				36B72AAD2AF8C6A600738F22 /* New Group */,
 				36B729AF2AF4A9FD00738F22 /* TestApiViewController */,
 				36B7299E2AF3997A00738F22 /* SplashViewController */,
 				36B729992AF393A700738F22 /* DaftarViewController */,
@@ -540,7 +537,6 @@
 		36B729A32AF47FC400738F22 /* cell */ = {
 			isa = PBXGroup;
 			children = (
-				36B729CE2AF4EFD500738F22 /* KoleksiViewCell */,
 				36B729A42AF47FE800738F22 /* CellTableViewCell.swift */,
 				36B729A52AF47FE800738F22 /* CellTableViewCell.xib */,
 			);
@@ -583,13 +579,11 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		36B729CE2AF4EFD500738F22 /* KoleksiViewCell */ = {
+		36B72AAD2AF8C6A600738F22 /* New Group */ = {
 			isa = PBXGroup;
 			children = (
-				36B729CF2AF4EFFA00738F22 /* KoleksiViewCell.swift */,
-				36B729D02AF4EFFA00738F22 /* KoleksiViewCell.xib */,
 			);
-			path = KoleksiViewCell;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -705,7 +699,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				368332212AEF8E7B00F78FFD /* LaunchScreen.storyboard in Resources */,
-				36B729D22AF4EFFA00738F22 /* KoleksiViewCell.xib in Resources */,
 				3683321E2AEF8E7B00F78FFD /* Assets.xcassets in Resources */,
 				368332552AEF8F8300F78FFD /* HomeViewController.xib in Resources */,
 				368332962AF0EBAD00F78FFD /* PopViewController.xib in Resources */,
@@ -766,7 +759,6 @@
 				36B729A62AF47FE800738F22 /* CellTableViewCell.swift in Sources */,
 				368332192AEF8E7900F78FFD /* ViewController.swift in Sources */,
 				36B729972AF34F4A00738F22 /* AnimasiViewController.swift in Sources */,
-				36B729D12AF4EFFA00738F22 /* KoleksiViewCell.swift in Sources */,
 				3683325A2AEF939E00F78FFD /* maintabbar.swift in Sources */,
 				36B729422AF1E85E00738F22 /* ScanViewController.swift in Sources */,
 				36B729832AF21E0A00738F22 /* MasukViewController.swift in Sources */,
