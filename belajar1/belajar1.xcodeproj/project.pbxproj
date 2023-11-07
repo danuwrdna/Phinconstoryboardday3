@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2802BF23573A0ADECD9FE69D /* Pods_belajar1Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8C3AF9017ACC4829CCABDF6 /* Pods_belajar1Tests.framework */; };
 		368332152AEF8E7900F78FFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368332142AEF8E7900F78FFD /* AppDelegate.swift */; };
 		368332172AEF8E7900F78FFD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368332162AEF8E7900F78FFD /* SceneDelegate.swift */; };
 		368332192AEF8E7900F78FFD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368332182AEF8E7900F78FFD /* ViewController.swift */; };
@@ -71,6 +72,8 @@
 		36B729C02AF4C15700738F22 /* TestApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B729BF2AF4C15700738F22 /* TestApiModel.swift */; };
 		36B729C22AF4C4D400738F22 /* ExtUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B729C12AF4C4D400738F22 /* ExtUIView.swift */; };
 		36B729C52AF4D0AE00738F22 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 36B729C42AF4D0AE00738F22 /* Kingfisher */; };
+		BD279317BDF08C89649CD862 /* Pods_belajar1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3272307CCA29A69293A4A376 /* Pods_belajar1.framework */; };
+		E624C51739753697922D0C0B /* Pods_belajar1_belajar1UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95DFB8A29DED73E8A79BA09E /* Pods_belajar1_belajar1UITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +94,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E7C226D35CFE049640F1665 /* Pods-belajar1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-belajar1.debug.xcconfig"; path = "Target Support Files/Pods-belajar1/Pods-belajar1.debug.xcconfig"; sourceTree = "<group>"; };
+		224131A811AA8E664C7051E4 /* Pods-belajar1Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-belajar1Tests.release.xcconfig"; path = "Target Support Files/Pods-belajar1Tests/Pods-belajar1Tests.release.xcconfig"; sourceTree = "<group>"; };
+		3272307CCA29A69293A4A376 /* Pods_belajar1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_belajar1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		368332112AEF8E7900F78FFD /* belajar1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = belajar1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		368332142AEF8E7900F78FFD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		368332162AEF8E7900F78FFD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -157,6 +163,12 @@
 		36B729B82AF4ADC500738F22 /* PokemonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PokemonTableViewCell.xib; sourceTree = "<group>"; };
 		36B729BF2AF4C15700738F22 /* TestApiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestApiModel.swift; sourceTree = "<group>"; };
 		36B729C12AF4C4D400738F22 /* ExtUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtUIView.swift; sourceTree = "<group>"; };
+		8CA2BDEB239139D4B8267ED2 /* Pods-belajar1-belajar1UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-belajar1-belajar1UITests.release.xcconfig"; path = "Target Support Files/Pods-belajar1-belajar1UITests/Pods-belajar1-belajar1UITests.release.xcconfig"; sourceTree = "<group>"; };
+		95DFB8A29DED73E8A79BA09E /* Pods_belajar1_belajar1UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_belajar1_belajar1UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8C3AF9017ACC4829CCABDF6 /* Pods_belajar1Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_belajar1Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D394A6762907DB23B66A455E /* Pods-belajar1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-belajar1.release.xcconfig"; path = "Target Support Files/Pods-belajar1/Pods-belajar1.release.xcconfig"; sourceTree = "<group>"; };
+		E0B0E19D52C656F308A14238 /* Pods-belajar1-belajar1UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-belajar1-belajar1UITests.debug.xcconfig"; path = "Target Support Files/Pods-belajar1-belajar1UITests/Pods-belajar1-belajar1UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E7CDF20FC0D8DDA4868D7043 /* Pods-belajar1Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-belajar1Tests.debug.xcconfig"; path = "Target Support Files/Pods-belajar1Tests/Pods-belajar1Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +178,7 @@
 			files = (
 				36B729C52AF4D0AE00738F22 /* Kingfisher in Frameworks */,
 				36B729BD2AF4B3E700738F22 /* Alamofire in Frameworks */,
+				BD279317BDF08C89649CD862 /* Pods_belajar1.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,6 +186,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2802BF23573A0ADECD9FE69D /* Pods_belajar1Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,6 +194,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E624C51739753697922D0C0B /* Pods_belajar1_belajar1UITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,6 +208,8 @@
 				3683322A2AEF8E7B00F78FFD /* belajar1Tests */,
 				368332342AEF8E7B00F78FFD /* belajar1UITests */,
 				368332122AEF8E7900F78FFD /* Products */,
+				37870D75129C7C8C942D4BE8 /* Pods */,
+				8B5759A663A75B88C01E7FF8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -586,6 +603,30 @@
 			path = "New Group";
 			sourceTree = "<group>";
 		};
+		37870D75129C7C8C942D4BE8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1E7C226D35CFE049640F1665 /* Pods-belajar1.debug.xcconfig */,
+				D394A6762907DB23B66A455E /* Pods-belajar1.release.xcconfig */,
+				E0B0E19D52C656F308A14238 /* Pods-belajar1-belajar1UITests.debug.xcconfig */,
+				8CA2BDEB239139D4B8267ED2 /* Pods-belajar1-belajar1UITests.release.xcconfig */,
+				E7CDF20FC0D8DDA4868D7043 /* Pods-belajar1Tests.debug.xcconfig */,
+				224131A811AA8E664C7051E4 /* Pods-belajar1Tests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8B5759A663A75B88C01E7FF8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3272307CCA29A69293A4A376 /* Pods_belajar1.framework */,
+				95DFB8A29DED73E8A79BA09E /* Pods_belajar1_belajar1UITests.framework */,
+				B8C3AF9017ACC4829CCABDF6 /* Pods_belajar1Tests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -593,9 +634,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3683323B2AEF8E7B00F78FFD /* Build configuration list for PBXNativeTarget "belajar1" */;
 			buildPhases = (
+				B55A9DA9CDA4F93227B93DA0 /* [CP] Check Pods Manifest.lock */,
 				3683320D2AEF8E7900F78FFD /* Sources */,
 				3683320E2AEF8E7900F78FFD /* Frameworks */,
 				3683320F2AEF8E7900F78FFD /* Resources */,
+				7B89987E6BA8FBAC1CA95DE1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -614,6 +657,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3683323E2AEF8E7B00F78FFD /* Build configuration list for PBXNativeTarget "belajar1Tests" */;
 			buildPhases = (
+				0D12EA27F55DF1815AAA6F78 /* [CP] Check Pods Manifest.lock */,
 				368332232AEF8E7B00F78FFD /* Sources */,
 				368332242AEF8E7B00F78FFD /* Frameworks */,
 				368332252AEF8E7B00F78FFD /* Resources */,
@@ -632,9 +676,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 368332412AEF8E7B00F78FFD /* Build configuration list for PBXNativeTarget "belajar1UITests" */;
 			buildPhases = (
+				259BCB3C6215F86D321D5E3F /* [CP] Check Pods Manifest.lock */,
 				3683322D2AEF8E7B00F78FFD /* Sources */,
 				3683322E2AEF8E7B00F78FFD /* Frameworks */,
 				3683322F2AEF8E7B00F78FFD /* Resources */,
+				E162AF5F878FB64FF613CE47 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -679,8 +725,8 @@
 			);
 			mainGroup = 368332082AEF8E7900F78FFD;
 			packageReferences = (
-				36B729BB2AF4B3E700738F22 /* XCRemoteSwiftPackageReference "Alamofire" */,
-				36B729C32AF4D0AE00738F22 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				36B729BB2AF4B3E700738F22 /* XCRemoteSwiftPackageReference "Alamofire.git" */,
+				36B729C32AF4D0AE00738F22 /* XCRemoteSwiftPackageReference "Kingfisher.git" */,
 			);
 			productRefGroup = 368332122AEF8E7900F78FFD /* Products */;
 			projectDirPath = "";
@@ -743,6 +789,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0D12EA27F55DF1815AAA6F78 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-belajar1Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		259BCB3C6215F86D321D5E3F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-belajar1-belajar1UITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7B89987E6BA8FBAC1CA95DE1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-belajar1/Pods-belajar1-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-belajar1/Pods-belajar1-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-belajar1/Pods-belajar1-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B55A9DA9CDA4F93227B93DA0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-belajar1-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E162AF5F878FB64FF613CE47 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-belajar1-belajar1UITests/Pods-belajar1-belajar1UITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-belajar1-belajar1UITests/Pods-belajar1-belajar1UITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-belajar1-belajar1UITests/Pods-belajar1-belajar1UITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3683320D2AEF8E7900F78FFD /* Sources */ = {
@@ -952,6 +1101,7 @@
 		};
 		3683323C2AEF8E7B00F78FFD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E7C226D35CFE049640F1665 /* Pods-belajar1.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -979,6 +1129,7 @@
 		};
 		3683323D2AEF8E7B00F78FFD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D394A6762907DB23B66A455E /* Pods-belajar1.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1006,6 +1157,7 @@
 		};
 		3683323F2AEF8E7B00F78FFD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7CDF20FC0D8DDA4868D7043 /* Pods-belajar1Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1025,6 +1177,7 @@
 		};
 		368332402AEF8E7B00F78FFD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 224131A811AA8E664C7051E4 /* Pods-belajar1Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1044,6 +1197,7 @@
 		};
 		368332422AEF8E7B00F78FFD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0B0E19D52C656F308A14238 /* Pods-belajar1-belajar1UITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1061,6 +1215,7 @@
 		};
 		368332432AEF8E7B00F78FFD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8CA2BDEB239139D4B8267ED2 /* Pods-belajar1-belajar1UITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1118,7 +1273,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		36B729BB2AF4B3E700738F22 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+		36B729BB2AF4B3E700738F22 /* XCRemoteSwiftPackageReference "Alamofire.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
@@ -1126,7 +1281,7 @@
 				minimumVersion = 5.0.0;
 			};
 		};
-		36B729C32AF4D0AE00738F22 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+		36B729C32AF4D0AE00738F22 /* XCRemoteSwiftPackageReference "Kingfisher.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
 			requirement = {
@@ -1139,12 +1294,12 @@
 /* Begin XCSwiftPackageProductDependency section */
 		36B729BC2AF4B3E700738F22 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 36B729BB2AF4B3E700738F22 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			package = 36B729BB2AF4B3E700738F22 /* XCRemoteSwiftPackageReference "Alamofire.git" */;
 			productName = Alamofire;
 		};
 		36B729C42AF4D0AE00738F22 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 36B729C32AF4D0AE00738F22 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			package = 36B729C32AF4D0AE00738F22 /* XCRemoteSwiftPackageReference "Kingfisher.git" */;
 			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */

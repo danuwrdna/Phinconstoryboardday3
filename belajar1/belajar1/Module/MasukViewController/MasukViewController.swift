@@ -1,5 +1,6 @@
 import UIKit
-
+import RxSwift
+import RxCocoa
 class MasukViewController: UIViewController {
     @IBOutlet weak var myView: UIView!
     @IBOutlet weak var textSalah: UIView!
@@ -29,10 +30,12 @@ class MasukViewController: UIViewController {
             }
         }
     }
-    
+    private let disposeBag = DisposeBag()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+        border()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -41,16 +44,38 @@ class MasukViewController: UIViewController {
     }
     func setup() {
         navigationController?.isNavigationBarHidden = true
-        emailTextField.placeholder = "Isi Dengan Benar"
-        passwordTextField.placeholder = "Isi Dengan Benar"
-        passwordTextField.isSecureTextEntry = true
         textSalah.isHidden = true
+        emailTextField.rx.text
+                   .subscribe(onNext: { [weak self] text in
+                       if let text = text, !text.isEmpty {
+                           // Memastikan hanya karakter angka yang diizinkan
+                           if let nonDigitRange = text.rangeOfCharacter(from: CharacterSet.decimalDigits.inverted) {
+                               // Jika karakter selain angka ditemukan, hapus karakter tersebut
+                               let cleanedText = String(text[text.startIndex..<nonDigitRange.lowerBound])
+                               self?.emailTextField.text = cleanedText
+                           }
+                       }
+                   })
+                   .disposed(by: disposeBag)
+               passwordTextField.rx.text
+                   .subscribe(onNext: { [weak self] text in
+                       if let text = text, !text.isEmpty {
+                           if let nonDigitRange = text.rangeOfCharacter(from: CharacterSet.decimalDigits.inverted) {
+                               let cleanedText = String(text[text.startIndex..<nonDigitRange.lowerBound])
+                               self?.passwordTextField.text = cleanedText
+                           }
+                       }
+                   })
+                   .disposed(by: disposeBag)
+           }
+    func border(){
         self.containerMasuk.roundedCorner(1, containerMasuk.frame.size.height/5)
-        self.masukImage.roundedCorner(1, masukImage.frame.size.height/2)
-        self.containerButton.roundedCorner(1, containerButton.frame.size.height/2)
-        self.containerLogin.roundedCorner(1, containerLogin.frame.size.height/2)
+               self.masukImage.roundedCorner(1, masukImage.frame.size.height/2)
+               self.containerButton.roundedCorner(1, containerButton.frame.size.height/2)
+               self.containerLogin.roundedCorner(1, containerLogin.frame.size.height/2)
+        passwordTextField.isSecureTextEntry = true
     }
-    
+       
     func animate() {
         UIView.animate(withDuration: 2, animations: {
             self.myView.frame = CGRect(x: 0, y: 0, width: 400, height: 400)

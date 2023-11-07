@@ -1,6 +1,4 @@
 import UIKit
-import Alamofire
-import Kingfisher
 struct Learn{
     let nama: String
     let description: String

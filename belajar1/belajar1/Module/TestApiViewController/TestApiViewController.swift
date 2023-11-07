@@ -19,7 +19,7 @@ class TestApiViewController: UIViewController {
         viewTable.delegate = self
         viewTable.register(UINib(nibName: "PokemonTableViewCell", bundle: nil), forCellReuseIdentifier: "PokemonTableViewCell")
     }
-    
+    //network api
     func fetchData(){
         let apiURL = "https://pokeapi.co/api/v2/pokemon?offset=0&limit=1000"
         NetworkManager.shared.makeAPICall(urlString: apiURL, method: .get, completion: { (response: Result<PokemontModel, Error>) in

@@ -21,7 +21,7 @@ class MainTabBarViewController: UITabBarController {
         pengaturan.tabBarItem = UITabBarItem(title: "Pengaturan", image: TabBar.icon4, tag: 3)
         foto.tabBarItem = UITabBarItem(title: "foto", image: TabBar.icon5, tag: 4)
         lainlain1.tabBarItem = UITabBarItem(title: "TestApi", image: TabBar.icon6, tag: 5)
-        scanbarcode.tabBarItem = UITabBarItem(title: "Scan Barcode", image: TabBar.icon7, tag: 6)
+        scanbarcode.tabBarItem = UITabBarItem(title: "List To Do", image: TabBar.icon7, tag: 6)
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.black], for: .normal)
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.black], for: .selected)
         UITabBar.appearance().tintColor = UIColor.black

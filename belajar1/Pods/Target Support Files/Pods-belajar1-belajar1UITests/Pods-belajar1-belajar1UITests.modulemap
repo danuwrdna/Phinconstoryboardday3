@@ -1,0 +1,6 @@
+framework module Pods_belajar1_belajar1UITests {
+  umbrella header "Pods-belajar1-belajar1UITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

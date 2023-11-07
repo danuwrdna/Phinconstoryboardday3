@@ -1,8 +1,18 @@
 import UIKit
+import AVFoundation
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var viewTable: UITableView!
     var songs = [Song]()
+    
+    public var playerFahmi: AVAudioPlayer!
+    
+    func playSound(soundName: String){
+        let url = Bundle.main.url(forResource: soundName, withExtension: "mp3")
+        playerFahmi = try! AVAudioPlayer(contentsOf: url!)
+        playerFahmi.play()
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -13,7 +23,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     func configureSongs(){
         songs.append(Song(name: "Yellow",
-                          albumName: "123 Something",
+                          albumName: "Yellow",
                           artistName: "Coldplay",
                           imageName: "350x350",
                           trackName: "Coldplay%20-%20Yellow%20%28Official%20Video%29_yKNxeF4KMsY"))
@@ -46,19 +56,33 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         viewTable.deselectRow(at: indexPath, animated: true)
         let position = indexPath.row
-        let vc = PlayerViewController()
-        self.navigationController?.present(vc, animated: true)
-        vc.songs = songs
-        vc.position = position
+        let song = songs[position]
+        
+        // Play the selected song
+        if let url = Bundle.main.url(forResource: song.trackName, withExtension: "mp3") {
+            do {
+                playerFahmi = try AVAudioPlayer(contentsOf: url)
+                playerFahmi.play()
+            } catch {
+                print("Error playing audio: \(error.localizedDescription)")
+            }
         }
-    
+       
+        // Create and present the PlayerViewController
+       // let vc = PlayerViewController()
+//        vc.songs = songs
+        //vc.position = position
+        //self.navigationController?.present(vc, animated: true)
     }
-
-struct Song{
-    let name: String
-    let albumName: String
-    let artistName: String
-    let imageName: String
-    let trackName: String
+    
+    
+    struct Song{
+        let name: String
+        let albumName: String
+        let artistName: String
+        let imageName: String
+        let trackName: String
+        
+    }
     
 }

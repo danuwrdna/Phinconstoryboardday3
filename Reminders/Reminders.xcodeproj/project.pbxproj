@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3686A16F2AF9DB14007A17A9 /* ToDoListItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3686A16D2AF9DB14007A17A9 /* ToDoListItem+CoreDataClass.swift */; };
+		3686A1702AF9DB14007A17A9 /* ToDoListItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3686A16E2AF9DB14007A17A9 /* ToDoListItem+CoreDataProperties.swift */; };
 		36B72A7B2AF8A60600738F22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B72A7A2AF8A60600738F22 /* AppDelegate.swift */; };
 		36B72A7D2AF8A60600738F22 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B72A7C2AF8A60600738F22 /* SceneDelegate.swift */; };
 		36B72A7F2AF8A60600738F22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B72A7E2AF8A60600738F22 /* ViewController.swift */; };
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3686A16D2AF9DB14007A17A9 /* ToDoListItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToDoListItem+CoreDataClass.swift"; sourceTree = "<group>"; };
+		3686A16E2AF9DB14007A17A9 /* ToDoListItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToDoListItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		36B72A772AF8A60600738F22 /* Reminders.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reminders.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36B72A7A2AF8A60600738F22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36B72A7C2AF8A60600738F22 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +82,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3686A1712AF9DB41007A17A9 /* ToDoListItem */ = {
+			isa = PBXGroup;
+			children = (
+				3686A16D2AF9DB14007A17A9 /* ToDoListItem+CoreDataClass.swift */,
+				3686A16E2AF9DB14007A17A9 /* ToDoListItem+CoreDataProperties.swift */,
+			);
+			path = ToDoListItem;
+			sourceTree = "<group>";
+		};
 		36B72A6E2AF8A60600738F22 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +114,7 @@
 		36B72A792AF8A60600738F22 /* Reminders */ = {
 			isa = PBXGroup;
 			children = (
+				3686A1712AF9DB41007A17A9 /* ToDoListItem */,
 				36B72A7A2AF8A60600738F22 /* AppDelegate.swift */,
 				36B72A7C2AF8A60600738F22 /* SceneDelegate.swift */,
 				36B72A7E2AF8A60600738F22 /* ViewController.swift */,
@@ -264,6 +278,8 @@
 				36B72A7F2AF8A60600738F22 /* ViewController.swift in Sources */,
 				36B72A7B2AF8A60600738F22 /* AppDelegate.swift in Sources */,
 				36B72A7D2AF8A60600738F22 /* SceneDelegate.swift in Sources */,
+				3686A16F2AF9DB14007A17A9 /* ToDoListItem+CoreDataClass.swift in Sources */,
+				3686A1702AF9DB14007A17A9 /* ToDoListItem+CoreDataProperties.swift in Sources */,
 				36B72A852AF8A60600738F22 /* Reminders.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
