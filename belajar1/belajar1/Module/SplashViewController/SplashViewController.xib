@@ -3,9 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -27,10 +25,11 @@
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Svf-5G-gNs">
                     <rect key="frame" x="285" y="691" width="75" height="31.666666666666629"/>
-                    <color key="backgroundColor" name="AccentColor"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain">
+                        <backgroundConfiguration key="background" cornerRadius="15" image="blank-blue-halftone-background_53876-114466"/>
                         <attributedString key="attributedTitle">
                             <fragment content="Login">
                                 <attributes>
@@ -46,10 +45,11 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W9U-Jz-LKJ">
                     <rect key="frame" x="286" y="742" width="72" height="31.666666666666629"/>
-                    <color key="backgroundColor" systemColor="systemYellowColor"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain">
+                        <backgroundConfiguration key="background" cornerRadius="15" image="360_F_542775509_kukwGVyxAEiLtbWF54xIHtQzil8QAwLC"/>
                         <attributedString key="attributedTitle">
                             <fragment content="Daftar">
                                 <attributes>
@@ -96,12 +96,8 @@
         </view>
     </objects>
     <resources>
+        <image name="360_F_542775509_kukwGVyxAEiLtbWF54xIHtQzil8QAwLC" width="637" height="360"/>
+        <image name="blank-blue-halftone-background_53876-114466" width="626" height="417"/>
         <image name="peakpx" width="720" height="1280"/>
-        <namedColor name="AccentColor">
-            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
     </resources>
 </document>

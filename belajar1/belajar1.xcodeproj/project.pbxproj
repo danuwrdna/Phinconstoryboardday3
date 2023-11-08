@@ -45,6 +45,7 @@
 		368332962AF0EBAD00F78FFD /* PopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 368332942AF0EBAD00F78FFD /* PopViewController.xib */; };
 		368332992AF0EF7F00F78FFD /* TextFieldViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 368332982AF0EF7F00F78FFD /* TextFieldViewController.xib */; };
 		3683329B2AF0F13100F78FFD /* TextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3683329A2AF0F13100F78FFD /* TextFieldViewController.swift */; };
+		3686A1762AFB5E7E007A17A9 /* TestApiViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3686A1752AFB5E7E007A17A9 /* TestApiViewModel.swift */; };
 		36B729422AF1E85E00738F22 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B729402AF1E85E00738F22 /* ScanViewController.swift */; };
 		36B729432AF1E85E00738F22 /* ScanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36B729412AF1E85E00738F22 /* ScanViewController.xib */; };
 		36B729472AF1EC5300738F22 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B729452AF1EC5300738F22 /* GalleryViewController.swift */; };
@@ -138,6 +139,7 @@
 		368332942AF0EBAD00F78FFD /* PopViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopViewController.xib; sourceTree = "<group>"; };
 		368332982AF0EF7F00F78FFD /* TextFieldViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldViewController.xib; sourceTree = "<group>"; };
 		3683329A2AF0F13100F78FFD /* TextFieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldViewController.swift; sourceTree = "<group>"; };
+		3686A1752AFB5E7E007A17A9 /* TestApiViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestApiViewModel.swift; sourceTree = "<group>"; };
 		36B729402AF1E85E00738F22 /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
 		36B729412AF1E85E00738F22 /* ScanViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScanViewController.xib; sourceTree = "<group>"; };
 		36B729452AF1EC5300738F22 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
@@ -275,7 +277,6 @@
 		368332462AEF8E9000F78FFD /* Module */ = {
 			isa = PBXGroup;
 			children = (
-				36B72AAD2AF8C6A600738F22 /* New Group */,
 				36B729AF2AF4A9FD00738F22 /* TestApiViewController */,
 				36B7299E2AF3997A00738F22 /* SplashViewController */,
 				36B729992AF393A700738F22 /* DaftarViewController */,
@@ -479,6 +480,14 @@
 			path = CustomViewController;
 			sourceTree = "<group>";
 		};
+		3686A1742AFB5E55007A17A9 /* TestApiViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3686A1752AFB5E7E007A17A9 /* TestApiViewModel.swift */,
+			);
+			path = TestApiViewModel;
+			sourceTree = "<group>";
+		};
 		36B7293F2AF1E84400738F22 /* ScanViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -571,6 +580,7 @@
 		36B729AF2AF4A9FD00738F22 /* TestApiViewController */ = {
 			isa = PBXGroup;
 			children = (
+				3686A1742AFB5E55007A17A9 /* TestApiViewModel */,
 				36B729BE2AF4C13D00738F22 /* Model */,
 				36B729B62AF4ADAB00738F22 /* cell */,
 				36B729B02AF4AA2600738F22 /* TestApiViewController.swift */,
@@ -596,13 +606,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		36B72AAD2AF8C6A600738F22 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
-			sourceTree = "<group>";
-		};
 		37870D75129C7C8C942D4BE8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -613,7 +616,6 @@
 				E7CDF20FC0D8DDA4868D7043 /* Pods-belajar1Tests.debug.xcconfig */,
 				224131A811AA8E664C7051E4 /* Pods-belajar1Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -725,8 +727,8 @@
 			);
 			mainGroup = 368332082AEF8E7900F78FFD;
 			packageReferences = (
-				36B729BB2AF4B3E700738F22 /* XCRemoteSwiftPackageReference "Alamofire.git" */,
-				36B729C32AF4D0AE00738F22 /* XCRemoteSwiftPackageReference "Kingfisher.git" */,
+				36B729BB2AF4B3E700738F22 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				36B729C32AF4D0AE00738F22 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 368332122AEF8E7900F78FFD /* Products */;
 			projectDirPath = "";
@@ -918,6 +920,7 @@
 				36B7299C2AF393C200738F22 /* DaftarViewController.swift in Sources */,
 				368332152AEF8E7900F78FFD /* AppDelegate.swift in Sources */,
 				3683324F2AEF8F3F00F78FFD /* HewanViewController.swift in Sources */,
+				3686A1762AFB5E7E007A17A9 /* TestApiViewModel.swift in Sources */,
 				36B729C22AF4C4D400738F22 /* ExtUIView.swift in Sources */,
 				36B729472AF1EC5300738F22 /* GalleryViewController.swift in Sources */,
 				36B729B92AF4ADC500738F22 /* PokemonTableViewCell.swift in Sources */,
@@ -1273,7 +1276,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		36B729BB2AF4B3E700738F22 /* XCRemoteSwiftPackageReference "Alamofire.git" */ = {
+		36B729BB2AF4B3E700738F22 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
@@ -1281,7 +1284,7 @@
 				minimumVersion = 5.0.0;
 			};
 		};
-		36B729C32AF4D0AE00738F22 /* XCRemoteSwiftPackageReference "Kingfisher.git" */ = {
+		36B729C32AF4D0AE00738F22 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
 			requirement = {
@@ -1294,12 +1297,12 @@
 /* Begin XCSwiftPackageProductDependency section */
 		36B729BC2AF4B3E700738F22 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 36B729BB2AF4B3E700738F22 /* XCRemoteSwiftPackageReference "Alamofire.git" */;
+			package = 36B729BB2AF4B3E700738F22 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
 		36B729C42AF4D0AE00738F22 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 36B729C32AF4D0AE00738F22 /* XCRemoteSwiftPackageReference "Kingfisher.git" */;
+			package = 36B729C32AF4D0AE00738F22 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */

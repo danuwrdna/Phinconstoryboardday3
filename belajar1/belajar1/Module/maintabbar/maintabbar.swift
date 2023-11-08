@@ -22,9 +22,9 @@ class MainTabBarViewController: UITabBarController {
         foto.tabBarItem = UITabBarItem(title: "foto", image: TabBar.icon5, tag: 4)
         lainlain1.tabBarItem = UITabBarItem(title: "TestApi", image: TabBar.icon6, tag: 5)
         scanbarcode.tabBarItem = UITabBarItem(title: "List To Do", image: TabBar.icon7, tag: 6)
-        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.black], for: .normal)
-        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.black], for: .selected)
-        UITabBar.appearance().tintColor = UIColor.black
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.blue], for: .normal)
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.blue], for: .selected)
+        UITabBar.appearance().tintColor = UIColor.blue
     }
      func setViewControllers() {
         setViewControllers([homeVC,pickers,progress,pengaturan,foto,lainlain1,scanbarcode], animated: true)

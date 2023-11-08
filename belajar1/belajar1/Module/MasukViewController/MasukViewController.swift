@@ -10,14 +10,25 @@ class MasukViewController: UIViewController {
     @IBOutlet weak var containerLogin: UIView!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    
     @IBAction func daftarButton(_ sender: Any) {
         let serigalabutton = DaftarViewController()
         self.navigationController?.pushViewController(serigalabutton, animated: true)
     }
     @IBAction func buttonLogin(_ sender: Any) {
-        // Set status login ke true saat berhasil login
-                
+                auth()
+    }
+    private let disposeBag = DisposeBag()
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setup()
+        border()
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        animate()
+    }
+    func auth (){
         let username = emailTextField.text
         let password = passwordTextField.text
         if username == "123" && password == "123" {
@@ -29,18 +40,6 @@ class MasukViewController: UIViewController {
                 self.textSalah.isHidden = true
             }
         }
-    }
-    private let disposeBag = DisposeBag()
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setup()
-        border()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        animate()
     }
     func setup() {
         navigationController?.isNavigationBarHidden = true
@@ -69,10 +68,7 @@ class MasukViewController: UIViewController {
                    .disposed(by: disposeBag)
            }
     func border(){
-        self.containerMasuk.roundedCorner(1, containerMasuk.frame.size.height/5)
-               self.masukImage.roundedCorner(1, masukImage.frame.size.height/2)
-               self.containerButton.roundedCorner(1, containerButton.frame.size.height/2)
-               self.containerLogin.roundedCorner(1, containerLogin.frame.size.height/2)
+        self.containerMasuk.roundedCorner(1, containerMasuk.frame.size.height/8)
         passwordTextField.isSecureTextEntry = true
     }
        

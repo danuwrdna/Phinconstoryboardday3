@@ -10,6 +10,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DaftarViewController" customModule="belajar1" customModuleProvider="target">
             <connections>
+                <outlet property="buttonLogin" destination="wSH-aU-0w0" id="M0g-pF-S0m"/>
+                <outlet property="containerDaftar" destination="w6j-6i-FHS" id="BYt-At-set"/>
+                <outlet property="emailDaftar" destination="b2b-gZ-h0M" id="CIb-oi-CtU"/>
+                <outlet property="erorText" destination="eJL-4p-M1P" id="HfK-Wp-pPz"/>
+                <outlet property="passwordDaftar" destination="rg9-5Q-Nvz" id="AtN-Jg-fWo"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,8 +23,26 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="40287474-group-of-wild-animals-on-white-background" translatesAutoresizingMaskIntoConstraints="NO" id="xxh-I4-TSG">
+                    <rect key="frame" x="82" y="11" width="229" height="163"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="163" id="68G-qy-MRH"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Silahkan Daftar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x5G-4V-385">
+                    <rect key="frame" x="131" y="162" width="130" height="20"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Untuk Menikmati Fitur Kami" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vrN-SW-Rno">
+                    <rect key="frame" x="107" y="190" width="178" height="18"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w6j-6i-FHS">
-                    <rect key="frame" x="60" y="243" width="273" height="280"/>
+                    <rect key="frame" x="60" y="247" width="273" height="232"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EiL-l0-ZxS">
                             <rect key="frame" x="8" y="53" width="41" height="19.333333333333329"/>
@@ -27,7 +50,7 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b2b-gZ-h0M">
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Kamu" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b2b-gZ-h0M">
                             <rect key="frame" x="8" y="74.333333333333314" width="257" height="34"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
@@ -38,17 +61,18 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rg9-5Q-Nvz">
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Passwordnya Yang Sulit" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rg9-5Q-Nvz">
                             <rect key="frame" x="8" y="138" width="257" height="34"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Df-hS-SAi">
                             <rect key="frame" x="177" y="180" width="84" height="32.666666666666657"/>
-                            <color key="backgroundColor" red="0.0" green="0.98106676339999999" blue="0.57369142770000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain">
+                                <backgroundConfiguration key="background" cornerRadius="15" image="photo-1617957718645-7680362d6312"/>
                                 <attributedString key="attributedTitle">
                                     <fragment content="Konfirm">
                                         <attributes>
@@ -59,23 +83,74 @@
                                 </attributedString>
                             </buttonConfiguration>
                         </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Masukkan Email Yang Valid" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJL-4p-M1P">
+                            <rect key="frame" x="57" y="56" width="131" height="12"/>
+                            <color key="tintColor" red="0.83341248170000004" green="0.28624163209999998" blue="0.37551975180000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                            <color key="textColor" red="0.83341248170000004" green="0.28624163209999998" blue="0.37551975180000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wSH-aU-0w0">
+                            <rect key="frame" x="8" y="179" width="64" height="32.666666666666657"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Button">
+                                <attributedString key="attributedTitle">
+                                    <fragment content="Login">
+                                        <attributes>
+                                            <font key="NSFont" size="16" name="Herculanum"/>
+                                            <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                            </state>
+                            <buttonConfiguration key="configuration" style="plain">
+                                <backgroundConfiguration key="background" cornerRadius="15" image="blank-blue-halftone-background_53876-114466"/>
+                                <attributedString key="attributedTitle">
+                                    <fragment content="Login">
+                                        <attributes>
+                                            <font key="NSFont" size="16" name="Herculanum"/>
+                                            <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                            </buttonConfiguration>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daftar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4sW-lX-a7f">
+                            <rect key="frame" x="111" y="8" width="51" height="21"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemGray6Color"/>
                     <constraints>
                         <constraint firstItem="0Df-hS-SAi" firstAttribute="top" secondItem="rg9-5Q-Nvz" secondAttribute="bottom" constant="8" symbolic="YES" id="0aE-8Y-5lS"/>
+                        <constraint firstAttribute="trailing" secondItem="4sW-lX-a7f" secondAttribute="trailing" constant="111" id="160-t7-YhC"/>
                         <constraint firstAttribute="trailing" secondItem="HGY-Lk-lWg" secondAttribute="trailing" constant="191" id="2lv-08-WFh"/>
+                        <constraint firstItem="0Df-hS-SAi" firstAttribute="leading" secondItem="wSH-aU-0w0" secondAttribute="trailing" constant="105" id="5iE-xl-HrD"/>
                         <constraint firstItem="rg9-5Q-Nvz" firstAttribute="leading" secondItem="w6j-6i-FHS" secondAttribute="leading" constant="8" id="8hs-O1-Yrt"/>
                         <constraint firstAttribute="trailing" secondItem="b2b-gZ-h0M" secondAttribute="trailing" constant="8" id="CC7-h2-xwc"/>
+                        <constraint firstItem="4sW-lX-a7f" firstAttribute="leading" secondItem="w6j-6i-FHS" secondAttribute="leading" constant="111" id="LNg-WL-grc"/>
+                        <constraint firstItem="eJL-4p-M1P" firstAttribute="leading" secondItem="EiL-l0-ZxS" secondAttribute="trailing" constant="8" symbolic="YES" id="M8Z-Ks-gGT"/>
+                        <constraint firstItem="wSH-aU-0w0" firstAttribute="leading" secondItem="w6j-6i-FHS" secondAttribute="leading" constant="8" id="MFG-UE-wBc"/>
+                        <constraint firstItem="wSH-aU-0w0" firstAttribute="top" secondItem="rg9-5Q-Nvz" secondAttribute="bottom" constant="7" id="MJt-Ii-QCk"/>
                         <constraint firstAttribute="trailing" secondItem="rg9-5Q-Nvz" secondAttribute="trailing" constant="8" id="OZY-is-Fgo"/>
-                        <constraint firstAttribute="height" constant="280" id="Pn9-Gi-uG9"/>
+                        <constraint firstAttribute="height" constant="232" id="Pn9-Gi-uG9"/>
                         <constraint firstAttribute="trailing" secondItem="EiL-l0-ZxS" secondAttribute="trailing" constant="224" id="U74-iZ-wGz"/>
+                        <constraint firstItem="eJL-4p-M1P" firstAttribute="top" secondItem="w6j-6i-FHS" secondAttribute="top" constant="56" id="UQ2-dX-AcQ"/>
                         <constraint firstItem="HGY-Lk-lWg" firstAttribute="top" secondItem="b2b-gZ-h0M" secondAttribute="bottom" constant="8" symbolic="YES" id="VPO-3L-4ai"/>
                         <constraint firstItem="EiL-l0-ZxS" firstAttribute="leading" secondItem="w6j-6i-FHS" secondAttribute="leading" constant="8" id="Yho-2x-TFA"/>
                         <constraint firstItem="rg9-5Q-Nvz" firstAttribute="top" secondItem="HGY-Lk-lWg" secondAttribute="bottom" constant="3" id="aO8-u3-hdY"/>
+                        <constraint firstAttribute="trailing" secondItem="eJL-4p-M1P" secondAttribute="trailing" constant="85" id="dBW-f7-bp6"/>
                         <constraint firstItem="EiL-l0-ZxS" firstAttribute="top" secondItem="w6j-6i-FHS" secondAttribute="top" constant="53" id="dpp-f7-z8N"/>
                         <constraint firstItem="b2b-gZ-h0M" firstAttribute="top" secondItem="EiL-l0-ZxS" secondAttribute="bottom" constant="2" id="ezL-2B-pGh"/>
                         <constraint firstItem="b2b-gZ-h0M" firstAttribute="leading" secondItem="w6j-6i-FHS" secondAttribute="leading" constant="8" id="f13-22-KPt"/>
                         <constraint firstItem="HGY-Lk-lWg" firstAttribute="leading" secondItem="w6j-6i-FHS" secondAttribute="leading" constant="8" id="gzr-FO-ZXe"/>
+                        <constraint firstItem="4sW-lX-a7f" firstAttribute="top" secondItem="w6j-6i-FHS" secondAttribute="top" constant="8" id="mop-Ut-XKv"/>
                         <constraint firstAttribute="trailing" secondItem="0Df-hS-SAi" secondAttribute="trailing" constant="12" id="uLI-Xl-ZQp"/>
                         <constraint firstItem="0Df-hS-SAi" firstAttribute="leading" secondItem="w6j-6i-FHS" secondAttribute="leading" constant="177" id="x7n-wh-4X5"/>
                     </constraints>
@@ -85,13 +160,25 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="w6j-6i-FHS" secondAttribute="trailing" constant="60" id="5lO-tu-JoO"/>
-                <constraint firstItem="w6j-6i-FHS" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="184" id="Lxy-iq-J6W"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="vrN-SW-Rno" secondAttribute="trailing" constant="108" id="F6d-bY-AxM"/>
+                <constraint firstItem="vrN-SW-Rno" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="107" id="Kdf-lJ-8U7"/>
+                <constraint firstItem="w6j-6i-FHS" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="188" id="Lxy-iq-J6W"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="x5G-4V-385" secondAttribute="trailing" constant="132" id="NmG-lV-SKX"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xxh-I4-TSG" secondAttribute="trailing" constant="82" id="Taq-Fp-uus"/>
+                <constraint firstItem="vrN-SW-Rno" firstAttribute="top" secondItem="x5G-4V-385" secondAttribute="bottom" constant="8" symbolic="YES" id="XHL-jQ-e1o"/>
+                <constraint firstItem="x5G-4V-385" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="131" id="of7-cV-2u0"/>
+                <constraint firstItem="x5G-4V-385" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="103" id="qfK-dE-O1H"/>
                 <constraint firstItem="w6j-6i-FHS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="60" id="v5Q-Ty-aJ7"/>
+                <constraint firstItem="xxh-I4-TSG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="82" id="wUL-PO-NPd"/>
+                <constraint firstItem="xxh-I4-TSG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="11" id="wwM-dh-DnM"/>
             </constraints>
             <point key="canvasLocation" x="-25.190839694656489" y="19.718309859154932"/>
         </view>
     </objects>
     <resources>
+        <image name="40287474-group-of-wild-animals-on-white-background" width="626" height="417"/>
+        <image name="blank-blue-halftone-background_53876-114466" width="626" height="417"/>
+        <image name="photo-1617957718645-7680362d6312" width="1000" height="563"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
