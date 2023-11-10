@@ -29,7 +29,7 @@
                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain">
-                        <backgroundConfiguration key="background" cornerRadius="15" image="blank-blue-halftone-background_53876-114466"/>
+                        <backgroundConfiguration key="background" cornerRadius="15" image="aa2"/>
                         <attributedString key="attributedTitle">
                             <fragment content="Login">
                                 <attributes>
@@ -49,7 +49,7 @@
                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain">
-                        <backgroundConfiguration key="background" cornerRadius="15" image="360_F_542775509_kukwGVyxAEiLtbWF54xIHtQzil8QAwLC"/>
+                        <backgroundConfiguration key="background" cornerRadius="15" image="aa1"/>
                         <attributedString key="attributedTitle">
                             <fragment content="Daftar">
                                 <attributes>
@@ -96,8 +96,8 @@
         </view>
     </objects>
     <resources>
-        <image name="360_F_542775509_kukwGVyxAEiLtbWF54xIHtQzil8QAwLC" width="637" height="360"/>
-        <image name="blank-blue-halftone-background_53876-114466" width="626" height="417"/>
+        <image name="aa1" width="637" height="360"/>
+        <image name="aa2" width="626" height="417"/>
         <image name="peakpx" width="720" height="1280"/>
     </resources>
 </document>

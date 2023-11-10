@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2802BF23573A0ADECD9FE69D /* Pods_belajar1Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8C3AF9017ACC4829CCABDF6 /* Pods_belajar1Tests.framework */; };
+		36421A782AFDE637001369E2 /* ExtCheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36421A772AFDE637001369E2 /* ExtCheckBox.swift */; };
 		368332152AEF8E7900F78FFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368332142AEF8E7900F78FFD /* AppDelegate.swift */; };
 		368332172AEF8E7900F78FFD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368332162AEF8E7900F78FFD /* SceneDelegate.swift */; };
 		368332192AEF8E7900F78FFD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368332182AEF8E7900F78FFD /* ViewController.swift */; };
@@ -46,6 +47,8 @@
 		368332992AF0EF7F00F78FFD /* TextFieldViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 368332982AF0EF7F00F78FFD /* TextFieldViewController.xib */; };
 		3683329B2AF0F13100F78FFD /* TextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3683329A2AF0F13100F78FFD /* TextFieldViewController.swift */; };
 		3686A1762AFB5E7E007A17A9 /* TestApiViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3686A1752AFB5E7E007A17A9 /* TestApiViewModel.swift */; };
+		3686A1BC2AFDC7F4007A17A9 /* FaqViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3686A1BA2AFDC7F4007A17A9 /* FaqViewController.swift */; };
+		3686A1BD2AFDC7F4007A17A9 /* FaqViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3686A1BB2AFDC7F4007A17A9 /* FaqViewController.xib */; };
 		36B729422AF1E85E00738F22 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B729402AF1E85E00738F22 /* ScanViewController.swift */; };
 		36B729432AF1E85E00738F22 /* ScanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36B729412AF1E85E00738F22 /* ScanViewController.xib */; };
 		36B729472AF1EC5300738F22 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B729452AF1EC5300738F22 /* GalleryViewController.swift */; };
@@ -98,6 +101,7 @@
 		1E7C226D35CFE049640F1665 /* Pods-belajar1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-belajar1.debug.xcconfig"; path = "Target Support Files/Pods-belajar1/Pods-belajar1.debug.xcconfig"; sourceTree = "<group>"; };
 		224131A811AA8E664C7051E4 /* Pods-belajar1Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-belajar1Tests.release.xcconfig"; path = "Target Support Files/Pods-belajar1Tests/Pods-belajar1Tests.release.xcconfig"; sourceTree = "<group>"; };
 		3272307CCA29A69293A4A376 /* Pods_belajar1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_belajar1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		36421A772AFDE637001369E2 /* ExtCheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtCheckBox.swift; sourceTree = "<group>"; };
 		368332112AEF8E7900F78FFD /* belajar1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = belajar1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		368332142AEF8E7900F78FFD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		368332162AEF8E7900F78FFD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -140,6 +144,8 @@
 		368332982AF0EF7F00F78FFD /* TextFieldViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldViewController.xib; sourceTree = "<group>"; };
 		3683329A2AF0F13100F78FFD /* TextFieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldViewController.swift; sourceTree = "<group>"; };
 		3686A1752AFB5E7E007A17A9 /* TestApiViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestApiViewModel.swift; sourceTree = "<group>"; };
+		3686A1BA2AFDC7F4007A17A9 /* FaqViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaqViewController.swift; sourceTree = "<group>"; };
+		3686A1BB2AFDC7F4007A17A9 /* FaqViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FaqViewController.xib; sourceTree = "<group>"; };
 		36B729402AF1E85E00738F22 /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
 		36B729412AF1E85E00738F22 /* ScanViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScanViewController.xib; sourceTree = "<group>"; };
 		36B729452AF1EC5300738F22 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
@@ -277,6 +283,7 @@
 		368332462AEF8E9000F78FFD /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				3686A1B92AFDC7D4007A17A9 /* FaqViewController */,
 				36B729AF2AF4A9FD00738F22 /* TestApiViewController */,
 				36B7299E2AF3997A00738F22 /* SplashViewController */,
 				36B729992AF393A700738F22 /* DaftarViewController */,
@@ -316,6 +323,7 @@
 			isa = PBXGroup;
 			children = (
 				36B729C12AF4C4D400738F22 /* ExtUIView.swift */,
+				36421A772AFDE637001369E2 /* ExtCheckBox.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -486,6 +494,15 @@
 				3686A1752AFB5E7E007A17A9 /* TestApiViewModel.swift */,
 			);
 			path = TestApiViewModel;
+			sourceTree = "<group>";
+		};
+		3686A1B92AFDC7D4007A17A9 /* FaqViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3686A1BA2AFDC7F4007A17A9 /* FaqViewController.swift */,
+				3686A1BB2AFDC7F4007A17A9 /* FaqViewController.xib */,
+			);
+			path = FaqViewController;
 			sourceTree = "<group>";
 		};
 		36B7293F2AF1E84400738F22 /* ScanViewController */ = {
@@ -763,6 +780,7 @@
 				36B729432AF1E85E00738F22 /* ScanViewController.xib in Resources */,
 				3683327C2AF0AFCD00F78FFD /* ProgressViewController.xib in Resources */,
 				3683328C2AF0DC5200F78FFD /* TableViewCell.xib in Resources */,
+				3686A1BD2AFDC7F4007A17A9 /* FaqViewController.xib in Resources */,
 				36B729B32AF4AA2600738F22 /* TestApiViewController.xib in Resources */,
 				368332682AEFA1CA00F78FFD /* SerigalaViewController.xib in Resources */,
 				36B7298E2AF2343E00738F22 /* LokasiViewController.xib in Resources */,
@@ -919,6 +937,7 @@
 				368332802AF0BE6A00F78FFD /* PengaturanViewController.swift in Sources */,
 				36B7299C2AF393C200738F22 /* DaftarViewController.swift in Sources */,
 				368332152AEF8E7900F78FFD /* AppDelegate.swift in Sources */,
+				3686A1BC2AFDC7F4007A17A9 /* FaqViewController.swift in Sources */,
 				3683324F2AEF8F3F00F78FFD /* HewanViewController.swift in Sources */,
 				3686A1762AFB5E7E007A17A9 /* TestApiViewModel.swift in Sources */,
 				36B729C22AF4C4D400738F22 /* ExtUIView.swift in Sources */,
@@ -933,6 +952,7 @@
 				368332712AF093E900F78FFD /* PickersViewController.swift in Sources */,
 				36B729922AF333CB00738F22 /* GagalViewController.swift in Sources */,
 				36B729B52AF4AD0200738F22 /* PokemonResource.swift in Sources */,
+				36421A782AFDE637001369E2 /* ExtCheckBox.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

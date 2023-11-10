@@ -19,33 +19,29 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4AW-wV-dmp">
-                    <rect key="frame" x="0.0" y="39" width="393" height="433"/>
-                    <subviews>
-                        <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="RY0-yO-Jha">
-                            <rect key="frame" x="4" y="-49" width="393" height="393"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            <inset key="scrollIndicatorInsets" minX="0.0" minY="-500" maxX="0.0" maxY="0.0"/>
-                        </tableView>
-                    </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="RY0-yO-Jha">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <inset key="scrollIndicatorInsets" minX="0.0" minY="-500" maxX="0.0" maxY="0.0"/>
+                    <color key="separatorColor" systemColor="labelColor"/>
+                    <color key="sectionIndexBackgroundColor" systemColor="labelColor"/>
+                </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" systemColor="labelColor"/>
             <constraints>
-                <constraint firstItem="4AW-wV-dmp" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="39" id="GIP-Fp-vn7"/>
-                <constraint firstAttribute="trailing" secondItem="4AW-wV-dmp" secondAttribute="trailing" id="IWX-ne-pXh"/>
-                <constraint firstItem="4AW-wV-dmp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Ml8-m0-xrR"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="4AW-wV-dmp" secondAttribute="bottom" constant="346" id="nsP-gV-P8U"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="RY0-yO-Jha" secondAttribute="bottom" constant="-34" id="Lxw-FS-Ea1"/>
+                <constraint firstItem="RY0-yO-Jha" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ZnN-du-pjk"/>
+                <constraint firstItem="RY0-yO-Jha" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="kmF-vE-t8h"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="RY0-yO-Jha" secondAttribute="trailing" id="yuL-Ck-geX"/>
             </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="46.564885496183201" y="20.422535211267608"/>
         </view>
     </objects>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

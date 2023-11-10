@@ -3,12 +3,15 @@ import UIKit
 class TableViewCell: UITableViewCell {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var pageAutoCarousel: UIPageControl!
-    
-    var images = (1...2).compactMap{ namaFile in
-        UIImage(named: "aa\(namaFile)")}
+    @IBAction func lanjutButton(_ sender: Any) {
+        setupAndNavigate()
+    }
+    @IBOutlet weak var lanjutButton: UIButton!
+    var images = (1...3).compactMap{ namaFile in
+        UIImage(named: "b\(namaFile)")}
     var timer: Timer?
     var currentIndex = 0
-    
+   
     override func awakeFromNib() {
         super.awakeFromNib()
         setupCollection()
@@ -16,6 +19,18 @@ class TableViewCell: UITableViewCell {
         startAutoSlide()
         print("ini file danu: \(images)")
     }
+    func setupAndNavigate(){
+        var responder: UIResponder? = self
+            while responder != nil && !(responder is UIViewController) {
+                responder = responder?.next
+            }
+
+            if let viewController = responder as? UIViewController {
+                let lanjutButton = FaqViewController()
+                viewController.navigationController?.pushViewController(lanjutButton, animated: true)
+            }
+    }
+    
     func setupCollection(){
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -47,10 +62,12 @@ extension TableViewCell: UICollectionViewDelegate, UICollectionViewDataSource, U
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 600, height: 600)
+        return CGSize(width: 400, height: 1000)
     }
     
     
     
     
 }
+
+

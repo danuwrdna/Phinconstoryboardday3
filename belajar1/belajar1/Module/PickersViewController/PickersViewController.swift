@@ -13,9 +13,9 @@ class PickersViewController: UIViewController {
         let kembalibutton = HomeViewController()
         self.navigationController?.pushViewController(kembalibutton, animated: true)
     }
-    let kebersihan = ["Lengkap","Biasa Aja", "Tidak lengkap"]
-    let hewan = ["Efektif", "Tidak Efektif"]
-    let pelayanan = ["Tepat","Tidak Tepat"]
+    let kebersihan = ["Bersih","Biasa Aja", "Kotor"]
+    let aplikasi = ["Mudah Digunakan", "Tidak Mudah Digunakan"]
+    let pelayanan = ["Ramah","Tidak Ramah"]
     
     var kebersihanPickerView = UIPickerView()
     var hewanPickerView = UIPickerView()
@@ -23,7 +23,9 @@ class PickersViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setup()
+    }
+    func setup(){
         penilaianKebersihan.inputView = kebersihanPickerView
         penilaianHewan.inputView = hewanPickerView
         penilaianPelayanan.inputView = pelayananPickerView
@@ -53,7 +55,7 @@ extension PickersViewController: UIPickerViewDataSource, UIPickerViewDelegate{
         case 1:
             return kebersihan.count
         case 2:
-            return hewan.count
+            return aplikasi.count
         case 3:
             return pelayanan.count
         default:
@@ -66,7 +68,7 @@ extension PickersViewController: UIPickerViewDataSource, UIPickerViewDelegate{
         case 1:
             return kebersihan[row]
         case 2:
-            return hewan[row]
+            return aplikasi[row]
         case 3:
             return pelayanan[row]
         default:
@@ -79,7 +81,7 @@ extension PickersViewController: UIPickerViewDataSource, UIPickerViewDelegate{
             penilaianKebersihan.text = kebersihan[row]
             penilaianKebersihan.resignFirstResponder()
         case 2:
-            penilaianHewan.text = hewan[row]
+            penilaianHewan.text = aplikasi[row]
             penilaianHewan.resignFirstResponder()
         case 3:
             penilaianPelayanan.text = pelayanan[row]

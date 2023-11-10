@@ -20,20 +20,9 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BsE-XP-PqH">
                     <rect key="frame" x="0.0" y="755" width="393" height="97"/>
-                    <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="images" translatesAutoresizingMaskIntoConstraints="NO" id="mCV-yq-k5q">
-                            <rect key="frame" x="0.0" y="-8" width="393" height="105"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="105" id="zt3-fa-oBf"/>
-                            </constraints>
-                        </imageView>
-                    </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="97" id="17c-WZ-Igh"/>
-                        <constraint firstItem="mCV-yq-k5q" firstAttribute="leading" secondItem="BsE-XP-PqH" secondAttribute="leading" id="8YU-wC-jWe"/>
-                        <constraint firstAttribute="trailing" secondItem="mCV-yq-k5q" secondAttribute="trailing" id="S1v-eP-dfo"/>
-                        <constraint firstItem="mCV-yq-k5q" firstAttribute="top" secondItem="BsE-XP-PqH" secondAttribute="top" constant="-8" id="dkO-0Z-ggc"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2eu-Fc-xTS">
@@ -163,7 +152,6 @@
         <image name="arrow.up.doc.fill" catalog="system" width="115" height="128"/>
         <image name="camera.metering.matrix" catalog="system" width="128" height="93"/>
         <image name="doc.text.image.fill" catalog="system" width="115" height="128"/>
-        <image name="images" width="503" height="342"/>
         <image name="moonphase.waning.crescent.inverse" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

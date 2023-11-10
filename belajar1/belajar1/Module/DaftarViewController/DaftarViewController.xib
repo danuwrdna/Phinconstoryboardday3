@@ -72,7 +72,7 @@
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain">
-                                <backgroundConfiguration key="background" cornerRadius="15" image="photo-1617957718645-7680362d6312"/>
+                                <backgroundConfiguration key="background" cornerRadius="15" image="6"/>
                                 <attributedString key="attributedTitle">
                                     <fragment content="Konfirm">
                                         <attributes>
@@ -107,7 +107,7 @@
                                 </attributedString>
                             </state>
                             <buttonConfiguration key="configuration" style="plain">
-                                <backgroundConfiguration key="background" cornerRadius="15" image="blank-blue-halftone-background_53876-114466"/>
+                                <backgroundConfiguration key="background" cornerRadius="15" image="aa2"/>
                                 <attributedString key="attributedTitle">
                                     <fragment content="Login">
                                         <attributes>
@@ -177,8 +177,8 @@
     </objects>
     <resources>
         <image name="40287474-group-of-wild-animals-on-white-background" width="626" height="417"/>
-        <image name="blank-blue-halftone-background_53876-114466" width="626" height="417"/>
-        <image name="photo-1617957718645-7680362d6312" width="1000" height="563"/>
+        <image name="6" width="1000" height="563"/>
+        <image name="aa2" width="626" height="417"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

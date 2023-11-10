@@ -10,15 +10,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="174" id="KGk-i7-Jjw" customClass="TableViewCell" customModule="belajar1" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="173" height="174"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="191" id="KGk-i7-Jjw" customClass="TableViewCell" customModule="belajar1" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="184" height="191"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="173" height="174"/>
+                <rect key="frame" x="0.0" y="0.0" width="184" height="191"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Lj2-YW-Qh3">
-                        <rect key="frame" x="0.0" y="0.0" width="173" height="174"/>
+                        <rect key="frame" x="0.0" y="0.0" width="184" height="191"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="kGl-nn-VEf">
                             <size key="itemSize" width="400" height="128"/>
@@ -28,29 +28,53 @@
                         </collectionViewFlowLayout>
                     </collectionView>
                     <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="akn-UM-rd2">
-                        <rect key="frame" x="16" y="138" width="141" height="20"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <rect key="frame" x="13" y="116" width="152" height="20"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="JTB-21-hIp"/>
                         </constraints>
                     </pageControl>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KSK-vQ-ueL">
+                        <rect key="frame" x="104.00000000000001" y="145" width="63.666666666666671" height="35"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="35" id="b3a-7T-yLl"/>
+                        </constraints>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="filled">
+                            <attributedString key="attributedTitle">
+                                <fragment content="Lanjut">
+                                    <attributes>
+                                        <font key="NSFont" size="14" name="Papyrus"/>
+                                        <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                        </buttonConfiguration>
+                        <connections>
+                            <action selector="lanjutButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="OG0-tb-uPd"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="Lj2-YW-Qh3" secondAttribute="trailing" id="AtV-lF-8PM"/>
                     <constraint firstItem="Lj2-YW-Qh3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="GtE-2X-gLd"/>
-                    <constraint firstAttribute="bottom" secondItem="akn-UM-rd2" secondAttribute="bottom" constant="16" id="TJi-nZ-rT6"/>
+                    <constraint firstAttribute="trailing" secondItem="KSK-vQ-ueL" secondAttribute="trailing" constant="16.333333333333314" id="Ly3-Ru-k2N"/>
                     <constraint firstItem="Lj2-YW-Qh3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Wcy-DJ-QzD"/>
-                    <constraint firstItem="akn-UM-rd2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="ZdM-BO-Lkp"/>
-                    <constraint firstAttribute="trailing" secondItem="akn-UM-rd2" secondAttribute="trailing" constant="16" id="hxp-xg-ian"/>
+                    <constraint firstItem="akn-UM-rd2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="13" id="ZdM-BO-Lkp"/>
+                    <constraint firstAttribute="bottom" secondItem="KSK-vQ-ueL" secondAttribute="bottom" constant="11" id="bJP-y5-hfo"/>
+                    <constraint firstAttribute="trailing" secondItem="akn-UM-rd2" secondAttribute="trailing" constant="19" id="hxp-xg-ian"/>
+                    <constraint firstItem="KSK-vQ-ueL" firstAttribute="top" secondItem="akn-UM-rd2" secondAttribute="bottom" constant="9" id="iF1-8E-v9v"/>
                     <constraint firstAttribute="bottom" secondItem="Lj2-YW-Qh3" secondAttribute="bottom" id="o7u-RH-odP"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="collectionView" destination="Lj2-YW-Qh3" id="IN9-3u-tbY"/>
                 <outlet property="pageAutoCarousel" destination="akn-UM-rd2" id="dgs-2x-Icg"/>
             </connections>
-            <point key="canvasLocation" x="1" y="20"/>
+            <point key="canvasLocation" x="9.1603053435114496" y="25.704225352112676"/>
         </tableViewCell>
     </objects>
     <resources>

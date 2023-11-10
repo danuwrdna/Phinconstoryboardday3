@@ -1,19 +1,25 @@
 import UIKit
 import AVFoundation
 
+struct Song{
+    let name: String
+    let albumName: String
+    let artistName: String
+    let imageName: String
+    let trackName: String
+}
+
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var viewTable: UITableView!
     var songs = [Song]()
     
-    public var playerFahmi: AVAudioPlayer!
+    public var playerd: AVAudioPlayer!
     
     func playSound(soundName: String){
         let url = Bundle.main.url(forResource: soundName, withExtension: "mp3")
-        playerFahmi = try! AVAudioPlayer(contentsOf: url!)
-        playerFahmi.play()
+        playerd = try! AVAudioPlayer(contentsOf: url!)
+        playerd.play()
     }
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureSongs()
@@ -57,32 +63,13 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         viewTable.deselectRow(at: indexPath, animated: true)
         let position = indexPath.row
         let song = songs[position]
-        
-        // Play the selected song
         if let url = Bundle.main.url(forResource: song.trackName, withExtension: "mp3") {
             do {
-                playerFahmi = try AVAudioPlayer(contentsOf: url)
-                playerFahmi.play()
+                playerd = try AVAudioPlayer(contentsOf: url)
+                playerd.play()
             } catch {
                 print("Error playing audio: \(error.localizedDescription)")
             }
         }
-       
-        // Create and present the PlayerViewController
-       // let vc = PlayerViewController()
-//        vc.songs = songs
-        //vc.position = position
-        //self.navigationController?.present(vc, animated: true)
     }
-    
-    
-    struct Song{
-        let name: String
-        let albumName: String
-        let artistName: String
-        let imageName: String
-        let trackName: String
-        
-    }
-    
 }

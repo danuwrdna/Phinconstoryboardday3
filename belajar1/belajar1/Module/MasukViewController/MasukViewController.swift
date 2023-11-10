@@ -24,10 +24,6 @@ class MasukViewController: UIViewController {
         setup()
         border()
     }
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        animate()
-    }
     func auth (){
         let username = emailTextField.text
         let password = passwordTextField.text
@@ -72,26 +68,6 @@ class MasukViewController: UIViewController {
         passwordTextField.isSecureTextEntry = true
     }
        
-    func animate() {
-        UIView.animate(withDuration: 2, animations: {
-            self.myView.frame = CGRect(x: 0, y: 0, width: 400, height: 400)
-            self.myView.center = self.view.center
-            self.myView.layer.cornerRadius = 50
-            self.myView.backgroundColor = UIColor.red
-        }, completion: { done in
-            if done {
-                UIView.animate(withDuration: 2, animations: {
-                    self.myView.frame = CGRect(x: -40, y: 0, width: 200, height: 200)
-                    self.myView.center = self.view.center
-                    self.myView.layer.cornerRadius = 0
-                    self.myView.backgroundColor = UIColor.black
-                },  completion: { done in
-                    if done {
-                        self.animate()
-                    };
-                })
-            }
-        })
-    }
+    
 }
 
