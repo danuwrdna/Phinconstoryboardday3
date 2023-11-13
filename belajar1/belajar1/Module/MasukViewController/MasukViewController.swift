@@ -1,6 +1,8 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import Firebase
+import FirebaseAuth
 class MasukViewController: UIViewController {
     @IBOutlet weak var myView: UIView!
     @IBOutlet weak var textSalah: UIView!
@@ -17,57 +19,35 @@ class MasukViewController: UIViewController {
     @IBAction func buttonLogin(_ sender: Any) {
                 auth()
     }
-    private let disposeBag = DisposeBag()
-
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
         border()
     }
     func auth (){
-        let username = emailTextField.text
-        let password = passwordTextField.text
-        if username == "123" && password == "123" {
-            let homeViewController = MainTabBarViewController(nibName: "HomeViewController", bundle: nil)
-            navigationController?.pushViewController(homeViewController, animated: true)
-        } else{
-            textSalah.isHidden = false
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-                self.textSalah.isHidden = true
+        guard let email = emailTextField.text, let password = passwordTextField.text else {
+            return
+        }
+        Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
+            if error != nil {
+                self?.textSalah.isHidden = false
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                    self?.textSalah.isHidden = true
+                }
+                
+            } else{
+                let serigalabutton = MainTabBarViewController()
+                self?.navigationController?.pushViewController(serigalabutton, animated: true)
             }
         }
     }
     func setup() {
         navigationController?.isNavigationBarHidden = true
         textSalah.isHidden = true
-        emailTextField.rx.text
-                   .subscribe(onNext: { [weak self] text in
-                       if let text = text, !text.isEmpty {
-                           // Memastikan hanya karakter angka yang diizinkan
-                           if let nonDigitRange = text.rangeOfCharacter(from: CharacterSet.decimalDigits.inverted) {
-                               // Jika karakter selain angka ditemukan, hapus karakter tersebut
-                               let cleanedText = String(text[text.startIndex..<nonDigitRange.lowerBound])
-                               self?.emailTextField.text = cleanedText
-                           }
-                       }
-                   })
-                   .disposed(by: disposeBag)
-               passwordTextField.rx.text
-                   .subscribe(onNext: { [weak self] text in
-                       if let text = text, !text.isEmpty {
-                           if let nonDigitRange = text.rangeOfCharacter(from: CharacterSet.decimalDigits.inverted) {
-                               let cleanedText = String(text[text.startIndex..<nonDigitRange.lowerBound])
-                               self?.passwordTextField.text = cleanedText
-                           }
-                       }
-                   })
-                   .disposed(by: disposeBag)
            }
     func border(){
         self.containerMasuk.roundedCorner(1, containerMasuk.frame.size.height/8)
         passwordTextField.isSecureTextEntry = true
     }
-       
-    
 }
 

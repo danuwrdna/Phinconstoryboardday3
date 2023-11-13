@@ -15,16 +15,28 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var image1: UIImageView!
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var filterView: UISegmentedControl!
-    @IBAction func logoutButton(_ sender: Any) {
-            alert()
-        }
+    @IBAction func keluarButton(_ sender: Any) {
+      
+    }
+    @IBAction func searchButton(_ sender: Any) {
+        let bt = SearchViewController()
+        bt.modalTransitionStyle = .crossDissolve
+        bt.modalPresentationStyle = .overFullScreen
+        self.navigationController?.present(bt, animated: true)
+    }
+    
+    @IBAction func profileButton(_ sender: Any) {
+        let bt = ProfileViewController()
+        bt.modalTransitionStyle = .crossDissolve
+        bt.modalPresentationStyle = .overFullScreen
+        self.navigationController?.present(bt, animated: true)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
         setup()
         search()
     }
-
     func setup() {
         listTableView.dataSource = self
         listTableView.delegate = self
@@ -109,12 +121,5 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             return harga
         }
         return 0.0
-    }
-    func alert(){
-        let alertController = UIAlertController(title: "Are you sure", message: "Do you want logout", preferredStyle: .actionSheet)
-        let okButton = UIAlertAction(title: "Ok", style: .default,handler: {action in
-            print(action)
-            print("Ok");
-        })
     }
 }

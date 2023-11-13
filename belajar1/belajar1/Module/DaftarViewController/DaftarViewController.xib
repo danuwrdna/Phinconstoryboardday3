@@ -66,23 +66,6 @@
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Df-hS-SAi">
-                            <rect key="frame" x="177" y="180" width="84" height="32.666666666666657"/>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain">
-                                <backgroundConfiguration key="background" cornerRadius="15" image="6"/>
-                                <attributedString key="attributedTitle">
-                                    <fragment content="Konfirm">
-                                        <attributes>
-                                            <font key="NSFont" size="16" name="Herculanum"/>
-                                            <font key="NSOriginalFont" size="12" name="Helvetica"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                            </buttonConfiguration>
-                        </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Masukkan Email Yang Valid" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJL-4p-M1P">
                             <rect key="frame" x="57" y="56" width="131" height="12"/>
                             <color key="tintColor" red="0.83341248170000004" green="0.28624163209999998" blue="0.37551975180000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -91,7 +74,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wSH-aU-0w0">
-                            <rect key="frame" x="8" y="179" width="64" height="32.666666666666657"/>
+                            <rect key="frame" x="8" y="179" width="66" height="28"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -109,10 +92,9 @@
                             <buttonConfiguration key="configuration" style="plain">
                                 <backgroundConfiguration key="background" cornerRadius="15" image="aa2"/>
                                 <attributedString key="attributedTitle">
-                                    <fragment content="Login">
+                                    <fragment content="Konfrim">
                                         <attributes>
-                                            <font key="NSFont" size="16" name="Herculanum"/>
-                                            <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                            <font key="NSFont" size="12" name="Helvetica"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -128,10 +110,8 @@
                     </subviews>
                     <color key="backgroundColor" systemColor="systemGray6Color"/>
                     <constraints>
-                        <constraint firstItem="0Df-hS-SAi" firstAttribute="top" secondItem="rg9-5Q-Nvz" secondAttribute="bottom" constant="8" symbolic="YES" id="0aE-8Y-5lS"/>
                         <constraint firstAttribute="trailing" secondItem="4sW-lX-a7f" secondAttribute="trailing" constant="111" id="160-t7-YhC"/>
                         <constraint firstAttribute="trailing" secondItem="HGY-Lk-lWg" secondAttribute="trailing" constant="191" id="2lv-08-WFh"/>
-                        <constraint firstItem="0Df-hS-SAi" firstAttribute="leading" secondItem="wSH-aU-0w0" secondAttribute="trailing" constant="105" id="5iE-xl-HrD"/>
                         <constraint firstItem="rg9-5Q-Nvz" firstAttribute="leading" secondItem="w6j-6i-FHS" secondAttribute="leading" constant="8" id="8hs-O1-Yrt"/>
                         <constraint firstAttribute="trailing" secondItem="b2b-gZ-h0M" secondAttribute="trailing" constant="8" id="CC7-h2-xwc"/>
                         <constraint firstItem="4sW-lX-a7f" firstAttribute="leading" secondItem="w6j-6i-FHS" secondAttribute="leading" constant="111" id="LNg-WL-grc"/>
@@ -151,8 +131,6 @@
                         <constraint firstItem="b2b-gZ-h0M" firstAttribute="leading" secondItem="w6j-6i-FHS" secondAttribute="leading" constant="8" id="f13-22-KPt"/>
                         <constraint firstItem="HGY-Lk-lWg" firstAttribute="leading" secondItem="w6j-6i-FHS" secondAttribute="leading" constant="8" id="gzr-FO-ZXe"/>
                         <constraint firstItem="4sW-lX-a7f" firstAttribute="top" secondItem="w6j-6i-FHS" secondAttribute="top" constant="8" id="mop-Ut-XKv"/>
-                        <constraint firstAttribute="trailing" secondItem="0Df-hS-SAi" secondAttribute="trailing" constant="12" id="uLI-Xl-ZQp"/>
-                        <constraint firstItem="0Df-hS-SAi" firstAttribute="leading" secondItem="w6j-6i-FHS" secondAttribute="leading" constant="177" id="x7n-wh-4X5"/>
                     </constraints>
                 </view>
             </subviews>
@@ -177,7 +155,6 @@
     </objects>
     <resources>
         <image name="40287474-group-of-wild-animals-on-white-background" width="626" height="417"/>
-        <image name="6" width="1000" height="563"/>
         <image name="aa2" width="626" height="417"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

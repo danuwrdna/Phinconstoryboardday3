@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		2802BF23573A0ADECD9FE69D /* Pods_belajar1Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8C3AF9017ACC4829CCABDF6 /* Pods_belajar1Tests.framework */; };
+		360A10DE2B020C820023DF4B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360A10DD2B020C820023DF4B /* ProfileViewController.swift */; };
+		360A10E02B0225F60023DF4B /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360A10DF2B0225F60023DF4B /* SearchViewController.swift */; };
+		362C48792B01B23D00F5BC86 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 362C48782B01B23D00F5BC86 /* SearchViewController.xib */; };
+		362C487B2B01B90F00F5BC86 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 362C487A2B01B90F00F5BC86 /* GoogleService-Info.plist */; };
+		362C48822B02098C00F5BC86 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 362C48812B02098C00F5BC86 /* ProfileViewController.xib */; };
 		36421A782AFDE637001369E2 /* ExtCheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36421A772AFDE637001369E2 /* ExtCheckBox.swift */; };
 		368332152AEF8E7900F78FFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368332142AEF8E7900F78FFD /* AppDelegate.swift */; };
 		368332172AEF8E7900F78FFD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368332162AEF8E7900F78FFD /* SceneDelegate.swift */; };
@@ -24,12 +29,6 @@
 		368332552AEF8F8300F78FFD /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 368332532AEF8F8300F78FFD /* HomeViewController.xib */; };
 		368332572AEF929200F78FFD /* constrant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368332562AEF929200F78FFD /* constrant.swift */; };
 		3683325A2AEF939E00F78FFD /* maintabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368332592AEF939E00F78FFD /* maintabbar.swift */; };
-		368332622AEFA19A00F78FFD /* SingaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368332602AEFA19A00F78FFD /* SingaViewController.swift */; };
-		368332632AEFA19A00F78FFD /* SingaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 368332612AEFA19A00F78FFD /* SingaViewController.xib */; };
-		368332672AEFA1CA00F78FFD /* SerigalaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368332652AEFA1CA00F78FFD /* SerigalaViewController.swift */; };
-		368332682AEFA1CA00F78FFD /* SerigalaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 368332662AEFA1CA00F78FFD /* SerigalaViewController.xib */; };
-		3683326C2AEFA1F800F78FFD /* MacanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3683326A2AEFA1F800F78FFD /* MacanViewController.swift */; };
-		3683326D2AEFA1F800F78FFD /* MacanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3683326B2AEFA1F800F78FFD /* MacanViewController.xib */; };
 		368332712AF093E900F78FFD /* PickersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3683326F2AF093E900F78FFD /* PickersViewController.swift */; };
 		368332722AF093E900F78FFD /* PickersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 368332702AF093E900F78FFD /* PickersViewController.xib */; };
 		3683327B2AF0AFCD00F78FFD /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368332792AF0AFCD00F78FFD /* ProgressViewController.swift */; };
@@ -101,6 +100,11 @@
 		1E7C226D35CFE049640F1665 /* Pods-belajar1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-belajar1.debug.xcconfig"; path = "Target Support Files/Pods-belajar1/Pods-belajar1.debug.xcconfig"; sourceTree = "<group>"; };
 		224131A811AA8E664C7051E4 /* Pods-belajar1Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-belajar1Tests.release.xcconfig"; path = "Target Support Files/Pods-belajar1Tests/Pods-belajar1Tests.release.xcconfig"; sourceTree = "<group>"; };
 		3272307CCA29A69293A4A376 /* Pods_belajar1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_belajar1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		360A10DD2B020C820023DF4B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		360A10DF2B0225F60023DF4B /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		362C48782B01B23D00F5BC86 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		362C487A2B01B90F00F5BC86 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		362C48812B02098C00F5BC86 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		36421A772AFDE637001369E2 /* ExtCheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtCheckBox.swift; sourceTree = "<group>"; };
 		368332112AEF8E7900F78FFD /* belajar1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = belajar1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		368332142AEF8E7900F78FFD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -121,12 +125,6 @@
 		368332532AEF8F8300F78FFD /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		368332562AEF929200F78FFD /* constrant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constrant.swift; sourceTree = "<group>"; };
 		368332592AEF939E00F78FFD /* maintabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = maintabbar.swift; sourceTree = "<group>"; };
-		368332602AEFA19A00F78FFD /* SingaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingaViewController.swift; sourceTree = "<group>"; };
-		368332612AEFA19A00F78FFD /* SingaViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingaViewController.xib; sourceTree = "<group>"; };
-		368332652AEFA1CA00F78FFD /* SerigalaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerigalaViewController.swift; sourceTree = "<group>"; };
-		368332662AEFA1CA00F78FFD /* SerigalaViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SerigalaViewController.xib; sourceTree = "<group>"; };
-		3683326A2AEFA1F800F78FFD /* MacanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacanViewController.swift; sourceTree = "<group>"; };
-		3683326B2AEFA1F800F78FFD /* MacanViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MacanViewController.xib; sourceTree = "<group>"; };
 		3683326F2AF093E900F78FFD /* PickersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickersViewController.swift; sourceTree = "<group>"; };
 		368332702AF093E900F78FFD /* PickersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PickersViewController.xib; sourceTree = "<group>"; };
 		368332792AF0AFCD00F78FFD /* ProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
@@ -209,6 +207,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		362C48772B01B1F500F5BC86 /* CustomViewController */ = {
+			isa = PBXGroup;
+			children = (
+				362C48782B01B23D00F5BC86 /* SearchViewController.xib */,
+				362C48812B02098C00F5BC86 /* ProfileViewController.xib */,
+				360A10DD2B020C820023DF4B /* ProfileViewController.swift */,
+				360A10DF2B0225F60023DF4B /* SearchViewController.swift */,
+			);
+			path = CustomViewController;
+			sourceTree = "<group>";
+		};
 		368332082AEF8E7900F78FFD = {
 			isa = PBXGroup;
 			children = (
@@ -239,6 +248,7 @@
 				368332462AEF8E9000F78FFD /* Module */,
 				368332452AEF8E8800F78FFD /* Common */,
 				3683321A2AEF8E7900F78FFD /* Main.storyboard */,
+				362C487A2B01B90F00F5BC86 /* GoogleService-Info.plist */,
 				368332222AEF8E7B00F78FFD /* Info.plist */,
 			);
 			path = belajar1;
@@ -283,6 +293,7 @@
 		368332462AEF8E9000F78FFD /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				362C48772B01B1F500F5BC86 /* CustomViewController */,
 				3686A1B92AFDC7D4007A17A9 /* FaqViewController */,
 				36B729AF2AF4A9FD00738F22 /* TestApiViewController */,
 				36B7299E2AF3997A00738F22 /* SplashViewController */,
@@ -298,9 +309,6 @@
 				3683327D2AF0BE4200F78FFD /* PengaturanViewController */,
 				368332782AF0AF8700F78FFD /* ProgressViewController */,
 				3683326E2AF093CE00F78FFD /* PickersViewController */,
-				368332692AEFA1DF00F78FFD /* MacanViewController */,
-				368332642AEFA1B200F78FFD /* SerigalaViewController */,
-				3683325F2AEFA18300F78FFD /* SingaViewController */,
 				368332582AEF938D00F78FFD /* maintabbar */,
 				368332512AEF8F5A00F78FFD /* HomeViewController */,
 				3683324C2AEF8F1D00F78FFD /* HewanViewController */,
@@ -377,33 +385,6 @@
 				368332592AEF939E00F78FFD /* maintabbar.swift */,
 			);
 			path = maintabbar;
-			sourceTree = "<group>";
-		};
-		3683325F2AEFA18300F78FFD /* SingaViewController */ = {
-			isa = PBXGroup;
-			children = (
-				368332602AEFA19A00F78FFD /* SingaViewController.swift */,
-				368332612AEFA19A00F78FFD /* SingaViewController.xib */,
-			);
-			path = SingaViewController;
-			sourceTree = "<group>";
-		};
-		368332642AEFA1B200F78FFD /* SerigalaViewController */ = {
-			isa = PBXGroup;
-			children = (
-				368332652AEFA1CA00F78FFD /* SerigalaViewController.swift */,
-				368332662AEFA1CA00F78FFD /* SerigalaViewController.xib */,
-			);
-			path = SerigalaViewController;
-			sourceTree = "<group>";
-		};
-		368332692AEFA1DF00F78FFD /* MacanViewController */ = {
-			isa = PBXGroup;
-			children = (
-				3683326A2AEFA1F800F78FFD /* MacanViewController.swift */,
-				3683326B2AEFA1F800F78FFD /* MacanViewController.xib */,
-			);
-			path = MacanViewController;
 			sourceTree = "<group>";
 		};
 		3683326E2AF093CE00F78FFD /* PickersViewController */ = {
@@ -771,7 +752,6 @@
 				368332992AF0EF7F00F78FFD /* TextFieldViewController.xib in Resources */,
 				36B7299D2AF393C200738F22 /* DaftarViewController.xib in Resources */,
 				368332722AF093E900F78FFD /* PickersViewController.xib in Resources */,
-				368332632AEFA19A00F78FFD /* SingaViewController.xib in Resources */,
 				36B729482AF1EC5300738F22 /* GalleryViewController.xib in Resources */,
 				368332502AEF8F3F00F78FFD /* HewanViewController.xib in Resources */,
 				368332862AF0DA6500F78FFD /* FotoViewController.xib in Resources */,
@@ -780,17 +760,18 @@
 				36B729432AF1E85E00738F22 /* ScanViewController.xib in Resources */,
 				3683327C2AF0AFCD00F78FFD /* ProgressViewController.xib in Resources */,
 				3683328C2AF0DC5200F78FFD /* TableViewCell.xib in Resources */,
+				362C487B2B01B90F00F5BC86 /* GoogleService-Info.plist in Resources */,
 				3686A1BD2AFDC7F4007A17A9 /* FaqViewController.xib in Resources */,
 				36B729B32AF4AA2600738F22 /* TestApiViewController.xib in Resources */,
-				368332682AEFA1CA00F78FFD /* SerigalaViewController.xib in Resources */,
 				36B7298E2AF2343E00738F22 /* LokasiViewController.xib in Resources */,
 				368332812AF0BE6A00F78FFD /* PengaturanViewController.xib in Resources */,
 				36B729A22AF3999C00738F22 /* SplashViewController.xib in Resources */,
 				36B729BA2AF4ADC500738F22 /* PokemonTableViewCell.xib in Resources */,
+				362C48792B01B23D00F5BC86 /* SearchViewController.xib in Resources */,
 				3683321C2AEF8E7900F78FFD /* Main.storyboard in Resources */,
 				36B729932AF333CB00738F22 /* GagalViewController.xib in Resources */,
-				3683326D2AEFA1F800F78FFD /* MacanViewController.xib in Resources */,
 				368332912AF0DC7900F78FFD /* CollectionViewCell.xib in Resources */,
+				362C48822B02098C00F5BC86 /* ProfileViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -924,6 +905,7 @@
 				368332902AF0DC7900F78FFD /* CollectionViewCell.swift in Sources */,
 				368332852AF0DA6500F78FFD /* FotoViewController.swift in Sources */,
 				36B729B22AF4AA2600738F22 /* TestApiViewController.swift in Sources */,
+				360A10DE2B020C820023DF4B /* ProfileViewController.swift in Sources */,
 				368332952AF0EBAD00F78FFD /* PopViewController.swift in Sources */,
 				36B729A62AF47FE800738F22 /* CellTableViewCell.swift in Sources */,
 				368332192AEF8E7900F78FFD /* ViewController.swift in Sources */,
@@ -931,13 +913,13 @@
 				3683325A2AEF939E00F78FFD /* maintabbar.swift in Sources */,
 				36B729422AF1E85E00738F22 /* ScanViewController.swift in Sources */,
 				36B729832AF21E0A00738F22 /* MasukViewController.swift in Sources */,
-				3683326C2AEFA1F800F78FFD /* MacanViewController.swift in Sources */,
 				3683329B2AF0F13100F78FFD /* TextFieldViewController.swift in Sources */,
 				3683327B2AF0AFCD00F78FFD /* ProgressViewController.swift in Sources */,
 				368332802AF0BE6A00F78FFD /* PengaturanViewController.swift in Sources */,
 				36B7299C2AF393C200738F22 /* DaftarViewController.swift in Sources */,
 				368332152AEF8E7900F78FFD /* AppDelegate.swift in Sources */,
 				3686A1BC2AFDC7F4007A17A9 /* FaqViewController.swift in Sources */,
+				360A10E02B0225F60023DF4B /* SearchViewController.swift in Sources */,
 				3683324F2AEF8F3F00F78FFD /* HewanViewController.swift in Sources */,
 				3686A1762AFB5E7E007A17A9 /* TestApiViewModel.swift in Sources */,
 				36B729C22AF4C4D400738F22 /* ExtUIView.swift in Sources */,
@@ -945,10 +927,8 @@
 				36B729B92AF4ADC500738F22 /* PokemonTableViewCell.swift in Sources */,
 				36B729A12AF3999C00738F22 /* SplashViewController.swift in Sources */,
 				36B729C02AF4C15700738F22 /* TestApiModel.swift in Sources */,
-				368332622AEFA19A00F78FFD /* SingaViewController.swift in Sources */,
 				368332572AEF929200F78FFD /* constrant.swift in Sources */,
 				368332172AEF8E7900F78FFD /* SceneDelegate.swift in Sources */,
-				368332672AEFA1CA00F78FFD /* SerigalaViewController.swift in Sources */,
 				368332712AF093E900F78FFD /* PickersViewController.swift in Sources */,
 				36B729922AF333CB00738F22 /* GagalViewController.swift in Sources */,
 				36B729B52AF4AD0200738F22 /* PokemonResource.swift in Sources */,

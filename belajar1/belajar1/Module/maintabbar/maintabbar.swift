@@ -8,7 +8,7 @@ class MainTabBarViewController: UITabBarController {
     let pengaturan = UINavigationController(rootViewController: PengaturanViewController())
     let foto = UINavigationController(rootViewController: FotoViewController())
     let lainlain1 = UINavigationController(rootViewController: TestApiViewController())
-    let scanbarcode = UINavigationController(rootViewController: SerigalaViewController())
+    let scanbarcode = UINavigationController(rootViewController: ProfileViewController())
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUITabBarItems()
