@@ -10,6 +10,7 @@ target 'belajar1' do
   pod "RxCocoa"
   pod "Firebase/Core"
   pod "Firebase/Auth"
+  pod 'lottie-ios'
 
   target 'belajar1Tests' do
     inherit! :search_paths

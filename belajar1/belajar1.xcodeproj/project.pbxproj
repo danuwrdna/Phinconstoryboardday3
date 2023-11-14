@@ -10,10 +10,16 @@
 		2802BF23573A0ADECD9FE69D /* Pods_belajar1Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8C3AF9017ACC4829CCABDF6 /* Pods_belajar1Tests.framework */; };
 		360A10DE2B020C820023DF4B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360A10DD2B020C820023DF4B /* ProfileViewController.swift */; };
 		360A10E02B0225F60023DF4B /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360A10DF2B0225F60023DF4B /* SearchViewController.swift */; };
+		360A10E42B030B820023DF4B /* Tiket1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360A10E22B030B820023DF4B /* Tiket1ViewController.swift */; };
+		360A10E52B030B820023DF4B /* Tiket1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 360A10E32B030B820023DF4B /* Tiket1ViewController.xib */; };
+		360A10E92B030BA70023DF4B /* Tiket2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360A10E72B030BA70023DF4B /* Tiket2ViewController.swift */; };
+		360A10EA2B030BA70023DF4B /* Tiket2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 360A10E82B030BA70023DF4B /* Tiket2ViewController.xib */; };
+		360A10ED2B03455A0023DF4B /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360A10EC2B03455A0023DF4B /* HomeViewModel.swift */; };
 		362C48792B01B23D00F5BC86 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 362C48782B01B23D00F5BC86 /* SearchViewController.xib */; };
 		362C487B2B01B90F00F5BC86 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 362C487A2B01B90F00F5BC86 /* GoogleService-Info.plist */; };
 		362C48822B02098C00F5BC86 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 362C48812B02098C00F5BC86 /* ProfileViewController.xib */; };
 		36421A782AFDE637001369E2 /* ExtCheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36421A772AFDE637001369E2 /* ExtCheckBox.swift */; };
+		3663D2262B0367FC00E25D38 /* TransaksiViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3663D2252B0367FC00E25D38 /* TransaksiViewModel.swift */; };
 		368332152AEF8E7900F78FFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368332142AEF8E7900F78FFD /* AppDelegate.swift */; };
 		368332172AEF8E7900F78FFD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368332162AEF8E7900F78FFD /* SceneDelegate.swift */; };
 		368332192AEF8E7900F78FFD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368332182AEF8E7900F78FFD /* ViewController.swift */; };
@@ -31,8 +37,6 @@
 		3683325A2AEF939E00F78FFD /* maintabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368332592AEF939E00F78FFD /* maintabbar.swift */; };
 		368332712AF093E900F78FFD /* PickersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3683326F2AF093E900F78FFD /* PickersViewController.swift */; };
 		368332722AF093E900F78FFD /* PickersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 368332702AF093E900F78FFD /* PickersViewController.xib */; };
-		3683327B2AF0AFCD00F78FFD /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368332792AF0AFCD00F78FFD /* ProgressViewController.swift */; };
-		3683327C2AF0AFCD00F78FFD /* ProgressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3683327A2AF0AFCD00F78FFD /* ProgressViewController.xib */; };
 		368332802AF0BE6A00F78FFD /* PengaturanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3683327E2AF0BE6A00F78FFD /* PengaturanViewController.swift */; };
 		368332812AF0BE6A00F78FFD /* PengaturanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3683327F2AF0BE6A00F78FFD /* PengaturanViewController.xib */; };
 		368332852AF0DA6500F78FFD /* FotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368332832AF0DA6500F78FFD /* FotoViewController.swift */; };
@@ -75,6 +79,10 @@
 		36B729C02AF4C15700738F22 /* TestApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B729BF2AF4C15700738F22 /* TestApiModel.swift */; };
 		36B729C22AF4C4D400738F22 /* ExtUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B729C12AF4C4D400738F22 /* ExtUIView.swift */; };
 		36B729C52AF4D0AE00738F22 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 36B729C42AF4D0AE00738F22 /* Kingfisher */; };
+		36BE16A02B0359870061989E /* TransaksiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BE169E2B0359870061989E /* TransaksiViewController.swift */; };
+		36BE16A12B0359870061989E /* TransaksiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36BE169F2B0359870061989E /* TransaksiViewController.xib */; };
+		36BE16A52B03607B0061989E /* TransaksiViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BE16A32B03607B0061989E /* TransaksiViewCell.swift */; };
+		36BE16A62B03607B0061989E /* TransaksiViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36BE16A42B03607B0061989E /* TransaksiViewCell.xib */; };
 		BD279317BDF08C89649CD862 /* Pods_belajar1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3272307CCA29A69293A4A376 /* Pods_belajar1.framework */; };
 		E624C51739753697922D0C0B /* Pods_belajar1_belajar1UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95DFB8A29DED73E8A79BA09E /* Pods_belajar1_belajar1UITests.framework */; };
 /* End PBXBuildFile section */
@@ -102,10 +110,16 @@
 		3272307CCA29A69293A4A376 /* Pods_belajar1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_belajar1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		360A10DD2B020C820023DF4B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		360A10DF2B0225F60023DF4B /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		360A10E22B030B820023DF4B /* Tiket1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tiket1ViewController.swift; sourceTree = "<group>"; };
+		360A10E32B030B820023DF4B /* Tiket1ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Tiket1ViewController.xib; sourceTree = "<group>"; };
+		360A10E72B030BA70023DF4B /* Tiket2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tiket2ViewController.swift; sourceTree = "<group>"; };
+		360A10E82B030BA70023DF4B /* Tiket2ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Tiket2ViewController.xib; sourceTree = "<group>"; };
+		360A10EC2B03455A0023DF4B /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		362C48782B01B23D00F5BC86 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 		362C487A2B01B90F00F5BC86 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		362C48812B02098C00F5BC86 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		36421A772AFDE637001369E2 /* ExtCheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtCheckBox.swift; sourceTree = "<group>"; };
+		3663D2252B0367FC00E25D38 /* TransaksiViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransaksiViewModel.swift; sourceTree = "<group>"; };
 		368332112AEF8E7900F78FFD /* belajar1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = belajar1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		368332142AEF8E7900F78FFD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		368332162AEF8E7900F78FFD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -127,8 +141,6 @@
 		368332592AEF939E00F78FFD /* maintabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = maintabbar.swift; sourceTree = "<group>"; };
 		3683326F2AF093E900F78FFD /* PickersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickersViewController.swift; sourceTree = "<group>"; };
 		368332702AF093E900F78FFD /* PickersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PickersViewController.xib; sourceTree = "<group>"; };
-		368332792AF0AFCD00F78FFD /* ProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
-		3683327A2AF0AFCD00F78FFD /* ProgressViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgressViewController.xib; sourceTree = "<group>"; };
 		3683327E2AF0BE6A00F78FFD /* PengaturanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PengaturanViewController.swift; sourceTree = "<group>"; };
 		3683327F2AF0BE6A00F78FFD /* PengaturanViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PengaturanViewController.xib; sourceTree = "<group>"; };
 		368332832AF0DA6500F78FFD /* FotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FotoViewController.swift; sourceTree = "<group>"; };
@@ -169,6 +181,10 @@
 		36B729B82AF4ADC500738F22 /* PokemonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PokemonTableViewCell.xib; sourceTree = "<group>"; };
 		36B729BF2AF4C15700738F22 /* TestApiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestApiModel.swift; sourceTree = "<group>"; };
 		36B729C12AF4C4D400738F22 /* ExtUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtUIView.swift; sourceTree = "<group>"; };
+		36BE169E2B0359870061989E /* TransaksiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransaksiViewController.swift; sourceTree = "<group>"; };
+		36BE169F2B0359870061989E /* TransaksiViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransaksiViewController.xib; sourceTree = "<group>"; };
+		36BE16A32B03607B0061989E /* TransaksiViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransaksiViewCell.swift; sourceTree = "<group>"; };
+		36BE16A42B03607B0061989E /* TransaksiViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransaksiViewCell.xib; sourceTree = "<group>"; };
 		8CA2BDEB239139D4B8267ED2 /* Pods-belajar1-belajar1UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-belajar1-belajar1UITests.release.xcconfig"; path = "Target Support Files/Pods-belajar1-belajar1UITests/Pods-belajar1-belajar1UITests.release.xcconfig"; sourceTree = "<group>"; };
 		95DFB8A29DED73E8A79BA09E /* Pods_belajar1_belajar1UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_belajar1_belajar1UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8C3AF9017ACC4829CCABDF6 /* Pods_belajar1Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_belajar1Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -207,6 +223,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		360A10E12B030A9A0023DF4B /* Tiket1ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				360A10E22B030B820023DF4B /* Tiket1ViewController.swift */,
+				360A10E32B030B820023DF4B /* Tiket1ViewController.xib */,
+			);
+			path = Tiket1ViewController;
+			sourceTree = "<group>";
+		};
+		360A10E62B030B860023DF4B /* Tiket2ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				360A10E72B030BA70023DF4B /* Tiket2ViewController.swift */,
+				360A10E82B030BA70023DF4B /* Tiket2ViewController.xib */,
+			);
+			path = Tiket2ViewController;
+			sourceTree = "<group>";
+		};
+		360A10EB2B0345400023DF4B /* model */ = {
+			isa = PBXGroup;
+			children = (
+				360A10EC2B03455A0023DF4B /* HomeViewModel.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
 		362C48772B01B1F500F5BC86 /* CustomViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -216,6 +258,14 @@
 				360A10DF2B0225F60023DF4B /* SearchViewController.swift */,
 			);
 			path = CustomViewController;
+			sourceTree = "<group>";
+		};
+		3663D2242B0367C600E25D38 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				3663D2252B0367FC00E25D38 /* TransaksiViewModel.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 		368332082AEF8E7900F78FFD = {
@@ -293,6 +343,9 @@
 		368332462AEF8E9000F78FFD /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				36BE169D2B0359630061989E /* TransaksiViewController */,
+				360A10E62B030B860023DF4B /* Tiket2ViewController */,
+				360A10E12B030A9A0023DF4B /* Tiket1ViewController */,
 				362C48772B01B1F500F5BC86 /* CustomViewController */,
 				3686A1B92AFDC7D4007A17A9 /* FaqViewController */,
 				36B729AF2AF4A9FD00738F22 /* TestApiViewController */,
@@ -307,7 +360,6 @@
 				368332922AF0EB8800F78FFD /* PopViewController */,
 				368332822AF0DA4C00F78FFD /* FotoViewController */,
 				3683327D2AF0BE4200F78FFD /* PengaturanViewController */,
-				368332782AF0AF8700F78FFD /* ProgressViewController */,
 				3683326E2AF093CE00F78FFD /* PickersViewController */,
 				368332582AEF938D00F78FFD /* maintabbar */,
 				368332512AEF8F5A00F78FFD /* HomeViewController */,
@@ -372,6 +424,7 @@
 		368332512AEF8F5A00F78FFD /* HomeViewController */ = {
 			isa = PBXGroup;
 			children = (
+				360A10EB2B0345400023DF4B /* model */,
 				36B729A32AF47FC400738F22 /* cell */,
 				368332522AEF8F8300F78FFD /* HomeViewController.swift */,
 				368332532AEF8F8300F78FFD /* HomeViewController.xib */,
@@ -394,15 +447,6 @@
 				368332702AF093E900F78FFD /* PickersViewController.xib */,
 			);
 			path = PickersViewController;
-			sourceTree = "<group>";
-		};
-		368332782AF0AF8700F78FFD /* ProgressViewController */ = {
-			isa = PBXGroup;
-			children = (
-				368332792AF0AFCD00F78FFD /* ProgressViewController.swift */,
-				3683327A2AF0AFCD00F78FFD /* ProgressViewController.xib */,
-			);
-			path = ProgressViewController;
 			sourceTree = "<group>";
 		};
 		3683327D2AF0BE4200F78FFD /* PengaturanViewController */ = {
@@ -604,6 +648,26 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		36BE169D2B0359630061989E /* TransaksiViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3663D2242B0367C600E25D38 /* model */,
+				36BE16A22B0360570061989E /* cell */,
+				36BE169E2B0359870061989E /* TransaksiViewController.swift */,
+				36BE169F2B0359870061989E /* TransaksiViewController.xib */,
+			);
+			path = TransaksiViewController;
+			sourceTree = "<group>";
+		};
+		36BE16A22B0360570061989E /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				36BE16A32B03607B0061989E /* TransaksiViewCell.swift */,
+				36BE16A42B03607B0061989E /* TransaksiViewCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
 		37870D75129C7C8C942D4BE8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -747,10 +811,13 @@
 				368332212AEF8E7B00F78FFD /* LaunchScreen.storyboard in Resources */,
 				3683321E2AEF8E7B00F78FFD /* Assets.xcassets in Resources */,
 				368332552AEF8F8300F78FFD /* HomeViewController.xib in Resources */,
+				36BE16A12B0359870061989E /* TransaksiViewController.xib in Resources */,
 				368332962AF0EBAD00F78FFD /* PopViewController.xib in Resources */,
 				36B729A72AF47FE800738F22 /* CellTableViewCell.xib in Resources */,
 				368332992AF0EF7F00F78FFD /* TextFieldViewController.xib in Resources */,
 				36B7299D2AF393C200738F22 /* DaftarViewController.xib in Resources */,
+				360A10E52B030B820023DF4B /* Tiket1ViewController.xib in Resources */,
+				36BE16A62B03607B0061989E /* TransaksiViewCell.xib in Resources */,
 				368332722AF093E900F78FFD /* PickersViewController.xib in Resources */,
 				36B729482AF1EC5300738F22 /* GalleryViewController.xib in Resources */,
 				368332502AEF8F3F00F78FFD /* HewanViewController.xib in Resources */,
@@ -758,12 +825,12 @@
 				36B729842AF21E0A00738F22 /* MasukViewController.xib in Resources */,
 				36B729982AF34F4A00738F22 /* AnimasiViewController.xib in Resources */,
 				36B729432AF1E85E00738F22 /* ScanViewController.xib in Resources */,
-				3683327C2AF0AFCD00F78FFD /* ProgressViewController.xib in Resources */,
 				3683328C2AF0DC5200F78FFD /* TableViewCell.xib in Resources */,
 				362C487B2B01B90F00F5BC86 /* GoogleService-Info.plist in Resources */,
 				3686A1BD2AFDC7F4007A17A9 /* FaqViewController.xib in Resources */,
 				36B729B32AF4AA2600738F22 /* TestApiViewController.xib in Resources */,
 				36B7298E2AF2343E00738F22 /* LokasiViewController.xib in Resources */,
+				360A10EA2B030BA70023DF4B /* Tiket2ViewController.xib in Resources */,
 				368332812AF0BE6A00F78FFD /* PengaturanViewController.xib in Resources */,
 				36B729A22AF3999C00738F22 /* SplashViewController.xib in Resources */,
 				36B729BA2AF4ADC500738F22 /* PokemonTableViewCell.xib in Resources */,
@@ -902,6 +969,7 @@
 				368332542AEF8F8300F78FFD /* HomeViewController.swift in Sources */,
 				36B7298D2AF2343E00738F22 /* LokasiViewController.swift in Sources */,
 				3683328B2AF0DC5200F78FFD /* TableViewCell.swift in Sources */,
+				3663D2262B0367FC00E25D38 /* TransaksiViewModel.swift in Sources */,
 				368332902AF0DC7900F78FFD /* CollectionViewCell.swift in Sources */,
 				368332852AF0DA6500F78FFD /* FotoViewController.swift in Sources */,
 				36B729B22AF4AA2600738F22 /* TestApiViewController.swift in Sources */,
@@ -909,17 +977,20 @@
 				368332952AF0EBAD00F78FFD /* PopViewController.swift in Sources */,
 				36B729A62AF47FE800738F22 /* CellTableViewCell.swift in Sources */,
 				368332192AEF8E7900F78FFD /* ViewController.swift in Sources */,
+				360A10ED2B03455A0023DF4B /* HomeViewModel.swift in Sources */,
 				36B729972AF34F4A00738F22 /* AnimasiViewController.swift in Sources */,
 				3683325A2AEF939E00F78FFD /* maintabbar.swift in Sources */,
 				36B729422AF1E85E00738F22 /* ScanViewController.swift in Sources */,
 				36B729832AF21E0A00738F22 /* MasukViewController.swift in Sources */,
+				36BE16A02B0359870061989E /* TransaksiViewController.swift in Sources */,
+				360A10E42B030B820023DF4B /* Tiket1ViewController.swift in Sources */,
 				3683329B2AF0F13100F78FFD /* TextFieldViewController.swift in Sources */,
-				3683327B2AF0AFCD00F78FFD /* ProgressViewController.swift in Sources */,
 				368332802AF0BE6A00F78FFD /* PengaturanViewController.swift in Sources */,
 				36B7299C2AF393C200738F22 /* DaftarViewController.swift in Sources */,
 				368332152AEF8E7900F78FFD /* AppDelegate.swift in Sources */,
 				3686A1BC2AFDC7F4007A17A9 /* FaqViewController.swift in Sources */,
 				360A10E02B0225F60023DF4B /* SearchViewController.swift in Sources */,
+				36BE16A52B03607B0061989E /* TransaksiViewCell.swift in Sources */,
 				3683324F2AEF8F3F00F78FFD /* HewanViewController.swift in Sources */,
 				3686A1762AFB5E7E007A17A9 /* TestApiViewModel.swift in Sources */,
 				36B729C22AF4C4D400738F22 /* ExtUIView.swift in Sources */,
@@ -933,6 +1004,7 @@
 				36B729922AF333CB00738F22 /* GagalViewController.swift in Sources */,
 				36B729B52AF4AD0200738F22 /* PokemonResource.swift in Sources */,
 				36421A782AFDE637001369E2 /* ExtCheckBox.swift in Sources */,
+				360A10E92B030BA70023DF4B /* Tiket2ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

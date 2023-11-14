@@ -15,3 +15,4 @@ struct ResultPokemon: Codable {
     let url: String
 }
 
+

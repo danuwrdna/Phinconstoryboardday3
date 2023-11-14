@@ -13,8 +13,8 @@ class MasukViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBAction func daftarButton(_ sender: Any) {
-        let serigalabutton = DaftarViewController()
-        self.navigationController?.pushViewController(serigalabutton, animated: true)
+        let bt = DaftarViewController()
+        self.navigationController?.pushViewController(bt, animated: true)
     }
     @IBAction func buttonLogin(_ sender: Any) {
                 auth()

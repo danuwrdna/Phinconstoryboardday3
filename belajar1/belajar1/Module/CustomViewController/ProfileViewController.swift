@@ -1,14 +1,18 @@
 import Foundation
 import UIKit
+import Firebase
+import FirebaseAuth
 
 class ProfileViewController: UIViewController {
     @IBOutlet weak var popView: UIView!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var labelEmail: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
        setup()
         setting()
         closepop()
+        displayUserEmail()
     }
     func setup(){
         view.backgroundColor = UIColor.black.withAlphaComponent(0.5)
@@ -42,4 +46,10 @@ extension ProfileViewController: UIImagePickerControllerDelegate,UINavigationCon
             dismiss(animated: true, completion: nil)
         }
     }
+    func displayUserEmail() {
+            if let user = Auth.auth().currentUser {
+                let userEmail = user.email
+                labelEmail.text = userEmail
+            }
+        }
 }

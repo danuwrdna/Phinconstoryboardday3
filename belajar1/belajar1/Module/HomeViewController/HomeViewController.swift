@@ -1,13 +1,15 @@
 import UIKit
 
 struct Learn {
+    let id: Int
     let nama: String
     let description: String
     let imageName: String
+    let detailViewControllerType: UIViewController.Type
 }
 class HomeViewController: UIViewController {
-    var originalLearn = [Learn]()
-    var learn = [Learn]()
+    let viewModel = HomeViewModel()
+
     @IBOutlet weak var listTableView: UITableView!
     @IBOutlet weak var popup: UIView!
     @IBOutlet weak var image3: UIImageView!
@@ -15,8 +17,9 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var image1: UIImageView!
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var filterView: UISegmentedControl!
+
     @IBAction func keluarButton(_ sender: Any) {
-      
+        // Handle keluar button action
     }
     @IBAction func searchButton(_ sender: Any) {
         let bt = SearchViewController()
@@ -24,7 +27,6 @@ class HomeViewController: UIViewController {
         bt.modalPresentationStyle = .overFullScreen
         self.navigationController?.present(bt, animated: true)
     }
-    
     @IBAction func profileButton(_ sender: Any) {
         let bt = ProfileViewController()
         bt.modalTransitionStyle = .crossDissolve
@@ -33,7 +35,7 @@ class HomeViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        configure()
+        viewModel.configure()
         setup()
         search()
     }
@@ -50,76 +52,33 @@ class HomeViewController: UIViewController {
     @objc func filterValueChanged() {
         updateViewBasedOnFilter()
     }
+
     func updateViewBasedOnFilter() {
-        switch filterView.selectedSegmentIndex {
-        case 0:
-            learn.sort(by: { (learn1, learn2) in
-                let harga1 = extractHarga(from: learn1.description)
-                let harga2 = extractHarga(from: learn2.description)
-                return harga1 > harga2
-            })
-        case 1:
-            learn.sort(by: { (learn1, learn2) in
-                let harga1 = extractHarga(from: learn1.description)
-                let harga2 = extractHarga(from: learn2.description)
-                return harga1 < harga2
-            })
-        default:
-            learn = originalLearn
-        }
+        viewModel.filterData(by: filterView.selectedSegmentIndex)
         listTableView.reloadData()
     }
 }
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return learn.count
+        return viewModel.learn.count
     }
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CellTableViewCell
-        let data = learn[indexPath.row]
+        let data = viewModel.learn[indexPath.row]
         cell.judul?.text = data.nama
         cell.subjudul?.text = data.description
-        cell.photoView?.image = UIImage(named: data.imageName )
+        cell.photoView?.image = UIImage(named: data.imageName)
         return cell
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200
     }
-    func configure() {
-        originalLearn = [
-            Learn(nama: "Duo sejoli",
-                  description: "Rp. 200.000",
-                  imageName: "two-cats-lying-white-background-pet-animals_73107-1"
-            ),
-            Learn(nama: "jomblo sejati",
-                  description: "Rp. 150.000",
-                  imageName: "afe76dd0358105b5b9c84be3ce8b2143"
-            ),
-            Learn(nama: "Peduli teman",
-                  description: "Rp. 400.000",
-                  imageName: "360_F_101249007_L4x7p3dSC13zCOnQn7GZUoxRz5Opoobz"
-            ),
-            Learn(nama: "Peduli keluarga",
-                  description: "Rp. 350.000",
-                  imageName: "four-different-kittens-white-background-huddle-together_485703-44"
-            ),
-            Learn(nama: "It",
-                  description: "aasaasasasasasasa",
-                  imageName: ""
-            ),
-            Learn(nama: "It",
-                  description: "aasaasasasasasasa",
-                  imageName: "Lion_waiting_in_Namibia"
-            )
-        ]
-        learn = originalLearn
-    }
-    func extractHarga(from description: String) -> Double {
-        let components = description.components(separatedBy: " ")
-        if let hargaString = components.last, let harga = Double(hargaString) {
-            return harga
-        }
-        return 0.0
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedLearn = viewModel.originalLearn[indexPath.row]
+        let detailViewController = selectedLearn.detailViewControllerType.init()
+        navigationController?.present(detailViewController, animated: true)
     }
 }

@@ -4,7 +4,7 @@ import UIKit
 class MainTabBarViewController: UITabBarController {
     let homeVC = UINavigationController(rootViewController:HomeViewController())
     let pickers = UINavigationController(rootViewController: PickersViewController())
-    let progress = UINavigationController(rootViewController: ProgressViewController())
+    let progress = UINavigationController(rootViewController: TransaksiViewController())
     let pengaturan = UINavigationController(rootViewController: PengaturanViewController())
     let foto = UINavigationController(rootViewController: FotoViewController())
     let lainlain1 = UINavigationController(rootViewController: TestApiViewController())

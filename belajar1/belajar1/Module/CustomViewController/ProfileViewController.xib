@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController" customModule="belajar1" customModuleProvider="target">
             <connections>
                 <outlet property="imageView" destination="R6Z-4E-abv" id="VjN-Lh-y2B"/>
+                <outlet property="labelEmail" destination="A9Q-3L-BBI" id="eyh-Mf-hrQ"/>
                 <outlet property="popView" destination="tJy-uW-MuA" id="a7H-ku-oCn"/>
                 <outlet property="view" destination="iN0-l3-epB" id="OS9-2J-aSQ"/>
             </connections>
@@ -23,22 +24,13 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tJy-uW-MuA">
                     <rect key="frame" x="14" y="204" width="365" height="411"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jualan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g06-H6-Z19">
-                            <rect key="frame" x="159" y="144" width="46" height="18"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="46" id="SJI-rK-0zY"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="15"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apple Willwill" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A9Q-3L-BBI">
-                            <rect key="frame" x="127" y="124.99999999999999" width="122" height="20.333333333333329"/>
+                            <rect key="frame" x="119" y="119.99999999999999" width="200" height="20.333333333333329"/>
                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="knowledge_graph_logo.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="R6Z-4E-abv">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="5" translatesAutoresizingMaskIntoConstraints="NO" id="R6Z-4E-abv">
                             <rect key="frame" x="31" y="20" width="302" height="97"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="97" id="yQw-vK-I6A"/>
@@ -131,19 +123,28 @@
                                 </stackView>
                             </subviews>
                         </stackView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pengguna" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g06-H6-Z19">
+                            <rect key="frame" x="146" y="144" width="72" height="18"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="72" id="SJI-rK-0zY"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="15"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="R6Z-4E-abv" secondAttribute="trailing" constant="32" id="4vx-6U-Fh7"/>
                         <constraint firstAttribute="trailing" secondItem="jX9-vh-SLh" secondAttribute="trailing" constant="155.66999999999999" id="5Gt-Be-S2U"/>
-                        <constraint firstItem="R6Z-4E-abv" firstAttribute="centerX" secondItem="A9Q-3L-BBI" secondAttribute="centerX" constant="-6" id="94i-eN-7xj"/>
+                        <constraint firstItem="R6Z-4E-abv" firstAttribute="centerX" secondItem="A9Q-3L-BBI" secondAttribute="centerX" constant="-37" id="94i-eN-7xj"/>
                         <constraint firstItem="jX9-vh-SLh" firstAttribute="top" secondItem="H9T-Nr-eWb" secondAttribute="bottom" constant="20.670000000000002" id="9Vd-Lg-pDb"/>
                         <constraint firstItem="g06-H6-Z19" firstAttribute="top" secondItem="R6Z-4E-abv" secondAttribute="bottom" constant="27" id="HLs-DL-4PH"/>
-                        <constraint firstItem="H9T-Nr-eWb" firstAttribute="centerX" secondItem="A9Q-3L-BBI" secondAttribute="centerX" constant="-6" id="K3W-y6-gTy"/>
-                        <constraint firstItem="A9Q-3L-BBI" firstAttribute="top" secondItem="R6Z-4E-abv" secondAttribute="bottom" constant="8" symbolic="YES" id="O7g-30-hKa"/>
-                        <constraint firstItem="H9T-Nr-eWb" firstAttribute="leading" secondItem="A9Q-3L-BBI" secondAttribute="leading" constant="-6" id="SXe-hb-tbV"/>
+                        <constraint firstItem="H9T-Nr-eWb" firstAttribute="centerX" secondItem="A9Q-3L-BBI" secondAttribute="centerX" constant="-37" id="K3W-y6-gTy"/>
+                        <constraint firstItem="A9Q-3L-BBI" firstAttribute="top" secondItem="R6Z-4E-abv" secondAttribute="bottom" constant="3" id="O7g-30-hKa"/>
+                        <constraint firstItem="H9T-Nr-eWb" firstAttribute="leading" secondItem="A9Q-3L-BBI" secondAttribute="leading" constant="2" id="SXe-hb-tbV"/>
                         <constraint firstItem="R6Z-4E-abv" firstAttribute="leading" secondItem="tJy-uW-MuA" secondAttribute="leading" constant="31" id="hnp-dj-LMU"/>
-                        <constraint firstItem="g06-H6-Z19" firstAttribute="leading" secondItem="tJy-uW-MuA" secondAttribute="leading" constant="159" id="i01-LK-k1I"/>
+                        <constraint firstItem="g06-H6-Z19" firstAttribute="leading" secondItem="tJy-uW-MuA" secondAttribute="leading" constant="146" id="i01-LK-k1I"/>
                         <constraint firstItem="R6Z-4E-abv" firstAttribute="top" secondItem="tJy-uW-MuA" secondAttribute="top" constant="20" id="vaL-Dl-CDH"/>
                         <constraint firstItem="jX9-vh-SLh" firstAttribute="leading" secondItem="tJy-uW-MuA" secondAttribute="leading" constant="93" id="wTk-wC-vyQ"/>
                         <constraint firstItem="H9T-Nr-eWb" firstAttribute="top" secondItem="g06-H6-Z19" secondAttribute="bottom" constant="8" symbolic="YES" id="yaa-pu-4Jg"/>
@@ -161,10 +162,10 @@
         </view>
     </objects>
     <resources>
+        <image name="5" width="130" height="130"/>
         <image name="aa1" width="637" height="360"/>
         <image name="bookmark.fill" catalog="system" width="110" height="128"/>
         <image name="gearshape.circle.fill" catalog="system" width="128" height="123"/>
-        <image name="knowledge_graph_logo.jpg" width="302" height="302"/>
         <image name="rectangle.portrait.and.arrow.right.fill" catalog="system" width="128" height="108"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
