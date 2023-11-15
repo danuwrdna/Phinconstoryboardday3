@@ -1,0 +1,6 @@
+framework module Pods_animalswiki_animalswikiUITests {
+  umbrella header "Pods-animalswiki-animalswikiUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

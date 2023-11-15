@@ -20,6 +20,12 @@
 		362C48822B02098C00F5BC86 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 362C48812B02098C00F5BC86 /* ProfileViewController.xib */; };
 		36421A782AFDE637001369E2 /* ExtCheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36421A772AFDE637001369E2 /* ExtCheckBox.swift */; };
 		3663D2262B0367FC00E25D38 /* TransaksiViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3663D2252B0367FC00E25D38 /* TransaksiViewModel.swift */; };
+		3663D22A2B04592E00E25D38 /* CustomLoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3663D2292B04592E00E25D38 /* CustomLoadingView.xib */; };
+		3663D22C2B0459CB00E25D38 /* CustomLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3663D22B2B0459CB00E25D38 /* CustomLoadingView.swift */; };
+		3663D22E2B04735100E25D38 /* SplashScreenVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3663D22D2B04735100E25D38 /* SplashScreenVC.xib */; };
+		3663D2302B04736500E25D38 /* SplashScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3663D22F2B04736500E25D38 /* SplashScreenVC.swift */; };
+		3663D2342B0474EA00E25D38 /* LoadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3663D2322B0474EA00E25D38 /* LoadViewController.swift */; };
+		3663D2352B0474EA00E25D38 /* LoadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3663D2332B0474EA00E25D38 /* LoadViewController.xib */; };
 		368332152AEF8E7900F78FFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368332142AEF8E7900F78FFD /* AppDelegate.swift */; };
 		368332172AEF8E7900F78FFD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368332162AEF8E7900F78FFD /* SceneDelegate.swift */; };
 		368332192AEF8E7900F78FFD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368332182AEF8E7900F78FFD /* ViewController.swift */; };
@@ -120,6 +126,12 @@
 		362C48812B02098C00F5BC86 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		36421A772AFDE637001369E2 /* ExtCheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtCheckBox.swift; sourceTree = "<group>"; };
 		3663D2252B0367FC00E25D38 /* TransaksiViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransaksiViewModel.swift; sourceTree = "<group>"; };
+		3663D2292B04592E00E25D38 /* CustomLoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomLoadingView.xib; sourceTree = "<group>"; };
+		3663D22B2B0459CB00E25D38 /* CustomLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLoadingView.swift; sourceTree = "<group>"; };
+		3663D22D2B04735100E25D38 /* SplashScreenVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashScreenVC.xib; sourceTree = "<group>"; };
+		3663D22F2B04736500E25D38 /* SplashScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenVC.swift; sourceTree = "<group>"; };
+		3663D2322B0474EA00E25D38 /* LoadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadViewController.swift; sourceTree = "<group>"; };
+		3663D2332B0474EA00E25D38 /* LoadViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadViewController.xib; sourceTree = "<group>"; };
 		368332112AEF8E7900F78FFD /* belajar1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = belajar1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		368332142AEF8E7900F78FFD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		368332162AEF8E7900F78FFD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -256,6 +268,10 @@
 				362C48812B02098C00F5BC86 /* ProfileViewController.xib */,
 				360A10DD2B020C820023DF4B /* ProfileViewController.swift */,
 				360A10DF2B0225F60023DF4B /* SearchViewController.swift */,
+				3663D2292B04592E00E25D38 /* CustomLoadingView.xib */,
+				3663D22B2B0459CB00E25D38 /* CustomLoadingView.swift */,
+				3663D22D2B04735100E25D38 /* SplashScreenVC.xib */,
+				3663D22F2B04736500E25D38 /* SplashScreenVC.swift */,
 			);
 			path = CustomViewController;
 			sourceTree = "<group>";
@@ -266,6 +282,15 @@
 				3663D2252B0367FC00E25D38 /* TransaksiViewModel.swift */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		3663D2312B0474C100E25D38 /* LoadViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3663D2322B0474EA00E25D38 /* LoadViewController.swift */,
+				3663D2332B0474EA00E25D38 /* LoadViewController.xib */,
+			);
+			path = LoadViewController;
 			sourceTree = "<group>";
 		};
 		368332082AEF8E7900F78FFD = {
@@ -343,6 +368,7 @@
 		368332462AEF8E9000F78FFD /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				3663D2312B0474C100E25D38 /* LoadViewController */,
 				36BE169D2B0359630061989E /* TransaksiViewController */,
 				360A10E62B030B860023DF4B /* Tiket2ViewController */,
 				360A10E12B030A9A0023DF4B /* Tiket1ViewController */,
@@ -808,10 +834,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3663D22A2B04592E00E25D38 /* CustomLoadingView.xib in Resources */,
 				368332212AEF8E7B00F78FFD /* LaunchScreen.storyboard in Resources */,
 				3683321E2AEF8E7B00F78FFD /* Assets.xcassets in Resources */,
 				368332552AEF8F8300F78FFD /* HomeViewController.xib in Resources */,
 				36BE16A12B0359870061989E /* TransaksiViewController.xib in Resources */,
+				3663D22E2B04735100E25D38 /* SplashScreenVC.xib in Resources */,
 				368332962AF0EBAD00F78FFD /* PopViewController.xib in Resources */,
 				36B729A72AF47FE800738F22 /* CellTableViewCell.xib in Resources */,
 				368332992AF0EF7F00F78FFD /* TextFieldViewController.xib in Resources */,
@@ -822,6 +850,7 @@
 				36B729482AF1EC5300738F22 /* GalleryViewController.xib in Resources */,
 				368332502AEF8F3F00F78FFD /* HewanViewController.xib in Resources */,
 				368332862AF0DA6500F78FFD /* FotoViewController.xib in Resources */,
+				3663D2352B0474EA00E25D38 /* LoadViewController.xib in Resources */,
 				36B729842AF21E0A00738F22 /* MasukViewController.xib in Resources */,
 				36B729982AF34F4A00738F22 /* AnimasiViewController.xib in Resources */,
 				36B729432AF1E85E00738F22 /* ScanViewController.xib in Resources */,
@@ -976,6 +1005,7 @@
 				360A10DE2B020C820023DF4B /* ProfileViewController.swift in Sources */,
 				368332952AF0EBAD00F78FFD /* PopViewController.swift in Sources */,
 				36B729A62AF47FE800738F22 /* CellTableViewCell.swift in Sources */,
+				3663D2302B04736500E25D38 /* SplashScreenVC.swift in Sources */,
 				368332192AEF8E7900F78FFD /* ViewController.swift in Sources */,
 				360A10ED2B03455A0023DF4B /* HomeViewModel.swift in Sources */,
 				36B729972AF34F4A00738F22 /* AnimasiViewController.swift in Sources */,
@@ -995,8 +1025,10 @@
 				3686A1762AFB5E7E007A17A9 /* TestApiViewModel.swift in Sources */,
 				36B729C22AF4C4D400738F22 /* ExtUIView.swift in Sources */,
 				36B729472AF1EC5300738F22 /* GalleryViewController.swift in Sources */,
+				3663D2342B0474EA00E25D38 /* LoadViewController.swift in Sources */,
 				36B729B92AF4ADC500738F22 /* PokemonTableViewCell.swift in Sources */,
 				36B729A12AF3999C00738F22 /* SplashViewController.swift in Sources */,
+				3663D22C2B0459CB00E25D38 /* CustomLoadingView.swift in Sources */,
 				36B729C02AF4C15700738F22 /* TestApiModel.swift in Sources */,
 				368332572AEF929200F78FFD /* constrant.swift in Sources */,
 				368332172AEF8E7900F78FFD /* SceneDelegate.swift in Sources */,

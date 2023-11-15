@@ -1,0 +1,755 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1A3A2322329809CE5B1422EECB20973B /* Pods-animalswiki-animalswikiUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D546B500BDF22149CF09E8AAF5E76CD /* Pods-animalswiki-animalswikiUITests-dummy.m */; };
+		1EF23B2D15FF6497D6B44F5090769025 /* Pods-animalswiki-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B5F0AC23E36F7705355873C31B7BBF13 /* Pods-animalswiki-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		44766D5F77E53F2AE56D39A55A937281 /* Pods-animalswikiTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 561A5AC396763B2A0481FCA367441F07 /* Pods-animalswikiTests-dummy.m */; };
+		5EDFAFD2759208D8ABBA91C475761E4C /* Pods-animalswiki-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 387C06C24969AE58616633EF43A760E0 /* Pods-animalswiki-dummy.m */; };
+		717E7259EC734171C44BF2466238A318 /* Pods-animalswiki-animalswikiUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D238099D7C65BBD0C6248B07C2C65C /* Pods-animalswiki-animalswikiUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7B92257B658FA340A15BF901F00F5D3D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		99D31AF30CF0E5E870CDBA4AE09B5366 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		CD4350055C2EF05CB53C4CF3E7BD2450 /* Pods-animalswikiTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D40BB93B44A794910252821CB32E9073 /* Pods-animalswikiTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D9C2597167B1445E2AD9F62DD0D76844 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1809F98DE43FF13B0363A6828430AB22 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C3C61250B9098830D58F2D91DB903781;
+			remoteInfo = "Pods-animalswiki";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		03016F4BC59FEEF07D6C576586819E05 /* Pods-animalswiki-animalswikiUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-animalswiki-animalswikiUITests-Info.plist"; sourceTree = "<group>"; };
+		074D73C6C7049E714B42674264F5AD53 /* Pods-animalswikiTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-animalswikiTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		387C06C24969AE58616633EF43A760E0 /* Pods-animalswiki-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-animalswiki-dummy.m"; sourceTree = "<group>"; };
+		443C8204A907464A951BD58E4444D68F /* Pods-animalswiki-animalswikiUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-animalswiki-animalswikiUITests.release.xcconfig"; sourceTree = "<group>"; };
+		50F44C0757125905634022516FB5FFC6 /* Pods-animalswiki.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-animalswiki.modulemap"; sourceTree = "<group>"; };
+		5368A86A6626DDF0A0CAEBDC4FB69C34 /* Pods-animalswiki.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-animalswiki.release.xcconfig"; sourceTree = "<group>"; };
+		561A5AC396763B2A0481FCA367441F07 /* Pods-animalswikiTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-animalswikiTests-dummy.m"; sourceTree = "<group>"; };
+		585229E7FDC5BCB00B002E2E9690073B /* Pods-animalswiki-animalswikiUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-animalswiki-animalswikiUITests.modulemap"; sourceTree = "<group>"; };
+		673124CBA5185BF059140168A3AA15BD /* Pods-animalswikiTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-animalswikiTests.modulemap"; sourceTree = "<group>"; };
+		6D546B500BDF22149CF09E8AAF5E76CD /* Pods-animalswiki-animalswikiUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-animalswiki-animalswikiUITests-dummy.m"; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		7B68FFE88ABD6D6F5BB4F3A71C831C24 /* Pods-animalswiki-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-animalswiki-acknowledgements.plist"; sourceTree = "<group>"; };
+		85C2EBB8FD91C338776895CFB4AEBBE0 /* Pods-animalswiki-animalswikiUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-animalswiki-animalswikiUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A41524379364F1F9A12207CD0C1B45EC /* Pods-animalswiki.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-animalswiki.debug.xcconfig"; sourceTree = "<group>"; };
+		AFFF0100E6CC59D7D563D194B678FBB8 /* Pods-animalswiki-animalswikiUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-animalswiki-animalswikiUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B5F0AC23E36F7705355873C31B7BBF13 /* Pods-animalswiki-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-animalswiki-umbrella.h"; sourceTree = "<group>"; };
+		B779A9C941E338B467830BFD813578B6 /* Pods-animalswiki-animalswikiUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-animalswiki-animalswikiUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		BC53B077E69FCD611596FF82492E68AE /* Pods-animalswiki */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-animalswiki"; path = Pods_animalswiki.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C101607F30521CE85510FEE06AA69DE4 /* Pods-animalswiki-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-animalswiki-Info.plist"; sourceTree = "<group>"; };
+		C1C327632853D7F937FEDAD81CFA61CE /* Pods-animalswikiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-animalswikiTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CEDCC18D308E939BA6E5FB782631596E /* Pods-animalswikiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-animalswikiTests.release.xcconfig"; sourceTree = "<group>"; };
+		D0B5A73D65648F943B2D567730C2AE59 /* Pods-animalswikiTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-animalswikiTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		D40BB93B44A794910252821CB32E9073 /* Pods-animalswikiTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-animalswikiTests-umbrella.h"; sourceTree = "<group>"; };
+		D4E5264D89C3FB8B5CD9E0464B523EBF /* Pods-animalswiki-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-animalswiki-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D8BD6F976177343A616C0B1911B35C59 /* Pods-animalswikiTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-animalswikiTests-Info.plist"; sourceTree = "<group>"; };
+		DD9E584218D168C2DA71EC84D1BFD546 /* Pods-animalswikiTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-animalswikiTests"; path = Pods_animalswikiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F817835D3927498C3491AE7F2D462DC4 /* Pods-animalswiki-animalswikiUITests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-animalswiki-animalswikiUITests"; path = Pods_animalswiki_animalswikiUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8D238099D7C65BBD0C6248B07C2C65C /* Pods-animalswiki-animalswikiUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-animalswiki-animalswikiUITests-umbrella.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6B213384E85F1967A1A4A1BC70294B43 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B92257B658FA340A15BF901F00F5D3D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DEB857082A2398D4110FBC99BF3AFCF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99D31AF30CF0E5E870CDBA4AE09B5366 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBADF0182F6356D0CBEE693602DEA475 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9C2597167B1445E2AD9F62DD0D76844 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2617086AF2DE9401291CD7D53225CA0D /* Pods-animalswiki */ = {
+			isa = PBXGroup;
+			children = (
+				50F44C0757125905634022516FB5FFC6 /* Pods-animalswiki.modulemap */,
+				D4E5264D89C3FB8B5CD9E0464B523EBF /* Pods-animalswiki-acknowledgements.markdown */,
+				7B68FFE88ABD6D6F5BB4F3A71C831C24 /* Pods-animalswiki-acknowledgements.plist */,
+				387C06C24969AE58616633EF43A760E0 /* Pods-animalswiki-dummy.m */,
+				C101607F30521CE85510FEE06AA69DE4 /* Pods-animalswiki-Info.plist */,
+				B5F0AC23E36F7705355873C31B7BBF13 /* Pods-animalswiki-umbrella.h */,
+				A41524379364F1F9A12207CD0C1B45EC /* Pods-animalswiki.debug.xcconfig */,
+				5368A86A6626DDF0A0CAEBDC4FB69C34 /* Pods-animalswiki.release.xcconfig */,
+			);
+			name = "Pods-animalswiki";
+			path = "Target Support Files/Pods-animalswiki";
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7EB18D2703C23CE238560344F050AD44 /* Pods-animalswikiTests */ = {
+			isa = PBXGroup;
+			children = (
+				673124CBA5185BF059140168A3AA15BD /* Pods-animalswikiTests.modulemap */,
+				074D73C6C7049E714B42674264F5AD53 /* Pods-animalswikiTests-acknowledgements.markdown */,
+				D0B5A73D65648F943B2D567730C2AE59 /* Pods-animalswikiTests-acknowledgements.plist */,
+				561A5AC396763B2A0481FCA367441F07 /* Pods-animalswikiTests-dummy.m */,
+				D8BD6F976177343A616C0B1911B35C59 /* Pods-animalswikiTests-Info.plist */,
+				D40BB93B44A794910252821CB32E9073 /* Pods-animalswikiTests-umbrella.h */,
+				C1C327632853D7F937FEDAD81CFA61CE /* Pods-animalswikiTests.debug.xcconfig */,
+				CEDCC18D308E939BA6E5FB782631596E /* Pods-animalswikiTests.release.xcconfig */,
+			);
+			name = "Pods-animalswikiTests";
+			path = "Target Support Files/Pods-animalswikiTests";
+			sourceTree = "<group>";
+		};
+		9722D48BE1BA4092DC6D4DD968E92178 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BC53B077E69FCD611596FF82492E68AE /* Pods-animalswiki */,
+				F817835D3927498C3491AE7F2D462DC4 /* Pods-animalswiki-animalswikiUITests */,
+				DD9E584218D168C2DA71EC84D1BFD546 /* Pods-animalswikiTests */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AA6E4C19B31F4142A39EFF1FAD0FA56F /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2617086AF2DE9401291CD7D53225CA0D /* Pods-animalswiki */,
+				E8D96C7C4C7915EE2852E49C10E08D92 /* Pods-animalswiki-animalswikiUITests */,
+				7EB18D2703C23CE238560344F050AD44 /* Pods-animalswikiTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				9722D48BE1BA4092DC6D4DD968E92178 /* Products */,
+				AA6E4C19B31F4142A39EFF1FAD0FA56F /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E8D96C7C4C7915EE2852E49C10E08D92 /* Pods-animalswiki-animalswikiUITests */ = {
+			isa = PBXGroup;
+			children = (
+				585229E7FDC5BCB00B002E2E9690073B /* Pods-animalswiki-animalswikiUITests.modulemap */,
+				AFFF0100E6CC59D7D563D194B678FBB8 /* Pods-animalswiki-animalswikiUITests-acknowledgements.markdown */,
+				85C2EBB8FD91C338776895CFB4AEBBE0 /* Pods-animalswiki-animalswikiUITests-acknowledgements.plist */,
+				6D546B500BDF22149CF09E8AAF5E76CD /* Pods-animalswiki-animalswikiUITests-dummy.m */,
+				03016F4BC59FEEF07D6C576586819E05 /* Pods-animalswiki-animalswikiUITests-Info.plist */,
+				F8D238099D7C65BBD0C6248B07C2C65C /* Pods-animalswiki-animalswikiUITests-umbrella.h */,
+				B779A9C941E338B467830BFD813578B6 /* Pods-animalswiki-animalswikiUITests.debug.xcconfig */,
+				443C8204A907464A951BD58E4444D68F /* Pods-animalswiki-animalswikiUITests.release.xcconfig */,
+			);
+			name = "Pods-animalswiki-animalswikiUITests";
+			path = "Target Support Files/Pods-animalswiki-animalswikiUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3EE30E325936FF290F5F5D61A791C592 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				717E7259EC734171C44BF2466238A318 /* Pods-animalswiki-animalswikiUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3CD6BBB77647EB8767171C6EDD96209 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EF23B2D15FF6497D6B44F5090769025 /* Pods-animalswiki-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE61F2FE9EDC1BA1234AD1F2BB5DC13E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD4350055C2EF05CB53C4CF3E7BD2450 /* Pods-animalswikiTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		872939EB71012AE40381B3E7FEFDCAC7 /* Pods-animalswikiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E5F94F09C2BB1CC50FB631108430F753 /* Build configuration list for PBXNativeTarget "Pods-animalswikiTests" */;
+			buildPhases = (
+				CE61F2FE9EDC1BA1234AD1F2BB5DC13E /* Headers */,
+				CB3F53A1F054B6687961431575429233 /* Sources */,
+				CBADF0182F6356D0CBEE693602DEA475 /* Frameworks */,
+				90D65DEF0B709726F19767DEEF7382F0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9ABE803CD42DADE161E883A41FCD7606 /* PBXTargetDependency */,
+			);
+			name = "Pods-animalswikiTests";
+			productName = Pods_animalswikiTests;
+			productReference = DD9E584218D168C2DA71EC84D1BFD546 /* Pods-animalswikiTests */;
+			productType = "com.apple.product-type.framework";
+		};
+		C3C61250B9098830D58F2D91DB903781 /* Pods-animalswiki */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BAB79622A62CC9CFEC3D1D65D53F1175 /* Build configuration list for PBXNativeTarget "Pods-animalswiki" */;
+			buildPhases = (
+				A3CD6BBB77647EB8767171C6EDD96209 /* Headers */,
+				1FC68A837A52BE420241201A091F32DF /* Sources */,
+				6B213384E85F1967A1A4A1BC70294B43 /* Frameworks */,
+				C1C81D180EF3186E93B1A70AE55C3772 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-animalswiki";
+			productName = Pods_animalswiki;
+			productReference = BC53B077E69FCD611596FF82492E68AE /* Pods-animalswiki */;
+			productType = "com.apple.product-type.framework";
+		};
+		CC4D8CDC7A9F014BE70DADC7F57110D4 /* Pods-animalswiki-animalswikiUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E60372D14EABA81A854D815450E88186 /* Build configuration list for PBXNativeTarget "Pods-animalswiki-animalswikiUITests" */;
+			buildPhases = (
+				3EE30E325936FF290F5F5D61A791C592 /* Headers */,
+				7B0D1ACF6F183076595E1456AAC54647 /* Sources */,
+				9DEB857082A2398D4110FBC99BF3AFCF /* Frameworks */,
+				A81827501E0882CD37D8FC1984AF7BAF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-animalswiki-animalswikiUITests";
+			productName = Pods_animalswiki_animalswikiUITests;
+			productReference = F817835D3927498C3491AE7F2D462DC4 /* Pods-animalswiki-animalswikiUITests */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 9722D48BE1BA4092DC6D4DD968E92178 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C3C61250B9098830D58F2D91DB903781 /* Pods-animalswiki */,
+				CC4D8CDC7A9F014BE70DADC7F57110D4 /* Pods-animalswiki-animalswikiUITests */,
+				872939EB71012AE40381B3E7FEFDCAC7 /* Pods-animalswikiTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		90D65DEF0B709726F19767DEEF7382F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A81827501E0882CD37D8FC1984AF7BAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1C81D180EF3186E93B1A70AE55C3772 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1FC68A837A52BE420241201A091F32DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EDFAFD2759208D8ABBA91C475761E4C /* Pods-animalswiki-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B0D1ACF6F183076595E1456AAC54647 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A3A2322329809CE5B1422EECB20973B /* Pods-animalswiki-animalswikiUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB3F53A1F054B6687961431575429233 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44766D5F77E53F2AE56D39A55A937281 /* Pods-animalswikiTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9ABE803CD42DADE161E883A41FCD7606 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-animalswiki";
+			target = C3C61250B9098830D58F2D91DB903781 /* Pods-animalswiki */;
+			targetProxy = 1809F98DE43FF13B0363A6828430AB22 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		07EFA9C57998784F45A7D41B0EA9A756 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B779A9C941E338B467830BFD813578B6 /* Pods-animalswiki-animalswikiUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-animalswiki-animalswikiUITests/Pods-animalswiki-animalswikiUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-animalswiki-animalswikiUITests/Pods-animalswiki-animalswikiUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2B0CA3238E204BF4DA0C40204B964899 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5368A86A6626DDF0A0CAEBDC4FB69C34 /* Pods-animalswiki.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-animalswiki/Pods-animalswiki-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-animalswiki/Pods-animalswiki.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		446BA1B9A1F1F2F95D04E5F82EB1B0F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		5D47E2EFAC6FAC81A782D9BFD8736F53 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		61BA0C3E671788EBAD563111D88CCDCC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CEDCC18D308E939BA6E5FB782631596E /* Pods-animalswikiTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-animalswikiTests/Pods-animalswikiTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-animalswikiTests/Pods-animalswikiTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A154451CD65F1E4C6B719C02993D03B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1C327632853D7F937FEDAD81CFA61CE /* Pods-animalswikiTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-animalswikiTests/Pods-animalswikiTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-animalswikiTests/Pods-animalswikiTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D7007EA66E2A17595A8E408AA42B2389 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 443C8204A907464A951BD58E4444D68F /* Pods-animalswiki-animalswikiUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-animalswiki-animalswikiUITests/Pods-animalswiki-animalswikiUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-animalswiki-animalswikiUITests/Pods-animalswiki-animalswikiUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DE695DC351FDE19782A1EAD293463CAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A41524379364F1F9A12207CD0C1B45EC /* Pods-animalswiki.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-animalswiki/Pods-animalswiki-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-animalswiki/Pods-animalswiki.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				446BA1B9A1F1F2F95D04E5F82EB1B0F4 /* Debug */,
+				5D47E2EFAC6FAC81A782D9BFD8736F53 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BAB79622A62CC9CFEC3D1D65D53F1175 /* Build configuration list for PBXNativeTarget "Pods-animalswiki" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE695DC351FDE19782A1EAD293463CAE /* Debug */,
+				2B0CA3238E204BF4DA0C40204B964899 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E5F94F09C2BB1CC50FB631108430F753 /* Build configuration list for PBXNativeTarget "Pods-animalswikiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A154451CD65F1E4C6B719C02993D03B8 /* Debug */,
+				61BA0C3E671788EBAD563111D88CCDCC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E60372D14EABA81A854D815450E88186 /* Build configuration list for PBXNativeTarget "Pods-animalswiki-animalswikiUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07EFA9C57998784F45A7D41B0EA9A756 /* Debug */,
+				D7007EA66E2A17595A8E408AA42B2389 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
