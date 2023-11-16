@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		364F40822B05BC5300EA0BC1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364F40802B05BC5300EA0BC1 /* ProfileViewController.swift */; };
+		364F40832B05BC5300EA0BC1 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 364F40812B05BC5300EA0BC1 /* ProfileViewController.xib */; };
+		364F40872B05CBDC00EA0BC1 /* ListContentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364F40852B05CBDB00EA0BC1 /* ListContentVC.swift */; };
+		364F40882B05CBDC00EA0BC1 /* ListContentVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 364F40862B05CBDB00EA0BC1 /* ListContentVC.xib */; };
+		364F408C2B05CC3B00EA0BC1 /* DetailProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364F408A2B05CC3B00EA0BC1 /* DetailProfileVC.swift */; };
+		364F408D2B05CC3B00EA0BC1 /* DetailProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 364F408B2B05CC3B00EA0BC1 /* DetailProfileVC.xib */; };
+		364F40902B05D0C300EA0BC1 /* CHTCollectionViewWaterfallLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 364F408F2B05D0C300EA0BC1 /* CHTCollectionViewWaterfallLayout */; };
+		364F40982B05D4D300EA0BC1 /* PinterestViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364F40962B05D4D300EA0BC1 /* PinterestViewCell.swift */; };
+		364F40992B05D4D300EA0BC1 /* PinterestViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 364F40972B05D4D300EA0BC1 /* PinterestViewCell.xib */; };
+		364F409D2B060D0000EA0BC1 /* DpViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364F409B2B060D0000EA0BC1 /* DpViewCell.swift */; };
+		364F409E2B060D0000EA0BC1 /* DpViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 364F409C2B060D0000EA0BC1 /* DpViewCell.xib */; };
 		3663D2432B049C8400E25D38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3663D2422B049C8400E25D38 /* AppDelegate.swift */; };
 		3663D2452B049C8400E25D38 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3663D2442B049C8400E25D38 /* SceneDelegate.swift */; };
 		3663D2472B049C8400E25D38 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3663D2462B049C8400E25D38 /* ViewController.swift */; };
@@ -48,6 +59,16 @@
 
 /* Begin PBXFileReference section */
 		232BC260A65FE403115ECDE4 /* Pods-animalswiki-animalswikiUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-animalswiki-animalswikiUITests.release.xcconfig"; path = "Target Support Files/Pods-animalswiki-animalswikiUITests/Pods-animalswiki-animalswikiUITests.release.xcconfig"; sourceTree = "<group>"; };
+		364F40802B05BC5300EA0BC1 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		364F40812B05BC5300EA0BC1 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		364F40852B05CBDB00EA0BC1 /* ListContentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListContentVC.swift; sourceTree = "<group>"; };
+		364F40862B05CBDB00EA0BC1 /* ListContentVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListContentVC.xib; sourceTree = "<group>"; };
+		364F408A2B05CC3B00EA0BC1 /* DetailProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProfileVC.swift; sourceTree = "<group>"; };
+		364F408B2B05CC3B00EA0BC1 /* DetailProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailProfileVC.xib; sourceTree = "<group>"; };
+		364F40962B05D4D300EA0BC1 /* PinterestViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestViewCell.swift; sourceTree = "<group>"; };
+		364F40972B05D4D300EA0BC1 /* PinterestViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PinterestViewCell.xib; sourceTree = "<group>"; };
+		364F409B2B060D0000EA0BC1 /* DpViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DpViewCell.swift; sourceTree = "<group>"; };
+		364F409C2B060D0000EA0BC1 /* DpViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DpViewCell.xib; sourceTree = "<group>"; };
 		3663D23F2B049C8400E25D38 /* animalswiki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = animalswiki.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3663D2422B049C8400E25D38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3663D2442B049C8400E25D38 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				364F40902B05D0C300EA0BC1 /* CHTCollectionViewWaterfallLayout in Frameworks */,
 				CE4CB531E526F4B3C0BE67F1 /* Pods_animalswiki.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -107,6 +129,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		364F407F2B05BC2D00EA0BC1 /* ProfileViewController */ = {
+			isa = PBXGroup;
+			children = (
+				364F40802B05BC5300EA0BC1 /* ProfileViewController.swift */,
+				364F40812B05BC5300EA0BC1 /* ProfileViewController.xib */,
+			);
+			path = ProfileViewController;
+			sourceTree = "<group>";
+		};
+		364F40842B05CBB500EA0BC1 /* ListContentVC */ = {
+			isa = PBXGroup;
+			children = (
+				364F40912B05D45E00EA0BC1 /* cell */,
+				364F40852B05CBDB00EA0BC1 /* ListContentVC.swift */,
+				364F40862B05CBDB00EA0BC1 /* ListContentVC.xib */,
+			);
+			path = ListContentVC;
+			sourceTree = "<group>";
+		};
+		364F40892B05CBFD00EA0BC1 /* DetailProfileVC */ = {
+			isa = PBXGroup;
+			children = (
+				364F409A2B060CD500EA0BC1 /* cell */,
+				364F408A2B05CC3B00EA0BC1 /* DetailProfileVC.swift */,
+				364F408B2B05CC3B00EA0BC1 /* DetailProfileVC.xib */,
+			);
+			path = DetailProfileVC;
+			sourceTree = "<group>";
+		};
+		364F40912B05D45E00EA0BC1 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				364F40962B05D4D300EA0BC1 /* PinterestViewCell.swift */,
+				364F40972B05D4D300EA0BC1 /* PinterestViewCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		364F409A2B060CD500EA0BC1 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				364F409B2B060D0000EA0BC1 /* DpViewCell.swift */,
+				364F409C2B060D0000EA0BC1 /* DpViewCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
 		3663D2362B049C8400E25D38 = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +250,9 @@
 		3663D2772B04A11400E25D38 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				364F40892B05CBFD00EA0BC1 /* DetailProfileVC */,
+				364F40842B05CBB500EA0BC1 /* ListContentVC */,
+				364F407F2B05BC2D00EA0BC1 /* ProfileViewController */,
 				3663D27E2B04A70D00E25D38 /* LoginViewController */,
 				3663D2792B04A2AC00E25D38 /* HomeViewController */,
 				3663D2462B049C8400E25D38 /* ViewController.swift */,
@@ -272,6 +344,9 @@
 			dependencies = (
 			);
 			name = animalswiki;
+			packageProductDependencies = (
+				364F408F2B05D0C300EA0BC1 /* CHTCollectionViewWaterfallLayout */,
+			);
 			productName = animalswiki;
 			productReference = 3663D23F2B049C8400E25D38 /* animalswiki.app */;
 			productType = "com.apple.product-type.application";
@@ -346,6 +421,9 @@
 				Base,
 			);
 			mainGroup = 3663D2362B049C8400E25D38;
+			packageReferences = (
+				364F408E2B05D0C300EA0BC1 /* XCRemoteSwiftPackageReference "CHTCollectionViewWaterfallLayout" */,
+			);
 			productRefGroup = 3663D2402B049C8400E25D38 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -362,10 +440,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				364F40832B05BC5300EA0BC1 /* ProfileViewController.xib in Resources */,
 				3663D2822B04A72800E25D38 /* LoginViewController.xib in Resources */,
+				364F40882B05CBDC00EA0BC1 /* ListContentVC.xib in Resources */,
 				3663D2522B049C8600E25D38 /* LaunchScreen.storyboard in Resources */,
 				3663D2872B04BB7500E25D38 /* CollectionViewCell.xib in Resources */,
+				364F409E2B060D0000EA0BC1 /* DpViewCell.xib in Resources */,
 				3663D24F2B049C8600E25D38 /* Assets.xcassets in Resources */,
+				364F408D2B05CC3B00EA0BC1 /* DetailProfileVC.xib in Resources */,
+				364F40992B05D4D300EA0BC1 /* PinterestViewCell.xib in Resources */,
 				3663D24A2B049C8400E25D38 /* Main.storyboard in Resources */,
 				3663D27D2B04A2C600E25D38 /* HomeViewController.xib in Resources */,
 			);
@@ -464,11 +547,16 @@
 				3663D2812B04A72800E25D38 /* LoginViewController.swift in Sources */,
 				3663D27C2B04A2C600E25D38 /* HomeViewController.swift in Sources */,
 				3663D2472B049C8400E25D38 /* ViewController.swift in Sources */,
+				364F408C2B05CC3B00EA0BC1 /* DetailProfileVC.swift in Sources */,
 				3663D28A2B04BE9600E25D38 /* HomeViewModel.swift in Sources */,
+				364F40872B05CBDC00EA0BC1 /* ListContentVC.swift in Sources */,
 				3663D2862B04BB7500E25D38 /* CollectionViewCell.swift in Sources */,
 				3663D24D2B049C8400E25D38 /* animalswiki.xcdatamodeld in Sources */,
+				364F40822B05BC5300EA0BC1 /* ProfileViewController.swift in Sources */,
 				3663D2432B049C8400E25D38 /* AppDelegate.swift in Sources */,
 				3663D2452B049C8400E25D38 /* SceneDelegate.swift in Sources */,
+				364F409D2B060D0000EA0BC1 /* DpViewCell.swift in Sources */,
+				364F40982B05D4D300EA0BC1 /* PinterestViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -651,8 +739,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -679,8 +767,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -810,6 +898,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		364F408E2B05D0C300EA0BC1 /* XCRemoteSwiftPackageReference "CHTCollectionViewWaterfallLayout" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AfrazCodes/CHTCollectionViewWaterfallLayout";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.8;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		364F408F2B05D0C300EA0BC1 /* CHTCollectionViewWaterfallLayout */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 364F408E2B05D0C300EA0BC1 /* XCRemoteSwiftPackageReference "CHTCollectionViewWaterfallLayout" */;
+			productName = CHTCollectionViewWaterfallLayout;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		3663D24B2B049C8400E25D38 /* animalswiki.xcdatamodeld */ = {

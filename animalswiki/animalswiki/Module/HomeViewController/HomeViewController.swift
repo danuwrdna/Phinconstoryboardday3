@@ -1,6 +1,7 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+    @IBOutlet weak var adamLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -10,8 +11,20 @@ class HomeViewController: UIViewController {
     override func viewWillAppear( _ animated: Bool) {
             super.viewWillAppear(animated)
             // Hide the navigation bar
+           labelNavigasi()
             showNaviItem()
         setupCollection()
+        }
+    func labelNavigasi(){
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(labelTapped))
+               adamLabel.isUserInteractionEnabled = true
+                adamLabel.addGestureRecognizer(tapGesture)
+    }
+    @objc func labelTapped() {
+            // Aksi yang diambil saat label ditekan
+            // Contoh: Menavigasi ke tampilan lain
+            let destinationViewController = ProfileViewController()
+            navigationController?.pushViewController(destinationViewController, animated: true)
         }
     func setupCollection(){
         collectionView.delegate = self
