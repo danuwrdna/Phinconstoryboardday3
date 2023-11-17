@@ -69,6 +69,11 @@ extension ListContentVC: UICollectionViewDelegate, UICollectionViewDataSource, C
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: view.frame.size.width/2, height: models[indexPath.row].height)
     }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+           // Navigasi ke layar tujuan setelah item diketuk
+           let bt = DetailProfileVC() // Gantilah dengan nama ViewController tujuan Anda
+           navigationController?.pushViewController(bt, animated: true)
+       }
 
 }
 

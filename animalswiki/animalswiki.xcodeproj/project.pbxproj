@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		36003FA12B06FD7D0044D9B5 /* AnimalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36003F9F2B06FD7D0044D9B5 /* AnimalCollectionViewCell.swift */; };
+		36003FA22B06FD7D0044D9B5 /* AnimalCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36003FA02B06FD7D0044D9B5 /* AnimalCollectionViewCell.xib */; };
+		36003FA52B070B9B0044D9B5 /* CollectionFPViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36003FA32B070B9B0044D9B5 /* CollectionFPViewCell.swift */; };
+		36003FA62B070B9B0044D9B5 /* CollectionFPViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36003FA42B070B9B0044D9B5 /* CollectionFPViewCell.xib */; };
+		36003FA92B070D610044D9B5 /* CollectionProductionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36003FA72B070D610044D9B5 /* CollectionProductionViewCell.swift */; };
+		36003FAA2B070D610044D9B5 /* CollectionProductionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36003FA82B070D610044D9B5 /* CollectionProductionViewCell.xib */; };
+		36003FB02B071A910044D9B5 /* SignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36003FAE2B071A910044D9B5 /* SignViewController.swift */; };
+		36003FB12B071A910044D9B5 /* SignViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36003FAF2B071A910044D9B5 /* SignViewController.xib */; };
+		36003FBF2B0722F90044D9B5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 36003FBE2B0722F90044D9B5 /* GoogleService-Info.plist */; };
+		36003FC82B073CF00044D9B5 /* AnimasiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36003FC72B073CF00044D9B5 /* AnimasiViewController.xib */; };
+		36003FCA2B073D110044D9B5 /* AnimasiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36003FC92B073D110044D9B5 /* AnimasiViewController.swift */; };
+		36003FCD2B0740250044D9B5 /* ErorlogViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36003FCC2B0740250044D9B5 /* ErorlogViewController.xib */; };
+		36003FCF2B0740E80044D9B5 /* ErorlogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36003FCE2B0740E80044D9B5 /* ErorlogViewController.swift */; };
+		36003FD22B0765670044D9B5 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36003FD12B0765670044D9B5 /* MainTabBar.swift */; };
+		36003FD42B0765D60044D9B5 /* constrant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36003FD32B0765D50044D9B5 /* constrant.swift */; };
 		364F40822B05BC5300EA0BC1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364F40802B05BC5300EA0BC1 /* ProfileViewController.swift */; };
 		364F40832B05BC5300EA0BC1 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 364F40812B05BC5300EA0BC1 /* ProfileViewController.xib */; };
 		364F40872B05CBDC00EA0BC1 /* ListContentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364F40852B05CBDB00EA0BC1 /* ListContentVC.swift */; };
@@ -59,6 +74,21 @@
 
 /* Begin PBXFileReference section */
 		232BC260A65FE403115ECDE4 /* Pods-animalswiki-animalswikiUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-animalswiki-animalswikiUITests.release.xcconfig"; path = "Target Support Files/Pods-animalswiki-animalswikiUITests/Pods-animalswiki-animalswikiUITests.release.xcconfig"; sourceTree = "<group>"; };
+		36003F9F2B06FD7D0044D9B5 /* AnimalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalCollectionViewCell.swift; sourceTree = "<group>"; };
+		36003FA02B06FD7D0044D9B5 /* AnimalCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimalCollectionViewCell.xib; sourceTree = "<group>"; };
+		36003FA32B070B9B0044D9B5 /* CollectionFPViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionFPViewCell.swift; sourceTree = "<group>"; };
+		36003FA42B070B9B0044D9B5 /* CollectionFPViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionFPViewCell.xib; sourceTree = "<group>"; };
+		36003FA72B070D610044D9B5 /* CollectionProductionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionProductionViewCell.swift; sourceTree = "<group>"; };
+		36003FA82B070D610044D9B5 /* CollectionProductionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionProductionViewCell.xib; sourceTree = "<group>"; };
+		36003FAE2B071A910044D9B5 /* SignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignViewController.swift; sourceTree = "<group>"; };
+		36003FAF2B071A910044D9B5 /* SignViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignViewController.xib; sourceTree = "<group>"; };
+		36003FBE2B0722F90044D9B5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		36003FC72B073CF00044D9B5 /* AnimasiViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimasiViewController.xib; sourceTree = "<group>"; };
+		36003FC92B073D110044D9B5 /* AnimasiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimasiViewController.swift; sourceTree = "<group>"; };
+		36003FCC2B0740250044D9B5 /* ErorlogViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErorlogViewController.xib; sourceTree = "<group>"; };
+		36003FCE2B0740E80044D9B5 /* ErorlogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErorlogViewController.swift; sourceTree = "<group>"; };
+		36003FD12B0765670044D9B5 /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
+		36003FD32B0765D50044D9B5 /* constrant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constrant.swift; sourceTree = "<group>"; };
 		364F40802B05BC5300EA0BC1 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		364F40812B05BC5300EA0BC1 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		364F40852B05CBDB00EA0BC1 /* ListContentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListContentVC.swift; sourceTree = "<group>"; };
@@ -129,6 +159,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		36003FAD2B071A660044D9B5 /* SignViewController */ = {
+			isa = PBXGroup;
+			children = (
+				36003FAE2B071A910044D9B5 /* SignViewController.swift */,
+				36003FAF2B071A910044D9B5 /* SignViewController.xib */,
+			);
+			path = SignViewController;
+			sourceTree = "<group>";
+		};
+		36003FC02B072D5C0044D9B5 /* CustomViewController */ = {
+			isa = PBXGroup;
+			children = (
+				36003FC72B073CF00044D9B5 /* AnimasiViewController.xib */,
+				36003FC92B073D110044D9B5 /* AnimasiViewController.swift */,
+				36003FCC2B0740250044D9B5 /* ErorlogViewController.xib */,
+				36003FCE2B0740E80044D9B5 /* ErorlogViewController.swift */,
+			);
+			path = CustomViewController;
+			sourceTree = "<group>";
+		};
+		36003FD02B07654F0044D9B5 /* MainTabbar */ = {
+			isa = PBXGroup;
+			children = (
+				36003FD12B0765670044D9B5 /* MainTabBar.swift */,
+			);
+			path = MainTabbar;
+			sourceTree = "<group>";
+		};
 		364F407F2B05BC2D00EA0BC1 /* ProfileViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,6 +259,7 @@
 		3663D2412B049C8400E25D38 /* animalswiki */ = {
 			isa = PBXGroup;
 			children = (
+				36003FBE2B0722F90044D9B5 /* GoogleService-Info.plist */,
 				3663D2782B04A11F00E25D38 /* Common */,
 				3663D2772B04A11400E25D38 /* Module */,
 				3663D2762B04A0F300E25D38 /* Resource */,
@@ -250,6 +309,9 @@
 		3663D2772B04A11400E25D38 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				36003FD02B07654F0044D9B5 /* MainTabbar */,
+				36003FC02B072D5C0044D9B5 /* CustomViewController */,
+				36003FAD2B071A660044D9B5 /* SignViewController */,
 				364F40892B05CBFD00EA0BC1 /* DetailProfileVC */,
 				364F40842B05CBB500EA0BC1 /* ListContentVC */,
 				364F407F2B05BC2D00EA0BC1 /* ProfileViewController */,
@@ -263,6 +325,7 @@
 		3663D2782B04A11F00E25D38 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				36003FD32B0765D50044D9B5 /* constrant.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -292,6 +355,12 @@
 			children = (
 				3663D2842B04BB7500E25D38 /* CollectionViewCell.swift */,
 				3663D2852B04BB7500E25D38 /* CollectionViewCell.xib */,
+				36003F9F2B06FD7D0044D9B5 /* AnimalCollectionViewCell.swift */,
+				36003FA02B06FD7D0044D9B5 /* AnimalCollectionViewCell.xib */,
+				36003FA32B070B9B0044D9B5 /* CollectionFPViewCell.swift */,
+				36003FA42B070B9B0044D9B5 /* CollectionFPViewCell.xib */,
+				36003FA72B070D610044D9B5 /* CollectionProductionViewCell.swift */,
+				36003FA82B070D610044D9B5 /* CollectionProductionViewCell.xib */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -338,6 +407,7 @@
 				3663D23B2B049C8400E25D38 /* Sources */,
 				3663D23C2B049C8400E25D38 /* Frameworks */,
 				3663D23D2B049C8400E25D38 /* Resources */,
+				D546688481845A32FF96EB1E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -378,6 +448,7 @@
 				3663D25E2B049C8600E25D38 /* Sources */,
 				3663D25F2B049C8600E25D38 /* Frameworks */,
 				3663D2602B049C8600E25D38 /* Resources */,
+				78007F30E4B3D0F323772583 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -442,14 +513,21 @@
 			files = (
 				364F40832B05BC5300EA0BC1 /* ProfileViewController.xib in Resources */,
 				3663D2822B04A72800E25D38 /* LoginViewController.xib in Resources */,
+				36003FA22B06FD7D0044D9B5 /* AnimalCollectionViewCell.xib in Resources */,
 				364F40882B05CBDC00EA0BC1 /* ListContentVC.xib in Resources */,
 				3663D2522B049C8600E25D38 /* LaunchScreen.storyboard in Resources */,
 				3663D2872B04BB7500E25D38 /* CollectionViewCell.xib in Resources */,
+				36003FB12B071A910044D9B5 /* SignViewController.xib in Resources */,
 				364F409E2B060D0000EA0BC1 /* DpViewCell.xib in Resources */,
 				3663D24F2B049C8600E25D38 /* Assets.xcassets in Resources */,
+				36003FAA2B070D610044D9B5 /* CollectionProductionViewCell.xib in Resources */,
 				364F408D2B05CC3B00EA0BC1 /* DetailProfileVC.xib in Resources */,
+				36003FBF2B0722F90044D9B5 /* GoogleService-Info.plist in Resources */,
 				364F40992B05D4D300EA0BC1 /* PinterestViewCell.xib in Resources */,
 				3663D24A2B049C8400E25D38 /* Main.storyboard in Resources */,
+				36003FC82B073CF00044D9B5 /* AnimasiViewController.xib in Resources */,
+				36003FCD2B0740250044D9B5 /* ErorlogViewController.xib in Resources */,
+				36003FA62B070B9B0044D9B5 /* CollectionFPViewCell.xib in Resources */,
 				3663D27D2B04A2C600E25D38 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -471,6 +549,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		78007F30E4B3D0F323772583 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-animalswiki-animalswikiUITests/Pods-animalswiki-animalswikiUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-animalswiki-animalswikiUITests/Pods-animalswiki-animalswikiUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-animalswiki-animalswikiUITests/Pods-animalswiki-animalswikiUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		AEB68E1A78A76F63DA3A47DC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -515,6 +610,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D546688481845A32FF96EB1E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-animalswiki/Pods-animalswiki-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-animalswiki/Pods-animalswiki-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-animalswiki/Pods-animalswiki-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		DFB9991E802F89DAC823BC2E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -545,18 +657,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				3663D2812B04A72800E25D38 /* LoginViewController.swift in Sources */,
+				36003FCA2B073D110044D9B5 /* AnimasiViewController.swift in Sources */,
 				3663D27C2B04A2C600E25D38 /* HomeViewController.swift in Sources */,
 				3663D2472B049C8400E25D38 /* ViewController.swift in Sources */,
 				364F408C2B05CC3B00EA0BC1 /* DetailProfileVC.swift in Sources */,
+				36003FA52B070B9B0044D9B5 /* CollectionFPViewCell.swift in Sources */,
 				3663D28A2B04BE9600E25D38 /* HomeViewModel.swift in Sources */,
 				364F40872B05CBDC00EA0BC1 /* ListContentVC.swift in Sources */,
+				36003FD22B0765670044D9B5 /* MainTabBar.swift in Sources */,
+				36003FCF2B0740E80044D9B5 /* ErorlogViewController.swift in Sources */,
+				36003FA92B070D610044D9B5 /* CollectionProductionViewCell.swift in Sources */,
 				3663D2862B04BB7500E25D38 /* CollectionViewCell.swift in Sources */,
 				3663D24D2B049C8400E25D38 /* animalswiki.xcdatamodeld in Sources */,
+				36003FA12B06FD7D0044D9B5 /* AnimalCollectionViewCell.swift in Sources */,
 				364F40822B05BC5300EA0BC1 /* ProfileViewController.swift in Sources */,
 				3663D2432B049C8400E25D38 /* AppDelegate.swift in Sources */,
 				3663D2452B049C8400E25D38 /* SceneDelegate.swift in Sources */,
 				364F409D2B060D0000EA0BC1 /* DpViewCell.swift in Sources */,
 				364F40982B05D4D300EA0BC1 /* PinterestViewCell.swift in Sources */,
+				36003FD42B0765D60044D9B5 /* constrant.swift in Sources */,
+				36003FB02B071A910044D9B5 /* SignViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

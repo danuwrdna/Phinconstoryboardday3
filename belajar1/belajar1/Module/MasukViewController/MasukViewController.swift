@@ -62,7 +62,7 @@ class MasukViewController: UIViewController {
     }
     func shadow(){
         containerMasuk.layer.shadowColor = UIColor.black.cgColor
-        containerMasuk.layer.shadowOpacity = 0.5
+        containerMasuk.layer.shadowOpacity = 3
         containerMasuk.layer.shadowOffset = CGSize(width: 0, height: 2)
         containerMasuk.layer.shadowRadius = 4 
         containerMasuk.layer.masksToBounds = false

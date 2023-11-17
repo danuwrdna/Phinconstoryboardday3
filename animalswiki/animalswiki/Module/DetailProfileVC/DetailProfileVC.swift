@@ -6,10 +6,11 @@ struct ModelDp{
 class DetailProfileVC: UIViewController {
     var images: [ModelDp] = []
     @IBOutlet weak var viewCollection: UICollectionView!
-    
+    @IBOutlet weak var imageButton: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollection()
+        setupImageButton()
     }
     func setupCollection(){
         images = [
@@ -24,6 +25,16 @@ class DetailProfileVC: UIViewController {
         viewCollection.dataSource = self
         viewCollection.register(UINib(nibName: "DpViewCell", bundle: nil), forCellWithReuseIdentifier: "DpViewCell")
     }
+    func setupImageButton() {
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(adamLabelTapped))
+            imageButton.isUserInteractionEnabled = true
+            imageButton.addGestureRecognizer(tapGesture)
+        }
+
+        @objc func adamLabelTapped() {
+            let bt = ListContentVC()
+            navigationController?.pushViewController(bt, animated: false)
+        }
 }
 extension DetailProfileVC: UICollectionViewDelegate, UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

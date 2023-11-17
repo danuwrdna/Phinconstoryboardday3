@@ -6,6 +6,11 @@ target 'animalswiki' do
   use_frameworks!
 
   # Pods for animalswiki
+  pod "RxSwift"
+  pod "RxCocoa"
+  pod "Firebase/Core"
+  pod "Firebase/Auth"
+  pod 'lottie-ios'
 
   target 'animalswikiTests' do
     inherit! :search_paths
