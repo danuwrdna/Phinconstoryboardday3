@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="241" id="KGk-i7-Jjw" customClass="ThirdPictureCell" customModule="animalswiki" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="425" height="241"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="425" height="241"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unsplash_C8Ta0gwPbQg" translatesAutoresizingMaskIntoConstraints="NO" id="fGj-dL-DgC">
+                        <rect key="frame" x="16" y="12" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="0Bf-Kn-j3C"/>
+                            <constraint firstAttribute="height" constant="40" id="3qF-YH-Lp8"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adam Lambeter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aMZ-uz-47s">
+                        <rect key="frame" x="64" y="12" width="112" height="20"/>
+                        <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="adamlambeter@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIo-wd-kpz">
+                        <rect key="frame" x="64" y="34" width="139" height="15"/>
+                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="elB-PT-Mtg">
+                        <rect key="frame" x="16" y="60" width="389" height="170"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="170" id="eZA-6J-ro8"/>
+                        </constraints>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="HCT-dQ-RKs">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N0L-dQ-P4k">
+                        <rect key="frame" x="308" y="12" width="97" height="35"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="35" id="M9V-Zp-DET"/>
+                            <constraint firstAttribute="width" constant="97" id="l2c-E3-399"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" title="">
+                            <backgroundConfiguration key="background" image="Group 10"/>
+                        </buttonConfiguration>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="fGj-dL-DgC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="5UV-as-Nfw"/>
+                    <constraint firstItem="elB-PT-Mtg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="93x-l6-pWL"/>
+                    <constraint firstItem="aMZ-uz-47s" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="BHS-Vt-XtL"/>
+                    <constraint firstItem="fGj-dL-DgC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="H0r-YB-Iqp"/>
+                    <constraint firstAttribute="trailing" secondItem="elB-PT-Mtg" secondAttribute="trailing" constant="20" symbolic="YES" id="Lj4-yX-c0x"/>
+                    <constraint firstItem="pIo-wd-kpz" firstAttribute="leading" secondItem="fGj-dL-DgC" secondAttribute="trailing" constant="8" symbolic="YES" id="Suz-QY-P4V"/>
+                    <constraint firstItem="aMZ-uz-47s" firstAttribute="leading" secondItem="fGj-dL-DgC" secondAttribute="trailing" constant="8" symbolic="YES" id="Uib-Fb-efZ"/>
+                    <constraint firstAttribute="trailing" secondItem="N0L-dQ-P4k" secondAttribute="trailing" constant="20" symbolic="YES" id="ZMS-0u-9cq"/>
+                    <constraint firstItem="pIo-wd-kpz" firstAttribute="top" secondItem="aMZ-uz-47s" secondAttribute="bottom" constant="2" id="hd7-EB-esb"/>
+                    <constraint firstItem="elB-PT-Mtg" firstAttribute="top" secondItem="fGj-dL-DgC" secondAttribute="bottom" constant="8" symbolic="YES" id="hvD-5z-WfA"/>
+                    <constraint firstItem="N0L-dQ-P4k" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="l4o-OC-9dB"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="collectionThird" destination="elB-PT-Mtg" id="yM3-32-gyA"/>
+            </connections>
+            <point key="canvasLocation" x="2.2900763358778624" y="91.901408450704224"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Group 10" width="400" height="144"/>
+        <image name="unsplash_C8Ta0gwPbQg" width="154" height="160"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

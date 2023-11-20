@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SecondPictureCell" rowHeight="280" id="KGk-i7-Jjw" customClass="SecondPictureCell" customModule="animalswiki" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="280"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="280"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cil_animal" translatesAutoresizingMaskIntoConstraints="NO" id="6kr-5x-5Se">
+                        <rect key="frame" x="16" y="15" width="17" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="17" id="KC6-gn-7iE"/>
+                            <constraint firstAttribute="height" constant="17" id="pa9-mn-17y"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="List animal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XDI-Wf-49F">
+                        <rect key="frame" x="40.999999999999993" y="13.000000000000002" width="84.333333333333314" height="21.666666666666671"/>
+                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="18"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aPf-8p-X3X">
+                        <rect key="frame" x="240.66666666666666" y="9.0000000000000018" width="70.333333333333343" height="29.666666666666671"/>
+                        <color key="tintColor" red="1" green="0.34147036780000001" blue="0.7649869775" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain">
+                            <attributedString key="attributedTitle">
+                                <fragment content="View all">
+                                    <attributes>
+                                        <font key="NSFont" metaFont="system"/>
+                                        <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                        </buttonConfiguration>
+                    </button>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="fTv-4G-2Oe">
+                        <rect key="frame" x="0.0" y="40" width="320" height="90"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="90" id="a39-p6-W1v"/>
+                        </constraints>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="oZM-Oe-7Ly">
+                            <size key="itemSize" width="70" height="70"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="fTv-4G-2Oe" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="2Cr-0U-nr4"/>
+                    <constraint firstItem="aPf-8p-X3X" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="9" id="Er9-Cc-OrM"/>
+                    <constraint firstAttribute="trailing" secondItem="fTv-4G-2Oe" secondAttribute="trailing" id="bx1-oO-DDC"/>
+                    <constraint firstItem="XDI-Wf-49F" firstAttribute="leading" secondItem="6kr-5x-5Se" secondAttribute="trailing" constant="8" id="gB2-mX-rcw"/>
+                    <constraint firstItem="6kr-5x-5Se" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="ifA-WU-VNA"/>
+                    <constraint firstItem="XDI-Wf-49F" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="13" id="kOs-Pt-Ib1"/>
+                    <constraint firstAttribute="trailing" secondItem="aPf-8p-X3X" secondAttribute="trailing" constant="9" id="pMt-rm-1cv"/>
+                    <constraint firstItem="6kr-5x-5Se" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="wT7-IX-FzW"/>
+                    <constraint firstItem="fTv-4G-2Oe" firstAttribute="top" secondItem="aPf-8p-X3X" secondAttribute="bottom" constant="1.3333333333333286" id="zt8-Xz-i3A"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="secondCollection" destination="fTv-4G-2Oe" id="gLq-Ku-6fA"/>
+            </connections>
+            <point key="canvasLocation" x="7.6335877862595414" y="102.8169014084507"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="cil_animal" width="38" height="38"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

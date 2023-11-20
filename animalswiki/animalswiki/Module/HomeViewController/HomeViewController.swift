@@ -1,115 +1,72 @@
 import UIKit
-
-class HomeViewController: UIViewController {
-    @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var collectionAc: UICollectionView!
-    @IBOutlet weak var collectionFP: UICollectionView!
-    @IBOutlet weak var collectionProduction: UICollectionView!
-    @IBOutlet weak var adamLabel: UILabel!
+//dashboardTableView.registerCellWithNib(DashboardSearch.self)
+//dashboardTableView.registerCellWithNib(DashboardCategory.self)
+//dashboardTableView.registerCellWithNib(TodayAnime.self)
+//dashboardTableView.registerCellWithNib(CurrentSeasonAnime.self)
+class HomeViewController:
+    UIViewController {
+    @IBOutlet weak var homeTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated: true)
-        showNaviItem()
-        setupCollection()
-        setupLabelGesture()
+        delegateTable()
     }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        // Hide the navigation bar
-        showNaviItem()
-    }
-
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        // Re-enable the navigation bar when leaving this view
-        showNaviItem()
-    }
-
-    func setupCollection() {
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        collectionView.register(UINib(nibName: "CollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CollectionViewCell")
-
-        collectionAc.delegate = self
-        collectionAc.dataSource = self
-        collectionAc.register(UINib(nibName: "AnimalCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "AnimalCollectionViewCell")
-
-        collectionFP.delegate = self
-        collectionFP.dataSource = self
-        collectionFP.register(UINib(nibName: "CollectionFPViewCell", bundle: nil), forCellWithReuseIdentifier: "CollectionFPViewCell")
-
-        collectionProduction.delegate = self
-        collectionProduction.dataSource = self
-        collectionProduction.register(UINib(nibName: "CollectionProductionViewCell", bundle: nil), forCellWithReuseIdentifier: "CollectionProductionViewCell")
-    }
-
-    func showNaviItem() {
-        navigationController?.navigationBar.isHidden = true
-        navigationController?.setNavigationBarHidden(false, animated: true)
-    }
-    func setupLabelGesture() {
-            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(adamLabelTapped))
-            adamLabel.isUserInteractionEnabled = true
-            adamLabel.addGestureRecognizer(tapGesture)
-        }
-
-        @objc func adamLabelTapped() {
-            let bt = ListContentVC()
-            navigationController?.pushViewController(bt, animated: true)
-        }
+    
 }
-
-
-extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
+    func delegateTable(){
+       homeTableView.delegate = self
+       homeTableView.dataSource = self
+       homeTableView.registerCellWithNib(FirstPictureVC.self)
+        homeTableView.registerCellWithNib(SecondPictureCell.self)
+        homeTableView.registerCellWithNib(ThirdPictureCell.self)
+        homeTableView.registerCellWithNib(FourPictureCell.self)
     }
-
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        var cell: UICollectionViewCell
-        var imageName = ""
-
-        switch collectionView {
-        case self.collectionView:
-            guard let specificCell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as? CollectionViewCell else {
-                fatalError("Failed to dequeue CollectionViewCell")
-            }
-            cell = specificCell
-            imageName = "singa1"
-        case collectionAc:
-            guard let specificCell = collectionAc.dequeueReusableCell(withReuseIdentifier: "AnimalCollectionViewCell", for: indexPath) as? AnimalCollectionViewCell else {
-                fatalError("Failed to dequeue AnimalCollectionViewCell")
-            }
-            cell = specificCell
-            imageName = "singa2"
-        case collectionFP:
-            guard let specificCell = collectionFP.dequeueReusableCell(withReuseIdentifier: "CollectionFPViewCell", for: indexPath) as? CollectionFPViewCell else {
-                fatalError("Failed to dequeue CollectionFPViewCell")
-            }
-            cell = specificCell
-            imageName = "home\(indexPath.row + 1)"
-        case collectionProduction:
-            guard let specificCell = collectionProduction.dequeueReusableCell(withReuseIdentifier: "CollectionProductionViewCell", for: indexPath) as? CollectionProductionViewCell else {
-                fatalError("Failed to dequeue CollectionProductionViewCell")
-            }
-            cell = specificCell
-            imageName = "profile\(indexPath.row + 1)"
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 4
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        switch indexPath.section {
+        case 0:
+            let first = tableView.dequeueReusableCell(forIndexPath: indexPath) as FirstPictureVC
+            return first
+        case 1:
+            let second = tableView.dequeueReusableCell(forIndexPath: indexPath) as SecondPictureCell
+            return second
+        case 2:
+            let third = tableView.dequeueReusableCell(forIndexPath: indexPath) as ThirdPictureCell
+            return third
+        case 3:
+            let four = tableView.dequeueReusableCell(forIndexPath: indexPath) as FourPictureCell
+        return four
         default:
-            fatalError("Unexpected collection view")
+            return UITableViewCell()
         }
-
-        if let imageView = (cell as? CollectionViewCell)?.viewImage {
-            imageView.image = UIImage(named: imageName)
-        } else if let imageView = (cell as? AnimalCollectionViewCell)?.imagesViews {
-            imageView.image = UIImage(named: imageName)
-        } else if let imageView = (cell as? CollectionFPViewCell)?.imageFp {
-            imageView.image = UIImage(named: imageName)
-        } else if let imageView = (cell as? CollectionProductionViewCell)?.imageProduction {
-            imageView.image = UIImage(named: imageName)
-        }
-
-        return cell
+        
     }
-
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        switch indexPath.section {
+        case 0:
+            // Setel tinggi untuk case 0
+            return 100
+        case 1:
+            // Setel tinggi untuk case 1
+            return 150
+        // ... tambahkan case lain jika diperlukan
+        case 2:
+            return 200
+        case 3:
+            return 300
+        default:
+            return 100
+        }
+    }
+    
+    
 }
