@@ -44,8 +44,8 @@ class LoginViewController: UIViewController {
                 }
                 
             } else{
-                let serigalabutton = HomeViewController()
-                self?.navigationController?.pushViewController(serigalabutton, animated: true)
+                let bt = MainTabBarViewController()
+                self?.navigationController?.pushViewController(bt, animated: true)
             }
         }
     }

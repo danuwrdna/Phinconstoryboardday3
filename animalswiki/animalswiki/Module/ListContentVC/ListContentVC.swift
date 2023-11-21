@@ -15,6 +15,7 @@ class ListContentVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+        navigationItem.hidesBackButton = true
     }
     
     
@@ -73,6 +74,8 @@ extension ListContentVC: UICollectionViewDelegate, UICollectionViewDataSource, C
            // Navigasi ke layar tujuan setelah item diketuk
            let bt = DetailProfileVC() // Gantilah dengan nama ViewController tujuan Anda
            navigationController?.pushViewController(bt, animated: true)
+        tabBarController?.tabBar.isHidden = true
+        navigationItem.hidesBackButton = true
        }
 
 }

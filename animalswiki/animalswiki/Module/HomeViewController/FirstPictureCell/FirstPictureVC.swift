@@ -1,7 +1,9 @@
 import UIKit
-
+import Kingfisher
 class FirstPictureVC: UITableViewCell {
+    
     @IBOutlet weak var firstpcCollection: UICollectionView!
+    var listCat: [CatModel]?
     override func awakeFromNib() {
         super.awakeFromNib()
         setupCollection()

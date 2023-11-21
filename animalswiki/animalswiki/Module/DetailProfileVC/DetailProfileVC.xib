@@ -69,18 +69,10 @@
                         </imageView>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="129" id="81j-c4-VLX"/>
+                    </constraints>
                 </view>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Arrow - Left 2" translatesAutoresizingMaskIntoConstraints="NO" id="nwD-mf-5eO">
-                    <rect key="frame" x="16" y="59" width="30" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Back" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgu-xs-Uqn">
-                    <rect key="frame" x="46" y="64" width="37" height="25"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="16"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unsplash_DCelW4ytxfM-2" translatesAutoresizingMaskIntoConstraints="NO" id="rUu-xb-RLJ">
                     <rect key="frame" x="0.0" y="222" width="393" height="630"/>
                     <constraints>
@@ -114,6 +106,24 @@
                         <constraint firstItem="dBk-pL-n4N" firstAttribute="centerY" secondItem="GIT-cV-ZPw" secondAttribute="centerY" id="hqr-Bj-Huj"/>
                     </constraints>
                 </view>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uQU-fv-Qfa">
+                    <rect key="frame" x="0.0" y="-37" width="393" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Back" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgu-xs-Uqn">
+                            <rect key="frame" x="39" y="91" width="37" height="25"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="16"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Arrow - Left 2" translatesAutoresizingMaskIntoConstraints="NO" id="nwD-mf-5eO">
+                            <rect key="frame" x="8" y="86" width="30" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -122,7 +132,6 @@
                 <constraint firstItem="GIT-cV-ZPw" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="RPN-EA-QGv"/>
                 <constraint firstItem="GIT-cV-ZPw" firstAttribute="centerX" secondItem="B0v-xb-Msh" secondAttribute="centerX" id="WDv-3h-GM4"/>
                 <constraint firstItem="B0v-xb-Msh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="-4" id="XBR-nX-wte"/>
-                <constraint firstItem="B0v-xb-Msh" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="91" id="ZkW-TW-Msf"/>
                 <constraint firstItem="rUu-xb-RLJ" firstAttribute="top" secondItem="B0v-xb-Msh" secondAttribute="bottom" constant="2" id="pB8-KB-WQy"/>
                 <constraint firstAttribute="bottom" secondItem="GIT-cV-ZPw" secondAttribute="bottom" constant="25" id="tTk-x1-w2O"/>
                 <constraint firstAttribute="bottom" secondItem="rUu-xb-RLJ" secondAttribute="bottom" id="v0v-vL-lRe"/>

@@ -6,9 +6,20 @@ class FourPictureCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
        setupCollection()
+        setupLayout()
     }
 }
 extension FourPictureCell: UICollectionViewDelegate, UICollectionViewDataSource{
+    func setupLayout(){
+        let layout = UICollectionViewFlowLayout()
+        let cellWidth = 160
+        let cellHeight = 170
+        
+        layout.minimumInteritemSpacing = 0// Atur sesuai kebutuhan Anda
+        layout.minimumLineSpacing = 0// Atur sesuai kebutuhan Anda
+        layout.itemSize = CGSize(width: cellWidth, height: cellHeight)
+        collectionFour.collectionViewLayout = layout
+    }
     func setupCollection(){
         collectionFour.delegate = self
         collectionFour.dataSource = self

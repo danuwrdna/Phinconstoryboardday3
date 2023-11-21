@@ -1,12 +1,21 @@
 import UIKit
-
+protocol ThirdPictureDelegate: AnyObject {
+    func didSelectCell()
+}
 class ThirdPictureCell: UITableViewCell {
     @IBOutlet weak var collectionThird: UICollectionView!
+    @IBOutlet weak var adamLabel: UILabel!
+    var parentViewController: UIViewController?
     override func awakeFromNib() {
         super.awakeFromNib()
         setupCollection()
         setupLayout()
-    }    
+        setupLabel()
+    }
+    func setupLabel(){
+    }
+    @objc func adamLabelTapped() {
+    }
 }
 extension ThirdPictureCell: UICollectionViewDelegate, UICollectionViewDataSource{
     func setupCollection(){
@@ -16,8 +25,8 @@ extension ThirdPictureCell: UICollectionViewDelegate, UICollectionViewDataSource
     }
     func setupLayout(){
         let layout = UICollectionViewFlowLayout()
-        let cellWidth = 100
-        let cellHeight = 150
+        let cellWidth = 170
+        let cellHeight = 180
         
         layout.minimumInteritemSpacing = 0// Atur sesuai kebutuhan Anda
         layout.minimumLineSpacing = 0// Atur sesuai kebutuhan Anda

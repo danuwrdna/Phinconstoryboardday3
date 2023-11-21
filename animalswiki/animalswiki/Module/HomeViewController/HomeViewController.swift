@@ -1,18 +1,17 @@
 import UIKit
-//dashboardTableView.registerCellWithNib(DashboardSearch.self)
-//dashboardTableView.registerCellWithNib(DashboardCategory.self)
-//dashboardTableView.registerCellWithNib(TodayAnime.self)
-//dashboardTableView.registerCellWithNib(CurrentSeasonAnime.self)
 class HomeViewController:
     UIViewController {
+    var viewModel = HomeViewModel()
     @IBOutlet weak var homeTableView: UITableView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated: true)
         delegateTable()
+        fetchData()
     }
-    
+    func fetchData(){
+        
+    }
 }
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
     func delegateTable(){
@@ -67,6 +66,25 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
             return 100
         }
     }
-    
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.section{
+        case 0:
+            return
+        case 1:
+            return
+        case 2:
+            if let cell = tableView.cellForRow(at: indexPath) as? ThirdPictureCell{
+                let labelValue = cell.adamLabel.text
+                    let newViewController = ListContentVC()
+                    self.navigationController?.pushViewController(newViewController, animated: true)
+                
+                }
+            return
+        case 3:
+            return
+            
+        default:
+            break
+        }
+    }
 }

@@ -77,6 +77,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="adamLabel" destination="aMZ-uz-47s" id="I7g-6o-i2o"/>
                 <outlet property="collectionThird" destination="elB-PT-Mtg" id="yM3-32-gyA"/>
             </connections>
             <point key="canvasLocation" x="2.2900763358778624" y="91.901408450704224"/>

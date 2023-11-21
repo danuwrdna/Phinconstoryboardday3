@@ -1,12 +1,30 @@
 {
   "pins" : [
     {
+      "identity" : "alamofire",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Alamofire/Alamofire.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "827a879ae2dcc473dfcae8ae188b992f66cd07d6"
+      }
+    },
+    {
       "identity" : "chtcollectionviewwaterfalllayout",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/AfrazCodes/CHTCollectionViewWaterfallLayout",
       "state" : {
         "revision" : "6353ec8305870da3c43b3bd2fa27d79119f4c60b",
         "version" : "0.9.8"
+      }
+    },
+    {
+      "identity" : "kingfisher",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/onevcat/Kingfisher.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "277f1ab2c6664b19b4a412e32b094b201e2d5757"
       }
     }
   ],

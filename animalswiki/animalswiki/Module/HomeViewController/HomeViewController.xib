@@ -19,6 +19,14 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NsG-fW-DBl">
+                    <rect key="frame" x="0.0" y="82" width="393" height="770"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="sectionIndexColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uot-8D-8dt">
                     <rect key="frame" x="345" y="52" width="32" height="32"/>
                     <constraints>
@@ -42,10 +50,10 @@
                     </buttonConfiguration>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yq5-l2-EF6">
-                    <rect key="frame" x="180.66666666666666" y="52" width="32" height="32"/>
+                    <rect key="frame" x="180.33333333333334" y="52" width="32.333333333333343" height="32"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="32" id="8XA-rT-Rj1"/>
-                        <constraint firstAttribute="width" constant="32" id="iaQ-U0-9qV"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="Sqy-Zu-eTP"/>
                     </constraints>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="">
@@ -63,30 +71,49 @@
                         <backgroundConfiguration key="background" image="Category"/>
                     </buttonConfiguration>
                 </button>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NsG-fW-DBl">
-                    <rect key="frame" x="0.0" y="82" width="393" height="736"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
-                    <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                </tableView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 4" translatesAutoresizingMaskIntoConstraints="NO" id="XZV-5P-ZFr">
+                    <rect key="frame" x="38" y="760" width="316" height="58"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="316" id="3WO-PX-nJ3"/>
+                        <constraint firstAttribute="height" constant="58" id="R70-CZ-ye4"/>
+                    </constraints>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Home" translatesAutoresizingMaskIntoConstraints="NO" id="TF9-cS-AMq">
+                    <rect key="frame" x="83" y="774" width="30" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Paper" translatesAutoresizingMaskIntoConstraints="NO" id="44m-3U-WCO">
+                    <rect key="frame" x="215" y="774" width="30" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Profile" translatesAutoresizingMaskIntoConstraints="NO" id="lLC-Bg-QeY">
+                    <rect key="frame" x="276" y="774" width="30" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="ys8-Lq-anV">
+                    <rect key="frame" x="149" y="774" width="30" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="gzf-UG-eat" firstAttribute="top" secondItem="uot-8D-8dt" secondAttribute="top" id="1j6-RE-pa7"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="XZV-5P-ZFr" secondAttribute="trailing" constant="39" id="3HU-Gt-D13"/>
                 <constraint firstItem="yq5-l2-EF6" firstAttribute="top" secondItem="gzf-UG-eat" secondAttribute="top" id="5vo-Og-GgS"/>
                 <constraint firstItem="gzf-UG-eat" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="305" id="7VX-Wl-Img"/>
                 <constraint firstItem="mTH-vd-VBC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="8dh-tJ-va1"/>
                 <constraint firstItem="mTH-vd-VBC" firstAttribute="top" secondItem="yq5-l2-EF6" secondAttribute="top" id="C6R-WC-CSD"/>
+                <constraint firstItem="XZV-5P-ZFr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="38" id="KKq-fw-6Fr"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="uot-8D-8dt" secondAttribute="trailing" constant="16" id="NLN-fx-53a"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="NsG-fW-DBl" secondAttribute="bottom" id="QqA-9t-wIc"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="NsG-fW-DBl" secondAttribute="bottom" constant="-34" id="QqA-9t-wIc"/>
                 <constraint firstItem="NsG-fW-DBl" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="23" id="Ryi-eq-UFW"/>
                 <constraint firstItem="NsG-fW-DBl" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Yrd-VG-KyG"/>
-                <constraint firstItem="yq5-l2-EF6" firstAttribute="centerX" secondItem="NsG-fW-DBl" secondAttribute="centerX" id="d2Y-KZ-xtC"/>
+                <constraint firstItem="gzf-UG-eat" firstAttribute="leading" secondItem="yq5-l2-EF6" secondAttribute="trailing" constant="92.333333333333343" id="fmn-Pc-PNK"/>
                 <constraint firstItem="uot-8D-8dt" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="52" id="fxu-HR-gse"/>
+                <constraint firstItem="yq5-l2-EF6" firstAttribute="centerX" secondItem="NsG-fW-DBl" secondAttribute="centerX" id="gim-Ua-Qo1"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="NsG-fW-DBl" secondAttribute="trailing" id="nkZ-EH-feG"/>
+                <constraint firstItem="XZV-5P-ZFr" firstAttribute="top" secondItem="uot-8D-8dt" secondAttribute="bottom" constant="676" id="zZr-xt-3Vo"/>
             </constraints>
             <point key="canvasLocation" x="61.832061068702288" y="20.422535211267608"/>
         </view>
@@ -94,6 +121,11 @@
     <resources>
         <image name="Category" width="27" height="27"/>
         <image name="Heart" width="32" height="32"/>
+        <image name="Home" width="120" height="120"/>
+        <image name="Image" width="125" height="120"/>
+        <image name="Paper" width="129" height="120"/>
+        <image name="Profile" width="121" height="120"/>
+        <image name="Rectangle 4" width="1304" height="264"/>
         <image name="Search" width="32" height="32"/>
         <image name="cil_animal" width="38" height="38"/>
         <systemColor name="systemBackgroundColor">

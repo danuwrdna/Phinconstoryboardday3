@@ -11,6 +11,11 @@ class DetailProfileVC: UIViewController {
         super.viewDidLoad()
         setupCollection()
         setupImageButton()
+        navigationItem.hidesBackButton = true
+        
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.isNavigationBarHidden = true
     }
     func setupCollection(){
         images = [
@@ -26,14 +31,15 @@ class DetailProfileVC: UIViewController {
         viewCollection.register(UINib(nibName: "DpViewCell", bundle: nil), forCellWithReuseIdentifier: "DpViewCell")
     }
     func setupImageButton() {
-            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(adamLabelTapped))
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(backTapped))
             imageButton.isUserInteractionEnabled = true
             imageButton.addGestureRecognizer(tapGesture)
+        
         }
 
-        @objc func adamLabelTapped() {
-            let bt = ListContentVC()
-            navigationController?.pushViewController(bt, animated: false)
+        @objc func backTapped() {
+            print("Back button tapped!")
+            navigationController?.popViewController(animated: false)
         }
 }
 extension DetailProfileVC: UICollectionViewDelegate, UICollectionViewDataSource{
