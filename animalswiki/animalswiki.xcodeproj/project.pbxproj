@@ -56,6 +56,12 @@
 		366499C02B0CA9A6000B3188 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 366499BF2B0CA9A6000B3188 /* Kingfisher */; };
 		366499C32B0CAB16000B3188 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366499C22B0CAB16000B3188 /* ApiManager.swift */; };
 		366499C52B0CAD7C000B3188 /* CatApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366499C42B0CAD7C000B3188 /* CatApiModel.swift */; };
+		366499C82B0DBE31000B3188 /* DetailProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366499C72B0DBE31000B3188 /* DetailProfileModel.swift */; };
+		366499CB2B0DCD94000B3188 /* ListContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366499CA2B0DCD94000B3188 /* ListContentModel.swift */; };
+		366499DE2B0DE553000B3188 /* SitemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366499DC2B0DE553000B3188 /* SitemViewController.swift */; };
+		366499DF2B0DE553000B3188 /* SitemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 366499DD2B0DE553000B3188 /* SitemViewController.xib */; };
+		366499E62B0DF548000B3188 /* ResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366499E42B0DF548000B3188 /* ResetViewController.swift */; };
+		366499E72B0DF548000B3188 /* ResetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 366499E52B0DF548000B3188 /* ResetViewController.xib */; };
 		368F4BC12B0B48F900735982 /* ThirdPictureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368F4BBF2B0B48F900735982 /* ThirdPictureCell.swift */; };
 		368F4BC22B0B48F900735982 /* ThirdPictureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 368F4BC02B0B48F900735982 /* ThirdPictureCell.xib */; };
 		368F4BC62B0B493A00735982 /* ThirdPcCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368F4BC42B0B493A00735982 /* ThirdPcCollection.swift */; };
@@ -139,6 +145,12 @@
 		3663D2892B04BE9600E25D38 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		366499C22B0CAB16000B3188 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		366499C42B0CAD7C000B3188 /* CatApiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatApiModel.swift; sourceTree = "<group>"; };
+		366499C72B0DBE31000B3188 /* DetailProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProfileModel.swift; sourceTree = "<group>"; };
+		366499CA2B0DCD94000B3188 /* ListContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListContentModel.swift; sourceTree = "<group>"; };
+		366499DC2B0DE553000B3188 /* SitemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitemViewController.swift; sourceTree = "<group>"; };
+		366499DD2B0DE553000B3188 /* SitemViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SitemViewController.xib; sourceTree = "<group>"; };
+		366499E42B0DF548000B3188 /* ResetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetViewController.swift; sourceTree = "<group>"; };
+		366499E52B0DF548000B3188 /* ResetViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResetViewController.xib; sourceTree = "<group>"; };
 		368F4BBF2B0B48F900735982 /* ThirdPictureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPictureCell.swift; sourceTree = "<group>"; };
 		368F4BC02B0B48F900735982 /* ThirdPictureCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThirdPictureCell.xib; sourceTree = "<group>"; };
 		368F4BC42B0B493A00735982 /* ThirdPcCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPcCollection.swift; sourceTree = "<group>"; };
@@ -205,6 +217,10 @@
 				36003FC92B073D110044D9B5 /* AnimasiViewController.swift */,
 				36003FCC2B0740250044D9B5 /* ErorlogViewController.xib */,
 				36003FCE2B0740E80044D9B5 /* ErorlogViewController.swift */,
+				366499DC2B0DE553000B3188 /* SitemViewController.swift */,
+				366499DD2B0DE553000B3188 /* SitemViewController.xib */,
+				366499E42B0DF548000B3188 /* ResetViewController.swift */,
+				366499E52B0DF548000B3188 /* ResetViewController.xib */,
 			);
 			path = CustomViewController;
 			sourceTree = "<group>";
@@ -267,6 +283,7 @@
 		364F40842B05CBB500EA0BC1 /* ListContentVC */ = {
 			isa = PBXGroup;
 			children = (
+				366499C92B0DBF44000B3188 /* Model */,
 				364F40912B05D45E00EA0BC1 /* cell */,
 				364F40852B05CBDB00EA0BC1 /* ListContentVC.swift */,
 				364F40862B05CBDB00EA0BC1 /* ListContentVC.xib */,
@@ -277,6 +294,7 @@
 		364F40892B05CBFD00EA0BC1 /* DetailProfileVC */ = {
 			isa = PBXGroup;
 			children = (
+				366499C62B0DBE13000B3188 /* Model */,
 				364F409A2B060CD500EA0BC1 /* cell */,
 				364F408A2B05CC3B00EA0BC1 /* DetailProfileVC.swift */,
 				364F408B2B05CC3B00EA0BC1 /* DetailProfileVC.xib */,
@@ -440,6 +458,22 @@
 				366499C22B0CAB16000B3188 /* ApiManager.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		366499C62B0DBE13000B3188 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				366499C72B0DBE31000B3188 /* DetailProfileModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		366499C92B0DBF44000B3188 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				366499CA2B0DCD94000B3188 /* ListContentModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		368F4BBE2B0B48BE00735982 /* ThirdPictureCell */ = {
@@ -629,8 +663,10 @@
 				368F4BD12B0B509C00735982 /* FourPcCell.xib in Resources */,
 				368F4BC22B0B48F900735982 /* ThirdPictureCell.xib in Resources */,
 				36003FB12B071A910044D9B5 /* SignViewController.xib in Resources */,
+				366499DF2B0DE553000B3188 /* SitemViewController.xib in Resources */,
 				364F409E2B060D0000EA0BC1 /* DpViewCell.xib in Resources */,
 				3663D24F2B049C8600E25D38 /* Assets.xcassets in Resources */,
+				366499E72B0DF548000B3188 /* ResetViewController.xib in Resources */,
 				368F4BC72B0B493A00735982 /* ThirdPcCollection.xib in Resources */,
 				364F408D2B05CC3B00EA0BC1 /* DetailProfileVC.xib in Resources */,
 				36003FBF2B0722F90044D9B5 /* GoogleService-Info.plist in Resources */,
@@ -781,6 +817,7 @@
 				364F408C2B05CC3B00EA0BC1 /* DetailProfileVC.swift in Sources */,
 				3663D28A2B04BE9600E25D38 /* HomeViewModel.swift in Sources */,
 				366499C52B0CAD7C000B3188 /* CatApiModel.swift in Sources */,
+				366499DE2B0DE553000B3188 /* SitemViewController.swift in Sources */,
 				36003FF72B0B28280044D9B5 /* ExtTable.swift in Sources */,
 				364F40872B05CBDC00EA0BC1 /* ListContentVC.swift in Sources */,
 				360040072B0B2FED0044D9B5 /* FirstPictureVC.swift in Sources */,
@@ -790,11 +827,14 @@
 				36003FCF2B0740E80044D9B5 /* ErorlogViewController.swift in Sources */,
 				368F4BD02B0B509C00735982 /* FourPcCell.swift in Sources */,
 				3663D24D2B049C8400E25D38 /* animalswiki.xcdatamodeld in Sources */,
+				366499E62B0DF548000B3188 /* ResetViewController.swift in Sources */,
 				364F40822B05BC5300EA0BC1 /* ProfileViewController.swift in Sources */,
 				3663D2432B049C8400E25D38 /* AppDelegate.swift in Sources */,
+				366499C82B0DBE31000B3188 /* DetailProfileModel.swift in Sources */,
 				3663D2452B049C8400E25D38 /* SceneDelegate.swift in Sources */,
 				3600400C2B0B31310044D9B5 /* FirstPcCollection.swift in Sources */,
 				360040162B0B34E50044D9B5 /* SecondPcCollection.swift in Sources */,
+				366499CB2B0DCD94000B3188 /* ListContentModel.swift in Sources */,
 				364F409D2B060D0000EA0BC1 /* DpViewCell.swift in Sources */,
 				364F40982B05D4D300EA0BC1 /* PinterestViewCell.swift in Sources */,
 				36003FD42B0765D60044D9B5 /* constrant.swift in Sources */,

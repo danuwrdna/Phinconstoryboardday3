@@ -1,16 +1,56 @@
 import UIKit
 class HomeViewController:
     UIViewController {
-    var viewModel = HomeViewModel()
+    @IBOutlet weak var buttomSheet: UIImageView!
     @IBOutlet weak var homeTableView: UITableView!
+    @IBOutlet weak var searchButton: UIButton!
+    let customPopup = SitemViewController()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated: true)
         delegateTable()
-        fetchData()
+       alertLogout()
+        setSB()
     }
-    func fetchData(){
-        
+    func setSB(){
+        searchButton.addTarget(self, action: #selector(searchButtonTapped), for: .touchUpInside)
+    }
+    @objc func searchButtonTapped() {
+           // Instantiate the search view controller
+           let searchViewController = SitemViewController()  // Replace SearchViewController with the actual class name of your search view controller
+
+           // Present the search view controller
+        searchViewController.modalTransitionStyle = .crossDissolve
+        searchViewController.modalPresentationStyle = .overFullScreen
+           navigationController?.present(searchViewController, animated: true)
+       }
+    func  alertLogout(){
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleImageTap))
+               buttomSheet.isUserInteractionEnabled = true
+               buttomSheet.addGestureRecognizer(tapGesture)
+    }
+    @objc func handleImageTap() {
+            showBottomSheet()
+        }
+    func showBottomSheet() {
+            let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+            let logoutAction = UIAlertAction(title: "Logout", style: .destructive) { _ in
+                self.logout()
+            }
+            alertController.addAction(logoutAction)
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            alertController.addAction(cancelAction)
+            alertController.popoverPresentationController?.sourceView = self.buttomSheet
+            alertController.popoverPresentationController?.sourceRect = self.buttomSheet.bounds
+            present(alertController, animated: true, completion: nil)
+        }
+
+        func logout() {
+            let bt = LoginViewController()
+            self.navigationController?.pushViewController(bt, animated: true)
+        }
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.isNavigationBarHidden = true
     }
 }
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
@@ -52,12 +92,9 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.section {
         case 0:
-            // Setel tinggi untuk case 0
             return 100
         case 1:
-            // Setel tinggi untuk case 1
             return 150
-        // ... tambahkan case lain jika diperlukan
         case 2:
             return 200
         case 3:
@@ -77,7 +114,6 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
                 let labelValue = cell.adamLabel.text
                     let newViewController = ListContentVC()
                     self.navigationController?.pushViewController(newViewController, animated: true)
-                
                 }
             return
         case 3:

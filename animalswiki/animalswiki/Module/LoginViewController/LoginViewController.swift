@@ -15,10 +15,12 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var animateView: AnimasiViewController!
     @IBOutlet weak var passwordLogin: UITextField!
     @IBOutlet weak var wrongText: UILabel!
+    @IBOutlet weak var resetLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         setupField()
         setup()
+        resetPassword()
     }
     func setup() {
             navigationController?.isNavigationBarHidden = true
@@ -44,10 +46,21 @@ class LoginViewController: UIViewController {
                 }
                 
             } else{
-                let bt = MainTabBarViewController()
+                let bt = HomeViewController()
                 self?.navigationController?.pushViewController(bt, animated: true)
             }
         }
+    }
+    func resetPassword(){
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(resetLabelTapped))
+                resetLabel.isUserInteractionEnabled = true
+                resetLabel.addGestureRecognizer(tapGesture)
+    }
+    @objc func resetLabelTapped() {
+        let resetViewController = ResetViewController()
+        resetViewController.modalTransitionStyle = .crossDissolve
+        resetViewController.modalPresentationStyle = .overFullScreen
+           navigationController?.present(resetViewController, animated: true)
     }
     
 }

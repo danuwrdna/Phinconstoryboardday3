@@ -9,7 +9,7 @@ class HomeViewModel {
     }
 
     func fetchData() {
-        let apiURL = "https://api.thecatapi.com/v1/images/search?limit=20"
+        let apiURL = "https://api.thecatapi.com/v1/images/search?limit=100"
         NetworkManager.shared.makeAPICall(urlString: apiURL, method: .get) { [weak self] (response: Result<Welcome, Error>) in
             switch response {
             case .success(let cats):
@@ -20,7 +20,6 @@ class HomeViewModel {
             }
         }
     }
-
     func getCatItem(at index: Int) -> CatModel? {
         return model?[index]
     }

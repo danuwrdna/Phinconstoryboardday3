@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListContentVC" customModule="animalswiki" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="53F-Ie-UY2" id="fxJ-yM-w9q"/>
+                <outlet property="imageBack" destination="hdT-Bu-fFV" id="evV-s7-TMt"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -30,7 +31,7 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" fixedFrame="YES" alwaysBounceVertical="YES" minimumZoomScale="3" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="53F-Ie-UY2">
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" fixedFrame="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" minimumZoomScale="3" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="53F-Ie-UY2">
                     <rect key="frame" x="16" y="249" width="361" height="569"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
