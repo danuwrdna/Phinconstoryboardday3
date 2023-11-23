@@ -8,13 +8,46 @@ class SignViewController: UIViewController {
     @IBOutlet weak var passwordSign: UITextField!
     @IBOutlet weak var erorText: UILabel!
     @IBOutlet weak var signButton: UIButton!
+    @IBOutlet weak var backImage: UIImageView!
+    @IBOutlet weak var eyeButton: UIButton!
     private let disposeBag = DisposeBag()
     let login = PublishRelay<Void>()
-    
+    var isPasswordVisible = false
     override func viewDidLoad() {
         super.viewDidLoad()
         validasi()
         setupSign()
+        setupImageButton()
+        setupEyeButton()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.isNavigationBarHidden = true
+    }
+    func setupImageButton() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(backTapped))
+        backImage.isUserInteractionEnabled = true
+        backImage.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func backTapped() {
+        print("Back button tapped!")
+        navigationController?.popViewController(animated: true)
+    }
+    func setupEyeButton() {
+        let eyeImage = UIImage(systemName: "eye.fill")
+        let eyeSlashImage = UIImage(systemName: "eye.slash.fill")
+        
+        eyeButton.setImage(eyeImage, for: .normal)
+        eyeButton.tintColor = .darkGray
+        eyeButton.addTarget(self, action: #selector(eyeButtonTapped), for: .touchUpInside)
+    }
+    @objc func eyeButtonTapped() {
+        isPasswordVisible.toggle()
+
+        let eyeImage = isPasswordVisible ? UIImage(systemName: "eye.fill") : UIImage(systemName: "eye.slash.fill")
+        eyeButton.setImage(eyeImage, for: .normal)
+
+        passwordSign.isSecureTextEntry = !isPasswordVisible
     }
     func validasi() {
         let emailObservable = emailSign.rx.text.orEmpty.asObservable()

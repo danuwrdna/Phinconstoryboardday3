@@ -62,6 +62,11 @@
 		366499DF2B0DE553000B3188 /* SitemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 366499DD2B0DE553000B3188 /* SitemViewController.xib */; };
 		366499E62B0DF548000B3188 /* ResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366499E42B0DF548000B3188 /* ResetViewController.swift */; };
 		366499E72B0DF548000B3188 /* ResetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 366499E52B0DF548000B3188 /* ResetViewController.xib */; };
+		366499EB2B0F2846000B3188 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366499E92B0F2846000B3188 /* ProfileViewController.swift */; };
+		366499EC2B0F2846000B3188 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 366499EA2B0F2846000B3188 /* ProfileViewController.xib */; };
+		366499F02B0F327B000B3188 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366499EE2B0F327B000B3188 /* TableViewCell.swift */; };
+		366499F12B0F327B000B3188 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 366499EF2B0F327B000B3188 /* TableViewCell.xib */; };
+		366499F42B0F384E000B3188 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366499F32B0F384E000B3188 /* ProfileModel.swift */; };
 		368F4BC12B0B48F900735982 /* ThirdPictureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368F4BBF2B0B48F900735982 /* ThirdPictureCell.swift */; };
 		368F4BC22B0B48F900735982 /* ThirdPictureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 368F4BC02B0B48F900735982 /* ThirdPictureCell.xib */; };
 		368F4BC62B0B493A00735982 /* ThirdPcCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368F4BC42B0B493A00735982 /* ThirdPcCollection.swift */; };
@@ -151,6 +156,11 @@
 		366499DD2B0DE553000B3188 /* SitemViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SitemViewController.xib; sourceTree = "<group>"; };
 		366499E42B0DF548000B3188 /* ResetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetViewController.swift; sourceTree = "<group>"; };
 		366499E52B0DF548000B3188 /* ResetViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResetViewController.xib; sourceTree = "<group>"; };
+		366499E92B0F2846000B3188 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		366499EA2B0F2846000B3188 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		366499EE2B0F327B000B3188 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		366499EF2B0F327B000B3188 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		366499F32B0F384E000B3188 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		368F4BBF2B0B48F900735982 /* ThirdPictureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPictureCell.swift; sourceTree = "<group>"; };
 		368F4BC02B0B48F900735982 /* ThirdPictureCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThirdPictureCell.xib; sourceTree = "<group>"; };
 		368F4BC42B0B493A00735982 /* ThirdPcCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPcCollection.swift; sourceTree = "<group>"; };
@@ -274,6 +284,8 @@
 		364F407F2B05BC2D00EA0BC1 /* ProfileViewController */ = {
 			isa = PBXGroup;
 			children = (
+				366499F22B0F382E000B3188 /* Model */,
+				366499ED2B0F3262000B3188 /* cell */,
 				364F40802B05BC5300EA0BC1 /* ProfileViewController.swift */,
 				364F40812B05BC5300EA0BC1 /* ProfileViewController.xib */,
 			);
@@ -395,6 +407,7 @@
 		3663D2772B04A11400E25D38 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				366499E82B0F27D1000B3188 /* ProfileViewController */,
 				36003FD02B07654F0044D9B5 /* MainTabbar */,
 				36003FC02B072D5C0044D9B5 /* CustomViewController */,
 				36003FAD2B071A660044D9B5 /* SignViewController */,
@@ -472,6 +485,32 @@
 			isa = PBXGroup;
 			children = (
 				366499CA2B0DCD94000B3188 /* ListContentModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		366499E82B0F27D1000B3188 /* ProfileViewController */ = {
+			isa = PBXGroup;
+			children = (
+				366499E92B0F2846000B3188 /* ProfileViewController.swift */,
+				366499EA2B0F2846000B3188 /* ProfileViewController.xib */,
+			);
+			path = ProfileViewController;
+			sourceTree = "<group>";
+		};
+		366499ED2B0F3262000B3188 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				366499EE2B0F327B000B3188 /* TableViewCell.swift */,
+				366499EF2B0F327B000B3188 /* TableViewCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		366499F22B0F382E000B3188 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				366499F32B0F384E000B3188 /* ProfileModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -669,9 +708,11 @@
 				366499E72B0DF548000B3188 /* ResetViewController.xib in Resources */,
 				368F4BC72B0B493A00735982 /* ThirdPcCollection.xib in Resources */,
 				364F408D2B05CC3B00EA0BC1 /* DetailProfileVC.xib in Resources */,
+				366499EC2B0F2846000B3188 /* ProfileViewController.xib in Resources */,
 				36003FBF2B0722F90044D9B5 /* GoogleService-Info.plist in Resources */,
 				364F40992B05D4D300EA0BC1 /* PinterestViewCell.xib in Resources */,
 				360040172B0B34E50044D9B5 /* SecondPcCollection.xib in Resources */,
+				366499F12B0F327B000B3188 /* TableViewCell.xib in Resources */,
 				360040082B0B2FED0044D9B5 /* FirstPictureVC.xib in Resources */,
 				3663D24A2B049C8400E25D38 /* Main.storyboard in Resources */,
 				36003FC82B073CF00044D9B5 /* AnimasiViewController.xib in Resources */,
@@ -828,10 +869,12 @@
 				368F4BD02B0B509C00735982 /* FourPcCell.swift in Sources */,
 				3663D24D2B049C8400E25D38 /* animalswiki.xcdatamodeld in Sources */,
 				366499E62B0DF548000B3188 /* ResetViewController.swift in Sources */,
+				366499F02B0F327B000B3188 /* TableViewCell.swift in Sources */,
 				364F40822B05BC5300EA0BC1 /* ProfileViewController.swift in Sources */,
 				3663D2432B049C8400E25D38 /* AppDelegate.swift in Sources */,
 				366499C82B0DBE31000B3188 /* DetailProfileModel.swift in Sources */,
 				3663D2452B049C8400E25D38 /* SceneDelegate.swift in Sources */,
+				366499F42B0F384E000B3188 /* ProfileModel.swift in Sources */,
 				3600400C2B0B31310044D9B5 /* FirstPcCollection.swift in Sources */,
 				360040162B0B34E50044D9B5 /* SecondPcCollection.swift in Sources */,
 				366499CB2B0DCD94000B3188 /* ListContentModel.swift in Sources */,
@@ -839,6 +882,7 @@
 				364F40982B05D4D300EA0BC1 /* PinterestViewCell.swift in Sources */,
 				36003FD42B0765D60044D9B5 /* constrant.swift in Sources */,
 				36003FB02B071A910044D9B5 /* SignViewController.swift in Sources */,
+				366499EB2B0F2846000B3188 /* ProfileViewController.swift in Sources */,
 				360040112B0B34A80044D9B5 /* SecondPictureCell.swift in Sources */,
 				36003FF92B0B28B80044D9B5 /* ExtCollection.swift in Sources */,
 			);

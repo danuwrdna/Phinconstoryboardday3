@@ -1,6 +1,9 @@
 import UIKit
 import Kingfisher
 class FirstPictureVC: UITableViewCell {
+    @IBAction func refreshButton(_ sender: Any) {
+        refresh()
+    }
     
     @IBOutlet weak var firstpcCollection: UICollectionView!
     let viewModel = HomeViewModel()
@@ -15,6 +18,9 @@ class FirstPictureVC: UITableViewCell {
            }
            viewModel.fetchData()
        }
+    func refresh(){
+        viewModel.fetchData()
+    }
 }
 extension FirstPictureVC: UICollectionViewDelegate, UICollectionViewDataSource{
     func setupCollection(){
