@@ -29,12 +29,16 @@ extension FirstPictureVC: UICollectionViewDelegate, UICollectionViewDataSource{
         firstpcCollection.registerCellWithNib(FirstPcCollection.self)
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.numberOfItems
+        return viewModel.numberOfItems > 0 ? .max : 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = firstpcCollection.dequeueReusableCell(withReuseIdentifier: "FirstPcCollection", for: indexPath) as! FirstPcCollection
-        if let cat = viewModel.getCatItem(at: indexPath.row) {
+        guard viewModel.numberOfItems > 0 else {
+                   return cell
+               }
+        let catIndex = indexPath.row % viewModel.numberOfItems
+        if let cat = viewModel.getCatItem(at: catIndex) {
                     let url = URL(string: cat.url)
                     cell.imageViewFirst.kf.setImage(with: url)
         }

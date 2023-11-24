@@ -7,12 +7,13 @@ class ListContentVC: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     private var models = [ListContentModel]()
-    
+    var images: [String] = ["profile1","profile2","profile3", "profile4", "profile5","profile6"]
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
         setupNavigateImage()
         navigationItem.hidesBackButton = true
+    
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -64,11 +65,14 @@ extension ListContentVC: UICollectionViewDelegate, UICollectionViewDataSource, C
         return CGSize(width: view.frame.size.width/2, height: models[indexPath.row].height)
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        // Navigasi ke layar tujuan setelah item diketuk
-        let bt = DetailProfileVC() // Gantilah dengan nama ViewController tujuan Anda
-        navigationController?.pushViewController(bt, animated: true)
-        tabBarController?.tabBar.isHidden = true
-        navigationItem.hidesBackButton = true
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)  {
+        let detailVC = DetailProfileVC()
+        let detailCollection = DpViewCell()
+        detailVC.image = UIImage(named: images[indexPath.row])
+        detailCollection.image2 =  UIImage(named: images[indexPath.row])
+
+            navigationController?.pushViewController(detailVC, animated: true)
+            tabBarController?.tabBar.isHidden = true
+            navigationItem.hidesBackButton = true
     }
 }

@@ -2,18 +2,25 @@ import UIKit
 
 class DetailProfileVC: UIViewController {
     var images: [DetailProfileModel] = []
+    var image: UIImage?
+ 
     @IBOutlet weak var viewCollection: UICollectionView!
     @IBOutlet weak var imageButton: UIImageView!
+    @IBOutlet weak var photoImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollection()
         setupImageButton()
+        passingData()
         navigationItem.hidesBackButton = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.isNavigationBarHidden = true
+    }
+    func passingData (){
+        photoImage.image = image
     }
     
     func setupCollection(){

@@ -67,6 +67,11 @@
 		366499F02B0F327B000B3188 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366499EE2B0F327B000B3188 /* TableViewCell.swift */; };
 		366499F12B0F327B000B3188 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 366499EF2B0F327B000B3188 /* TableViewCell.xib */; };
 		366499F42B0F384E000B3188 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366499F32B0F384E000B3188 /* ProfileModel.swift */; };
+		366499F62B103D2B000B3188 /* DogApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366499F52B103D2B000B3188 /* DogApiModel.swift */; };
+		366499FA2B105881000B3188 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366499F82B105881000B3188 /* DetailViewController.swift */; };
+		366499FB2B105881000B3188 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 366499F92B105881000B3188 /* DetailViewController.xib */; };
+		366499FF2B1082C7000B3188 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366499FD2B1082C7000B3188 /* AddViewController.swift */; };
+		36649A002B1082C7000B3188 /* AddViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 366499FE2B1082C7000B3188 /* AddViewController.xib */; };
 		368F4BC12B0B48F900735982 /* ThirdPictureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368F4BBF2B0B48F900735982 /* ThirdPictureCell.swift */; };
 		368F4BC22B0B48F900735982 /* ThirdPictureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 368F4BC02B0B48F900735982 /* ThirdPictureCell.xib */; };
 		368F4BC62B0B493A00735982 /* ThirdPcCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368F4BC42B0B493A00735982 /* ThirdPcCollection.swift */; };
@@ -161,6 +166,11 @@
 		366499EE2B0F327B000B3188 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		366499EF2B0F327B000B3188 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		366499F32B0F384E000B3188 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
+		366499F52B103D2B000B3188 /* DogApiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogApiModel.swift; sourceTree = "<group>"; };
+		366499F82B105881000B3188 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		366499F92B105881000B3188 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		366499FD2B1082C7000B3188 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		366499FE2B1082C7000B3188 /* AddViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddViewController.xib; sourceTree = "<group>"; };
 		368F4BBF2B0B48F900735982 /* ThirdPictureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPictureCell.swift; sourceTree = "<group>"; };
 		368F4BC02B0B48F900735982 /* ThirdPictureCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThirdPictureCell.xib; sourceTree = "<group>"; };
 		368F4BC42B0B493A00735982 /* ThirdPcCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPcCollection.swift; sourceTree = "<group>"; };
@@ -407,6 +417,8 @@
 		3663D2772B04A11400E25D38 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				366499FC2B108299000B3188 /* AddViewController */,
+				366499F72B105858000B3188 /* DetailViewController */,
 				366499E82B0F27D1000B3188 /* ProfileViewController */,
 				36003FD02B07654F0044D9B5 /* MainTabbar */,
 				36003FC02B072D5C0044D9B5 /* CustomViewController */,
@@ -461,6 +473,7 @@
 			children = (
 				3663D2892B04BE9600E25D38 /* HomeViewModel.swift */,
 				366499C42B0CAD7C000B3188 /* CatApiModel.swift */,
+				366499F52B103D2B000B3188 /* DogApiModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -513,6 +526,24 @@
 				366499F32B0F384E000B3188 /* ProfileModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		366499F72B105858000B3188 /* DetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				366499F82B105881000B3188 /* DetailViewController.swift */,
+				366499F92B105881000B3188 /* DetailViewController.xib */,
+			);
+			path = DetailViewController;
+			sourceTree = "<group>";
+		};
+		366499FC2B108299000B3188 /* AddViewController */ = {
+			isa = PBXGroup;
+			children = (
+				366499FD2B1082C7000B3188 /* AddViewController.swift */,
+				366499FE2B1082C7000B3188 /* AddViewController.xib */,
+			);
+			path = AddViewController;
 			sourceTree = "<group>";
 		};
 		368F4BBE2B0B48BE00735982 /* ThirdPictureCell */ = {
@@ -708,6 +739,7 @@
 				366499E72B0DF548000B3188 /* ResetViewController.xib in Resources */,
 				368F4BC72B0B493A00735982 /* ThirdPcCollection.xib in Resources */,
 				364F408D2B05CC3B00EA0BC1 /* DetailProfileVC.xib in Resources */,
+				366499FB2B105881000B3188 /* DetailViewController.xib in Resources */,
 				366499EC2B0F2846000B3188 /* ProfileViewController.xib in Resources */,
 				36003FBF2B0722F90044D9B5 /* GoogleService-Info.plist in Resources */,
 				364F40992B05D4D300EA0BC1 /* PinterestViewCell.xib in Resources */,
@@ -720,6 +752,7 @@
 				360040122B0B34A80044D9B5 /* SecondPictureCell.xib in Resources */,
 				36003FCD2B0740250044D9B5 /* ErorlogViewController.xib in Resources */,
 				368F4BCC2B0B4F5100735982 /* FourPictureCell.xib in Resources */,
+				36649A002B1082C7000B3188 /* AddViewController.xib in Resources */,
 				3663D27D2B04A2C600E25D38 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -848,6 +881,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				366499FA2B105881000B3188 /* DetailViewController.swift in Sources */,
 				368F4BCB2B0B4F5100735982 /* FourPictureCell.swift in Sources */,
 				368F4BC12B0B48F900735982 /* ThirdPictureCell.swift in Sources */,
 				3663D2812B04A72800E25D38 /* LoginViewController.swift in Sources */,
@@ -857,6 +891,7 @@
 				368F4BC62B0B493A00735982 /* ThirdPcCollection.swift in Sources */,
 				364F408C2B05CC3B00EA0BC1 /* DetailProfileVC.swift in Sources */,
 				3663D28A2B04BE9600E25D38 /* HomeViewModel.swift in Sources */,
+				366499FF2B1082C7000B3188 /* AddViewController.swift in Sources */,
 				366499C52B0CAD7C000B3188 /* CatApiModel.swift in Sources */,
 				366499DE2B0DE553000B3188 /* SitemViewController.swift in Sources */,
 				36003FF72B0B28280044D9B5 /* ExtTable.swift in Sources */,
@@ -867,6 +902,7 @@
 				368F4BD32B0C5F5F00735982 /* ExtUiImage.swift in Sources */,
 				36003FCF2B0740E80044D9B5 /* ErorlogViewController.swift in Sources */,
 				368F4BD02B0B509C00735982 /* FourPcCell.swift in Sources */,
+				366499F62B103D2B000B3188 /* DogApiModel.swift in Sources */,
 				3663D24D2B049C8400E25D38 /* animalswiki.xcdatamodeld in Sources */,
 				366499E62B0DF548000B3188 /* ResetViewController.swift in Sources */,
 				366499F02B0F327B000B3188 /* TableViewCell.swift in Sources */,

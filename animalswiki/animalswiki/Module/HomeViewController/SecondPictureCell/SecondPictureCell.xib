@@ -45,7 +45,7 @@
                             </attributedString>
                         </buttonConfiguration>
                     </button>
-                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="fTv-4G-2Oe">
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="fTv-4G-2Oe">
                         <rect key="frame" x="0.0" y="40" width="320" height="90"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>

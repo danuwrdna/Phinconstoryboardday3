@@ -12,7 +12,7 @@ class FirstPcCollection: UICollectionViewCell {
     @IBOutlet weak var imageViewFirst: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        imageViewFirst.layer.cornerRadius = 15.0
     }
 
 }

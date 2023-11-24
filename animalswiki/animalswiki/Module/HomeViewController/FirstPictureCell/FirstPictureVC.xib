@@ -41,12 +41,33 @@
                             <action selector="refreshButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="KGN-Vq-I2l"/>
                         </connections>
                     </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZOi-bv-DC3">
+                        <rect key="frame" x="274" y="3" width="75" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="6I7-4h-8uS"/>
+                        </constraints>
+                        <color key="tintColor" red="1" green="0.34147036780000001" blue="0.7649869775" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain">
+                            <attributedString key="attributedTitle">
+                                <fragment content="Add">
+                                    <attributes>
+                                        <font key="NSFont" size="12" name="Optima-Regular"/>
+                                        <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                        </buttonConfiguration>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="YLh-zO-w6Z" secondAttribute="trailing" id="3Kq-Kv-5ir"/>
+                    <constraint firstAttribute="trailing" secondItem="ZOi-bv-DC3" secondAttribute="trailing" constant="-4" id="5oK-ZY-2YY"/>
                     <constraint firstAttribute="bottom" secondItem="YLh-zO-w6Z" secondAttribute="bottom" id="D0q-2l-SS5"/>
                     <constraint firstItem="YLh-zO-w6Z" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="30" id="L5p-Rj-DWv"/>
                     <constraint firstItem="Jkz-nN-p9I" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="OLG-cQ-cHw"/>
+                    <constraint firstItem="ZOi-bv-DC3" firstAttribute="leading" secondItem="Jkz-nN-p9I" secondAttribute="trailing" constant="223" id="Td7-SJ-cYo"/>
+                    <constraint firstItem="ZOi-bv-DC3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="3" id="eIa-Ge-o0C"/>
                     <constraint firstItem="Jkz-nN-p9I" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="hmU-du-mnC"/>
                     <constraint firstItem="YLh-zO-w6Z" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="nJr-VJ-kPf"/>
                 </constraints>

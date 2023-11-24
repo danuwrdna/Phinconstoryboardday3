@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailProfileVC" customModule="animalswiki" customModuleProvider="target">
             <connections>
                 <outlet property="imageButton" destination="nwD-mf-5eO" id="jIW-vI-3cF"/>
+                <outlet property="photoImage" destination="rUu-xb-RLJ" id="0jI-zU-2Ld"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="viewCollection" destination="dBk-pL-n4N" id="OTB-Wj-OGB"/>
             </connections>
@@ -110,7 +111,7 @@
                     <rect key="frame" x="0.0" y="-37" width="393" height="128"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Back" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgu-xs-Uqn">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="DetailProfileVC" text="Back" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgu-xs-Uqn">
                             <rect key="frame" x="39" y="91" width="37" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="16"/>
