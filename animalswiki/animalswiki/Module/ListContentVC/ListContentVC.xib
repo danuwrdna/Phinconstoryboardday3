@@ -93,26 +93,6 @@
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </view>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Rectangle 4" translatesAutoresizingMaskIntoConstraints="NO" id="r4S-eq-AYb">
-                    <rect key="frame" x="41" y="760" width="316" height="58"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </imageView>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="BK0-5b-qnX">
-                    <rect key="frame" x="152" y="774" width="30" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </imageView>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Home" translatesAutoresizingMaskIntoConstraints="NO" id="LTJ-bb-cRe">
-                    <rect key="frame" x="86" y="774" width="30" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </imageView>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Paper" translatesAutoresizingMaskIntoConstraints="NO" id="Sla-qk-yuM">
-                    <rect key="frame" x="218" y="774" width="30" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </imageView>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Profile" translatesAutoresizingMaskIntoConstraints="NO" id="MCN-sY-e0Z">
-                    <rect key="frame" x="279" y="774" width="30" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </imageView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -122,11 +102,6 @@
     <resources>
         <image name="Arrow - Left 2" width="168" height="168"/>
         <image name="Group 10" width="400" height="144"/>
-        <image name="Home" width="120" height="120"/>
-        <image name="Image" width="125" height="120"/>
-        <image name="Paper" width="129" height="120"/>
-        <image name="Profile" width="121" height="120"/>
-        <image name="Rectangle 4" width="1304" height="264"/>
         <image name="bx_bxl-pinterest" width="96" height="96"/>
         <image name="ic_baseline-facebook" width="96" height="96"/>
         <systemColor name="systemBackgroundColor">

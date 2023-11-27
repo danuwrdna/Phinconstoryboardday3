@@ -4,60 +4,68 @@ class HomeViewController:
     @IBOutlet weak var buttomSheet: UIImageView!
     @IBOutlet weak var homeTableView: UITableView!
     @IBOutlet weak var searchButton: UIButton!
+    @IBAction func loveButton(_ sender: Any) {
+        navigationLB()
+    }
     let customPopup = SitemViewController()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated: true)
         delegateTable()
-       alertLogout()
+        alertLogout()
         setSB()
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        navigationController?.isNavigationBarHidden = true
     }
     func setSB(){
         searchButton.addTarget(self, action: #selector(searchButtonTapped), for: .touchUpInside)
     }
     @objc func searchButtonTapped() {
-           // Instantiate the search view controller
-           let searchViewController = SitemViewController()  // Replace SearchViewController with the actual class name of your search view controller
-
-           // Present the search view controller
+        // Instantiate the search view controller
+        let searchViewController = SitemViewController()  // Replace SearchViewController with the actual class name of your search view controller
+        
+        // Present the search view controller
         searchViewController.modalTransitionStyle = .crossDissolve
         searchViewController.modalPresentationStyle = .overFullScreen
-           navigationController?.present(searchViewController, animated: true)
-       }
+        navigationController?.present(searchViewController, animated: true)
+    }
     func  alertLogout(){
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleImageTap))
-               buttomSheet.isUserInteractionEnabled = true
-               buttomSheet.addGestureRecognizer(tapGesture)
+        buttomSheet.isUserInteractionEnabled = true
+        buttomSheet.addGestureRecognizer(tapGesture)
     }
     @objc func handleImageTap() {
-            showBottomSheet()
-        }
+        showBottomSheet()
+    }
     func showBottomSheet() {
-            let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-            let logoutAction = UIAlertAction(title: "Logout", style: .destructive) { _ in
-                self.logout()
-            }
-            alertController.addAction(logoutAction)
-            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-            alertController.addAction(cancelAction)
-            alertController.popoverPresentationController?.sourceView = self.buttomSheet
-            alertController.popoverPresentationController?.sourceRect = self.buttomSheet.bounds
-            present(alertController, animated: true, completion: nil)
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        let logoutAction = UIAlertAction(title: "Logout", style: .destructive) { _ in
+            self.logout()
         }
-
-        func logout() {
-            let bt = LoginViewController()
-            self.navigationController?.pushViewController(bt, animated: true)
-        }
-    override func viewWillAppear(_ animated: Bool) {
-        navigationController?.isNavigationBarHidden = true
+        alertController.addAction(logoutAction)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(cancelAction)
+        alertController.popoverPresentationController?.sourceView = self.buttomSheet
+        alertController.popoverPresentationController?.sourceRect = self.buttomSheet.bounds
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    func logout() {
+        let bt = LoginViewController()
+        self.navigationController?.pushViewController(bt, animated: true)
+    }
+    func  navigationLB(){
+        let bt = IcLoveViewController()
+        self.navigationController?.pushViewController(bt, animated: true)
     }
 }
+
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
     func delegateTable(){
-       homeTableView.delegate = self
-       homeTableView.dataSource = self
-       homeTableView.registerCellWithNib(FirstPictureVC.self)
+        homeTableView.delegate = self
+        homeTableView.dataSource = self
+        homeTableView.registerCellWithNib(FirstPictureVC.self)
         homeTableView.registerCellWithNib(SecondPictureCell.self)
         homeTableView.registerCellWithNib(ThirdPictureCell.self)
         homeTableView.registerCellWithNib(FourPictureCell.self)
@@ -83,7 +91,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
             return third
         case 3:
             let four = tableView.dequeueReusableCell(forIndexPath: indexPath) as FourPictureCell
-        return four
+            return four
         default:
             return UITableViewCell()
         }
@@ -112,9 +120,9 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
         case 2:
             if let cell = tableView.cellForRow(at: indexPath) as? ThirdPictureCell{
                 let labelValue = cell.adamLabel.text
-                    let newViewController = ListContentVC()
-                    self.navigationController?.pushViewController(newViewController, animated: true)
-                }
+                let newViewController = ListContentVC()
+                self.navigationController?.pushViewController(newViewController, animated: true)
+            }
             return
         case 3:
             return

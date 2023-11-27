@@ -26,6 +26,26 @@
 		360040122B0B34A80044D9B5 /* SecondPictureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 360040102B0B34A80044D9B5 /* SecondPictureCell.xib */; };
 		360040162B0B34E50044D9B5 /* SecondPcCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360040142B0B34E50044D9B5 /* SecondPcCollection.swift */; };
 		360040172B0B34E50044D9B5 /* SecondPcCollection.xib in Resources */ = {isa = PBXBuildFile; fileRef = 360040152B0B34E50044D9B5 /* SecondPcCollection.xib */; };
+		362D4F4E2B14432700448517 /* IcLoveViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362D4F4D2B14432700448517 /* IcLoveViewModel.swift */; };
+		362D4F522B1446B400448517 /* SecondCellLoveVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362D4F502B1446B400448517 /* SecondCellLoveVC.swift */; };
+		362D4F532B1446B400448517 /* SecondCellLoveVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 362D4F512B1446B400448517 /* SecondCellLoveVC.xib */; };
+		362D4F572B14491D00448517 /* CollectionLoveSecond.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362D4F552B14491D00448517 /* CollectionLoveSecond.swift */; };
+		362D4F582B14491D00448517 /* CollectionLoveSecond.xib in Resources */ = {isa = PBXBuildFile; fileRef = 362D4F562B14491D00448517 /* CollectionLoveSecond.xib */; };
+		362D4F5D2B146D4C00448517 /* ThirdCellLoveVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362D4F5B2B146D4C00448517 /* ThirdCellLoveVC.swift */; };
+		362D4F5E2B146D4C00448517 /* ThirdCellLoveVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 362D4F5C2B146D4C00448517 /* ThirdCellLoveVC.xib */; };
+		362D4F622B146DBC00448517 /* CollectionLoveThird.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362D4F602B146DBC00448517 /* CollectionLoveThird.swift */; };
+		362D4F632B146DBC00448517 /* CollectionLoveThird.xib in Resources */ = {isa = PBXBuildFile; fileRef = 362D4F612B146DBC00448517 /* CollectionLoveThird.xib */; };
+		362D4F662B1479C200448517 /* ThirdCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362D4F652B1479C200448517 /* ThirdCellModel.swift */; };
+		362D4F6A2B147FC200448517 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362D4F682B147FC200448517 /* ImageViewController.swift */; };
+		362D4F6B2B147FC200448517 /* ImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 362D4F692B147FC200448517 /* ImageViewController.xib */; };
+		362D4F6F2B14845A00448517 /* FirstCellImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362D4F6D2B14845A00448517 /* FirstCellImageVC.swift */; };
+		362D4F702B14845A00448517 /* FirstCellImageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 362D4F6E2B14845A00448517 /* FirstCellImageVC.xib */; };
+		362D4F742B1485E800448517 /* ColFirstCellImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362D4F722B1485E800448517 /* ColFirstCellImage.swift */; };
+		362D4F752B1485E800448517 /* ColFirstCellImage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 362D4F732B1485E800448517 /* ColFirstCellImage.xib */; };
+		362D4F792B1491A500448517 /* SecondCellImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362D4F772B1491A500448517 /* SecondCellImageVC.swift */; };
+		362D4F7A2B1491A500448517 /* SecondCellImageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 362D4F782B1491A500448517 /* SecondCellImageVC.xib */; };
+		362D4F7E2B1491D800448517 /* ColSecondCellImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362D4F7C2B1491D800448517 /* ColSecondCellImage.swift */; };
+		362D4F7F2B1491D800448517 /* ColSecondCellImage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 362D4F7D2B1491D800448517 /* ColSecondCellImage.xib */; };
 		364F40822B05BC5300EA0BC1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364F40802B05BC5300EA0BC1 /* ProfileViewController.swift */; };
 		364F40832B05BC5300EA0BC1 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 364F40812B05BC5300EA0BC1 /* ProfileViewController.xib */; };
 		364F40872B05CBDC00EA0BC1 /* ListContentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364F40852B05CBDB00EA0BC1 /* ListContentVC.swift */; };
@@ -72,6 +92,12 @@
 		366499FB2B105881000B3188 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 366499F92B105881000B3188 /* DetailViewController.xib */; };
 		366499FF2B1082C7000B3188 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366499FD2B1082C7000B3188 /* AddViewController.swift */; };
 		36649A002B1082C7000B3188 /* AddViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 366499FE2B1082C7000B3188 /* AddViewController.xib */; };
+		36649A042B143A2C000B3188 /* IcLoveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36649A022B143A2C000B3188 /* IcLoveViewController.swift */; };
+		36649A052B143A2C000B3188 /* IcLoveViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36649A032B143A2C000B3188 /* IcLoveViewController.xib */; };
+		36649A0B2B143B61000B3188 /* FirstCellLoveVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36649A092B143B61000B3188 /* FirstCellLoveVC.swift */; };
+		36649A0C2B143B61000B3188 /* FirstCellLoveVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36649A0A2B143B61000B3188 /* FirstCellLoveVC.xib */; };
+		36649A102B143E4B000B3188 /* CollectionLoveFirst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36649A0E2B143E4B000B3188 /* CollectionLoveFirst.swift */; };
+		36649A112B143E4B000B3188 /* CollectionLoveFirst.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36649A0F2B143E4B000B3188 /* CollectionLoveFirst.xib */; };
 		368F4BC12B0B48F900735982 /* ThirdPictureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368F4BBF2B0B48F900735982 /* ThirdPictureCell.swift */; };
 		368F4BC22B0B48F900735982 /* ThirdPictureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 368F4BC02B0B48F900735982 /* ThirdPictureCell.xib */; };
 		368F4BC62B0B493A00735982 /* ThirdPcCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368F4BC42B0B493A00735982 /* ThirdPcCollection.swift */; };
@@ -124,6 +150,26 @@
 		360040102B0B34A80044D9B5 /* SecondPictureCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondPictureCell.xib; sourceTree = "<group>"; };
 		360040142B0B34E50044D9B5 /* SecondPcCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPcCollection.swift; sourceTree = "<group>"; };
 		360040152B0B34E50044D9B5 /* SecondPcCollection.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondPcCollection.xib; sourceTree = "<group>"; };
+		362D4F4D2B14432700448517 /* IcLoveViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IcLoveViewModel.swift; sourceTree = "<group>"; };
+		362D4F502B1446B400448517 /* SecondCellLoveVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondCellLoveVC.swift; sourceTree = "<group>"; };
+		362D4F512B1446B400448517 /* SecondCellLoveVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondCellLoveVC.xib; sourceTree = "<group>"; };
+		362D4F552B14491D00448517 /* CollectionLoveSecond.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionLoveSecond.swift; sourceTree = "<group>"; };
+		362D4F562B14491D00448517 /* CollectionLoveSecond.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionLoveSecond.xib; sourceTree = "<group>"; };
+		362D4F5B2B146D4C00448517 /* ThirdCellLoveVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdCellLoveVC.swift; sourceTree = "<group>"; };
+		362D4F5C2B146D4C00448517 /* ThirdCellLoveVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThirdCellLoveVC.xib; sourceTree = "<group>"; };
+		362D4F602B146DBC00448517 /* CollectionLoveThird.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionLoveThird.swift; sourceTree = "<group>"; };
+		362D4F612B146DBC00448517 /* CollectionLoveThird.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionLoveThird.xib; sourceTree = "<group>"; };
+		362D4F652B1479C200448517 /* ThirdCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdCellModel.swift; sourceTree = "<group>"; };
+		362D4F682B147FC200448517 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		362D4F692B147FC200448517 /* ImageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageViewController.xib; sourceTree = "<group>"; };
+		362D4F6D2B14845A00448517 /* FirstCellImageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstCellImageVC.swift; sourceTree = "<group>"; };
+		362D4F6E2B14845A00448517 /* FirstCellImageVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstCellImageVC.xib; sourceTree = "<group>"; };
+		362D4F722B1485E800448517 /* ColFirstCellImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColFirstCellImage.swift; sourceTree = "<group>"; };
+		362D4F732B1485E800448517 /* ColFirstCellImage.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColFirstCellImage.xib; sourceTree = "<group>"; };
+		362D4F772B1491A500448517 /* SecondCellImageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondCellImageVC.swift; sourceTree = "<group>"; };
+		362D4F782B1491A500448517 /* SecondCellImageVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondCellImageVC.xib; sourceTree = "<group>"; };
+		362D4F7C2B1491D800448517 /* ColSecondCellImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColSecondCellImage.swift; sourceTree = "<group>"; };
+		362D4F7D2B1491D800448517 /* ColSecondCellImage.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColSecondCellImage.xib; sourceTree = "<group>"; };
 		364F40802B05BC5300EA0BC1 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		364F40812B05BC5300EA0BC1 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		364F40852B05CBDB00EA0BC1 /* ListContentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListContentVC.swift; sourceTree = "<group>"; };
@@ -171,6 +217,12 @@
 		366499F92B105881000B3188 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		366499FD2B1082C7000B3188 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		366499FE2B1082C7000B3188 /* AddViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddViewController.xib; sourceTree = "<group>"; };
+		36649A022B143A2C000B3188 /* IcLoveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IcLoveViewController.swift; sourceTree = "<group>"; };
+		36649A032B143A2C000B3188 /* IcLoveViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IcLoveViewController.xib; sourceTree = "<group>"; };
+		36649A092B143B61000B3188 /* FirstCellLoveVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstCellLoveVC.swift; sourceTree = "<group>"; };
+		36649A0A2B143B61000B3188 /* FirstCellLoveVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstCellLoveVC.xib; sourceTree = "<group>"; };
+		36649A0E2B143E4B000B3188 /* CollectionLoveFirst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionLoveFirst.swift; sourceTree = "<group>"; };
+		36649A0F2B143E4B000B3188 /* CollectionLoveFirst.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionLoveFirst.xib; sourceTree = "<group>"; };
 		368F4BBF2B0B48F900735982 /* ThirdPictureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPictureCell.swift; sourceTree = "<group>"; };
 		368F4BC02B0B48F900735982 /* ThirdPictureCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThirdPictureCell.xib; sourceTree = "<group>"; };
 		368F4BC42B0B493A00735982 /* ThirdPcCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPcCollection.swift; sourceTree = "<group>"; };
@@ -289,6 +341,109 @@
 				360040152B0B34E50044D9B5 /* SecondPcCollection.xib */,
 			);
 			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		362D4F4F2B14467D00448517 /* SecondCellLoveVC */ = {
+			isa = PBXGroup;
+			children = (
+				362D4F542B1448F800448517 /* collection */,
+				362D4F502B1446B400448517 /* SecondCellLoveVC.swift */,
+				362D4F512B1446B400448517 /* SecondCellLoveVC.xib */,
+			);
+			path = SecondCellLoveVC;
+			sourceTree = "<group>";
+		};
+		362D4F542B1448F800448517 /* collection */ = {
+			isa = PBXGroup;
+			children = (
+				362D4F552B14491D00448517 /* CollectionLoveSecond.swift */,
+				362D4F562B14491D00448517 /* CollectionLoveSecond.xib */,
+			);
+			path = collection;
+			sourceTree = "<group>";
+		};
+		362D4F592B146C5600448517 /* ImageViewController */ = {
+			isa = PBXGroup;
+			children = (
+				362D4F762B14916F00448517 /* SecondCellImageVC */,
+				362D4F6C2B14841400448517 /* FirstCellImageVC */,
+				362D4F682B147FC200448517 /* ImageViewController.swift */,
+				362D4F692B147FC200448517 /* ImageViewController.xib */,
+			);
+			path = ImageViewController;
+			sourceTree = "<group>";
+		};
+		362D4F5A2B146C6800448517 /* ThirdCellLoveVC */ = {
+			isa = PBXGroup;
+			children = (
+				362D4F642B14799D00448517 /* Model */,
+				362D4F5F2B146D5E00448517 /* collection */,
+				362D4F5B2B146D4C00448517 /* ThirdCellLoveVC.swift */,
+				362D4F5C2B146D4C00448517 /* ThirdCellLoveVC.xib */,
+			);
+			path = ThirdCellLoveVC;
+			sourceTree = "<group>";
+		};
+		362D4F5F2B146D5E00448517 /* collection */ = {
+			isa = PBXGroup;
+			children = (
+				362D4F602B146DBC00448517 /* CollectionLoveThird.swift */,
+				362D4F612B146DBC00448517 /* CollectionLoveThird.xib */,
+			);
+			path = collection;
+			sourceTree = "<group>";
+		};
+		362D4F642B14799D00448517 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				362D4F652B1479C200448517 /* ThirdCellModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		362D4F672B147CB000448517 /* FourCellLoveVC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FourCellLoveVC;
+			sourceTree = "<group>";
+		};
+		362D4F6C2B14841400448517 /* FirstCellImageVC */ = {
+			isa = PBXGroup;
+			children = (
+				362D4F712B1485A600448517 /* collection */,
+				362D4F6D2B14845A00448517 /* FirstCellImageVC.swift */,
+				362D4F6E2B14845A00448517 /* FirstCellImageVC.xib */,
+			);
+			path = FirstCellImageVC;
+			sourceTree = "<group>";
+		};
+		362D4F712B1485A600448517 /* collection */ = {
+			isa = PBXGroup;
+			children = (
+				362D4F722B1485E800448517 /* ColFirstCellImage.swift */,
+				362D4F732B1485E800448517 /* ColFirstCellImage.xib */,
+			);
+			path = collection;
+			sourceTree = "<group>";
+		};
+		362D4F762B14916F00448517 /* SecondCellImageVC */ = {
+			isa = PBXGroup;
+			children = (
+				362D4F7B2B1491AD00448517 /* collection */,
+				362D4F772B1491A500448517 /* SecondCellImageVC.swift */,
+				362D4F782B1491A500448517 /* SecondCellImageVC.xib */,
+			);
+			path = SecondCellImageVC;
+			sourceTree = "<group>";
+		};
+		362D4F7B2B1491AD00448517 /* collection */ = {
+			isa = PBXGroup;
+			children = (
+				362D4F7C2B1491D800448517 /* ColSecondCellImage.swift */,
+				362D4F7D2B1491D800448517 /* ColSecondCellImage.xib */,
+			);
+			path = collection;
 			sourceTree = "<group>";
 		};
 		364F407F2B05BC2D00EA0BC1 /* ProfileViewController */ = {
@@ -417,6 +572,8 @@
 		3663D2772B04A11400E25D38 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				362D4F592B146C5600448517 /* ImageViewController */,
+				36649A012B1439E9000B3188 /* IcLoveViewController */,
 				366499FC2B108299000B3188 /* AddViewController */,
 				366499F72B105858000B3188 /* DetailViewController */,
 				366499E82B0F27D1000B3188 /* ProfileViewController */,
@@ -544,6 +701,47 @@
 				366499FE2B1082C7000B3188 /* AddViewController.xib */,
 			);
 			path = AddViewController;
+			sourceTree = "<group>";
+		};
+		36649A012B1439E9000B3188 /* IcLoveViewController */ = {
+			isa = PBXGroup;
+			children = (
+				362D4F672B147CB000448517 /* FourCellLoveVC */,
+				362D4F5A2B146C6800448517 /* ThirdCellLoveVC */,
+				362D4F4F2B14467D00448517 /* SecondCellLoveVC */,
+				36649A082B143B1A000B3188 /* FirstCellLoveVC */,
+				36649A072B143B0D000B3188 /* Model */,
+				36649A022B143A2C000B3188 /* IcLoveViewController.swift */,
+				36649A032B143A2C000B3188 /* IcLoveViewController.xib */,
+			);
+			path = IcLoveViewController;
+			sourceTree = "<group>";
+		};
+		36649A072B143B0D000B3188 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				362D4F4D2B14432700448517 /* IcLoveViewModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		36649A082B143B1A000B3188 /* FirstCellLoveVC */ = {
+			isa = PBXGroup;
+			children = (
+				36649A0D2B143E10000B3188 /* collection */,
+				36649A092B143B61000B3188 /* FirstCellLoveVC.swift */,
+				36649A0A2B143B61000B3188 /* FirstCellLoveVC.xib */,
+			);
+			path = FirstCellLoveVC;
+			sourceTree = "<group>";
+		};
+		36649A0D2B143E10000B3188 /* collection */ = {
+			isa = PBXGroup;
+			children = (
+				36649A0E2B143E4B000B3188 /* CollectionLoveFirst.swift */,
+				36649A0F2B143E4B000B3188 /* CollectionLoveFirst.xib */,
+			);
+			path = collection;
 			sourceTree = "<group>";
 		};
 		368F4BBE2B0B48BE00735982 /* ThirdPictureCell */ = {
@@ -734,23 +932,35 @@
 				368F4BC22B0B48F900735982 /* ThirdPictureCell.xib in Resources */,
 				36003FB12B071A910044D9B5 /* SignViewController.xib in Resources */,
 				366499DF2B0DE553000B3188 /* SitemViewController.xib in Resources */,
+				362D4F702B14845A00448517 /* FirstCellImageVC.xib in Resources */,
 				364F409E2B060D0000EA0BC1 /* DpViewCell.xib in Resources */,
 				3663D24F2B049C8600E25D38 /* Assets.xcassets in Resources */,
+				362D4F6B2B147FC200448517 /* ImageViewController.xib in Resources */,
 				366499E72B0DF548000B3188 /* ResetViewController.xib in Resources */,
 				368F4BC72B0B493A00735982 /* ThirdPcCollection.xib in Resources */,
 				364F408D2B05CC3B00EA0BC1 /* DetailProfileVC.xib in Resources */,
+				362D4F752B1485E800448517 /* ColFirstCellImage.xib in Resources */,
+				362D4F7A2B1491A500448517 /* SecondCellImageVC.xib in Resources */,
+				36649A0C2B143B61000B3188 /* FirstCellLoveVC.xib in Resources */,
+				362D4F5E2B146D4C00448517 /* ThirdCellLoveVC.xib in Resources */,
+				36649A112B143E4B000B3188 /* CollectionLoveFirst.xib in Resources */,
 				366499FB2B105881000B3188 /* DetailViewController.xib in Resources */,
+				362D4F532B1446B400448517 /* SecondCellLoveVC.xib in Resources */,
 				366499EC2B0F2846000B3188 /* ProfileViewController.xib in Resources */,
 				36003FBF2B0722F90044D9B5 /* GoogleService-Info.plist in Resources */,
 				364F40992B05D4D300EA0BC1 /* PinterestViewCell.xib in Resources */,
 				360040172B0B34E50044D9B5 /* SecondPcCollection.xib in Resources */,
 				366499F12B0F327B000B3188 /* TableViewCell.xib in Resources */,
+				36649A052B143A2C000B3188 /* IcLoveViewController.xib in Resources */,
 				360040082B0B2FED0044D9B5 /* FirstPictureVC.xib in Resources */,
 				3663D24A2B049C8400E25D38 /* Main.storyboard in Resources */,
 				36003FC82B073CF00044D9B5 /* AnimasiViewController.xib in Resources */,
 				3600400D2B0B31310044D9B5 /* FirstPcCollection.xib in Resources */,
 				360040122B0B34A80044D9B5 /* SecondPictureCell.xib in Resources */,
+				362D4F582B14491D00448517 /* CollectionLoveSecond.xib in Resources */,
 				36003FCD2B0740250044D9B5 /* ErorlogViewController.xib in Resources */,
+				362D4F632B146DBC00448517 /* CollectionLoveThird.xib in Resources */,
+				362D4F7F2B1491D800448517 /* ColSecondCellImage.xib in Resources */,
 				368F4BCC2B0B4F5100735982 /* FourPictureCell.xib in Resources */,
 				36649A002B1082C7000B3188 /* AddViewController.xib in Resources */,
 				3663D27D2B04A2C600E25D38 /* HomeViewController.xib in Resources */,
@@ -882,12 +1092,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				366499FA2B105881000B3188 /* DetailViewController.swift in Sources */,
+				362D4F622B146DBC00448517 /* CollectionLoveThird.swift in Sources */,
 				368F4BCB2B0B4F5100735982 /* FourPictureCell.swift in Sources */,
+				362D4F662B1479C200448517 /* ThirdCellModel.swift in Sources */,
 				368F4BC12B0B48F900735982 /* ThirdPictureCell.swift in Sources */,
+				362D4F5D2B146D4C00448517 /* ThirdCellLoveVC.swift in Sources */,
 				3663D2812B04A72800E25D38 /* LoginViewController.swift in Sources */,
 				36003FCA2B073D110044D9B5 /* AnimasiViewController.swift in Sources */,
 				3663D27C2B04A2C600E25D38 /* HomeViewController.swift in Sources */,
 				3663D2472B049C8400E25D38 /* ViewController.swift in Sources */,
+				36649A102B143E4B000B3188 /* CollectionLoveFirst.swift in Sources */,
 				368F4BC62B0B493A00735982 /* ThirdPcCollection.swift in Sources */,
 				364F408C2B05CC3B00EA0BC1 /* DetailProfileVC.swift in Sources */,
 				3663D28A2B04BE9600E25D38 /* HomeViewModel.swift in Sources */,
@@ -895,10 +1109,14 @@
 				366499C52B0CAD7C000B3188 /* CatApiModel.swift in Sources */,
 				366499DE2B0DE553000B3188 /* SitemViewController.swift in Sources */,
 				36003FF72B0B28280044D9B5 /* ExtTable.swift in Sources */,
+				362D4F6F2B14845A00448517 /* FirstCellImageVC.swift in Sources */,
 				364F40872B05CBDC00EA0BC1 /* ListContentVC.swift in Sources */,
 				360040072B0B2FED0044D9B5 /* FirstPictureVC.swift in Sources */,
 				36003FD22B0765670044D9B5 /* MainTabBar.swift in Sources */,
+				362D4F7E2B1491D800448517 /* ColSecondCellImage.swift in Sources */,
 				366499C32B0CAB16000B3188 /* ApiManager.swift in Sources */,
+				362D4F572B14491D00448517 /* CollectionLoveSecond.swift in Sources */,
+				362D4F522B1446B400448517 /* SecondCellLoveVC.swift in Sources */,
 				368F4BD32B0C5F5F00735982 /* ExtUiImage.swift in Sources */,
 				36003FCF2B0740E80044D9B5 /* ErorlogViewController.swift in Sources */,
 				368F4BD02B0B509C00735982 /* FourPcCell.swift in Sources */,
@@ -907,20 +1125,26 @@
 				366499E62B0DF548000B3188 /* ResetViewController.swift in Sources */,
 				366499F02B0F327B000B3188 /* TableViewCell.swift in Sources */,
 				364F40822B05BC5300EA0BC1 /* ProfileViewController.swift in Sources */,
+				362D4F6A2B147FC200448517 /* ImageViewController.swift in Sources */,
 				3663D2432B049C8400E25D38 /* AppDelegate.swift in Sources */,
 				366499C82B0DBE31000B3188 /* DetailProfileModel.swift in Sources */,
 				3663D2452B049C8400E25D38 /* SceneDelegate.swift in Sources */,
 				366499F42B0F384E000B3188 /* ProfileModel.swift in Sources */,
 				3600400C2B0B31310044D9B5 /* FirstPcCollection.swift in Sources */,
+				36649A042B143A2C000B3188 /* IcLoveViewController.swift in Sources */,
 				360040162B0B34E50044D9B5 /* SecondPcCollection.swift in Sources */,
+				362D4F4E2B14432700448517 /* IcLoveViewModel.swift in Sources */,
 				366499CB2B0DCD94000B3188 /* ListContentModel.swift in Sources */,
 				364F409D2B060D0000EA0BC1 /* DpViewCell.swift in Sources */,
 				364F40982B05D4D300EA0BC1 /* PinterestViewCell.swift in Sources */,
 				36003FD42B0765D60044D9B5 /* constrant.swift in Sources */,
+				362D4F792B1491A500448517 /* SecondCellImageVC.swift in Sources */,
 				36003FB02B071A910044D9B5 /* SignViewController.swift in Sources */,
+				362D4F742B1485E800448517 /* ColFirstCellImage.swift in Sources */,
 				366499EB2B0F2846000B3188 /* ProfileViewController.swift in Sources */,
 				360040112B0B34A80044D9B5 /* SecondPictureCell.swift in Sources */,
 				36003FF92B0B28B80044D9B5 /* ExtCollection.swift in Sources */,
+				36649A0B2B143B61000B3188 /* FirstCellLoveVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

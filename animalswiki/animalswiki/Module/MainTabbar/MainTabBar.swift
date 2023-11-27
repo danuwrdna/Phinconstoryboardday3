@@ -2,18 +2,20 @@ import Foundation
 import UIKit
 
 class MainTabBarViewController: UITabBarController {
-    
+    var visualEffectView: UIVisualEffectView?
     let homeVC = UINavigationController(rootViewController: HomeViewController())
-    let pickers = UINavigationController(rootViewController: ListContentVC())
-    let progress = UINavigationController(rootViewController: DetailProfileVC())
-    let pengaturan = UINavigationController(rootViewController: HomeViewController())
+    let image = UINavigationController(rootViewController: ImageViewController())
+    let list = UINavigationController(rootViewController: IcLoveViewController())
+    let profile = UINavigationController(rootViewController: ProfileViewController())
 
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUITabBarItems()
         setViewControllers()
     }
-
+    override func viewDidAppear(_ animated: Bool) {
+        navigationController?.isNavigationBarHidden = true
+    }
     func configureUITabBarItems() {
         // Konfigurasi homeVC
          
@@ -21,13 +23,13 @@ class MainTabBarViewController: UITabBarController {
         homeVC.tabBarItem = UITabBarItem(title: "Home", image: TabBar.icon1, tag: 0)
 
         // Konfigurasi pickers
-        pickers.tabBarItem = UITabBarItem(title: "Umpan Balik", image: TabBar.icon2, tag: 1)
+        image.tabBarItem = UITabBarItem(title: "Image", image: TabBar.icon2, tag: 1)
     
         // Konfigurasi progress
-        progress.tabBarItem = UITabBarItem(title: "Aktifitas", image: TabBar.icon3, tag: 2)
+        list.tabBarItem = UITabBarItem(title: "List", image: TabBar.icon3, tag: 2)
         
         // Konfigurasi pengaturan
-        pengaturan.tabBarItem = UITabBarItem(title: "Pengaturan", image: TabBar.icon4, tag: 3)
+        profile.tabBarItem = UITabBarItem(title: "Profile", image: TabBar.icon4, tag: 3)
        
 
         // Konfigurasi warna teks
@@ -44,13 +46,14 @@ class MainTabBarViewController: UITabBarController {
         let tabBarColor = UIColor(red: red, green: green, blue: blue, alpha: 1.0)
         UITabBar.appearance().backgroundColor = tabBarColor
         UITabBar.appearance().tintColor = UIColor.white
-        UITabBar.appearance().barTintColor = UIColor.white
+        UITabBar.appearance().barTintColor = tabBarColor
+        
        
         
         // Warna latar belakang tab bar
     }
 
     func setViewControllers() {
-        setViewControllers([homeVC, pickers, progress, pengaturan], animated: true)
+        setViewControllers([homeVC, image, list, profile], animated: true)
     }
 }

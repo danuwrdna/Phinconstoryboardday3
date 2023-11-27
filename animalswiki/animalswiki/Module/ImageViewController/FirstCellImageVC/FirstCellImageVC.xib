@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FirstCellImageVC" rowHeight="197" id="KGk-i7-Jjw" customClass="FirstCellImageVC" customModule="animalswiki" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="362" height="197"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="362" height="197"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cil_animal" translatesAutoresizingMaskIntoConstraints="NO" id="Sts-Ov-2gj">
+                        <rect key="frame" x="16" y="10" width="17" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="17" id="3ol-VG-UkT"/>
+                            <constraint firstAttribute="width" constant="17" id="FXY-YQ-gkV"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="List animal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uKW-R4-GAp">
+                        <rect key="frame" x="40.999999999999993" y="8" width="84.333333333333314" height="21"/>
+                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="18"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="gSH-p4-yq4">
+                        <rect key="frame" x="16" y="40" width="326" height="70"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="70" id="0p9-Wf-P5Y"/>
+                            <constraint firstAttribute="width" constant="326" id="jyk-NR-esf"/>
+                        </constraints>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fKv-ve-coi">
+                            <size key="itemSize" width="70" height="70"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ywB-we-Ybi">
+                        <rect key="frame" x="283" y="8" width="70.333333333333314" height="29.666666666666671"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="29.670000000000002" id="YRs-wS-QRC"/>
+                            <constraint firstAttribute="width" constant="70.329999999999998" id="b0V-yx-7gV"/>
+                        </constraints>
+                        <color key="tintColor" red="1" green="0.34147036780000001" blue="0.7649869775" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain">
+                            <attributedString key="attributedTitle">
+                                <fragment content="View all">
+                                    <attributes>
+                                        <font key="NSFont" metaFont="system"/>
+                                        <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                        </buttonConfiguration>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="gSH-p4-yq4" firstAttribute="top" secondItem="ywB-we-Ybi" secondAttribute="bottom" constant="2.3333333333333286" id="0dU-z4-ylh"/>
+                    <constraint firstItem="Sts-Ov-2gj" firstAttribute="centerY" secondItem="uKW-R4-GAp" secondAttribute="centerY" id="H9F-Hc-6T1"/>
+                    <constraint firstItem="ywB-we-Ybi" firstAttribute="leading" secondItem="uKW-R4-GAp" secondAttribute="trailing" constant="157.66666666666669" id="HNb-nk-lV8"/>
+                    <constraint firstItem="gSH-p4-yq4" firstAttribute="top" secondItem="Sts-Ov-2gj" secondAttribute="bottom" constant="13" id="N2m-uc-clw"/>
+                    <constraint firstItem="gSH-p4-yq4" firstAttribute="top" secondItem="ywB-we-Ybi" secondAttribute="bottom" constant="2.3333333333333286" id="UsS-ux-t5V"/>
+                    <constraint firstItem="ywB-we-Ybi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="YdD-xu-IAH"/>
+                    <constraint firstItem="Sts-Ov-2gj" firstAttribute="leading" secondItem="gSH-p4-yq4" secondAttribute="leading" id="d8Y-ff-Enl"/>
+                    <constraint firstItem="uKW-R4-GAp" firstAttribute="leading" secondItem="Sts-Ov-2gj" secondAttribute="trailing" constant="8" symbolic="YES" id="iBO-pV-8do"/>
+                    <constraint firstItem="gSH-p4-yq4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="mWL-m0-SaF"/>
+                    <constraint firstItem="uKW-R4-GAp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="mqD-JZ-NeM"/>
+                    <constraint firstAttribute="trailing" secondItem="gSH-p4-yq4" secondAttribute="trailing" constant="20" symbolic="YES" id="pJc-1Y-Ody"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="colFirstCellImage" destination="gSH-p4-yq4" id="gfZ-KV-8b3"/>
+            </connections>
+            <point key="canvasLocation" x="91.603053435114504" y="71.478873239436624"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="cil_animal" width="38" height="38"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

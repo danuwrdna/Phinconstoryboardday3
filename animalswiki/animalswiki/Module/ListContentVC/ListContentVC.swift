@@ -67,9 +67,10 @@ extension ListContentVC: UICollectionViewDelegate, UICollectionViewDataSource, C
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)  {
         let detailVC = DetailProfileVC()
-        let detailCollection = DpViewCell()
+        let collectionDetailVC = DpViewCell()
+      
         detailVC.image = UIImage(named: images[indexPath.row])
-        detailCollection.image2 =  UIImage(named: images[indexPath.row])
+        collectionDetailVC.image2 = UIImage(named: images[indexPath.row])
 
             navigationController?.pushViewController(detailVC, animated: true)
             tabBarController?.tabBar.isHidden = true

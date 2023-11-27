@@ -11,7 +11,7 @@ class SecondPcCollection: UICollectionViewCell {
     @IBOutlet weak var imageSecond: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
-        imageSecond.layer.cornerRadius = 15.0
+        imageSecond.layer.cornerRadius = 30.0
     }
 
 }

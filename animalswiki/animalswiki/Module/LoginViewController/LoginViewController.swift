@@ -49,7 +49,7 @@ class LoginViewController: UIViewController {
                 }
                 
             } else{
-                let bt = HomeViewController()
+                let bt = MainTabBarViewController()
                 self?.navigationController?.pushViewController(bt, animated: true)
             }
         }
