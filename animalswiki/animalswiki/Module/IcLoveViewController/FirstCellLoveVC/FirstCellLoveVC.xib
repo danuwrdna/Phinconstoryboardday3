@@ -48,13 +48,13 @@
                         </buttonConfiguration>
                     </button>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="4fX-va-koV">
-                        <rect key="frame" x="0.0" y="49" width="361" height="172"/>
+                        <rect key="frame" x="16" y="49" width="325" height="172"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="172" id="XKG-B9-Okw"/>
                         </constraints>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xkx-Ni-sXz">
-                            <size key="itemSize" width="128" height="128"/>
+                            <size key="itemSize" width="128" height="172"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -64,9 +64,9 @@
                 <constraints>
                     <constraint firstItem="ib8-zY-W1E" firstAttribute="leading" secondItem="03i-WA-h2O" secondAttribute="trailing" constant="8" symbolic="YES" id="1Lq-aQ-dMA"/>
                     <constraint firstItem="03i-WA-h2O" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="3dh-dj-1Fa"/>
-                    <constraint firstItem="4fX-va-koV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="61E-TC-2is"/>
+                    <constraint firstItem="4fX-va-koV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="61E-TC-2is"/>
                     <constraint firstAttribute="trailing" secondItem="3s0-mZ-Ydg" secondAttribute="trailing" constant="20" symbolic="YES" id="CVS-or-XHm"/>
-                    <constraint firstAttribute="trailing" secondItem="4fX-va-koV" secondAttribute="trailing" id="L7s-uo-EkP"/>
+                    <constraint firstAttribute="trailing" secondItem="4fX-va-koV" secondAttribute="trailing" constant="20" id="L7s-uo-EkP"/>
                     <constraint firstItem="ib8-zY-W1E" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="TZu-xU-PHx"/>
                     <constraint firstItem="03i-WA-h2O" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="b7i-vc-qUI"/>
                     <constraint firstItem="3s0-mZ-Ydg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="c3V-5l-ADc"/>

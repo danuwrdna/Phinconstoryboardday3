@@ -7,6 +7,9 @@ class HomeViewController:
     @IBAction func loveButton(_ sender: Any) {
         navigationLB()
     }
+    @IBAction func splashBT(_ sender: Any) {
+        navigateSplash()
+    }
     let customPopup = SitemViewController()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,6 +60,10 @@ class HomeViewController:
     }
     func  navigationLB(){
         let bt = IcLoveViewController()
+        self.navigationController?.pushViewController(bt, animated: true)
+    }
+    func navigateSplash(){
+        let bt = SoundAnVC()
         self.navigationController?.pushViewController(bt, animated: true)
     }
 }

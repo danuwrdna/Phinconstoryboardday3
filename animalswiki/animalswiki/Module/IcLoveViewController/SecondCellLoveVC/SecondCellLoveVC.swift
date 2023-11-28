@@ -8,6 +8,7 @@ class SecondCellLoveVC: UITableViewCell {
         super.awakeFromNib()
         setup()
         delegateCollectionLoveVcSecond()
+        collectionLoveVcSecond.collectionViewLayout = Self.createLayout()
     }
     func setup() {
         viewModel.onDataUpdate = { [weak self] in
@@ -38,6 +39,45 @@ extension SecondCellLoveVC: UICollectionViewDelegate, UICollectionViewDataSource
         }
         return cell
     }
+    static func createLayout() -> UICollectionViewCompositionalLayout{
+        let item = NSCollectionLayoutItem(
+            layoutSize: NSCollectionLayoutSize(
+                widthDimension: .fractionalWidth(2/3),
+                heightDimension: .fractionalHeight(1)
+            )
+        )
+        item.contentInsets = NSDirectionalEdgeInsets(
+            top: 2, leading: 2, bottom: 2, trailing: 2)
+        let verticalStackItem = NSCollectionLayoutItem(
+            layoutSize: NSCollectionLayoutSize(
+                widthDimension: .fractionalWidth(2),
+                heightDimension: .fractionalHeight(0.5)
+                
+            )
+        )
+        verticalStackItem.contentInsets = NSDirectionalEdgeInsets(
+            top: 2, leading: 2, bottom: 2, trailing: 2)
+        let verticalStackGroup = NSCollectionLayoutGroup.vertical(
+        layoutSize: NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(0.5/3),
+            heightDimension: .fractionalHeight(1)),
+        subitem: verticalStackItem,
+        count: 2
+        )
+        let group = NSCollectionLayoutGroup.horizontal(
+            layoutSize: NSCollectionLayoutSize(
+                widthDimension: .fractionalWidth(1.0),
+                heightDimension: .fractionalHeight(3/5)
+            ),
+            subitems: [
+                item,
+                verticalStackGroup
+            ]
+        )
+        let section = NSCollectionLayoutSection(group: group)
+        return UICollectionViewCompositionalLayout(section: section)
+    }
+    
 }
 
 

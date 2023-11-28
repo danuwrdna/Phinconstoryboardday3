@@ -46,6 +46,22 @@
 		362D4F7A2B1491A500448517 /* SecondCellImageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 362D4F782B1491A500448517 /* SecondCellImageVC.xib */; };
 		362D4F7E2B1491D800448517 /* ColSecondCellImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362D4F7C2B1491D800448517 /* ColSecondCellImage.swift */; };
 		362D4F7F2B1491D800448517 /* ColSecondCellImage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 362D4F7D2B1491D800448517 /* ColSecondCellImage.xib */; };
+		362D4F832B1577EF00448517 /* ThirdCellImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362D4F812B1577EF00448517 /* ThirdCellImageVC.swift */; };
+		362D4F842B1577EF00448517 /* ThirdCellImageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 362D4F822B1577EF00448517 /* ThirdCellImageVC.xib */; };
+		362D4F882B1579B100448517 /* ColThirdCellImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362D4F862B1579B100448517 /* ColThirdCellImage.swift */; };
+		362D4F892B1579B100448517 /* ColThirdCellImage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 362D4F872B1579B100448517 /* ColThirdCellImage.xib */; };
+		362D4F912B15826C00448517 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362D4F8F2B15826C00448517 /* SplashVC.swift */; };
+		362D4F922B15826C00448517 /* SplashVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 362D4F902B15826C00448517 /* SplashVC.xib */; };
+		362D4F952B1592B300448517 /* FourCellLoveVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362D4F932B1592B300448517 /* FourCellLoveVC.swift */; };
+		362D4F962B1592B300448517 /* FourCellLoveVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 362D4F942B1592B300448517 /* FourCellLoveVC.xib */; };
+		362D4F9A2B15935600448517 /* CollectionLoveFour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362D4F982B15935600448517 /* CollectionLoveFour.swift */; };
+		362D4F9B2B15935600448517 /* CollectionLoveFour.xib in Resources */ = {isa = PBXBuildFile; fileRef = 362D4F992B15935600448517 /* CollectionLoveFour.xib */; };
+		362D4F9F2B15D72900448517 /* SoundAnVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362D4F9D2B15D72900448517 /* SoundAnVC.swift */; };
+		362D4FA02B15D72900448517 /* SoundAnVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 362D4F9E2B15D72900448517 /* SoundAnVC.xib */; };
+		362D4FA42B15D8B100448517 /* SoundTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362D4FA22B15D8B100448517 /* SoundTableViewCell.swift */; };
+		362D4FA52B15D8B100448517 /* SoundTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 362D4FA32B15D8B100448517 /* SoundTableViewCell.xib */; };
+		362D4FA92B15ECA500448517 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362D4FA72B15ECA500448517 /* GameViewController.swift */; };
+		362D4FAA2B15ECA500448517 /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 362D4FA82B15ECA500448517 /* GameViewController.xib */; };
 		364F40822B05BC5300EA0BC1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364F40802B05BC5300EA0BC1 /* ProfileViewController.swift */; };
 		364F40832B05BC5300EA0BC1 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 364F40812B05BC5300EA0BC1 /* ProfileViewController.xib */; };
 		364F40872B05CBDC00EA0BC1 /* ListContentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364F40852B05CBDB00EA0BC1 /* ListContentVC.swift */; };
@@ -170,6 +186,22 @@
 		362D4F782B1491A500448517 /* SecondCellImageVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondCellImageVC.xib; sourceTree = "<group>"; };
 		362D4F7C2B1491D800448517 /* ColSecondCellImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColSecondCellImage.swift; sourceTree = "<group>"; };
 		362D4F7D2B1491D800448517 /* ColSecondCellImage.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColSecondCellImage.xib; sourceTree = "<group>"; };
+		362D4F812B1577EF00448517 /* ThirdCellImageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdCellImageVC.swift; sourceTree = "<group>"; };
+		362D4F822B1577EF00448517 /* ThirdCellImageVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThirdCellImageVC.xib; sourceTree = "<group>"; };
+		362D4F862B1579B100448517 /* ColThirdCellImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColThirdCellImage.swift; sourceTree = "<group>"; };
+		362D4F872B1579B100448517 /* ColThirdCellImage.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColThirdCellImage.xib; sourceTree = "<group>"; };
+		362D4F8F2B15826C00448517 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
+		362D4F902B15826C00448517 /* SplashVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashVC.xib; sourceTree = "<group>"; };
+		362D4F932B1592B300448517 /* FourCellLoveVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourCellLoveVC.swift; sourceTree = "<group>"; };
+		362D4F942B1592B300448517 /* FourCellLoveVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FourCellLoveVC.xib; sourceTree = "<group>"; };
+		362D4F982B15935600448517 /* CollectionLoveFour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionLoveFour.swift; sourceTree = "<group>"; };
+		362D4F992B15935600448517 /* CollectionLoveFour.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionLoveFour.xib; sourceTree = "<group>"; };
+		362D4F9D2B15D72900448517 /* SoundAnVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundAnVC.swift; sourceTree = "<group>"; };
+		362D4F9E2B15D72900448517 /* SoundAnVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SoundAnVC.xib; sourceTree = "<group>"; };
+		362D4FA22B15D8B100448517 /* SoundTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundTableViewCell.swift; sourceTree = "<group>"; };
+		362D4FA32B15D8B100448517 /* SoundTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SoundTableViewCell.xib; sourceTree = "<group>"; };
+		362D4FA72B15ECA500448517 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		362D4FA82B15ECA500448517 /* GameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameViewController.xib; sourceTree = "<group>"; };
 		364F40802B05BC5300EA0BC1 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		364F40812B05BC5300EA0BC1 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		364F40852B05CBDB00EA0BC1 /* ListContentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListContentVC.swift; sourceTree = "<group>"; };
@@ -365,6 +397,7 @@
 		362D4F592B146C5600448517 /* ImageViewController */ = {
 			isa = PBXGroup;
 			children = (
+				362D4F802B1577A400448517 /* ThirdCellImageVC */,
 				362D4F762B14916F00448517 /* SecondCellImageVC */,
 				362D4F6C2B14841400448517 /* FirstCellImageVC */,
 				362D4F682B147FC200448517 /* ImageViewController.swift */,
@@ -404,6 +437,9 @@
 		362D4F672B147CB000448517 /* FourCellLoveVC */ = {
 			isa = PBXGroup;
 			children = (
+				362D4F972B15932D00448517 /* collection */,
+				362D4F932B1592B300448517 /* FourCellLoveVC.swift */,
+				362D4F942B1592B300448517 /* FourCellLoveVC.xib */,
 			);
 			path = FourCellLoveVC;
 			sourceTree = "<group>";
@@ -444,6 +480,71 @@
 				362D4F7D2B1491D800448517 /* ColSecondCellImage.xib */,
 			);
 			path = collection;
+			sourceTree = "<group>";
+		};
+		362D4F802B1577A400448517 /* ThirdCellImageVC */ = {
+			isa = PBXGroup;
+			children = (
+				362D4F852B15797E00448517 /* collection */,
+				362D4F812B1577EF00448517 /* ThirdCellImageVC.swift */,
+				362D4F822B1577EF00448517 /* ThirdCellImageVC.xib */,
+			);
+			path = ThirdCellImageVC;
+			sourceTree = "<group>";
+		};
+		362D4F852B15797E00448517 /* collection */ = {
+			isa = PBXGroup;
+			children = (
+				362D4F862B1579B100448517 /* ColThirdCellImage.swift */,
+				362D4F872B1579B100448517 /* ColThirdCellImage.xib */,
+			);
+			path = collection;
+			sourceTree = "<group>";
+		};
+		362D4F8A2B15811D00448517 /* SplashVC */ = {
+			isa = PBXGroup;
+			children = (
+				362D4F8F2B15826C00448517 /* SplashVC.swift */,
+				362D4F902B15826C00448517 /* SplashVC.xib */,
+			);
+			path = SplashVC;
+			sourceTree = "<group>";
+		};
+		362D4F972B15932D00448517 /* collection */ = {
+			isa = PBXGroup;
+			children = (
+				362D4F982B15935600448517 /* CollectionLoveFour.swift */,
+				362D4F992B15935600448517 /* CollectionLoveFour.xib */,
+			);
+			path = collection;
+			sourceTree = "<group>";
+		};
+		362D4F9C2B15D70100448517 /* SoundAnVC */ = {
+			isa = PBXGroup;
+			children = (
+				362D4FA12B15D89100448517 /* cell */,
+				362D4F9D2B15D72900448517 /* SoundAnVC.swift */,
+				362D4F9E2B15D72900448517 /* SoundAnVC.xib */,
+			);
+			path = SoundAnVC;
+			sourceTree = "<group>";
+		};
+		362D4FA12B15D89100448517 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				362D4FA22B15D8B100448517 /* SoundTableViewCell.swift */,
+				362D4FA32B15D8B100448517 /* SoundTableViewCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		362D4FA62B15EC8800448517 /* GameViewController */ = {
+			isa = PBXGroup;
+			children = (
+				362D4FA72B15ECA500448517 /* GameViewController.swift */,
+				362D4FA82B15ECA500448517 /* GameViewController.xib */,
+			);
+			path = GameViewController;
 			sourceTree = "<group>";
 		};
 		364F407F2B05BC2D00EA0BC1 /* ProfileViewController */ = {
@@ -572,6 +673,9 @@
 		3663D2772B04A11400E25D38 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				362D4FA62B15EC8800448517 /* GameViewController */,
+				362D4F9C2B15D70100448517 /* SoundAnVC */,
+				362D4F8A2B15811D00448517 /* SplashVC */,
 				362D4F592B146C5600448517 /* ImageViewController */,
 				36649A012B1439E9000B3188 /* IcLoveViewController */,
 				366499FC2B108299000B3188 /* AddViewController */,
@@ -924,6 +1028,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				362D4F9B2B15935600448517 /* CollectionLoveFour.xib in Resources */,
 				364F40832B05BC5300EA0BC1 /* ProfileViewController.xib in Resources */,
 				3663D2822B04A72800E25D38 /* LoginViewController.xib in Resources */,
 				364F40882B05CBDC00EA0BC1 /* ListContentVC.xib in Resources */,
@@ -932,6 +1037,7 @@
 				368F4BC22B0B48F900735982 /* ThirdPictureCell.xib in Resources */,
 				36003FB12B071A910044D9B5 /* SignViewController.xib in Resources */,
 				366499DF2B0DE553000B3188 /* SitemViewController.xib in Resources */,
+				362D4F922B15826C00448517 /* SplashVC.xib in Resources */,
 				362D4F702B14845A00448517 /* FirstCellImageVC.xib in Resources */,
 				364F409E2B060D0000EA0BC1 /* DpViewCell.xib in Resources */,
 				3663D24F2B049C8600E25D38 /* Assets.xcassets in Resources */,
@@ -941,6 +1047,7 @@
 				364F408D2B05CC3B00EA0BC1 /* DetailProfileVC.xib in Resources */,
 				362D4F752B1485E800448517 /* ColFirstCellImage.xib in Resources */,
 				362D4F7A2B1491A500448517 /* SecondCellImageVC.xib in Resources */,
+				362D4F962B1592B300448517 /* FourCellLoveVC.xib in Resources */,
 				36649A0C2B143B61000B3188 /* FirstCellLoveVC.xib in Resources */,
 				362D4F5E2B146D4C00448517 /* ThirdCellLoveVC.xib in Resources */,
 				36649A112B143E4B000B3188 /* CollectionLoveFirst.xib in Resources */,
@@ -948,14 +1055,17 @@
 				362D4F532B1446B400448517 /* SecondCellLoveVC.xib in Resources */,
 				366499EC2B0F2846000B3188 /* ProfileViewController.xib in Resources */,
 				36003FBF2B0722F90044D9B5 /* GoogleService-Info.plist in Resources */,
+				362D4F892B1579B100448517 /* ColThirdCellImage.xib in Resources */,
 				364F40992B05D4D300EA0BC1 /* PinterestViewCell.xib in Resources */,
 				360040172B0B34E50044D9B5 /* SecondPcCollection.xib in Resources */,
 				366499F12B0F327B000B3188 /* TableViewCell.xib in Resources */,
 				36649A052B143A2C000B3188 /* IcLoveViewController.xib in Resources */,
+				362D4FAA2B15ECA500448517 /* GameViewController.xib in Resources */,
 				360040082B0B2FED0044D9B5 /* FirstPictureVC.xib in Resources */,
 				3663D24A2B049C8400E25D38 /* Main.storyboard in Resources */,
 				36003FC82B073CF00044D9B5 /* AnimasiViewController.xib in Resources */,
 				3600400D2B0B31310044D9B5 /* FirstPcCollection.xib in Resources */,
+				362D4FA52B15D8B100448517 /* SoundTableViewCell.xib in Resources */,
 				360040122B0B34A80044D9B5 /* SecondPictureCell.xib in Resources */,
 				362D4F582B14491D00448517 /* CollectionLoveSecond.xib in Resources */,
 				36003FCD2B0740250044D9B5 /* ErorlogViewController.xib in Resources */,
@@ -964,6 +1074,8 @@
 				368F4BCC2B0B4F5100735982 /* FourPictureCell.xib in Resources */,
 				36649A002B1082C7000B3188 /* AddViewController.xib in Resources */,
 				3663D27D2B04A2C600E25D38 /* HomeViewController.xib in Resources */,
+				362D4F842B1577EF00448517 /* ThirdCellImageVC.xib in Resources */,
+				362D4FA02B15D72900448517 /* SoundAnVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1101,20 +1213,28 @@
 				36003FCA2B073D110044D9B5 /* AnimasiViewController.swift in Sources */,
 				3663D27C2B04A2C600E25D38 /* HomeViewController.swift in Sources */,
 				3663D2472B049C8400E25D38 /* ViewController.swift in Sources */,
+				362D4F952B1592B300448517 /* FourCellLoveVC.swift in Sources */,
 				36649A102B143E4B000B3188 /* CollectionLoveFirst.swift in Sources */,
 				368F4BC62B0B493A00735982 /* ThirdPcCollection.swift in Sources */,
 				364F408C2B05CC3B00EA0BC1 /* DetailProfileVC.swift in Sources */,
 				3663D28A2B04BE9600E25D38 /* HomeViewModel.swift in Sources */,
+				362D4F882B1579B100448517 /* ColThirdCellImage.swift in Sources */,
 				366499FF2B1082C7000B3188 /* AddViewController.swift in Sources */,
 				366499C52B0CAD7C000B3188 /* CatApiModel.swift in Sources */,
 				366499DE2B0DE553000B3188 /* SitemViewController.swift in Sources */,
 				36003FF72B0B28280044D9B5 /* ExtTable.swift in Sources */,
 				362D4F6F2B14845A00448517 /* FirstCellImageVC.swift in Sources */,
 				364F40872B05CBDC00EA0BC1 /* ListContentVC.swift in Sources */,
+				362D4FA92B15ECA500448517 /* GameViewController.swift in Sources */,
 				360040072B0B2FED0044D9B5 /* FirstPictureVC.swift in Sources */,
 				36003FD22B0765670044D9B5 /* MainTabBar.swift in Sources */,
 				362D4F7E2B1491D800448517 /* ColSecondCellImage.swift in Sources */,
 				366499C32B0CAB16000B3188 /* ApiManager.swift in Sources */,
+				362D4F832B1577EF00448517 /* ThirdCellImageVC.swift in Sources */,
+				362D4FA42B15D8B100448517 /* SoundTableViewCell.swift in Sources */,
+				362D4F9F2B15D72900448517 /* SoundAnVC.swift in Sources */,
+				362D4F912B15826C00448517 /* SplashVC.swift in Sources */,
+				362D4F9A2B15935600448517 /* CollectionLoveFour.swift in Sources */,
 				362D4F572B14491D00448517 /* CollectionLoveSecond.swift in Sources */,
 				362D4F522B1446B400448517 /* SecondCellLoveVC.swift in Sources */,
 				368F4BD32B0C5F5F00735982 /* ExtUiImage.swift in Sources */,

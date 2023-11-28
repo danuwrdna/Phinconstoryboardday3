@@ -7,6 +7,8 @@ class MainTabBarViewController: UITabBarController {
     let image = UINavigationController(rootViewController: ImageViewController())
     let list = UINavigationController(rootViewController: IcLoveViewController())
     let profile = UINavigationController(rootViewController: ProfileViewController())
+    let game = UINavigationController(rootViewController: GameViewController())
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +32,7 @@ class MainTabBarViewController: UITabBarController {
         
         // Konfigurasi pengaturan
         profile.tabBarItem = UITabBarItem(title: "Profile", image: TabBar.icon4, tag: 3)
+        game.tabBarItem = UITabBarItem(title: "Game", image: TabBar.icon5, tag: 4)
        
 
         // Konfigurasi warna teks
@@ -54,6 +57,6 @@ class MainTabBarViewController: UITabBarController {
     }
 
     func setViewControllers() {
-        setViewControllers([homeVC, image, list, profile], animated: true)
+        setViewControllers([homeVC, image, list, profile, game], animated: true)
     }
 }

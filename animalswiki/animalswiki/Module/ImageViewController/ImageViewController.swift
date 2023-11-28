@@ -14,6 +14,7 @@ extension ImageViewController: UITableViewDelegate, UITableViewDataSource{
         tableImView.dataSource = self
         tableImView.registerCellWithNib(FirstCellImageVC.self)
         tableImView.registerCellWithNib(SecondCellImageVC.self)
+        tableImView.registerCellWithNib(ThirdCellImageVC.self)
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         return 4
@@ -30,6 +31,9 @@ extension ImageViewController: UITableViewDelegate, UITableViewDataSource{
         case 1:
             let second = tableView.dequeueReusableCell(forIndexPath: indexPath) as SecondCellImageVC
             return second
+        case 2:
+            let third = tableView.dequeueReusableCell(forIndexPath: indexPath) as ThirdCellImageVC
+            return third
         default:
             return UITableViewCell()
         }
@@ -41,6 +45,8 @@ extension ImageViewController: UITableViewDelegate, UITableViewDataSource{
             return 120
         case 1:
             return 319
+        case 2:
+            return 230
         default:
             return 100
         }

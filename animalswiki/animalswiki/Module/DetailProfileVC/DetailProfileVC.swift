@@ -39,6 +39,7 @@ class DetailProfileVC: UIViewController {
     
     @objc func backTapped() {
         print("Back button tapped!")
+        tabBarController?.tabBar.isHidden = false
         navigationController?.popViewController(animated: true)
     }
 }
