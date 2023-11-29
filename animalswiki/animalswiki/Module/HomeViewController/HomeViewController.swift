@@ -56,6 +56,7 @@ class HomeViewController:
     
     func logout() {
         let bt = LoginViewController()
+        tabBarController?.tabBar.isHidden = true
         self.navigationController?.pushViewController(bt, animated: true)
     }
     func  navigationLB(){

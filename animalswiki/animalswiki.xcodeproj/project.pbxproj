@@ -62,6 +62,11 @@
 		362D4FA52B15D8B100448517 /* SoundTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 362D4FA32B15D8B100448517 /* SoundTableViewCell.xib */; };
 		362D4FA92B15ECA500448517 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362D4FA72B15ECA500448517 /* GameViewController.swift */; };
 		362D4FAA2B15ECA500448517 /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 362D4FA82B15ECA500448517 /* GameViewController.xib */; };
+		362D4FAD2B16C72100448517 /* SoundAnVcModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362D4FAC2B16C72100448517 /* SoundAnVcModel.swift */; };
+		362D4FB32B16DDEB00448517 /* Cheetah5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 362D4FB22B16DDEB00448517 /* Cheetah5.mp3 */; };
+		362D4FB72B16DE7700448517 /* lion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 362D4FB42B16DE7700448517 /* lion.mp3 */; };
+		362D4FB82B16DE7700448517 /* JAGUARS.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 362D4FB52B16DE7700448517 /* JAGUARS.mp3 */; };
+		362D4FB92B16DE7700448517 /* wolf.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 362D4FB62B16DE7700448517 /* wolf.mp3 */; };
 		364F40822B05BC5300EA0BC1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364F40802B05BC5300EA0BC1 /* ProfileViewController.swift */; };
 		364F40832B05BC5300EA0BC1 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 364F40812B05BC5300EA0BC1 /* ProfileViewController.xib */; };
 		364F40872B05CBDC00EA0BC1 /* ListContentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364F40852B05CBDB00EA0BC1 /* ListContentVC.swift */; };
@@ -202,6 +207,11 @@
 		362D4FA32B15D8B100448517 /* SoundTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SoundTableViewCell.xib; sourceTree = "<group>"; };
 		362D4FA72B15ECA500448517 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		362D4FA82B15ECA500448517 /* GameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameViewController.xib; sourceTree = "<group>"; };
+		362D4FAC2B16C72100448517 /* SoundAnVcModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundAnVcModel.swift; sourceTree = "<group>"; };
+		362D4FB22B16DDEB00448517 /* Cheetah5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Cheetah5.mp3; path = ../../../../../../../../../Downloads/Cheetah5.mp3; sourceTree = "<group>"; };
+		362D4FB42B16DE7700448517 /* lion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = lion.mp3; path = ../../../../../../../../../Downloads/lion.mp3; sourceTree = "<group>"; };
+		362D4FB52B16DE7700448517 /* JAGUARS.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = JAGUARS.mp3; path = ../../../../../../../../../Downloads/JAGUARS.mp3; sourceTree = "<group>"; };
+		362D4FB62B16DE7700448517 /* wolf.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = wolf.mp3; path = ../../../../../../../../../Downloads/wolf.mp3; sourceTree = "<group>"; };
 		364F40802B05BC5300EA0BC1 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		364F40812B05BC5300EA0BC1 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		364F40852B05CBDB00EA0BC1 /* ListContentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListContentVC.swift; sourceTree = "<group>"; };
@@ -522,6 +532,8 @@
 		362D4F9C2B15D70100448517 /* SoundAnVC */ = {
 			isa = PBXGroup;
 			children = (
+				362D4FB02B16DD3500448517 /* Audio */,
+				362D4FAB2B16C70A00448517 /* Model */,
 				362D4FA12B15D89100448517 /* cell */,
 				362D4F9D2B15D72900448517 /* SoundAnVC.swift */,
 				362D4F9E2B15D72900448517 /* SoundAnVC.xib */,
@@ -545,6 +557,25 @@
 				362D4FA82B15ECA500448517 /* GameViewController.xib */,
 			);
 			path = GameViewController;
+			sourceTree = "<group>";
+		};
+		362D4FAB2B16C70A00448517 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				362D4FAC2B16C72100448517 /* SoundAnVcModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		362D4FB02B16DD3500448517 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				362D4FB52B16DE7700448517 /* JAGUARS.mp3 */,
+				362D4FB42B16DE7700448517 /* lion.mp3 */,
+				362D4FB62B16DE7700448517 /* wolf.mp3 */,
+				362D4FB22B16DDEB00448517 /* Cheetah5.mp3 */,
+			);
+			path = Audio;
 			sourceTree = "<group>";
 		};
 		364F407F2B05BC2D00EA0BC1 /* ProfileViewController */ = {
@@ -1030,16 +1061,20 @@
 			files = (
 				362D4F9B2B15935600448517 /* CollectionLoveFour.xib in Resources */,
 				364F40832B05BC5300EA0BC1 /* ProfileViewController.xib in Resources */,
+				362D4FB92B16DE7700448517 /* wolf.mp3 in Resources */,
 				3663D2822B04A72800E25D38 /* LoginViewController.xib in Resources */,
 				364F40882B05CBDC00EA0BC1 /* ListContentVC.xib in Resources */,
 				3663D2522B049C8600E25D38 /* LaunchScreen.storyboard in Resources */,
 				368F4BD12B0B509C00735982 /* FourPcCell.xib in Resources */,
+				362D4FB72B16DE7700448517 /* lion.mp3 in Resources */,
 				368F4BC22B0B48F900735982 /* ThirdPictureCell.xib in Resources */,
 				36003FB12B071A910044D9B5 /* SignViewController.xib in Resources */,
+				362D4FB32B16DDEB00448517 /* Cheetah5.mp3 in Resources */,
 				366499DF2B0DE553000B3188 /* SitemViewController.xib in Resources */,
 				362D4F922B15826C00448517 /* SplashVC.xib in Resources */,
 				362D4F702B14845A00448517 /* FirstCellImageVC.xib in Resources */,
 				364F409E2B060D0000EA0BC1 /* DpViewCell.xib in Resources */,
+				362D4FB82B16DE7700448517 /* JAGUARS.mp3 in Resources */,
 				3663D24F2B049C8600E25D38 /* Assets.xcassets in Resources */,
 				362D4F6B2B147FC200448517 /* ImageViewController.xib in Resources */,
 				366499E72B0DF548000B3188 /* ResetViewController.xib in Resources */,
@@ -1245,6 +1280,7 @@
 				366499E62B0DF548000B3188 /* ResetViewController.swift in Sources */,
 				366499F02B0F327B000B3188 /* TableViewCell.swift in Sources */,
 				364F40822B05BC5300EA0BC1 /* ProfileViewController.swift in Sources */,
+				362D4FAD2B16C72100448517 /* SoundAnVcModel.swift in Sources */,
 				362D4F6A2B147FC200448517 /* ImageViewController.swift in Sources */,
 				3663D2432B049C8400E25D38 /* AppDelegate.swift in Sources */,
 				366499C82B0DBE31000B3188 /* DetailProfileModel.swift in Sources */,
