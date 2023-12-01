@@ -31,17 +31,8 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9TC-AK-SRF">
-                        <rect key="frame" x="226" y="50" width="20" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="tintColor" systemColor="systemGreenColor"/>
-                        <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="plain">
-                            <backgroundConfiguration key="background" image="play.fill" catalog="system"/>
-                        </buttonConfiguration>
-                    </button>
                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wpq-oL-61r">
-                        <rect key="frame" x="254" y="50" width="20" height="21"/>
+                        <rect key="frame" x="230" y="50" width="20" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="tintColor" systemColor="systemYellowColor"/>
                         <state key="normal" title="Button"/>
@@ -60,17 +51,12 @@
                 <outlet property="downloadButton" destination="Wpq-oL-61r" id="AUr-wc-MXu"/>
                 <outlet property="imageSound" destination="4U0-f3-2kl" id="iOe-6D-BwI"/>
                 <outlet property="labelSoundVC" destination="IaT-dJ-WF0" id="ayo-Z0-y6m"/>
-                <outlet property="playButton" destination="9TC-AK-SRF" id="TNJ-XO-7gF"/>
             </connections>
             <point key="canvasLocation" x="7.6335877862595414" y="43.661971830985919"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="play.fill" catalog="system" width="117" height="128"/>
         <image name="tray.and.arrow.down.fill" catalog="system" width="128" height="115"/>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

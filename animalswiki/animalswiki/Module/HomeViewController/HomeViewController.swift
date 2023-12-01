@@ -1,4 +1,5 @@
 import UIKit
+import Hero
 class HomeViewController:
     UIViewController {
     @IBOutlet weak var buttomSheet: UIImageView!
@@ -12,11 +13,13 @@ class HomeViewController:
     }
     let customPopup = SitemViewController()
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated: true)
         delegateTable()
         alertLogout()
         setSB()
+        closeLightbox()
     }
     override func viewDidAppear(_ animated: Bool) {
         navigationController?.isNavigationBarHidden = true
@@ -67,6 +70,9 @@ class HomeViewController:
         let bt = SoundAnVC()
         self.navigationController?.pushViewController(bt, animated: true)
     }
+    func closeLightbox() {
+            dismiss(animated: true, completion: nil)
+        }
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
@@ -129,6 +135,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
             if let cell = tableView.cellForRow(at: indexPath) as? ThirdPictureCell{
                 let labelValue = cell.adamLabel.text
                 let newViewController = ListContentVC()
+                
                 self.navigationController?.pushViewController(newViewController, animated: true)
             }
             return

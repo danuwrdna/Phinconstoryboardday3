@@ -11,6 +11,7 @@ class ThirdPictureCell: UITableViewCell {
         setupCollection()
         setupLayout()
         setupLabel()
+        adamLabel.hero.id = "labelHeroID"
     }
     func setupLabel(){
     }
@@ -28,8 +29,8 @@ extension ThirdPictureCell: UICollectionViewDelegate, UICollectionViewDataSource
         let cellWidth = 170
         let cellHeight = 180
         
-        layout.minimumInteritemSpacing = 0// Atur sesuai kebutuhan Anda
-        layout.minimumLineSpacing = 0// Atur sesuai kebutuhan Anda
+        layout.minimumInteritemSpacing = 10// Atur sesuai kebutuhan Anda
+        layout.minimumLineSpacing = 10// Atur sesuai kebutuhan Anda
         layout.itemSize = CGSize(width: cellWidth, height: cellHeight)
         collectionThird.collectionViewLayout = layout
     }

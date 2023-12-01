@@ -20,7 +20,15 @@ extension ImageViewController: UITableViewDelegate, UITableViewDataSource{
         return 4
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        switch section{
+        case 0:
+            return 1
+        case 1:
+            return 1
+        case 2:
+            return 5
+        default: return 1
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

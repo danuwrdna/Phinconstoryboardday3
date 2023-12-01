@@ -11,6 +11,8 @@ target 'animalswiki' do
   pod "Firebase/Core"
   pod "Firebase/Auth"
   pod 'lottie-ios'
+  pod 'Lightbox'
+  pod 'Hero'
 
   target 'animalswikiTests' do
     inherit! :search_paths

@@ -8,6 +8,7 @@ class SecondPictureCell: UITableViewCell {
         super.awakeFromNib()
         setupCollection()
         callApi()
+        
     }
     func callApi(){
         dogViewModel.onDataUpdate = { [weak self] in

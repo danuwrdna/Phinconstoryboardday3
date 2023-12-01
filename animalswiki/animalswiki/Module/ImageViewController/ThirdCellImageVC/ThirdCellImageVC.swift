@@ -8,6 +8,7 @@ class ThirdCellImageVC: UITableViewCell {
         super.awakeFromNib()
         delegateCollection()
         callApi()
+        colThirdCellImage.collectionViewLayout = Self.createLayout()
     }
     func callApi(){
         dogViewModel.onDataUpdate = { [weak self] in
@@ -25,7 +26,8 @@ extension ThirdCellImageVC: UICollectionViewDelegate, UICollectionViewDataSource
         colThirdCellImage.registerCellWithNib(ColThirdCellImage.self)
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        return dogViewModel.numberOfItems
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -46,6 +48,44 @@ extension ThirdCellImageVC: UICollectionViewDelegate, UICollectionViewDataSource
         default:
             return 100
         }
+    }
+    static func createLayout() -> UICollectionViewCompositionalLayout{
+        let item = NSCollectionLayoutItem(
+            layoutSize: NSCollectionLayoutSize(
+                widthDimension: .fractionalWidth(2/4),
+                heightDimension: .fractionalHeight(1)
+            )
+        )
+        item.contentInsets = NSDirectionalEdgeInsets(
+            top: 5, leading: 5, bottom: 5, trailing: 5)
+        let verticalStackItem = NSCollectionLayoutItem(
+            layoutSize: NSCollectionLayoutSize(
+                widthDimension: .fractionalWidth(2),
+                heightDimension: .fractionalHeight(0.5)
+                
+            )
+        )
+        verticalStackItem.contentInsets = NSDirectionalEdgeInsets(
+            top: 5, leading: 5, bottom: 5, trailing: 5)
+        let verticalStackGroup = NSCollectionLayoutGroup.vertical(
+            layoutSize: NSCollectionLayoutSize(
+                widthDimension: .fractionalWidth(2/4),
+                heightDimension: .fractionalHeight(2)),
+            subitem: verticalStackItem,
+            count: 2
+        )
+        let group = NSCollectionLayoutGroup.horizontal(
+            layoutSize: NSCollectionLayoutSize(
+                widthDimension: .fractionalWidth(1.0),
+                heightDimension: .fractionalHeight(3/5)
+            ),
+            subitems: [
+                item,
+                verticalStackGroup
+            ]
+        )
+        let section = NSCollectionLayoutSection(group: group)
+        return UICollectionViewCompositionalLayout(section: section)
     }
 }
 

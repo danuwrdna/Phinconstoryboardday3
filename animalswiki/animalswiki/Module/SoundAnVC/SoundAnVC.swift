@@ -5,19 +5,43 @@ class SoundAnVC: UIViewController {
     var soundModel : [SoundAnVcModel] = []
     var currentPlayingSound: SoundAnVcModel?
     var playerLayer = AVPlayerLayer()
+    var filteredData: [SoundAnVcModel] = []
     public var player: AVAudioPlayer!
+    public var timer: Timer!
     @IBOutlet weak var tableSound: UITableView!
+    @IBOutlet weak var searchField: UITextField!
+    @IBOutlet weak var searchButton: UIButton!
+    @IBOutlet weak var progressBar: UIProgressView!
+    @IBAction func playButtonTapped(_ sender: Any) {
+        player?.play()
+        startTimer()
+        setupPlay()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        filteredData = soundModel
+        tableSound.reloadData()
         soundModel = SoundAnVcModel.sampleData
         delegateTable()
-        avVideo()
+        setupSearch()
+        
+    }
+    func setupPlay(){
+        guard let selectedIndexPath = tableSound.indexPathForSelectedRow else {
+               print("No sound selected")
+               return
+           }
+
+           let selectedSound = filteredData[selectedIndexPath.row]
+           playSound(soundName: selectedSound.sound)
+           startTimer()
     }
     func playSound(soundName: String) {
         if let url = Bundle.main.url(forResource: soundName, withExtension: "mp3") {
             do {
                 player = try AVAudioPlayer(contentsOf: url)
-                player?.play()
+                player?.delegate = self
+                progressBar.progress = 0.0
             } catch {
                 print("Error playing audio: \(error.localizedDescription)")
             }
@@ -25,35 +49,53 @@ class SoundAnVC: UIViewController {
             print("Sound file not found.")
         }
     }
-    func avVideo() {
-            guard let videoURL = URL(string: "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4") else {
-                // URL video tidak valid, tampilkan pesan kesalahan atau lakukan tindakan lainnya
-                print("URL video tidak valid")
-                return
-            }
-
-            let player = AVPlayer(url: videoURL)
-            playerLayer = AVPlayerLayer(player: player)
-            playerLayer.frame = self.view.bounds
-            playerLayer.videoGravity = .resizeAspect
-            self.view.layer.addSublayer(playerLayer)
-
-            // Tambahkan observer untuk mendeteksi saat video selesai diputar
-            NotificationCenter.default.addObserver(self, selector: #selector(videoDidFinish), name: .AVPlayerItemDidPlayToEndTime, object: player.currentItem)
-
-            player.play()
+    func startTimer() {
+            timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateProgress), userInfo: nil, repeats: true)
+        }
+    func resetTimer() {
+            timer?.invalidate()
+            timer = nil
+            progressBar.progress = 0.0
         }
 
-        @objc func videoDidFinish(notification: Notification) {
-            // Video selesai diputar, lakukan tindakan sesuai kebutuhan
-            print("Video selesai diputar")
-        }
+    @objc func updateProgress() {
+           guard let player = player else { return }
+           let progress = Float(player.currentTime / player.duration)
+           progressBar.progress = progress
 
-        deinit {
-            // Hapus observer saat objek dihapus
-            NotificationCenter.default.removeObserver(self)
-        }
+           if progress >= 1.0 {
+               // Lagu selesai, mungkin pindah ke lagu berikutnya
+               resetTimer()
+           }
+       }
+    func setupSearch(){
+        searchButton.addTarget(self, action: #selector(searchButtonTapped), for: .touchUpInside)
     }
+    @objc func searchButtonTapped() {
+        // Memeriksa apakah textField memiliki teks
+        guard let searchTerm = searchField.text, !searchTerm.isEmpty else {
+            // Tampilkan pesan atau lakukan tindakan lain jika pencarian kosong
+            print("Pencarian kosong")
+            return
+        }
+        performSearch(with: searchTerm)
+    }
+    func performSearch(with searchTerm: String) {
+        if searchTerm.isEmpty {
+            // Jika pencarian kosong, tampilkan semua data
+            filteredData = soundModel
+        } else {
+            filteredData = soundModel.filter { sound in
+                return sound.name.lowercased().contains(searchTerm.lowercased()) ||
+                String(sound.id).contains(searchTerm)
+            }
+        }
+        
+        tableSound.reloadData()
+    }
+    
+}
+
 
 extension SoundAnVC: UITableViewDelegate, UITableViewDataSource, AVAudioPlayerDelegate{
     func delegateTable(){
@@ -63,58 +105,40 @@ extension SoundAnVC: UITableViewDelegate, UITableViewDataSource, AVAudioPlayerDe
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return soundModel.count
+        return filteredData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableSound.dequeueReusableCell(withIdentifier: "SoundTableViewCell", for: indexPath) as! SoundTableViewCell
-        let currentSound = soundModel[indexPath.row]
+        let currentSound = filteredData[indexPath.row]
         
         cell.labelSoundVC?.text = currentSound.name
-        cell.imageSound?.image = UIImage(named: soundModel[indexPath.row].imageName)
-        cell.playButton.tag = indexPath.row
-        cell.playButton.addTarget(self, action: #selector(playButtonTapped(_:)), for: .touchUpInside)
+        cell.imageSound?.image = UIImage(named: filteredData[indexPath.row].imageName)
         cell.downloadButton.tag = indexPath.row
         cell.downloadButton.addTarget(self, action: #selector(downloadButtonTapped(_:)), for: .touchUpInside)
         
         return cell
     }
-    @objc func playButtonTapped(_ sender: UIButton) {
-        let selectedSound = soundModel[sender.tag]
-        if sender.isSelected {
-            // Saat tombol diubah menjadi stop
-            sender.setImage(UIImage(systemName: "play.fill"), for: .normal)
-            sender.tintColor = UIColor.systemGreen
-            sender.isSelected = false
-            stopSound()
-        } else {
-            // Saat tombol diubah menjadi play
-            sender.setImage(UIImage(systemName: "stop.fill"), for: .normal)
-            sender.tintColor = UIColor.red
-            sender.isSelected = true
-            playSound(soundName: selectedSound.sound)
-        }
-        
-    }
-//    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
-//        // Lagu selesai diputar, ganti ikon tombol play di dalam sel tabel
-//        if let currentPlayingSound = currentPlayingSound,
-//           let indexPaths = tableSound.indexPathsForVisibleRows {
-//            for indexPath in indexPaths {
-//                if let cell = tableSound.cellForRow(at: indexPath) as? SoundTableViewCell,
-//                   cell.sound == currentPlayingSound {
-//                    cell.playButton.setImage(UIImage(systemName: "play.fill"), for: .normal)
-//                    cell.playButton.tintColor = UIColor.systemGreen
-//                    cell.playButton.isSelected = false
-//                    break
-//                }
-//            }
-//        }
-//        currentPlayingSound = nil
-//    }
-//
-
-
+    
+    //    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+    //        // Lagu selesai diputar, ganti ikon tombol play di dalam sel tabel
+    //        if let currentPlayingSound = currentPlayingSound,
+    //           let indexPaths = tableSound.indexPathsForVisibleRows {
+    //            for indexPath in indexPaths {
+    //                if let cell = tableSound.cellForRow(at: indexPath) as? SoundTableViewCell,
+    //                   cell.sound == currentPlayingSound {
+    //                    cell.playButton.setImage(UIImage(systemName: "play.fill"), for: .normal)
+    //                    cell.playButton.tintColor = UIColor.systemGreen
+    //                    cell.playButton.isSelected = false
+    //                    break
+    //                }
+    //            }
+    //        }
+    //        currentPlayingSound = nil
+    //    }
+    //
+    
+    
     @objc func downloadButtonTapped(_ sender: UIButton) {
         let selectedSound = soundModel[sender.tag]
         downloadSound(selectedSound)
@@ -168,13 +192,6 @@ extension SoundAnVC: UITableViewDelegate, UITableViewDataSource, AVAudioPlayerDe
         // Menampilkan alert
         DispatchQueue.main.async {
             self.present(alertController, animated: true, completion: nil)
-        }
-    }
-    func stopSound(){
-        if let player = player, player.isPlaying{
-            player.stop()
-            player.delegate = self
-            
         }
     }
 }

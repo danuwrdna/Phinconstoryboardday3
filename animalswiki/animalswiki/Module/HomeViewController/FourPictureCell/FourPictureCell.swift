@@ -12,11 +12,11 @@ class FourPictureCell: UITableViewCell {
 extension FourPictureCell: UICollectionViewDelegate, UICollectionViewDataSource{
     func setupLayout(){
         let layout = UICollectionViewFlowLayout()
-        let cellWidth = 160
+        let cellWidth = 170
         let cellHeight = 170
         
-        layout.minimumInteritemSpacing = 0// Atur sesuai kebutuhan Anda
-        layout.minimumLineSpacing = 0// Atur sesuai kebutuhan Anda
+        layout.minimumInteritemSpacing = 10// Atur sesuai kebutuhan Anda
+        layout.minimumLineSpacing = 10// Atur sesuai kebutuhan Anda
         layout.itemSize = CGSize(width: cellWidth, height: cellHeight)
         collectionFour.collectionViewLayout = layout
     }

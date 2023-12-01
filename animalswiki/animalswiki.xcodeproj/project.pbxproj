@@ -63,10 +63,6 @@
 		362D4FA92B15ECA500448517 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362D4FA72B15ECA500448517 /* GameViewController.swift */; };
 		362D4FAA2B15ECA500448517 /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 362D4FA82B15ECA500448517 /* GameViewController.xib */; };
 		362D4FAD2B16C72100448517 /* SoundAnVcModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362D4FAC2B16C72100448517 /* SoundAnVcModel.swift */; };
-		362D4FB32B16DDEB00448517 /* Cheetah5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 362D4FB22B16DDEB00448517 /* Cheetah5.mp3 */; };
-		362D4FB72B16DE7700448517 /* lion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 362D4FB42B16DE7700448517 /* lion.mp3 */; };
-		362D4FB82B16DE7700448517 /* JAGUARS.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 362D4FB52B16DE7700448517 /* JAGUARS.mp3 */; };
-		362D4FB92B16DE7700448517 /* wolf.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 362D4FB62B16DE7700448517 /* wolf.mp3 */; };
 		364F40822B05BC5300EA0BC1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364F40802B05BC5300EA0BC1 /* ProfileViewController.swift */; };
 		364F40832B05BC5300EA0BC1 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 364F40812B05BC5300EA0BC1 /* ProfileViewController.xib */; };
 		364F40872B05CBDC00EA0BC1 /* ListContentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364F40852B05CBDB00EA0BC1 /* ListContentVC.swift */; };
@@ -78,6 +74,13 @@
 		364F40992B05D4D300EA0BC1 /* PinterestViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 364F40972B05D4D300EA0BC1 /* PinterestViewCell.xib */; };
 		364F409D2B060D0000EA0BC1 /* DpViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364F409B2B060D0000EA0BC1 /* DpViewCell.swift */; };
 		364F409E2B060D0000EA0BC1 /* DpViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 364F409C2B060D0000EA0BC1 /* DpViewCell.xib */; };
+		365AFB752B197E52001CC383 /* MusicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365AFB732B197E52001CC383 /* MusicTableViewCell.swift */; };
+		365AFB762B197E52001CC383 /* MusicTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 365AFB742B197E52001CC383 /* MusicTableViewCell.xib */; };
+		365AFB792B197F4B001CC383 /* MusicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365AFB782B197F4B001CC383 /* MusicViewModel.swift */; };
+		365AFB7C2B198BC3001CC383 /* coldplay.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 365AFB7B2B198BC3001CC383 /* coldplay.mp3 */; };
+		365AFB7E2B19C284001CC383 /* oasis.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 365AFB7D2B19C284001CC383 /* oasis.mp3 */; };
+		365AFB802B19C368001CC383 /* slank.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 365AFB7F2B19C368001CC383 /* slank.mp3 */; };
+		365AFB822B19C393001CC383 /* peterpan.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 365AFB812B19C393001CC383 /* peterpan.mp3 */; };
 		3663D2432B049C8400E25D38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3663D2422B049C8400E25D38 /* AppDelegate.swift */; };
 		3663D2452B049C8400E25D38 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3663D2442B049C8400E25D38 /* SceneDelegate.swift */; };
 		3663D2472B049C8400E25D38 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3663D2462B049C8400E25D38 /* ViewController.swift */; };
@@ -128,6 +131,14 @@
 		368F4BD02B0B509C00735982 /* FourPcCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368F4BCE2B0B509C00735982 /* FourPcCell.swift */; };
 		368F4BD12B0B509C00735982 /* FourPcCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 368F4BCF2B0B509C00735982 /* FourPcCell.xib */; };
 		368F4BD32B0C5F5F00735982 /* ExtUiImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368F4BD22B0C5F5F00735982 /* ExtUiImage.swift */; };
+		36D2B8952B197BAF005E3B38 /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D2B8932B197BAF005E3B38 /* MusicViewController.swift */; };
+		36D2B8962B197BAF005E3B38 /* MusicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36D2B8942B197BAF005E3B38 /* MusicViewController.xib */; };
+		36F846CE2B1845C600F6DD83 /* JAGUARS.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 36F846CA2B1845C600F6DD83 /* JAGUARS.mp3 */; };
+		36F846CF2B1845C600F6DD83 /* wolf.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 36F846CB2B1845C600F6DD83 /* wolf.mp3 */; };
+		36F846D02B1845C600F6DD83 /* Cheetah5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 36F846CC2B1845C600F6DD83 /* Cheetah5.mp3 */; };
+		36F846D12B1845C600F6DD83 /* lion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 36F846CD2B1845C600F6DD83 /* lion.mp3 */; };
+		36F846D52B18466A00F6DD83 /* ViewAllVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F846D32B18466A00F6DD83 /* ViewAllVC.swift */; };
+		36F846D62B18466A00F6DD83 /* ViewAllVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36F846D42B18466A00F6DD83 /* ViewAllVC.xib */; };
 		4ED0BFDA04C0CE70BADD795A /* Pods_animalswikiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BFEFF632B8B38BE32DC04E3 /* Pods_animalswikiTests.framework */; };
 		6495F0481E88650530DC4D13 /* Pods_animalswiki_animalswikiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDC59B16C235D1BA040465D5 /* Pods_animalswiki_animalswikiUITests.framework */; };
 		CE4CB531E526F4B3C0BE67F1 /* Pods_animalswiki.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 878BC12B431E630ED934B203 /* Pods_animalswiki.framework */; };
@@ -208,10 +219,6 @@
 		362D4FA72B15ECA500448517 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		362D4FA82B15ECA500448517 /* GameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameViewController.xib; sourceTree = "<group>"; };
 		362D4FAC2B16C72100448517 /* SoundAnVcModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundAnVcModel.swift; sourceTree = "<group>"; };
-		362D4FB22B16DDEB00448517 /* Cheetah5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Cheetah5.mp3; path = ../../../../../../../../../Downloads/Cheetah5.mp3; sourceTree = "<group>"; };
-		362D4FB42B16DE7700448517 /* lion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = lion.mp3; path = ../../../../../../../../../Downloads/lion.mp3; sourceTree = "<group>"; };
-		362D4FB52B16DE7700448517 /* JAGUARS.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = JAGUARS.mp3; path = ../../../../../../../../../Downloads/JAGUARS.mp3; sourceTree = "<group>"; };
-		362D4FB62B16DE7700448517 /* wolf.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = wolf.mp3; path = ../../../../../../../../../Downloads/wolf.mp3; sourceTree = "<group>"; };
 		364F40802B05BC5300EA0BC1 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		364F40812B05BC5300EA0BC1 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		364F40852B05CBDB00EA0BC1 /* ListContentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListContentVC.swift; sourceTree = "<group>"; };
@@ -222,6 +229,13 @@
 		364F40972B05D4D300EA0BC1 /* PinterestViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PinterestViewCell.xib; sourceTree = "<group>"; };
 		364F409B2B060D0000EA0BC1 /* DpViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DpViewCell.swift; sourceTree = "<group>"; };
 		364F409C2B060D0000EA0BC1 /* DpViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DpViewCell.xib; sourceTree = "<group>"; };
+		365AFB732B197E52001CC383 /* MusicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicTableViewCell.swift; sourceTree = "<group>"; };
+		365AFB742B197E52001CC383 /* MusicTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicTableViewCell.xib; sourceTree = "<group>"; };
+		365AFB782B197F4B001CC383 /* MusicViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewModel.swift; sourceTree = "<group>"; };
+		365AFB7B2B198BC3001CC383 /* coldplay.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = coldplay.mp3; path = ../../../../../../../../../Downloads/coldplay.mp3; sourceTree = "<group>"; };
+		365AFB7D2B19C284001CC383 /* oasis.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = oasis.mp3; path = ../../../../../../../../../Downloads/oasis.mp3; sourceTree = "<group>"; };
+		365AFB7F2B19C368001CC383 /* slank.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = slank.mp3; path = ../../../../../../../../../Downloads/slank.mp3; sourceTree = "<group>"; };
+		365AFB812B19C393001CC383 /* peterpan.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = peterpan.mp3; path = ../../../../../../../../../Downloads/peterpan.mp3; sourceTree = "<group>"; };
 		3663D23F2B049C8400E25D38 /* animalswiki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = animalswiki.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3663D2422B049C8400E25D38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3663D2442B049C8400E25D38 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -274,6 +288,16 @@
 		368F4BCE2B0B509C00735982 /* FourPcCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourPcCell.swift; sourceTree = "<group>"; };
 		368F4BCF2B0B509C00735982 /* FourPcCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FourPcCell.xib; sourceTree = "<group>"; };
 		368F4BD22B0C5F5F00735982 /* ExtUiImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtUiImage.swift; sourceTree = "<group>"; };
+		36D2B8932B197BAF005E3B38 /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
+		36D2B8942B197BAF005E3B38 /* MusicViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicViewController.xib; sourceTree = "<group>"; };
+		36F846CA2B1845C600F6DD83 /* JAGUARS.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = JAGUARS.mp3; sourceTree = "<group>"; };
+		36F846CB2B1845C600F6DD83 /* wolf.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = wolf.mp3; sourceTree = "<group>"; };
+		36F846CC2B1845C600F6DD83 /* Cheetah5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Cheetah5.mp3; sourceTree = "<group>"; };
+		36F846CD2B1845C600F6DD83 /* lion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lion.mp3; sourceTree = "<group>"; };
+		36F846D32B18466A00F6DD83 /* ViewAllVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAllVC.swift; sourceTree = "<group>"; };
+		36F846D42B18466A00F6DD83 /* ViewAllVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewAllVC.xib; sourceTree = "<group>"; };
+		36F847122B1860C500F6DD83 /* art.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; name = art.scn; path = /Users/phincon/Documents/test/Bootcampswiftphinconbatch3/Phinconstoryboardday3/animalswiki/animalswiki/Common/art.scn; sourceTree = "<absolute>"; };
+		36F847132B1860C800F6DD83 /* art.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; name = art.scn; path = /Users/phincon/Documents/test/Bootcampswiftphinconbatch3/Phinconstoryboardday3/animalswiki/animalswiki/Common/art.scn; sourceTree = "<absolute>"; };
 		5D5097DE0B358D752CD43607 /* Pods-animalswiki-animalswikiUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-animalswiki-animalswikiUITests.debug.xcconfig"; path = "Target Support Files/Pods-animalswiki-animalswikiUITests/Pods-animalswiki-animalswikiUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		60E596C3664ACEFA178DC781 /* Pods-animalswiki.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-animalswiki.debug.xcconfig"; path = "Target Support Files/Pods-animalswiki/Pods-animalswiki.debug.xcconfig"; sourceTree = "<group>"; };
 		6643CE897E42F3A25A750874 /* Pods-animalswikiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-animalswikiTests.debug.xcconfig"; path = "Target Support Files/Pods-animalswikiTests/Pods-animalswikiTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -570,10 +594,10 @@
 		362D4FB02B16DD3500448517 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
-				362D4FB52B16DE7700448517 /* JAGUARS.mp3 */,
-				362D4FB42B16DE7700448517 /* lion.mp3 */,
-				362D4FB62B16DE7700448517 /* wolf.mp3 */,
-				362D4FB22B16DDEB00448517 /* Cheetah5.mp3 */,
+				36F846CC2B1845C600F6DD83 /* Cheetah5.mp3 */,
+				36F846CA2B1845C600F6DD83 /* JAGUARS.mp3 */,
+				36F846CD2B1845C600F6DD83 /* lion.mp3 */,
+				36F846CB2B1845C600F6DD83 /* wolf.mp3 */,
 			);
 			path = Audio;
 			sourceTree = "<group>";
@@ -627,6 +651,25 @@
 				364F409C2B060D0000EA0BC1 /* DpViewCell.xib */,
 			);
 			path = cell;
+			sourceTree = "<group>";
+		};
+		365AFB772B197F3C001CC383 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				365AFB782B197F4B001CC383 /* MusicViewModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		365AFB7A2B198B9D001CC383 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				365AFB812B19C393001CC383 /* peterpan.mp3 */,
+				365AFB7F2B19C368001CC383 /* slank.mp3 */,
+				365AFB7D2B19C284001CC383 /* oasis.mp3 */,
+				365AFB7B2B198BC3001CC383 /* coldplay.mp3 */,
+			);
+			path = Audio;
 			sourceTree = "<group>";
 		};
 		3663D2362B049C8400E25D38 = {
@@ -704,6 +747,8 @@
 		3663D2772B04A11400E25D38 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				36D2B8922B197B91005E3B38 /* MusicViewController */,
+				36F846D22B18464400F6DD83 /* ViewAllVC */,
 				362D4FA62B15EC8800448517 /* GameViewController */,
 				362D4F9C2B15D70100448517 /* SoundAnVC */,
 				362D4F8A2B15811D00448517 /* SplashVC */,
@@ -728,6 +773,8 @@
 		3663D2782B04A11F00E25D38 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				36F847122B1860C500F6DD83 /* art.scn */,
+				36F847132B1860C800F6DD83 /* art.scn */,
 				366499C12B0CA9B8000B3188 /* Network */,
 				36003FD32B0765D50044D9B5 /* constrant.swift */,
 				36003FF62B0B28280044D9B5 /* ExtTable.swift */,
@@ -917,6 +964,36 @@
 			path = CollectionViewCell;
 			sourceTree = "<group>";
 		};
+		36D2B8922B197B91005E3B38 /* MusicViewController */ = {
+			isa = PBXGroup;
+			children = (
+				365AFB7A2B198B9D001CC383 /* Audio */,
+				365AFB772B197F3C001CC383 /* Model */,
+				36D2B8972B197CE8005E3B38 /* cell */,
+				36D2B8932B197BAF005E3B38 /* MusicViewController.swift */,
+				36D2B8942B197BAF005E3B38 /* MusicViewController.xib */,
+			);
+			path = MusicViewController;
+			sourceTree = "<group>";
+		};
+		36D2B8972B197CE8005E3B38 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				365AFB732B197E52001CC383 /* MusicTableViewCell.swift */,
+				365AFB742B197E52001CC383 /* MusicTableViewCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		36F846D22B18464400F6DD83 /* ViewAllVC */ = {
+			isa = PBXGroup;
+			children = (
+				36F846D32B18466A00F6DD83 /* ViewAllVC.swift */,
+				36F846D42B18466A00F6DD83 /* ViewAllVC.xib */,
+			);
+			path = ViewAllVC;
+			sourceTree = "<group>";
+		};
 		665BB943A66E91CAB372886B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1061,23 +1138,24 @@
 			files = (
 				362D4F9B2B15935600448517 /* CollectionLoveFour.xib in Resources */,
 				364F40832B05BC5300EA0BC1 /* ProfileViewController.xib in Resources */,
-				362D4FB92B16DE7700448517 /* wolf.mp3 in Resources */,
 				3663D2822B04A72800E25D38 /* LoginViewController.xib in Resources */,
 				364F40882B05CBDC00EA0BC1 /* ListContentVC.xib in Resources */,
 				3663D2522B049C8600E25D38 /* LaunchScreen.storyboard in Resources */,
 				368F4BD12B0B509C00735982 /* FourPcCell.xib in Resources */,
-				362D4FB72B16DE7700448517 /* lion.mp3 in Resources */,
+				36D2B8962B197BAF005E3B38 /* MusicViewController.xib in Resources */,
 				368F4BC22B0B48F900735982 /* ThirdPictureCell.xib in Resources */,
 				36003FB12B071A910044D9B5 /* SignViewController.xib in Resources */,
-				362D4FB32B16DDEB00448517 /* Cheetah5.mp3 in Resources */,
+				36F846CE2B1845C600F6DD83 /* JAGUARS.mp3 in Resources */,
 				366499DF2B0DE553000B3188 /* SitemViewController.xib in Resources */,
 				362D4F922B15826C00448517 /* SplashVC.xib in Resources */,
 				362D4F702B14845A00448517 /* FirstCellImageVC.xib in Resources */,
 				364F409E2B060D0000EA0BC1 /* DpViewCell.xib in Resources */,
-				362D4FB82B16DE7700448517 /* JAGUARS.mp3 in Resources */,
 				3663D24F2B049C8600E25D38 /* Assets.xcassets in Resources */,
+				365AFB822B19C393001CC383 /* peterpan.mp3 in Resources */,
 				362D4F6B2B147FC200448517 /* ImageViewController.xib in Resources */,
+				365AFB7E2B19C284001CC383 /* oasis.mp3 in Resources */,
 				366499E72B0DF548000B3188 /* ResetViewController.xib in Resources */,
+				36F846D12B1845C600F6DD83 /* lion.mp3 in Resources */,
 				368F4BC72B0B493A00735982 /* ThirdPcCollection.xib in Resources */,
 				364F408D2B05CC3B00EA0BC1 /* DetailProfileVC.xib in Resources */,
 				362D4F752B1485E800448517 /* ColFirstCellImage.xib in Resources */,
@@ -1098,14 +1176,20 @@
 				362D4FAA2B15ECA500448517 /* GameViewController.xib in Resources */,
 				360040082B0B2FED0044D9B5 /* FirstPictureVC.xib in Resources */,
 				3663D24A2B049C8400E25D38 /* Main.storyboard in Resources */,
+				36F846CF2B1845C600F6DD83 /* wolf.mp3 in Resources */,
 				36003FC82B073CF00044D9B5 /* AnimasiViewController.xib in Resources */,
 				3600400D2B0B31310044D9B5 /* FirstPcCollection.xib in Resources */,
 				362D4FA52B15D8B100448517 /* SoundTableViewCell.xib in Resources */,
+				365AFB7C2B198BC3001CC383 /* coldplay.mp3 in Resources */,
 				360040122B0B34A80044D9B5 /* SecondPictureCell.xib in Resources */,
 				362D4F582B14491D00448517 /* CollectionLoveSecond.xib in Resources */,
 				36003FCD2B0740250044D9B5 /* ErorlogViewController.xib in Resources */,
 				362D4F632B146DBC00448517 /* CollectionLoveThird.xib in Resources */,
+				36F846D62B18466A00F6DD83 /* ViewAllVC.xib in Resources */,
 				362D4F7F2B1491D800448517 /* ColSecondCellImage.xib in Resources */,
+				365AFB802B19C368001CC383 /* slank.mp3 in Resources */,
+				36F846D02B1845C600F6DD83 /* Cheetah5.mp3 in Resources */,
+				365AFB762B197E52001CC383 /* MusicTableViewCell.xib in Resources */,
 				368F4BCC2B0B4F5100735982 /* FourPictureCell.xib in Resources */,
 				36649A002B1082C7000B3188 /* AddViewController.xib in Resources */,
 				3663D27D2B04A2C600E25D38 /* HomeViewController.xib in Resources */,
@@ -1272,6 +1356,7 @@
 				362D4F9A2B15935600448517 /* CollectionLoveFour.swift in Sources */,
 				362D4F572B14491D00448517 /* CollectionLoveSecond.swift in Sources */,
 				362D4F522B1446B400448517 /* SecondCellLoveVC.swift in Sources */,
+				365AFB792B197F4B001CC383 /* MusicViewModel.swift in Sources */,
 				368F4BD32B0C5F5F00735982 /* ExtUiImage.swift in Sources */,
 				36003FCF2B0740E80044D9B5 /* ErorlogViewController.swift in Sources */,
 				368F4BD02B0B509C00735982 /* FourPcCell.swift in Sources */,
@@ -1291,13 +1376,16 @@
 				360040162B0B34E50044D9B5 /* SecondPcCollection.swift in Sources */,
 				362D4F4E2B14432700448517 /* IcLoveViewModel.swift in Sources */,
 				366499CB2B0DCD94000B3188 /* ListContentModel.swift in Sources */,
+				365AFB752B197E52001CC383 /* MusicTableViewCell.swift in Sources */,
 				364F409D2B060D0000EA0BC1 /* DpViewCell.swift in Sources */,
 				364F40982B05D4D300EA0BC1 /* PinterestViewCell.swift in Sources */,
+				36F846D52B18466A00F6DD83 /* ViewAllVC.swift in Sources */,
 				36003FD42B0765D60044D9B5 /* constrant.swift in Sources */,
 				362D4F792B1491A500448517 /* SecondCellImageVC.swift in Sources */,
 				36003FB02B071A910044D9B5 /* SignViewController.swift in Sources */,
 				362D4F742B1485E800448517 /* ColFirstCellImage.swift in Sources */,
 				366499EB2B0F2846000B3188 /* ProfileViewController.swift in Sources */,
+				36D2B8952B197BAF005E3B38 /* MusicViewController.swift in Sources */,
 				360040112B0B34A80044D9B5 /* SecondPictureCell.swift in Sources */,
 				36003FF92B0B28B80044D9B5 /* ExtCollection.swift in Sources */,
 				36649A0B2B143B61000B3188 /* FirstCellLoveVC.swift in Sources */,
