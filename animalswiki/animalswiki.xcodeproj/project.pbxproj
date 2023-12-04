@@ -81,6 +81,8 @@
 		365AFB7E2B19C284001CC383 /* oasis.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 365AFB7D2B19C284001CC383 /* oasis.mp3 */; };
 		365AFB802B19C368001CC383 /* slank.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 365AFB7F2B19C368001CC383 /* slank.mp3 */; };
 		365AFB822B19C393001CC383 /* peterpan.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 365AFB812B19C393001CC383 /* peterpan.mp3 */; };
+		365AFBCD2B1DC619001CC383 /* MusicColViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365AFBCB2B1DC619001CC383 /* MusicColViewCell.swift */; };
+		365AFBCE2B1DC619001CC383 /* MusicColViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 365AFBCC2B1DC619001CC383 /* MusicColViewCell.xib */; };
 		3663D2432B049C8400E25D38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3663D2422B049C8400E25D38 /* AppDelegate.swift */; };
 		3663D2452B049C8400E25D38 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3663D2442B049C8400E25D38 /* SceneDelegate.swift */; };
 		3663D2472B049C8400E25D38 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3663D2462B049C8400E25D38 /* ViewController.swift */; };
@@ -236,6 +238,8 @@
 		365AFB7D2B19C284001CC383 /* oasis.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = oasis.mp3; path = ../../../../../../../../../Downloads/oasis.mp3; sourceTree = "<group>"; };
 		365AFB7F2B19C368001CC383 /* slank.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = slank.mp3; path = ../../../../../../../../../Downloads/slank.mp3; sourceTree = "<group>"; };
 		365AFB812B19C393001CC383 /* peterpan.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = peterpan.mp3; path = ../../../../../../../../../Downloads/peterpan.mp3; sourceTree = "<group>"; };
+		365AFBCB2B1DC619001CC383 /* MusicColViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicColViewCell.swift; sourceTree = "<group>"; };
+		365AFBCC2B1DC619001CC383 /* MusicColViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicColViewCell.xib; sourceTree = "<group>"; };
 		3663D23F2B049C8400E25D38 /* animalswiki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = animalswiki.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3663D2422B049C8400E25D38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3663D2442B049C8400E25D38 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -672,6 +676,15 @@
 			path = Audio;
 			sourceTree = "<group>";
 		};
+		365AFBCA2B1DC5B1001CC383 /* collection */ = {
+			isa = PBXGroup;
+			children = (
+				365AFBCB2B1DC619001CC383 /* MusicColViewCell.swift */,
+				365AFBCC2B1DC619001CC383 /* MusicColViewCell.xib */,
+			);
+			path = collection;
+			sourceTree = "<group>";
+		};
 		3663D2362B049C8400E25D38 = {
 			isa = PBXGroup;
 			children = (
@@ -979,6 +992,7 @@
 		36D2B8972B197CE8005E3B38 /* cell */ = {
 			isa = PBXGroup;
 			children = (
+				365AFBCA2B1DC5B1001CC383 /* collection */,
 				365AFB732B197E52001CC383 /* MusicTableViewCell.swift */,
 				365AFB742B197E52001CC383 /* MusicTableViewCell.xib */,
 			);
@@ -1183,6 +1197,7 @@
 				365AFB7C2B198BC3001CC383 /* coldplay.mp3 in Resources */,
 				360040122B0B34A80044D9B5 /* SecondPictureCell.xib in Resources */,
 				362D4F582B14491D00448517 /* CollectionLoveSecond.xib in Resources */,
+				365AFBCE2B1DC619001CC383 /* MusicColViewCell.xib in Resources */,
 				36003FCD2B0740250044D9B5 /* ErorlogViewController.xib in Resources */,
 				362D4F632B146DBC00448517 /* CollectionLoveThird.xib in Resources */,
 				36F846D62B18466A00F6DD83 /* ViewAllVC.xib in Resources */,
@@ -1341,6 +1356,7 @@
 				366499FF2B1082C7000B3188 /* AddViewController.swift in Sources */,
 				366499C52B0CAD7C000B3188 /* CatApiModel.swift in Sources */,
 				366499DE2B0DE553000B3188 /* SitemViewController.swift in Sources */,
+				365AFBCD2B1DC619001CC383 /* MusicColViewCell.swift in Sources */,
 				36003FF72B0B28280044D9B5 /* ExtTable.swift in Sources */,
 				362D4F6F2B14845A00448517 /* FirstCellImageVC.swift in Sources */,
 				364F40872B05CBDC00EA0BC1 /* ListContentVC.swift in Sources */,

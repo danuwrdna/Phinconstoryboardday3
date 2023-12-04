@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "white-gradient-background-1920-x-1200-47lrykb49ixqc08d.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

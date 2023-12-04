@@ -9,8 +9,8 @@ struct MusicViewModel {
     let imageName: String
     let sound: String
 }
-
 extension MusicViewModel{
+    
     static var sampleData: [MusicViewModel] {
         return [
             MusicViewModel(id: 0, title:"Coldplay",subTitle:"The Scientist",imageName: "coldplay", sound: "coldplay"),
