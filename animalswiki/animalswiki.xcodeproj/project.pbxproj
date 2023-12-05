@@ -76,13 +76,14 @@
 		364F409E2B060D0000EA0BC1 /* DpViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 364F409C2B060D0000EA0BC1 /* DpViewCell.xib */; };
 		365AFB752B197E52001CC383 /* MusicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365AFB732B197E52001CC383 /* MusicTableViewCell.swift */; };
 		365AFB762B197E52001CC383 /* MusicTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 365AFB742B197E52001CC383 /* MusicTableViewCell.xib */; };
-		365AFB792B197F4B001CC383 /* MusicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365AFB782B197F4B001CC383 /* MusicViewModel.swift */; };
 		365AFB7C2B198BC3001CC383 /* coldplay.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 365AFB7B2B198BC3001CC383 /* coldplay.mp3 */; };
 		365AFB7E2B19C284001CC383 /* oasis.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 365AFB7D2B19C284001CC383 /* oasis.mp3 */; };
 		365AFB802B19C368001CC383 /* slank.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 365AFB7F2B19C368001CC383 /* slank.mp3 */; };
 		365AFB822B19C393001CC383 /* peterpan.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 365AFB812B19C393001CC383 /* peterpan.mp3 */; };
 		365AFBCD2B1DC619001CC383 /* MusicColViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365AFBCB2B1DC619001CC383 /* MusicColViewCell.swift */; };
 		365AFBCE2B1DC619001CC383 /* MusicColViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 365AFBCC2B1DC619001CC383 /* MusicColViewCell.xib */; };
+		365AFBD22B1EAD55001CC383 /* QuestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365AFBD02B1EAD55001CC383 /* QuestViewController.swift */; };
+		365AFBD32B1EAD55001CC383 /* QuestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 365AFBD12B1EAD55001CC383 /* QuestViewController.xib */; };
 		3663D2432B049C8400E25D38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3663D2422B049C8400E25D38 /* AppDelegate.swift */; };
 		3663D2452B049C8400E25D38 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3663D2442B049C8400E25D38 /* SceneDelegate.swift */; };
 		3663D2472B049C8400E25D38 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3663D2462B049C8400E25D38 /* ViewController.swift */; };
@@ -133,6 +134,8 @@
 		368F4BD02B0B509C00735982 /* FourPcCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368F4BCE2B0B509C00735982 /* FourPcCell.swift */; };
 		368F4BD12B0B509C00735982 /* FourPcCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 368F4BCF2B0B509C00735982 /* FourPcCell.xib */; };
 		368F4BD32B0C5F5F00735982 /* ExtUiImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368F4BD22B0C5F5F00735982 /* ExtUiImage.swift */; };
+		36D163AC2B1EBD64000D9977 /* ColdplayApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D163AB2B1EBD64000D9977 /* ColdplayApiModel.swift */; };
+		36D163AE2B1EDD47000D9977 /* MusicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D163AD2B1EDD47000D9977 /* MusicViewModel.swift */; };
 		36D2B8952B197BAF005E3B38 /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D2B8932B197BAF005E3B38 /* MusicViewController.swift */; };
 		36D2B8962B197BAF005E3B38 /* MusicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36D2B8942B197BAF005E3B38 /* MusicViewController.xib */; };
 		36F846CE2B1845C600F6DD83 /* JAGUARS.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 36F846CA2B1845C600F6DD83 /* JAGUARS.mp3 */; };
@@ -233,13 +236,14 @@
 		364F409C2B060D0000EA0BC1 /* DpViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DpViewCell.xib; sourceTree = "<group>"; };
 		365AFB732B197E52001CC383 /* MusicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicTableViewCell.swift; sourceTree = "<group>"; };
 		365AFB742B197E52001CC383 /* MusicTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicTableViewCell.xib; sourceTree = "<group>"; };
-		365AFB782B197F4B001CC383 /* MusicViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewModel.swift; sourceTree = "<group>"; };
 		365AFB7B2B198BC3001CC383 /* coldplay.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = coldplay.mp3; path = ../../../../../../../../../Downloads/coldplay.mp3; sourceTree = "<group>"; };
 		365AFB7D2B19C284001CC383 /* oasis.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = oasis.mp3; path = ../../../../../../../../../Downloads/oasis.mp3; sourceTree = "<group>"; };
 		365AFB7F2B19C368001CC383 /* slank.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = slank.mp3; path = ../../../../../../../../../Downloads/slank.mp3; sourceTree = "<group>"; };
 		365AFB812B19C393001CC383 /* peterpan.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = peterpan.mp3; path = ../../../../../../../../../Downloads/peterpan.mp3; sourceTree = "<group>"; };
 		365AFBCB2B1DC619001CC383 /* MusicColViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicColViewCell.swift; sourceTree = "<group>"; };
 		365AFBCC2B1DC619001CC383 /* MusicColViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicColViewCell.xib; sourceTree = "<group>"; };
+		365AFBD02B1EAD55001CC383 /* QuestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestViewController.swift; sourceTree = "<group>"; };
+		365AFBD12B1EAD55001CC383 /* QuestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestViewController.xib; sourceTree = "<group>"; };
 		3663D23F2B049C8400E25D38 /* animalswiki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = animalswiki.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3663D2422B049C8400E25D38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3663D2442B049C8400E25D38 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -292,6 +296,8 @@
 		368F4BCE2B0B509C00735982 /* FourPcCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourPcCell.swift; sourceTree = "<group>"; };
 		368F4BCF2B0B509C00735982 /* FourPcCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FourPcCell.xib; sourceTree = "<group>"; };
 		368F4BD22B0C5F5F00735982 /* ExtUiImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtUiImage.swift; sourceTree = "<group>"; };
+		36D163AB2B1EBD64000D9977 /* ColdplayApiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColdplayApiModel.swift; sourceTree = "<group>"; };
+		36D163AD2B1EDD47000D9977 /* MusicViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MusicViewModel.swift; path = ../../../../../../../../../.Trash/MusicViewModel.swift; sourceTree = "<group>"; };
 		36D2B8932B197BAF005E3B38 /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
 		36D2B8942B197BAF005E3B38 /* MusicViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicViewController.xib; sourceTree = "<group>"; };
 		36F846CA2B1845C600F6DD83 /* JAGUARS.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = JAGUARS.mp3; sourceTree = "<group>"; };
@@ -657,14 +663,6 @@
 			path = cell;
 			sourceTree = "<group>";
 		};
-		365AFB772B197F3C001CC383 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				365AFB782B197F4B001CC383 /* MusicViewModel.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		365AFB7A2B198B9D001CC383 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
@@ -683,6 +681,15 @@
 				365AFBCC2B1DC619001CC383 /* MusicColViewCell.xib */,
 			);
 			path = collection;
+			sourceTree = "<group>";
+		};
+		365AFBCF2B1EAD21001CC383 /* QuestViewController */ = {
+			isa = PBXGroup;
+			children = (
+				365AFBD02B1EAD55001CC383 /* QuestViewController.swift */,
+				365AFBD12B1EAD55001CC383 /* QuestViewController.xib */,
+			);
+			path = QuestViewController;
 			sourceTree = "<group>";
 		};
 		3663D2362B049C8400E25D38 = {
@@ -760,6 +767,7 @@
 		3663D2772B04A11400E25D38 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				365AFBCF2B1EAD21001CC383 /* QuestViewController */,
 				36D2B8922B197B91005E3B38 /* MusicViewController */,
 				36F846D22B18464400F6DD83 /* ViewAllVC */,
 				362D4FA62B15EC8800448517 /* GameViewController */,
@@ -977,11 +985,20 @@
 			path = CollectionViewCell;
 			sourceTree = "<group>";
 		};
+		36D163AA2B1EBD4C000D9977 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				36D163AD2B1EDD47000D9977 /* MusicViewModel.swift */,
+				36D163AB2B1EBD64000D9977 /* ColdplayApiModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		36D2B8922B197B91005E3B38 /* MusicViewController */ = {
 			isa = PBXGroup;
 			children = (
+				36D163AA2B1EBD4C000D9977 /* Model */,
 				365AFB7A2B198B9D001CC383 /* Audio */,
-				365AFB772B197F3C001CC383 /* Model */,
 				36D2B8972B197CE8005E3B38 /* cell */,
 				36D2B8932B197BAF005E3B38 /* MusicViewController.swift */,
 				36D2B8942B197BAF005E3B38 /* MusicViewController.xib */,
@@ -1159,6 +1176,7 @@
 				36D2B8962B197BAF005E3B38 /* MusicViewController.xib in Resources */,
 				368F4BC22B0B48F900735982 /* ThirdPictureCell.xib in Resources */,
 				36003FB12B071A910044D9B5 /* SignViewController.xib in Resources */,
+				365AFBD32B1EAD55001CC383 /* QuestViewController.xib in Resources */,
 				36F846CE2B1845C600F6DD83 /* JAGUARS.mp3 in Resources */,
 				366499DF2B0DE553000B3188 /* SitemViewController.xib in Resources */,
 				362D4F922B15826C00448517 /* SplashVC.xib in Resources */,
@@ -1363,16 +1381,17 @@
 				362D4FA92B15ECA500448517 /* GameViewController.swift in Sources */,
 				360040072B0B2FED0044D9B5 /* FirstPictureVC.swift in Sources */,
 				36003FD22B0765670044D9B5 /* MainTabBar.swift in Sources */,
+				365AFBD22B1EAD55001CC383 /* QuestViewController.swift in Sources */,
 				362D4F7E2B1491D800448517 /* ColSecondCellImage.swift in Sources */,
 				366499C32B0CAB16000B3188 /* ApiManager.swift in Sources */,
 				362D4F832B1577EF00448517 /* ThirdCellImageVC.swift in Sources */,
+				36D163AE2B1EDD47000D9977 /* MusicViewModel.swift in Sources */,
 				362D4FA42B15D8B100448517 /* SoundTableViewCell.swift in Sources */,
 				362D4F9F2B15D72900448517 /* SoundAnVC.swift in Sources */,
 				362D4F912B15826C00448517 /* SplashVC.swift in Sources */,
 				362D4F9A2B15935600448517 /* CollectionLoveFour.swift in Sources */,
 				362D4F572B14491D00448517 /* CollectionLoveSecond.swift in Sources */,
 				362D4F522B1446B400448517 /* SecondCellLoveVC.swift in Sources */,
-				365AFB792B197F4B001CC383 /* MusicViewModel.swift in Sources */,
 				368F4BD32B0C5F5F00735982 /* ExtUiImage.swift in Sources */,
 				36003FCF2B0740E80044D9B5 /* ErorlogViewController.swift in Sources */,
 				368F4BD02B0B509C00735982 /* FourPcCell.swift in Sources */,
@@ -1399,6 +1418,7 @@
 				36003FD42B0765D60044D9B5 /* constrant.swift in Sources */,
 				362D4F792B1491A500448517 /* SecondCellImageVC.swift in Sources */,
 				36003FB02B071A910044D9B5 /* SignViewController.swift in Sources */,
+				36D163AC2B1EBD64000D9977 /* ColdplayApiModel.swift in Sources */,
 				362D4F742B1485E800448517 /* ColFirstCellImage.swift in Sources */,
 				366499EB2B0F2846000B3188 /* ProfileViewController.swift in Sources */,
 				36D2B8952B197BAF005E3B38 /* MusicViewController.swift in Sources */,

@@ -15,6 +15,8 @@
                 <outlet property="imgAB" destination="9Tl-ck-bEr" id="SaT-tw-z5q"/>
                 <outlet property="playPauseButton" destination="uA1-iJ-y0D" id="dDJ-kd-Pfs"/>
                 <outlet property="progressBar" destination="oaz-Ob-DEq" id="S15-yB-SDY"/>
+                <outlet property="searchBT" destination="O44-Hs-rvG" id="ewi-PI-ckd"/>
+                <outlet property="searchField" destination="pZd-y2-4aH" id="DEI-7Z-398"/>
                 <outlet property="startLabel" destination="jpB-DM-0Tf" id="nci-jp-3yz"/>
                 <outlet property="subHeadLabel" destination="7eX-nQ-Sh9" id="KyH-AP-oTj"/>
                 <outlet property="tableMusic" destination="csE-rQ-HON" id="mSS-bn-i32"/>
@@ -27,8 +29,9 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" indicatorStyle="white" bouncesZoom="NO" style="plain" separatorStyle="default" rowHeight="150" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="csE-rQ-HON">
-                    <rect key="frame" x="0.0" y="244" width="393" height="608"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" indicatorStyle="white" bouncesZoom="NO" style="plain" separatorStyle="default" rowHeight="150" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="csE-rQ-HON">
+                    <rect key="frame" x="0.0" y="291" width="393" height="561"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -120,19 +123,31 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pZd-y2-4aH">
+                    <rect key="frame" x="16" y="256" width="361" height="34"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O44-Hs-rvG">
+                    <rect key="frame" x="349" y="264" width="21" height="18"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="">
+                        <backgroundConfiguration key="background" image="Search"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="searchBT:" destination="-1" eventType="touchUpInside" id="L8V-TF-cAy"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-            <constraints>
-                <constraint firstItem="csE-rQ-HON" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="LaB-kz-8NB"/>
-                <constraint firstItem="csE-rQ-HON" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="185" id="iGL-Tb-Umz"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="csE-rQ-HON" secondAttribute="bottom" constant="-34" id="jGW-AV-a4Q"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="csE-rQ-HON" secondAttribute="trailing" id="kPx-VF-pcl"/>
-            </constraints>
             <point key="canvasLocation" x="6.8702290076335872" y="19.718309859154932"/>
         </view>
     </objects>
     <resources>
+        <image name="Search" width="32" height="32"/>
         <image name="arrowtriangle.backward.circle" catalog="system" width="128" height="123"/>
         <image name="arrowtriangle.right.circle" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
