@@ -3,13 +3,14 @@ import AVFoundation
 import Kingfisher
 class MusicViewController: UIViewController {
     var model = ColdplayApiModel()
-    var musicModel : [MusicViewModel] = []
     var modelDatum: [Datum] = []
     var player: AVPlayer?
     var playerItem: AVPlayerItem?
     var timer: Timer?
     var isPlaying = false
     var playbackTime: Double = 0.0
+    
+    @IBOutlet weak var viewSearch: UIView!
     @IBOutlet weak var startLabel: UILabel!
     @IBOutlet weak var finishLabel: UILabel!
     @IBOutlet weak var playPauseButton: UIButton!
@@ -36,7 +37,7 @@ class MusicViewController: UIViewController {
         super.viewDidLoad()
         searchField.delegate = self
         delegateTable()
-        musicModel = MusicViewModel.sampleData
+        viewSrch()
         progress()
         playPause()
         border()
@@ -107,7 +108,7 @@ extension MusicViewController: UITableViewDelegate, UITableViewDataSource{
     func delegateTable(){
         tableMusic.delegate = self
         tableMusic.dataSource = self
-        tableMusic.registerCellWithNib(MusicTableViewCell.self)
+        tableMusic.register(UINib(nibName: "MusicTableViewCell", bundle: nil), forCellReuseIdentifier: "MusicTableViewCell")
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return modelDatum.count
@@ -438,4 +439,16 @@ extension MusicViewController: UITextFieldDelegate {
         
     }
     
+}
+extension MusicViewController{
+    func viewSrch(){
+        viewSearch.layer.cornerRadius = 16
+        viewSearch.layer.masksToBounds = false
+        viewSearch.layer.shadowColor = UIColor.black.cgColor
+        viewSearch.layer.shadowOpacity = 0.5
+        viewSearch.layer.shadowOffset = CGSize(width: 0, height: 2)
+        viewSearch.layer.shadowRadius = 4.0
+        viewSearch.layer.shouldRasterize = true
+        viewSearch.layer.rasterizationScale = UIScreen.main.scale
+    }
 }

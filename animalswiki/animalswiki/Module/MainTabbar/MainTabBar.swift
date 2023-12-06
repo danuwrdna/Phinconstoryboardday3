@@ -3,11 +3,9 @@ import UIKit
 
 class MainTabBarViewController: UITabBarController {
     var visualEffectView: UIVisualEffectView?
-    let homeVC = UINavigationController(rootViewController: HomeViewController())
-    let image = UINavigationController(rootViewController: ImageViewController())
-    let list = UINavigationController(rootViewController: IcLoveViewController())
-    let profile = UINavigationController(rootViewController: ProfileViewController())
-    let game = UINavigationController(rootViewController: GameViewController())
+    let homeVC = UINavigationController(rootViewController: MusicViewController())
+    let explore = UINavigationController(rootViewController: MusicViewController())
+    let profile = UINavigationController(rootViewController: MusicViewController())
     
 
     override func viewDidLoad() {
@@ -23,16 +21,9 @@ class MainTabBarViewController: UITabBarController {
          
 
         homeVC.tabBarItem = UITabBarItem(title: "Home", image: TabBar.icon1, tag: 0)
-
-        // Konfigurasi pickers
-        image.tabBarItem = UITabBarItem(title: "Image", image: TabBar.icon2, tag: 1)
-    
-        // Konfigurasi progress
-        list.tabBarItem = UITabBarItem(title: "List", image: TabBar.icon3, tag: 2)
-        
-        // Konfigurasi pengaturan
-        profile.tabBarItem = UITabBarItem(title: "Profile", image: TabBar.icon4, tag: 3)
-        game.tabBarItem = UITabBarItem(title: "Game", image: TabBar.icon5, tag: 4)
+        explore.tabBarItem = UITabBarItem(title: "Explore", image: TabBar.icon2, tag: 1)
+        profile.tabBarItem = UITabBarItem(title: "Profile", image: TabBar.icon3, tag: 2)
+       
        
 
         // Konfigurasi warna teks
@@ -43,9 +34,9 @@ class MainTabBarViewController: UITabBarController {
         UITabBarItem.appearance().setTitleTextAttributes(selectedTextAttributes, for: .selected)
 
         // Konfigurasi warna tab bar
-        let red = CGFloat(255) / 255.0
-        let green = CGFloat(34) / 255.0
-        let blue = CGFloat(203) / 255.0
+        let red = CGFloat(73) / 255.0
+        let green = CGFloat(94) / 255.0
+        let blue = CGFloat(87) / 255.0
         let tabBarColor = UIColor(red: red, green: green, blue: blue, alpha: 1.0)
         UITabBar.appearance().backgroundColor = tabBarColor
         UITabBar.appearance().tintColor = UIColor.white
@@ -57,6 +48,6 @@ class MainTabBarViewController: UITabBarController {
     }
 
     func setViewControllers() {
-        setViewControllers([homeVC, image, list, profile, game], animated: true)
+        setViewControllers([homeVC, explore, profile], animated: true)
     }
 }
