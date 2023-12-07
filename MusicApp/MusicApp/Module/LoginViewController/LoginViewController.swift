@@ -126,11 +126,11 @@ extension LoginViewController{
         
         present(alertController, animated: true, completion: nil)
     }
+    
     func handleResetPassword() {
         guard let email = resetEmailTextField?.text, !email.isEmpty else {
             return
         }
-        
         Auth.auth().sendPasswordReset(withEmail: email) { [weak self] error in
             if let error = error {
                 print("Error resetting password: \(error.localizedDescription)")

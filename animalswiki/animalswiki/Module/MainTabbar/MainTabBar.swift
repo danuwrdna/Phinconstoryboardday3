@@ -3,9 +3,9 @@ import UIKit
 
 class MainTabBarViewController: UITabBarController {
     var visualEffectView: UIVisualEffectView?
-    let homeVC = UINavigationController(rootViewController: MusicViewController())
-    let explore = UINavigationController(rootViewController: MusicViewController())
-    let profile = UINavigationController(rootViewController: MusicViewController())
+    let homeVC = UINavigationController(rootViewController: HomeViewController())
+    let search = UINavigationController(rootViewController: SearchViewController())
+    let profile = UINavigationController(rootViewController: ProfileViewController())
     
 
     override func viewDidLoad() {
@@ -21,7 +21,7 @@ class MainTabBarViewController: UITabBarController {
          
 
         homeVC.tabBarItem = UITabBarItem(title: "Home", image: TabBar.icon1, tag: 0)
-        explore.tabBarItem = UITabBarItem(title: "Explore", image: TabBar.icon2, tag: 1)
+        search.tabBarItem = UITabBarItem(title: "Search", image: TabBar.icon2, tag: 1)
         profile.tabBarItem = UITabBarItem(title: "Profile", image: TabBar.icon3, tag: 2)
        
        
@@ -48,6 +48,6 @@ class MainTabBarViewController: UITabBarController {
     }
 
     func setViewControllers() {
-        setViewControllers([homeVC, explore, profile], animated: true)
+        setViewControllers([homeVC, search, profile], animated: true)
     }
 }
