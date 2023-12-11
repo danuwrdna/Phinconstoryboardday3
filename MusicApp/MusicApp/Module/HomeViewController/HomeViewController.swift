@@ -8,6 +8,7 @@ class HomeViewController: UIViewController {
         delegateTable()
     }
 }
+
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
     func delegateTable(){
         homeTableView.delegate = self
@@ -32,6 +33,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
             return first
         case 1:
             let second = tableView.dequeueReusableCell(forIndexPath: indexPath) as SectionSecondViewCell
+            second.delegate = self
             return second
         case 2:
             let third = tableView.dequeueReusableCell(forIndexPath: indexPath) as SectionThirdViewCell
@@ -57,5 +59,16 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
             return 100
         }
     }
+    
+    
+}
+
+extension HomeViewController: SectionSecondViewCellDelegate {
+    func didSelectItemAt(image: String) {
+        let vc = DetailViewController()
+        vc.setImage(image: image)
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
     
 }

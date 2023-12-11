@@ -10,6 +10,7 @@ class MusicViewController: UIViewController {
     var isPlaying = false
     var playbackTime: Double = 0.0
     
+    
     @IBOutlet weak var viewSearch: UIView!
     @IBOutlet weak var startLabel: UILabel!
     @IBOutlet weak var finishLabel: UILabel!
@@ -31,6 +32,9 @@ class MusicViewController: UIViewController {
     
     @IBAction func categoryBT1(_ sender: UIButton) {
         
+    }
+    @IBAction func backBT(_ sender: Any) {
+        btBack()
     }
     @IBOutlet weak var viewHome: UIView!
     override func viewDidLoad() {
@@ -450,5 +454,10 @@ extension MusicViewController{
         viewSearch.layer.shadowRadius = 4.0
         viewSearch.layer.shouldRasterize = true
         viewSearch.layer.rasterizationScale = UIScreen.main.scale
+    }
+}
+extension MusicViewController{
+    func btBack(){
+        navigationController?.popViewController(animated: true)
     }
 }

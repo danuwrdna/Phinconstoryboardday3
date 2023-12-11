@@ -10,7 +10,6 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailLogin: UITextField!
     @IBOutlet weak var passwordLogin: UITextField!
     @IBOutlet weak var eyeButton: UIButton!
-    
     @IBOutlet weak var googleImg: UIImageView!
     @IBAction func forgetBT(_ sender: Any) {
         showForgetPasswordBottomSheet()

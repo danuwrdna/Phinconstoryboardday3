@@ -1,9 +1,15 @@
 import UIKit
 
+protocol SectionSecondViewCellDelegate {
+    func didSelectItemAt(image: String)
+}
+
 class SectionSecondViewCell: UITableViewCell {
     @IBOutlet weak var collectionSecondCell: UICollectionView!
     var data: [Datum] = []
     var apiModel = ColdplayApiModel()
+    var didSelectItem: ((Datum) -> Void)?
+    var delegate: SectionSecondViewCellDelegate?
     override func awakeFromNib() {
         super.awakeFromNib()
         fetchDataFromAPI()
@@ -23,6 +29,7 @@ extension SectionSecondViewCell: UICollectionViewDelegate, UICollectionViewDataS
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionSecondCell.dequeueReusableCell(withReuseIdentifier: "SectionSecondViewCollection", for: indexPath) as! SectionSecondViewCollection// Replace YourCollectionViewCell with the actual name of your cell class
         let datum = data[indexPath.item]
+        didSelectItem?(datum)
         cell.textLabelSecondCollection?.text = datum.artist?.name?.rawValue
         if let imageUrl = datum.album?.cover {
             let url = URL(string: imageUrl)
@@ -31,7 +38,14 @@ extension SectionSecondViewCell: UICollectionViewDelegate, UICollectionViewDataS
             // Handle case when album cover URL is not available
             cell.imgViewSecondCollection?.image = UIImage(named: "placeholderImage") // You can use a placeholder image
         }
+        
+        
         return cell
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let selectedDatum = data[indexPath.item]
+        delegate?.didSelectItemAt(image: selectedDatum.album?.cover ?? "")
+               
     }
     
     
