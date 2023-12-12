@@ -35,6 +35,7 @@
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <connections>
+                <outlet property="imgBG" destination="vV3-ey-UZp" id="He6-zg-xDN"/>
                 <outlet property="imgBrowse" destination="kEJ-fH-FK3" id="L5b-4t-Qky"/>
                 <outlet property="labelBrowse" destination="93G-j9-dZg" id="Atq-Z8-eWs"/>
             </connections>

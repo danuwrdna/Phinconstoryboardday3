@@ -21,14 +21,14 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SKz-JI-1ei">
-                        <rect key="frame" x="88" y="45" width="40" height="21"/>
+                        <rect key="frame" x="88" y="45" width="123" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MZn-ye-mlc">
-                        <rect key="frame" x="88" y="84" width="33" height="17"/>
+                        <rect key="frame" x="88" y="84" width="228" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="14"/>
                         <nil key="textColor"/>
@@ -39,7 +39,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="imgDetail" destination="lav-WC-bQf" id="Tlf-R5-Xa8"/>
-                <outlet property="labelDetail" destination="MZn-ye-mlc" id="DhZ-7E-KlD"/>
+                <outlet property="labelDetail" destination="SKz-JI-1ei" id="a2X-XE-wAk"/>
                 <outlet property="subLabelDetail" destination="MZn-ye-mlc" id="Aro-40-WA9"/>
             </connections>
             <point key="canvasLocation" x="35.877862595419849" y="21.126760563380284"/>

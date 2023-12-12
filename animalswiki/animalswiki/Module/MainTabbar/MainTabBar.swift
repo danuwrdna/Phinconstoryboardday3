@@ -6,6 +6,7 @@ class MainTabBarViewController: UITabBarController {
     let homeVC = UINavigationController(rootViewController: HomeViewController())
     let search = UINavigationController(rootViewController: SearchViewController())
     let profile = UINavigationController(rootViewController: ProfileViewController())
+    let collection = UINavigationController(rootViewController: CollectionMusicVC())
     
 
     override func viewDidLoad() {
@@ -23,6 +24,7 @@ class MainTabBarViewController: UITabBarController {
         homeVC.tabBarItem = UITabBarItem(title: "Home", image: TabBar.icon1, tag: 0)
         search.tabBarItem = UITabBarItem(title: "Search", image: TabBar.icon2, tag: 1)
         profile.tabBarItem = UITabBarItem(title: "Profile", image: TabBar.icon3, tag: 2)
+        collection.tabBarItem = UITabBarItem(title: "Collection", image: TabBar.icon4, tag: 3)
        
        
 
@@ -48,6 +50,6 @@ class MainTabBarViewController: UITabBarController {
     }
 
     func setViewControllers() {
-        setViewControllers([homeVC, search, profile], animated: true)
+        setViewControllers([homeVC, search, profile,collection], animated: true)
     }
 }

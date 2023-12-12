@@ -67,6 +67,7 @@ extension HomeViewController: SectionSecondViewCellDelegate {
     func didSelectItemAt(image: String) {
         let vc = DetailViewController()
         vc.setImage(image: image)
+        navigationController?.navigationBar.isHidden = true
         navigationController?.pushViewController(vc, animated: true)
     }
     

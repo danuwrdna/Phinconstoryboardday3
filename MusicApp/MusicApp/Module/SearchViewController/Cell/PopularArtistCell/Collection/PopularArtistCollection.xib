@@ -35,6 +35,7 @@
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <connections>
+                <outlet property="imgBG" destination="cjv-dZ-dpC" id="n28-Tw-7Vd"/>
                 <outlet property="imgPopularArtist" destination="Uuk-Vd-WEO" id="35M-dJ-kcw"/>
                 <outlet property="labelPopularArtist" destination="mDL-Ln-Uqv" id="wXT-2d-Xel"/>
             </connections>

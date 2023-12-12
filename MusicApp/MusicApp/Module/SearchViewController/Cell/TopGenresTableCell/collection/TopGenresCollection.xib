@@ -35,6 +35,7 @@
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <connections>
+                <outlet property="imgBG" destination="TwE-M5-est" id="cn8-VT-031"/>
                 <outlet property="imgTopGenreCollection" destination="ppt-N4-YXe" id="o57-zf-kag"/>
                 <outlet property="labelTextTopGenre" destination="2lg-Ui-ecA" id="Rvk-ef-RlQ"/>
             </connections>

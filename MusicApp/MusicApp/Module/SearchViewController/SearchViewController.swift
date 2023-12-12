@@ -1,6 +1,6 @@
 import UIKit
 
-class SearchViewController: UIViewController {
+class SearchViewController: UIViewController{
 
     @IBOutlet weak var tablePageSrchView: UITableView!
     @IBAction func btSearch(_ sender: Any) {
@@ -32,9 +32,11 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource{
         switch indexPath.section {
         case 0:
             let topGenre = tableView.dequeueReusableCell(forIndexPath: indexPath) as TopGenresTableCell
+            topGenre.delegate = self
             return topGenre
         case 1:
             let popularArtist = tableView.dequeueReusableCell(forIndexPath: indexPath) as PopularArtistCell
+           
             return popularArtist
         case 2:
             let browse = tableView.dequeueReusableCell(forIndexPath: indexPath) as BrowseCell
@@ -55,8 +57,17 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource{
             return 100
         }
     }
+
     
 }
+extension SearchViewController: TopTableCell {
+    func didSelectItemAt(text: String) {
+        let categoryVC = CategoryViewController()
+        categoryVC.selectedText = text
+        self.navigationController?.pushViewController(categoryVC, animated: true)
+    }
+}
+
 extension SearchViewController{
     func border(){
         imgSearch.layer.cornerRadius = 16
@@ -65,6 +76,7 @@ extension SearchViewController{
 extension SearchViewController{
     func navigate(){
         let bt = MusicViewController()
+        
         navigationController?.pushViewController(bt, animated: true)
     }
 }

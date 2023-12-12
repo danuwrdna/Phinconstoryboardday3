@@ -1,15 +1,17 @@
 import UIKit
 import AVFoundation
 import Kingfisher
+import CoreData
 class MusicViewController: UIViewController {
     var model = ColdplayApiModel()
+    
     var modelDatum: [Datum] = []
     var player: AVPlayer?
     var playerItem: AVPlayerItem?
     var timer: Timer?
     var isPlaying = false
     var playbackTime: Double = 0.0
-    
+    //satu
     
     @IBOutlet weak var viewSearch: UIView!
     @IBOutlet weak var startLabel: UILabel!
@@ -39,6 +41,7 @@ class MusicViewController: UIViewController {
     @IBOutlet weak var viewHome: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.hidesBackButton = true
         searchField.delegate = self
         delegateTable()
         viewSrch()
@@ -46,6 +49,10 @@ class MusicViewController: UIViewController {
         playPause()
         border()
         viewModel()
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        navigationController?.isNavigationBarHidden = true
+        searchField.becomeFirstResponder()
     }
     
 }
@@ -60,8 +67,29 @@ extension MusicViewController{
                 }
             }
         }
+        fetchDataFromCoreData()
     }
+    func fetchDataFromCoreData() {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext;     let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Music")
+        
+        do {
+            let result = try context.fetch(fetchRequest)
+            for data in result as! [NSManagedObject] {
+                let title = data.value(forKey: "title") as? String ?? ""
+                let subtitle = data.value(forKey: "subtitle") as? String ?? ""
+                let image = data.value(forKey: "image") as? String ?? ""
+                
+                // Lakukan sesuatu dengan data yang diambil, misalnya tampilkan atau gunakan sesuai kebutuhan Anda
+                print("Title: \(title), Subtitle: \(subtitle), Image: \(image)")
+            }
+        } catch {
+            fatalError("Gagal mengambil data dari Core Data: \(error)")
+        }
+    }
+    
+    
 }
+
 extension MusicViewController{
     func progress(){
         let gestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(handlePanGesture(_:)))
@@ -188,6 +216,7 @@ extension MusicViewController {
             // Handle case when cover URL is not available
             // You might want to show an alert or take appropriate action
             imgAB.image = UIImage(named: "placeholderImage")
+            
         }
         
         
@@ -246,6 +275,24 @@ extension MusicViewController {
         
         // Reset state
         stateReset()
+        saveMusicToCoreData(title: selectedSound.artist?.name?.rawValue, subtitle: selectedSound.title, image: selectedSound.album?.cover)
+        
+    }
+    func saveMusicToCoreData(title: String?, subtitle: String?, image: String?) {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let entity = NSEntityDescription.entity(forEntityName: "Music", in: context)
+        let music = NSManagedObject(entity: entity!, insertInto: context)
+        
+        music.setValue(title, forKey: "title")
+        music.setValue(subtitle, forKey: "subtitle")
+        music.setValue(image, forKey: "image")
+        
+        do {
+            try context.save()
+            print("Data berhasil disimpan di Core Data.")
+        } catch {
+            fatalError("Gagal menyimpan data ke Core Data: \(error)")
+        }
     }
     
     
@@ -424,13 +471,29 @@ extension MusicViewController{
 extension MusicViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
-        performSearch()
+        
         return true
     }
-    func performSearch() {
-        guard let searchTerm = searchField.text?.trimmingCharacters(in: .whitespacesAndNewlines), !searchTerm.isEmpty else {
-            return
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        // Get the updated text after the user types
+        guard let updatedText = (textField.text as NSString?)?.replacingCharacters(in: range, with: string) else {
+            return true
         }
+        if updatedText.isEmpty {
+            displayAllData()
+        } else {
+            performSearch(with: updatedText)
+        }
+        
+        return true
+    }
+    func displayAllData() {
+        // Set the table data to the complete dataset
+        let musicViewModel = ColdplayApiModel()
+        // Replace this line with your actual method to get all data
+        tableMusic.reloadData()
+    }
+    func performSearch(with searchTerm: String) {
         let musicViewModel = ColdplayApiModel()
         model.searchData(searchTerm: searchTerm) { [weak self] data in
             if let data = data as? [Datum] {
@@ -440,7 +503,6 @@ extension MusicViewController: UITextFieldDelegate {
                 }
             }
         }
-        
     }
     
 }

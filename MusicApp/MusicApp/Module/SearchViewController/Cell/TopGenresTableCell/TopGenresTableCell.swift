@@ -1,8 +1,11 @@
 import UIKit
-
+protocol TopTableCell {
+    func didSelectItemAt(text: String)
+}
 class TopGenresTableCell: UITableViewCell {
     var data: [Datum] = []
     var apiModel = ColdplayApiModel()
+    var delegate: TopTableCell?
     @IBOutlet weak var topGenreCollectionCell: UICollectionView!
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -32,6 +35,10 @@ extension TopGenresTableCell: UICollectionViewDelegate,UICollectionViewDataSourc
             cell.imgTopGenreCollection?.image = UIImage(named: "placeholderImage") // You can use a placeholder image
         }
         return cell
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let selectedDatum = data[indexPath.item]
+        delegate?.didSelectItemAt(text: selectedDatum.artist?.name?.rawValue ?? "")
     }
     
     
