@@ -5,9 +5,9 @@ class MainTabBarViewController: UITabBarController {
     var visualEffectView: UIVisualEffectView?
     let homeVC = UINavigationController(rootViewController: HomeViewController())
     let search = UINavigationController(rootViewController: SearchViewController())
-    let profile = UINavigationController(rootViewController: ProfileViewController())
     let collection = UINavigationController(rootViewController: CollectionMusicVC())
-    
+    let profile = UINavigationController(rootViewController: ProfileViewController())
+   
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,9 +23,8 @@ class MainTabBarViewController: UITabBarController {
 
         homeVC.tabBarItem = UITabBarItem(title: "Home", image: TabBar.icon1, tag: 0)
         search.tabBarItem = UITabBarItem(title: "Search", image: TabBar.icon2, tag: 1)
-        profile.tabBarItem = UITabBarItem(title: "Profile", image: TabBar.icon3, tag: 2)
-        collection.tabBarItem = UITabBarItem(title: "Collection", image: TabBar.icon4, tag: 3)
-       
+        collection.tabBarItem = UITabBarItem(title: "Collection", image: TabBar.icon3, tag: 2)
+        profile.tabBarItem = UITabBarItem(title: "Profile", image: TabBar.icon4, tag: 3)
        
 
         // Konfigurasi warna teks
@@ -50,6 +49,6 @@ class MainTabBarViewController: UITabBarController {
     }
 
     func setViewControllers() {
-        setViewControllers([homeVC, search, profile,collection], animated: true)
+        setViewControllers([homeVC, search, collection,profile], animated: true)
     }
 }

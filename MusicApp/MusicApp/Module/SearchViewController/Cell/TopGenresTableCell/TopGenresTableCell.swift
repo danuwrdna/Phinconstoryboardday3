@@ -24,7 +24,8 @@ extension TopGenresTableCell: UICollectionViewDelegate,UICollectionViewDataSourc
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = topGenreCollectionCell.dequeueReusableCell(withReuseIdentifier: "TopGenresCollection", for: indexPath) as! TopGenresCollection// Replace YourCollectionViewCell with the actual name of your cell class
+        let cell = topGenreCollectionCell.dequeueReusableCell(withReuseIdentifier: "TopGenresCollection", for: indexPath) as! TopGenresCollection
+        cell.modelImgViewModel = ModelImgViewModel()
         let datum = data[indexPath.item]
         cell.labelTextTopGenre?.text = datum.artist?.name?.rawValue
         if let imageUrl = datum.album?.cover {

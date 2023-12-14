@@ -142,6 +142,9 @@ extension MusicViewController: UITableViewDelegate, UITableViewDataSource{
         tableMusic.dataSource = self
         tableMusic.register(UINib(nibName: "MusicTableViewCell", bundle: nil), forCellReuseIdentifier: "MusicTableViewCell")
     }
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Listen Your Way"
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return modelDatum.count
     }
@@ -171,19 +174,6 @@ extension MusicViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //        let deezerTrack = modelDatum[indexPath.row]
-        //        if let previewURLString = deezerTrack.preview,
-        //           let encodedURLString = previewURLString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
-        //           let previewURL = URL(string: encodedURLString) {
-        //            let previewURLString = previewURL.absoluteString
-        //
-        //                // Pass the String to the playSnd function
-        //                playSnd(soundName: previewURLString, startTime: playbackTime)
-        //        } else {
-        //            // Handle case when preview URL is not available or cannot be converted to a valid URL
-        //        }
-        //
-        //    }
         playy()
     }
 }
@@ -202,10 +192,11 @@ extension MusicViewController {
     }
     func playy() {
         print("play sudah terpanggil")
+        
         guard let selectedIndexPath = tableMusic.indexPathForSelectedRow else {
             return
+            
         }
-        
         let selectedSound = modelDatum[selectedIndexPath.row]
         headLabel.text = selectedSound.artist?.name?.rawValue
         subHeadLabel.text = selectedSound.title
@@ -213,18 +204,17 @@ extension MusicViewController {
            let coverURL = URL(string: coverURLString) {
             imgAB.kf.setImage(with: coverURL)
         } else {
-            // Handle case when cover URL is not available
-            // You might want to show an alert or take appropriate action
             imgAB.image = UIImage(named: "placeholderImage")
-            
         }
         
-        
+       
         if let player = player {
             if player.rate > 0 {
                 // Musik sedang diputar, jadi pause
+                saveMusicToCoreData(title: selectedSound.artist?.name?.rawValue, subtitle: selectedSound.title, image: selectedSound.album?.cover)
                 print("Lagu sedang diputar, di-pause")
                 pauseMusic()
+                
             } else {
                 // Musik sedang di-pause, jadi putar
                 print("Lagu di-pause, dilanjutkan pemutaran")
@@ -238,6 +228,7 @@ extension MusicViewController {
                         // Ada URL preview, putar lagu baru
                         print("Memutar lagu baru")
                         playSnd(soundName: selectedPreview, startTime: playbackTime)
+                        
                     } else {
                         // URL preview tidak tersedia
                         print("URL preview tidak tersedia")
@@ -275,7 +266,7 @@ extension MusicViewController {
         
         // Reset state
         stateReset()
-        saveMusicToCoreData(title: selectedSound.artist?.name?.rawValue, subtitle: selectedSound.title, image: selectedSound.album?.cover)
+       
         
     }
     func saveMusicToCoreData(title: String?, subtitle: String?, image: String?) {

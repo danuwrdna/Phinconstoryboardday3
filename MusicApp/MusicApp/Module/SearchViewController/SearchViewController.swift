@@ -75,8 +75,8 @@ extension SearchViewController{
 }
 extension SearchViewController{
     func navigate(){
-        let bt = MusicViewController()
-        
+        let bt = FindMusicVC()
+        navigationItem.hidesBackButton = true
         navigationController?.pushViewController(bt, animated: true)
     }
 }

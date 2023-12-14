@@ -1,14 +1,25 @@
 import UIKit
 import CoreData
 class CollectionMusicVC: UIViewController {
-   
+    private let refreshControl = UIRefreshControl()
     @IBOutlet weak var tableCmView: UITableView!
+    @IBOutlet weak var deleteBt: UIButton!
     var coreDataArray: [Music] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         delegateTable()
+       
+        tableCmView.allowsSelection = true
+        refreshCoreaData()
+        
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
         fetchDataFromCoreData()
-
+        UIView.animate(withDuration: 5) {
+               self.view.alpha = 5.0
+           }
     }
 }
 extension CollectionMusicVC: UITableViewDelegate, UITableViewDataSource{
@@ -28,31 +39,60 @@ extension CollectionMusicVC: UITableViewDelegate, UITableViewDataSource{
         cell.labelCollection?.text = datum.title
         cell.subLabelCollection?.text = datum.subtitle
         if let imageUrlString = datum.image,
-               let imageUrl = URL(string: imageUrlString) {
-                cell.imageView?.kf.setImage(with: imageUrl)
-            } else {
-                // Jika properti gambar tidak ada atau tidak valid, atur gambar placeholder
-                cell.imageView?.image = UIImage(named: "placeholderImage")
-            }
-        return cell
+           let imageUrl = URL(string: imageUrlString) {
+            cell.imageView?.kf.setImage(with: imageUrl)
+        } else {
+            cell.imageView?.image = UIImage(named: "placeholderImage")
         }
-    
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 117
-//    }
+        return cell
     }
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        deleteSelectedData()
+       
+    }
+}
+
 extension CollectionMusicVC{
     func fetchDataFromCoreData() {
-            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Music")
-            
-            do {
-                let result = try context.fetch(fetchRequest)
-                coreDataArray = result as! [Music] // Update YourCoreDataType with your actual data type
-                tableCmView.reloadData()
-            } catch {
-                fatalError("Gagal mengambil data dari Core Data: \(error)")
-            }
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Music")
+        
+        do {
+            let result = try context.fetch(fetchRequest)
+            coreDataArray = result as! [Music]
+            tableCmView.reloadData()
+        } catch {
+            fatalError("Gagal mengambil data dari Core Data: \(error)")
         }
+    }
+}
+extension CollectionMusicVC{
+    func deleteSelectedData() {
+        guard let selectedIndexPath = tableCmView.indexPathForSelectedRow else {
+            return
+        }
+        
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let selectedData = coreDataArray[selectedIndexPath.row]
+        context.delete(selectedData)
+        
+        do {
+            try context.save()
+            coreDataArray.remove(at: selectedIndexPath.row)
+            tableCmView.reloadData()
+        } catch {
+            fatalError("Failed to delete data from Core Data: \(error)")
+        }
+    }
+}
+extension CollectionMusicVC{
+    func refreshCoreaData(){
+        refreshControl.addTarget(self, action: #selector(refreshData), for: .valueChanged)
+            tableCmView.refreshControl = refreshControl
+    }
+    @objc func refreshData() {
+        fetchDataFromCoreData()
+        tableCmView.reloadData()
+        refreshControl.endRefreshing()
+    }
 }

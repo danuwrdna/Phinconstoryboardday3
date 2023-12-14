@@ -5,10 +5,16 @@ class CategoryViewController: UIViewController {
     var selectedText: String?
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var tableCategoryView: UITableView!
+    @IBAction func backBT(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         delegateTable()
 
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        navigationController?.isNavigationBarHidden = true
     }
 }
 extension CategoryViewController: UITableViewDataSource, UITableViewDelegate{
@@ -16,6 +22,7 @@ extension CategoryViewController: UITableViewDataSource, UITableViewDelegate{
         tableCategoryView.delegate = self
         tableCategoryView.dataSource = self
         tableCategoryView.registerCellWithNib(TopViewCell.self)
+        tableCategoryView.registerCellWithNib(BodyViewCell.self)
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
@@ -28,9 +35,10 @@ extension CategoryViewController: UITableViewDataSource, UITableViewDelegate{
         switch indexPath.section {
         case 0:
             let topCell = tableView.dequeueReusableCell(forIndexPath: indexPath) as TopViewCell
-            
             return topCell
-       
+        case 1:
+            let bodyViewCell = tableView.dequeueReusableCell(forIndexPath: indexPath) as BodyViewCell
+            return bodyViewCell
         default:
             return UITableViewCell()
         }

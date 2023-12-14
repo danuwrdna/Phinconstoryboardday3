@@ -3,4 +3,114 @@
    uuid = "71086155-39D1-46C1-9220-E569285FDE4B"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B8945C56-8288-4233-9FAD-879BF6157323"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MusicApp/Module/FindMusicVC/FindMusicVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "9"
+            endingLineNumber = "9"
+            landmarkName = "FindMusicVC"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "B8945C56-8288-4233-9FAD-879BF6157323 - 3636b54511d9d2bb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MusicApp.FindMusicVC.viewFindMusic.getter : Swift.Optional&lt;__C.UIView&gt;"
+                  moduleName = "MusicApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/phincon/Documents/test/Bootcampswiftphinconbatch3/Phinconstoryboardday3/MusicApp/MusicApp/Module/FindMusicVC/FindMusicVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "B8945C56-8288-4233-9FAD-879BF6157323 - 51e69884c7267fb7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MusicApp.FindMusicVC.viewFindMusic.setter : Swift.Optional&lt;__C.UIView&gt;"
+                  moduleName = "MusicApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/phincon/Documents/test/Bootcampswiftphinconbatch3/Phinconstoryboardday3/MusicApp/MusicApp/Module/FindMusicVC/FindMusicVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "108">
+               </Location>
+               <Location
+                  uuid = "B8945C56-8288-4233-9FAD-879BF6157323 - 12557c4bf257e9e6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MusicApp.FindMusicVC.viewFindMusic.modify : Swift.Optional&lt;__C.UIView&gt;"
+                  moduleName = "MusicApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/phincon/Documents/test/Bootcampswiftphinconbatch3/Phinconstoryboardday3/MusicApp/MusicApp/Module/FindMusicVC/FindMusicVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "B8945C56-8288-4233-9FAD-879BF6157323 - 5889cfb17fa5e82"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MusicApp.FindMusicVC.viewFindMusic.modify : Swift.Optional&lt;__C.UIView&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "MusicApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/phincon/Documents/test/Bootcampswiftphinconbatch3/Phinconstoryboardday3/MusicApp/MusicApp/Module/FindMusicVC/FindMusicVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  uuid = "B8945C56-8288-4233-9FAD-879BF6157323 - d96b2da29f98d2fa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MusicApp.FindMusicVC.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; MusicApp.FindMusicVC"
+                  moduleName = "MusicApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/phincon/Documents/test/Bootcampswiftphinconbatch3/Phinconstoryboardday3/MusicApp/MusicApp/Module/FindMusicVC/FindMusicVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "656">
+               </Location>
+               <Location
+                  uuid = "B8945C56-8288-4233-9FAD-879BF6157323 - 398d1aae798df4a1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MusicApp.FindMusicVC.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;MusicApp.FindMusicVC&gt;"
+                  moduleName = "MusicApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/phincon/Documents/test/Bootcampswiftphinconbatch3/Phinconstoryboardday3/MusicApp/MusicApp/Module/FindMusicVC/FindMusicVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "632">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

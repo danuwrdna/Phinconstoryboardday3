@@ -3,6 +3,7 @@ import UIKit
 class BrowseCell: UITableViewCell {
     var data: [Datum] = []
     var apiModel = ColdplayApiModel()
+    var colorModel = ModelImgViewModel()
     @IBOutlet weak var collectionBrowse: UICollectionView!
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,6 +24,7 @@ extension BrowseCell: UICollectionViewDelegate, UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionBrowse.dequeueReusableCell(withReuseIdentifier: "BrowseCollection", for: indexPath) as! BrowseCollection// Replace YourCollectionViewCell with the actual name of your cell class
+        cell.modelImgViewModel = ModelImgViewModel()
         let datum = data[indexPath.item]
         cell.labelBrowse?.text = datum.artist?.name?.rawValue
         if let imageUrl = datum.album?.cover {
