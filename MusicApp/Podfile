@@ -9,7 +9,6 @@ target 'MusicApp' do
   pod "RxCocoa"
   pod "Firebase/Core"
   pod "Firebase/Auth"
-
   pod 'lottie-ios'
   pod 'Alamofire'
   # Pods for MusicApp

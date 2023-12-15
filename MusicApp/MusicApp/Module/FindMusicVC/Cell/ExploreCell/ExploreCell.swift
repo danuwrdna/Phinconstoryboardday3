@@ -1,9 +1,13 @@
 
 import UIKit
+protocol ExploreViewCellDelegate {
+    func didSelectItemAt(image: String,head: String,title: String, subTitle: String, trackPreview: String)
+}
 
 class ExploreCell: UITableViewCell {
     var data: [Datum] = []
     var apiModel = ColdplayApiModel()
+    var delegate: ExploreViewCellDelegate?
     @IBOutlet weak var collectionExplore: UICollectionView!
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -37,6 +41,15 @@ extension ExploreCell: UICollectionViewDelegate, UICollectionViewDataSource{
         }
         
         return cell
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let selectedDatum = data[indexPath.item]
+        delegate?.didSelectItemAt(image: selectedDatum.album?.cover ?? "",
+                                  head: selectedDatum.album?.title ?? "",
+                                  title: selectedDatum.artist?.name?.rawValue ?? "",
+                                  subTitle: selectedDatum.title ?? "",
+                                  trackPreview: selectedDatum.preview ?? ""  )
+        
     }
     
 }
