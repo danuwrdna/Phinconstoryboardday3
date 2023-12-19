@@ -12,7 +12,7 @@ class ExploreCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         delegateCollection()
-        fetchDataFromAPI()
+        //fetchDataFromAPI()
     }
 }
 extension ExploreCell: UICollectionViewDelegate, UICollectionViewDataSource{
@@ -44,25 +44,27 @@ extension ExploreCell: UICollectionViewDelegate, UICollectionViewDataSource{
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let selectedDatum = data[indexPath.item]
+       
         delegate?.didSelectItemAt(image: selectedDatum.album?.cover ?? "",
                                   head: selectedDatum.album?.title ?? "",
                                   title: selectedDatum.artist?.name?.rawValue ?? "",
                                   subTitle: selectedDatum.title ?? "",
-                                  trackPreview: selectedDatum.preview ?? ""  )
+                                  trackPreview: selectedDatum.preview ?? ""
+                                  )
         
     }
     
 }
 extension ExploreCell{
-    func fetchDataFromAPI(){
-        let musicViewModel = ColdplayApiModel()
-        musicViewModel.fetchData { [weak self] data in
-            if let data = data {
-                self?.data = data
-                DispatchQueue.main.async {
-                    self?.collectionExplore.reloadData()
-                }
-            }
-        }
-    }
+//    func fetchDataFromAPI(){
+//        let musicViewModel = ColdplayApiModel()
+//        musicViewModel.fetchData { [weak self] data in
+//            if let data = data {
+//                self?.data = data
+//                DispatchQueue.main.async {
+//                    self?.collectionExplore.reloadData()
+//                }
+//            }
+//        }
+//    }
 }

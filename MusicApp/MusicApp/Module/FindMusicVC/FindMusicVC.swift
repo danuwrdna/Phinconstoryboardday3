@@ -77,6 +77,7 @@ extension FindMusicVC{
 extension FindMusicVC: ExploreViewCellDelegate{
     func didSelectItemAt(image: String,head: String,title: String, subTitle: String, trackPreview: String) {
         let vc = PlayedViewController()
+        
         vc.setImage(image: image,head: head, title: title, subTitle: subTitle, trackPreview: trackPreview)
         navigationController?.navigationBar.isHidden = true
         navigationController?.pushViewController(vc, animated: true)
@@ -103,7 +104,7 @@ extension FindMusicVC: UITextFieldDelegate {
         if updatedText.isEmpty {
             displayAllData()
         } else {
-            performSearch(with: updatedText)
+            //performSearch(with: updatedText)
         }
         
         return true
@@ -114,16 +115,16 @@ extension FindMusicVC: UITextFieldDelegate {
         // Replace this line with your actual method to get all data
         tableFindMusic.reloadData()
     }
-    func performSearch(with searchTerm: String) {
-        let musicViewModel = ColdplayApiModel()
-        model.searchData(searchTerm: searchTerm) { [weak self] data in
-            if let data = data as? [Datum] {
-                self?.modelDatum = data
-                DispatchQueue.main.async {
-                    self?.tableFindMusic.reloadData()
-                }
-            }
-        }
-    }
+//    func performSearch(with searchTerm: String) {
+//        let musicViewModel = ColdplayApiModel()
+//        model.searchData(searchTerm: searchTerm) { [weak self] data in
+//            if let data = data as? [Datum] {
+//                self?.modelDatum = data
+//                DispatchQueue.main.async {
+//                    self?.tableFindMusic.reloadData()
+//                }
+//            }
+//        }
+//    }
     
 }

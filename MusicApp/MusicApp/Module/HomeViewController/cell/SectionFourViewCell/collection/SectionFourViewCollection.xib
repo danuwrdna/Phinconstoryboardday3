@@ -16,13 +16,19 @@
                 <rect key="frame" x="0.0" y="0.0" width="126" height="153"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uXZ-rb-DSE">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uXZ-rb-DSE">
                         <rect key="frame" x="0.0" y="0.0" width="126" height="126"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="126" id="Lxt-Wd-cbL"/>
+                            <constraint firstAttribute="height" constant="126" id="abR-do-rb6"/>
+                        </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uaD-8o-GrK">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uaD-8o-GrK">
                         <rect key="frame" x="3" y="131" width="123" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="2NT-VX-5mu"/>
+                            <constraint firstAttribute="width" constant="123" id="hMm-uk-xNY"/>
+                        </constraints>
                         <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -30,6 +36,14 @@
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="uXZ-rb-DSE" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="0qE-Zn-JQS"/>
+                <constraint firstItem="uaD-8o-GrK" firstAttribute="top" secondItem="uXZ-rb-DSE" secondAttribute="bottom" constant="5" id="MGL-Tc-RV6"/>
+                <constraint firstItem="uXZ-rb-DSE" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="WzR-fj-i9U"/>
+                <constraint firstAttribute="trailing" secondItem="uaD-8o-GrK" secondAttribute="trailing" id="XYZ-AG-7hN"/>
+                <constraint firstItem="uaD-8o-GrK" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="3" id="cRR-hB-LUL"/>
+                <constraint firstAttribute="trailing" secondItem="uXZ-rb-DSE" secondAttribute="trailing" id="hOj-mT-rLk"/>
+            </constraints>
             <connections>
                 <outlet property="imgCollectionFour" destination="uXZ-rb-DSE" id="c3r-Jz-fom"/>
                 <outlet property="labelTextCollectionFour" destination="uaD-8o-GrK" id="KfO-VK-vnb"/>

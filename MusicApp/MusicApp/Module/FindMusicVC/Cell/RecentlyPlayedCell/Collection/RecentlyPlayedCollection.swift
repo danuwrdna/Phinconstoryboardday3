@@ -17,5 +17,6 @@ extension RecentlyPlayedCollection{
         imgRecentlyPlayed.layer.shadowOpacity = 0.5
         imgRecentlyPlayed.layer.shadowRadius = 5.0
         imgRecentlyPlayed.layer.shadowOffset = CGSize(width: 0, height: 5.0)
+        imgRecentlyPlayed.clipsToBounds = true
     }
 }

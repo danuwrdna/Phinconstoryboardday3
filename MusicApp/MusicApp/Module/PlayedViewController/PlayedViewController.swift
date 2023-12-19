@@ -14,6 +14,8 @@ class PlayedViewController: UIViewController {
     var audioItem: AVPlayerItem?
     var audioPlayer: AVPlayer?
     var track: String = ""
+    var trackList : [Datum] = []
+  
     @IBAction func btBack(_ sender: Any) {
         navigate()
     }
@@ -37,15 +39,16 @@ class PlayedViewController: UIViewController {
         setupUI()
         setupDesign()
         setupAudio()
+        
         progress()
         playPause()
         animateIng()
         border()
     }
     override func viewDidAppear(_ animated: Bool) {
-       setupAudio()
+        setupAudio()
         playPause()
-
+        
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
@@ -59,6 +62,7 @@ extension PlayedViewController{
         self.titlePlayed = title
         self.subTitlePlayed = subTitle
         self.trackPreview = trackPreview
+    
     }
     
     func setupUI() {
@@ -141,21 +145,34 @@ extension PlayedViewController{
 }
 extension PlayedViewController{
     func setupAudio() {
-        guard let audioFileURL = URL(string: track) else {
+        let audio = track
+        guard let audioFileURL = URL(string: audio) else {
             print("Invalid audio file URL.")
             return
         }
-        audioItem = AVPlayerItem(url: audioFileURL)
-        audioPlayer = AVPlayer(playerItem: audioItem)
-        audioPlayer?.play()
-        isPlaying = true
-        startTimer()
-        updatePlayPauseButton()
-        if !isAnimating {
-                   animateIng()
-               }
-        
+        do{
+            try AVAudioSession.sharedInstance().setCategory(.playback)
+            try AVAudioSession.sharedInstance().setMode(.default)
+            try AVAudioSession.sharedInstance().setActive(true)
+            audioItem = AVPlayerItem(url: audioFileURL)
+            audioPlayer = AVPlayer(playerItem: audioItem)
+            
+            audioPlayer?.play()
+            isPlaying = true
+            startTimer()
+            updatePlayPauseButton()
+            if !isAnimating {
+                animateIng()
+            }
+        }catch{
+            print("eror")
+        }
     }
+}
+extension PlayedViewController{
+    
+    
+    
 }
 extension PlayedViewController{
     func playPause() {
@@ -231,36 +248,53 @@ extension PlayedViewController{
         progressMusicView.progress = 0.0
         
     }
+}
+
+extension PlayedViewController {
+    func nextMusic() {
+//        if position < (track.count - 1){
+//            position = position + 1
+//            audioPlayer?.pause()
+//        }
+//        audioPlayer?.pause()
+    }
+    
+    func previousMusic() {
+//        if position > 0{
+//            position = position - 1
+//            audioPlayer?.pause()
+//        }
+//        setupAudio(at: position)
+        
+    }
+    
+
     
 }
-extension PlayedViewController{
-    func nextMusic(){
-        
-        
-    }
-    func previousMusic(){
-        
-    }
-}
+
 
 extension PlayedViewController{
     func animateIng() {
-            guard isPlaying else {
-                // Jika musik tidak diputar, hentikan animasi
-                isAnimating = false
-                return
-            }
-
-            UIView.animate(withDuration: 2.0, delay: 0, options: .curveLinear, animations: {
-                self.imgPlayed.transform = self.imgPlayed.transform.rotated(by: .pi)
-            }) { _ in
-                self.animateIng()
-            }
-            isAnimating = true
+        guard isPlaying else {
+            isAnimating = false
+            return
         }
+        
+        UIView.animate(withDuration: 2.0, delay: 0, options: .curveLinear, animations: {
+            self.imgPlayed.transform = self.imgPlayed.transform.rotated(by: .pi)
+        }) { _ in
+            self.animateIng()
+        }
+        isAnimating = true
+    }
     func border(){
+        imgPlayed.layer.masksToBounds = false
+        imgPlayed.layer.shadowRadius = 10
+        imgPlayed.layer.shadowColor = UIColor.black.cgColor
+        imgPlayed.layer.shadowOffset =  CGSize(width: 0, height: 2)
+        imgPlayed.layer.shadowOpacity = 0.5
         imgPlayed.layer.cornerRadius = imgPlayed.frame.height / 2
         imgPlayed.clipsToBounds = true
         
     }
-    }
+}

@@ -8,7 +8,7 @@ class RecentlyPlayedCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         delegateCollection()
-        fetchDataFromAPI()
+        //fetchDataFromAPI()
     }
 }
 extension RecentlyPlayedCell: UICollectionViewDelegate, UICollectionViewDataSource{
@@ -38,15 +38,15 @@ extension RecentlyPlayedCell: UICollectionViewDelegate, UICollectionViewDataSour
     
 }
 extension RecentlyPlayedCell{
-    func fetchDataFromAPI(){
-        let musicViewModel = ColdplayApiModel()
-        musicViewModel.fetchData { [weak self] data in
-            if let data = data {
-                self?.data = data
-                DispatchQueue.main.async {
-                    self?.collectionRecentlyPlayed.reloadData()
-                }
-            }
-        }
-    }
+//    func fetchDataFromAPI(){
+//        let musicViewModel = ColdplayApiModel()
+//        musicViewModel.fetchData { [weak self] data in
+//            if let data = data {
+//                self?.data = data
+//                DispatchQueue.main.async {
+//                    self?.collectionRecentlyPlayed.reloadData()
+//                }
+//            }
+//        }
+//    }
 }

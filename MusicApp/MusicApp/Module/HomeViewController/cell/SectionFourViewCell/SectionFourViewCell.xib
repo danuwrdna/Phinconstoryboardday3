@@ -17,17 +17,19 @@
                 <rect key="frame" x="0.0" y="0.0" width="361" height="348"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Newley Release For You" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3uN-hX-bgm">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Newley Release For You" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3uN-hX-bgm">
                         <rect key="frame" x="20" y="16" width="249" height="29"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="24"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="YHY-wx-6cS">
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="YHY-wx-6cS">
                         <rect key="frame" x="0.0" y="46" width="361" height="225"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="361" id="E2I-Bc-yea"/>
+                            <constraint firstAttribute="height" constant="225" id="gcm-XT-B9c"/>
+                        </constraints>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="A4R-ug-lLt">
                             <size key="itemSize" width="126" height="153"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -36,6 +38,14 @@
                         </collectionViewFlowLayout>
                     </collectionView>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="3uN-hX-bgm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="4p6-72-nTj"/>
+                    <constraint firstItem="YHY-wx-6cS" firstAttribute="top" secondItem="3uN-hX-bgm" secondAttribute="bottom" constant="1" id="4zX-0Z-Zia"/>
+                    <constraint firstAttribute="trailing" secondItem="3uN-hX-bgm" secondAttribute="trailing" constant="92" id="GxN-Zq-VXm"/>
+                    <constraint firstItem="YHY-wx-6cS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="L3C-se-wCk"/>
+                    <constraint firstAttribute="trailing" secondItem="YHY-wx-6cS" secondAttribute="trailing" id="ZbS-p8-L33"/>
+                    <constraint firstItem="3uN-hX-bgm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" symbolic="YES" id="wcW-hb-1c8"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>

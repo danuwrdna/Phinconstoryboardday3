@@ -5,6 +5,7 @@
 //  Created by Phincon on 05/12/23.
 //
 
+import netfox
 import UIKit
 import CoreData
 import Firebase
@@ -16,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
+        NFX.sharedInstance().start() // in didFinishLaunchingWithOptions:
         // Override point for customization after application launch.
         return true
     }

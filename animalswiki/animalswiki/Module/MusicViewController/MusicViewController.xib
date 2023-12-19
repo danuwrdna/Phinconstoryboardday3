@@ -64,7 +64,7 @@
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" title="">
-                                <backgroundConfiguration key="background" image="arrowtriangle.right.circle" catalog="system"/>
+                                <backgroundConfiguration key="background" image="skip-forward-2"/>
                             </buttonConfiguration>
                             <connections>
                                 <action selector="nextButton:" destination="-1" eventType="touchUpInside" id="XNa-Jl-YbX"/>
@@ -83,7 +83,7 @@
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" title="">
-                                <backgroundConfiguration key="background" image="arrowtriangle.backward.circle" catalog="system"/>
+                                <backgroundConfiguration key="background" image="skip-back"/>
                             </buttonConfiguration>
                             <connections>
                                 <action selector="previousButton:" destination="-1" eventType="touchUpInside" id="5VX-NY-xV0"/>
@@ -171,9 +171,9 @@
     </objects>
     <resources>
         <image name="arrowshape.turn.up.backward.circle" catalog="system" width="128" height="123"/>
-        <image name="arrowtriangle.backward.circle" catalog="system" width="128" height="123"/>
-        <image name="arrowtriangle.right.circle" catalog="system" width="128" height="123"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <image name="skip-back" width="99" height="96"/>
+        <image name="skip-forward-2" width="100" height="96"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -15,6 +15,7 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.hidesBackButton = true
+        borderImgDetailView()
         delegateTable()
         setupUI()
         fetchDataFromAPI()
@@ -83,10 +84,15 @@ extension DetailViewController{
     }
 }
 extension DetailViewController {
-//    func showCustomPopup() {
-//        customPopupView = PlayedMusicViewController()
-//        customPopupView?.modalPresentationStyle = .overFullScreen
-//        customPopupView?.modalTransitionStyle = .crossDissolve
-//        present(customPopupView!, animated: true, completion: nil)
-//    }
+    func borderImgDetailView(){
+        imgDetailView.layer.cornerRadius = imgDetailView.frame.height / 9
+        imgDetailView.clipsToBounds = true
+        imgDetailView.layer.masksToBounds = true
+        imgDetailView.layer.shadowColor = UIColor.black.cgColor
+        imgDetailView.layer.shadowOpacity = 0.5
+        imgDetailView.layer.shadowOffset = CGSize(width: 0, height: 2)
+        imgDetailView.layer.shadowRadius = 4.0
+      
+        
+    }
 }

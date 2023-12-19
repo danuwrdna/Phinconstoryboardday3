@@ -8,7 +8,18 @@ class SectionThirdViewCollection: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        border()
+    }
+    func border(){
+        imgCollectionThird.layer.cornerRadius = 10
+        imgCollectionThird.clipsToBounds = true
+        imgCollectionThird.layer.masksToBounds = true
+        imgCollectionThird.layer.shadowColor = UIColor.black.cgColor
+        imgCollectionThird.layer.shadowOpacity = 0.5
+        imgCollectionThird.layer.shadowOffset = CGSize(width: 0, height: 2)
+        imgCollectionThird.layer.shadowRadius = 4.0
+        imgCollectionThird.layer.shouldRasterize = true
+        imgCollectionThird.layer.rasterizationScale = UIScreen.main.scale
     }
 
 }

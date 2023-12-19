@@ -16,13 +16,15 @@
                 <rect key="frame" x="0.0" y="0.0" width="126" height="153"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bRG-AS-3BR">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bRG-AS-3BR">
                         <rect key="frame" x="0.0" y="0.0" width="126" height="126"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="126" id="Q2O-PM-F7R"/>
+                            <constraint firstAttribute="height" constant="126" id="sSq-3H-riS"/>
+                        </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8dM-Hc-dGP">
-                        <rect key="frame" x="4" y="131" width="102" height="19"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8dM-Hc-dGP">
+                        <rect key="frame" x="4" y="131" width="122" height="19"/>
                         <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -30,6 +32,14 @@
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="8dM-Hc-dGP" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="6vq-dn-h95"/>
+                <constraint firstAttribute="trailing" secondItem="bRG-AS-3BR" secondAttribute="trailing" id="7Fk-5N-qlB"/>
+                <constraint firstItem="8dM-Hc-dGP" firstAttribute="top" secondItem="bRG-AS-3BR" secondAttribute="bottom" constant="5" id="Ef1-J3-RLa"/>
+                <constraint firstAttribute="trailing" secondItem="8dM-Hc-dGP" secondAttribute="trailing" symbolic="YES" id="K9Z-3P-FAa"/>
+                <constraint firstItem="bRG-AS-3BR" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="PbY-X3-4ni"/>
+                <constraint firstItem="bRG-AS-3BR" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="SJ5-Ye-ixt"/>
+            </constraints>
             <connections>
                 <outlet property="imgCollectionThird" destination="bRG-AS-3BR" id="9U3-SW-m5X"/>
                 <outlet property="textLabelCollectionThird" destination="8dM-Hc-dGP" id="CtQ-xg-8vF"/>

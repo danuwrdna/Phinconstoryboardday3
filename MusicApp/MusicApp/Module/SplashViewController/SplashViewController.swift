@@ -10,7 +10,7 @@ class SplashViewController: UIViewController {
         animate()
         animateNavigate()
     }
-
+    
 }
 
 extension SplashViewController {
@@ -32,7 +32,7 @@ extension SplashViewController{
     }
     @objc func animationDidFinish() {
         let ng = MainTabBarViewController()
-       ng.navigationItem.hidesBackButton = true
+        ng.navigationItem.hidesBackButton = true
         navigationController?.pushViewController(ng, animated: true)
     }
 }

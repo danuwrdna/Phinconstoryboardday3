@@ -20,27 +20,32 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Phe-6z-bxR">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Phe-6z-bxR">
                     <rect key="frame" x="16" y="59" width="20" height="20"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="20" id="KXm-CH-edX"/>
+                        <constraint firstAttribute="height" constant="20" id="RAY-w1-aCX"/>
+                    </constraints>
                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="">
-                        <backgroundConfiguration key="background" image="chevron.backward" catalog="system"/>
+                        <backgroundConfiguration key="background" image="arrowshape.turn.up.backward.circle" catalog="system"/>
                     </buttonConfiguration>
                     <connections>
                         <action selector="btBack:" destination="-1" eventType="touchUpInside" id="JDN-To-G4n"/>
                     </connections>
                 </button>
-                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search Playlist" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qnP-i2-kWx">
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search Playlist" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qnP-i2-kWx">
                     <rect key="frame" x="16" y="87" width="270" height="34"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="34" id="e54-qL-Scn"/>
+                        <constraint firstAttribute="width" constant="270" id="fix-Ys-kMw"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mP7-o9-ChM">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mP7-o9-ChM">
                     <rect key="frame" x="304" y="88" width="55" height="31"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="0.17345302152317882" colorSpace="custom" customColorSpace="sRGB"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain">
@@ -55,24 +60,47 @@
                         </attributedString>
                     </buttonConfiguration>
                 </button>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="22q-rw-B9b">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="22q-rw-B9b">
                     <rect key="frame" x="96" y="152" width="200" height="180"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="ki6-JL-6Ee"/>
+                        <constraint firstAttribute="height" constant="180" id="m7V-ck-XdZ"/>
+                    </constraints>
                 </imageView>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="130" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="PNa-ql-uJS">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="110" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="PNa-ql-uJS">
                     <rect key="frame" x="16" y="340" width="361" height="512"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="512" id="Vk5-BS-uTa"/>
+                        <constraint firstAttribute="width" constant="361" id="sse-6g-nB7"/>
+                    </constraints>
                     <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="22q-rw-B9b" secondAttribute="trailing" constant="97" id="0uJ-fs-sr6"/>
+                <constraint firstItem="22q-rw-B9b" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="96" id="BSs-7g-LQ0"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Phe-6z-bxR" secondAttribute="trailing" constant="357" id="E5n-t7-bpy"/>
+                <constraint firstItem="mP7-o9-ChM" firstAttribute="leading" secondItem="qnP-i2-kWx" secondAttribute="trailing" constant="18" id="K78-LO-gra"/>
+                <constraint firstItem="PNa-ql-uJS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="O7P-0i-VhF"/>
+                <constraint firstItem="mP7-o9-ChM" firstAttribute="leading" secondItem="qnP-i2-kWx" secondAttribute="trailing" constant="18" id="RWc-lb-5hz"/>
+                <constraint firstItem="mP7-o9-ChM" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="29" id="Rf2-4C-UR4"/>
+                <constraint firstItem="22q-rw-B9b" firstAttribute="top" secondItem="qnP-i2-kWx" secondAttribute="bottom" constant="31" id="VM0-SR-Obl"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="PNa-ql-uJS" secondAttribute="trailing" constant="16" id="VWa-UJ-eNE"/>
+                <constraint firstItem="qnP-i2-kWx" firstAttribute="top" secondItem="Phe-6z-bxR" secondAttribute="bottom" constant="8" symbolic="YES" id="WQc-Uf-EoO"/>
+                <constraint firstItem="Phe-6z-bxR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="aD7-LM-6Lc"/>
+                <constraint firstItem="PNa-ql-uJS" firstAttribute="top" secondItem="22q-rw-B9b" secondAttribute="bottom" constant="8" symbolic="YES" id="eWE-t6-hWd"/>
+                <constraint firstItem="Phe-6z-bxR" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="jog-hs-qKO"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mP7-o9-ChM" secondAttribute="trailing" constant="34" id="oKu-31-WrQ"/>
+                <constraint firstItem="qnP-i2-kWx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="pEi-Ad-b9K"/>
+            </constraints>
             <point key="canvasLocation" x="-556.48854961832058" y="73.943661971830991"/>
         </view>
     </objects>
     <resources>
-        <image name="chevron.backward" catalog="system" width="97" height="128"/>
+        <image name="arrowshape.turn.up.backward.circle" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -18,7 +18,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="eMd-ba-Jtt">
-                        <rect key="frame" x="0.0" y="62" width="399" height="236"/>
+                        <rect key="frame" x="0.0" y="62" width="393" height="229"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Blz-a3-SjL">
@@ -29,7 +29,7 @@
                         </collectionViewFlowLayout>
                     </collectionView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Good Evening" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r6k-HE-AtI">
-                        <rect key="frame" x="20" y="25" width="147" height="29"/>
+                        <rect key="frame" x="20" y="25" width="147" height="28.666666666666671"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="24"/>
                         <nil key="textColor"/>
@@ -41,7 +41,7 @@
             <connections>
                 <outlet property="sectionFirstViewCollection" destination="eMd-ba-Jtt" id="8rM-V7-NLJ"/>
             </connections>
-            <point key="canvasLocation" x="72.51908396946564" y="35.91549295774648"/>
+            <point key="canvasLocation" x="72.51908396946564" y="35.563380281690144"/>
         </tableViewCell>
     </objects>
     <resources>

@@ -47,7 +47,8 @@ class MusicViewController: UIViewController {
         viewSrch()
         progress()
         playPause()
-        border()
+        borderViewHome()
+        borderImageAb()
         viewModel()
     }
     override func viewDidAppear(_ animated: Bool) {
@@ -207,7 +208,7 @@ extension MusicViewController {
             imgAB.image = UIImage(named: "placeholderImage")
         }
         
-       
+        
         if let player = player {
             if player.rate > 0 {
                 // Musik sedang diputar, jadi pause
@@ -266,7 +267,7 @@ extension MusicViewController {
         
         // Reset state
         stateReset()
-       
+        
         
     }
     func saveMusicToCoreData(title: String?, subtitle: String?, image: String?) {
@@ -446,9 +447,8 @@ extension MusicViewController{
 }
 
 extension MusicViewController{
-    func border(){
-        imgAB.layer.cornerRadius = 16
-        viewHome.layer.cornerRadius = 16
+    func borderViewHome(){
+        viewHome.layer.cornerRadius = 10
         viewHome.layer.masksToBounds = false
         viewHome.layer.shadowColor = UIColor.black.cgColor
         viewHome.layer.shadowOpacity = 0.5
@@ -458,6 +458,16 @@ extension MusicViewController{
         viewHome.layer.rasterizationScale = UIScreen.main.scale
         
     }
+    func borderImageAb(){
+        imgAB.layer.cornerRadius = 16
+        imgAB.layer.shadowColor = UIColor.black.cgColor
+        imgAB.layer.shadowOpacity = 0.5
+        imgAB.layer.shadowOffset = CGSize(width: 0, height: 2)
+        imgAB.layer.shadowRadius = 4.0
+        imgAB.layer.cornerRadius = 16
+        imgAB.layer.masksToBounds = false
+        imgAB.clipsToBounds = true
+    }
 }
 extension MusicViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -466,7 +476,6 @@ extension MusicViewController: UITextFieldDelegate {
         return true
     }
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        // Get the updated text after the user types
         guard let updatedText = (textField.text as NSString?)?.replacingCharacters(in: range, with: string) else {
             return true
         }
@@ -479,13 +488,11 @@ extension MusicViewController: UITextFieldDelegate {
         return true
     }
     func displayAllData() {
-        // Set the table data to the complete dataset
         let musicViewModel = ColdplayApiModel()
-        // Replace this line with your actual method to get all data
         tableMusic.reloadData()
     }
     func performSearch(with searchTerm: String) {
-        let musicViewModel = ColdplayApiModel()
+        let searchModel = ColdplayApiModel()
         model.searchData(searchTerm: searchTerm) { [weak self] data in
             if let data = data as? [Datum] {
                 self?.modelDatum = data

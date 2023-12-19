@@ -14,7 +14,9 @@ class SectionFirstViewCollection: UICollectionViewCell {
 extension SectionFirstViewCollection{
     func borderImg(){
         imgViewCollection.layer.cornerRadius = 10
-//        imgViewFirstCollection.layer.cornerRadius = 10
+        imgViewCollection.clipsToBounds = true
+        imgViewFirstCollection.layer.cornerRadius = 10
+     
        
     }
 

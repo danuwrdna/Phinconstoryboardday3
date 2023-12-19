@@ -113,6 +113,7 @@
 		36D164002B200061000D9977 /* ColdplayApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D163F92B200060000D9977 /* ColdplayApiModel.swift */; };
 		36D164042B20031E000D9977 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 36D164032B20031E000D9977 /* Kingfisher */; };
 		36D164062B200819000D9977 /* MusicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36D164052B200818000D9977 /* MusicViewController.xib */; };
+		36D44C652B303489003DC4C9 /* APISearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D44C642B303489003DC4C9 /* APISearchModel.swift */; };
 		C5A6D67454CCD03CB767DE20 /* Pods_MusicAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DBD72FFE7B4759F84931076 /* Pods_MusicAppTests.framework */; };
 		E6B3073CEEF1C2B853FD2DE6 /* Pods_MusicApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 839A3BA5FEC6E22007830118 /* Pods_MusicApp.framework */; };
 /* End PBXBuildFile section */
@@ -245,6 +246,7 @@
 		36D163F62B200060000D9977 /* MusicTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MusicTableViewCell.xib; sourceTree = "<group>"; };
 		36D163F92B200060000D9977 /* ColdplayApiModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColdplayApiModel.swift; sourceTree = "<group>"; };
 		36D164052B200818000D9977 /* MusicViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MusicViewController.xib; sourceTree = "<group>"; };
+		36D44C642B303489003DC4C9 /* APISearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APISearchModel.swift; sourceTree = "<group>"; };
 		4249A96DC1233338DF2ED940 /* Pods_MusicApp_MusicAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MusicApp_MusicAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		49680CEA03947F610F647693 /* Pods-MusicApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicApp.debug.xcconfig"; path = "Target Support Files/Pods-MusicApp/Pods-MusicApp.debug.xcconfig"; sourceTree = "<group>"; };
 		4DBD72FFE7B4759F84931076 /* Pods_MusicAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MusicAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -814,6 +816,7 @@
 		36D163EE2B1FFFFB000D9977 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				36D44C632B30346C003DC4C9 /* APISearchModel */,
 				366EF19E2B2B01BF00FA28FE /* PlayedViewController */,
 				366EF1842B2ADB0D00FA28FE /* FindMusicVC */,
 				36405CE92B2842E8008EB012 /* CategoryViewController */,
@@ -871,6 +874,14 @@
 				36405CD02B27E8C6008EB012 /* AllMusicApiModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		36D44C632B30346C003DC4C9 /* APISearchModel */ = {
+			isa = PBXGroup;
+			children = (
+				36D44C642B303489003DC4C9 /* APISearchModel.swift */,
+			);
+			path = APISearchModel;
 			sourceTree = "<group>";
 		};
 		3A387BFE61F594E9ABF1C9CE /* Frameworks */ = {
@@ -1216,6 +1227,7 @@
 				36405D052B2849B1008EB012 /* BodyCollection.swift in Sources */,
 				36405CB52B269B79008EB012 /* PopularArtistCollection.swift in Sources */,
 				366EF1872B2ADB4400FA28FE /* FindMusicVC.swift in Sources */,
+				36D44C652B303489003DC4C9 /* APISearchModel.swift in Sources */,
 				36405C992B2178AD008EB012 /* SectionFourViewCollection.swift in Sources */,
 				36D163FD2B200061000D9977 /* MusicColViewCell.swift in Sources */,
 				36405C742B21752F008EB012 /* SectionFirstViewCell.swift in Sources */,
