@@ -1,18 +1,17 @@
 import UIKit
-
+import CoreData
 protocol SectionSecondViewCellDelegate {
     func didSelectItemAt(image: String)
 }
 
 class SectionSecondViewCell: UITableViewCell {
     @IBOutlet weak var collectionSecondCell: UICollectionView!
-    var data: [Datum] = []
-    var apiModel = ColdplayApiModel()
-    var didSelectItem: ((Datum) -> Void)?
+    var data: [Music] = []
+    var didSelectItem: ((Music) -> Void)?
     var delegate: SectionSecondViewCellDelegate?
     override func awakeFromNib() {
         super.awakeFromNib()
-        fetchDataFromAPI()
+        fetchDataFromCoreData()
         delegateCollection()
     }
 }
@@ -30,8 +29,8 @@ extension SectionSecondViewCell: UICollectionViewDelegate, UICollectionViewDataS
         let cell = collectionSecondCell.dequeueReusableCell(withReuseIdentifier: "SectionSecondViewCollection", for: indexPath) as! SectionSecondViewCollection// Replace YourCollectionViewCell with the actual name of your cell class
         let datum = data[indexPath.item]
         didSelectItem?(datum)
-        cell.textLabelSecondCollection?.text = datum.artist?.name?.rawValue
-        if let imageUrl = datum.album?.cover {
+        cell.textLabelSecondCollection?.text = datum.title
+        if let imageUrl = datum.image {
             let url = URL(string: imageUrl)
             cell.imgViewSecondCollection?.kf.setImage(with: url)
         } else {
@@ -44,22 +43,23 @@ extension SectionSecondViewCell: UICollectionViewDelegate, UICollectionViewDataS
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let selectedDatum = data[indexPath.item]
-        delegate?.didSelectItemAt(image: selectedDatum.album?.cover ?? "")
+        delegate?.didSelectItemAt(image: selectedDatum.image ?? "")
                
     }
     
     
 }
 extension SectionSecondViewCell{
-    func fetchDataFromAPI(){
-        let musicViewModel = ColdplayApiModel()
-        musicViewModel.fetchData { [weak self] data in
-            if let data = data {
-                self?.data = data
-                DispatchQueue.main.async {
-                    self?.collectionSecondCell.reloadData()
-                }
-            }
+    func fetchDataFromCoreData() {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Music")
+        
+        do {
+            let result = try context.fetch(fetchRequest)
+           data = result as! [Music]
+          collectionSecondCell.reloadData()
+        } catch {
+            fatalError("Gagal mengambil data dari Core Data: \(error)")
         }
     }
 }

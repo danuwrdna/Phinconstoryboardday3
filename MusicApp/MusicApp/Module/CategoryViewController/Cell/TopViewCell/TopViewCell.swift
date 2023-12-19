@@ -1,13 +1,12 @@
 import UIKit
-
+import CoreData
 class TopViewCell: UITableViewCell {
-    var data: [Datum] = []
-    var apiModel = ColdplayApiModel()
+    var data: [Music] = []
     @IBOutlet weak var collectionTopViewCell: UICollectionView!
     override func awakeFromNib() {
         super.awakeFromNib()
         delegateCollection()
-        fetchDataFromAPI()
+        fetchDataFromCoreData()
     }
     
 }
@@ -24,8 +23,8 @@ extension TopViewCell: UICollectionViewDelegate, UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionTopViewCell.dequeueReusableCell(withReuseIdentifier: "TopCollection", for: indexPath) as! TopCollection// Replace YourCollectionViewCell with the actual name of your cell class
         let datum = data[indexPath.item]
-        cell.labelCollection?.text = datum.artist?.name?.rawValue
-        if let imageUrl = datum.album?.cover {
+        cell.labelCollection?.text = datum.subtitle
+        if let imageUrl = datum.image {
             let url = URL(string: imageUrl)
             cell.imgTop?.kf.setImage(with: url)
         } else {
@@ -38,15 +37,16 @@ extension TopViewCell: UICollectionViewDelegate, UICollectionViewDataSource{
     
 }
 extension TopViewCell{
-    func fetchDataFromAPI(){
-        let musicViewModel = ColdplayApiModel()
-        musicViewModel.fetchData { [weak self] data in
-            if let data = data {
-                self?.data = data
-                DispatchQueue.main.async {
-                    self?.collectionTopViewCell.reloadData()
-                }
-            }
+    func fetchDataFromCoreData() {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Music")
+        
+        do {
+            let result = try context.fetch(fetchRequest)
+           data = result as! [Music]
+          collectionTopViewCell.reloadData()
+        } catch {
+            fatalError("Gagal mengambil data dari Core Data: \(error)")
         }
     }
 }

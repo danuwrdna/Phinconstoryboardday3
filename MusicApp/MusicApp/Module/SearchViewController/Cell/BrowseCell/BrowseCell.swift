@@ -1,14 +1,13 @@
 import UIKit
-
+import CoreData
 class BrowseCell: UITableViewCell {
-    var data: [Datum] = []
-    var apiModel = ColdplayApiModel()
+    var data: [Music] = []
     var colorModel = ModelImgViewModel()
     @IBOutlet weak var collectionBrowse: UICollectionView!
     override func awakeFromNib() {
         super.awakeFromNib()
         delegateCollection()
-        fetchDataFromAPI()
+        fetchDataFromCoreData()
     }
 }
 extension BrowseCell: UICollectionViewDelegate, UICollectionViewDataSource{
@@ -18,16 +17,15 @@ extension BrowseCell: UICollectionViewDelegate, UICollectionViewDataSource{
         collectionBrowse.registerCellWithNib(BrowseCollection.self)
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        let rowCount = (data.count + 1) / 2
-        return rowCount * 2
+        return data.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionBrowse.dequeueReusableCell(withReuseIdentifier: "BrowseCollection", for: indexPath) as! BrowseCollection// Replace YourCollectionViewCell with the actual name of your cell class
         cell.modelImgViewModel = ModelImgViewModel()
         let datum = data[indexPath.item]
-        cell.labelBrowse?.text = datum.artist?.name?.rawValue
-        if let imageUrl = datum.album?.cover {
+        cell.labelBrowse?.text = datum.subtitle
+        if let imageUrl = datum.image {
             let url = URL(string: imageUrl)
             cell.imgBrowse?.kf.setImage(with: url)
         } else {
@@ -40,15 +38,16 @@ extension BrowseCell: UICollectionViewDelegate, UICollectionViewDataSource{
     
 }
 extension BrowseCell{
-    func fetchDataFromAPI(){
-        let musicViewModel = ColdplayApiModel()
-        musicViewModel.fetchData { [weak self] data in
-            if let data = data {
-                self?.data = data
-                DispatchQueue.main.async {
-                    self?.collectionBrowse.reloadData()
-                }
-            }
+    func fetchDataFromCoreData() {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Music")
+        
+        do {
+            let result = try context.fetch(fetchRequest)
+           data = result as! [Music]
+          collectionBrowse.reloadData()
+        } catch {
+            fatalError("Gagal mengambil data dari Core Data: \(error)")
         }
     }
 }

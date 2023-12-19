@@ -1,27 +1,25 @@
 import UIKit
-
+import CoreData
 class SectionFirstViewCell: UITableViewCell {
     @IBOutlet weak var sectionFirstViewCollection: UICollectionView!
-    var data: [Datum] = []
-    var apiModel = ColdplayApiModel()
+    var coreDataArray: [Music] = []
     override func awakeFromNib() {
         super.awakeFromNib()
         delegateCollection()
-        fetchDataFromAPI()
-        
+        fetchDataFromCoreData()
     }
-    
 }
 extension SectionFirstViewCell{
-    func fetchDataFromAPI(){
-        let musicViewModel = ColdplayApiModel()
-        musicViewModel.fetchData { [weak self] data in
-            if let data = data {
-                self?.data = data
-                DispatchQueue.main.async {
-                    self?.sectionFirstViewCollection.reloadData()
-                }
-            }
+    func fetchDataFromCoreData() {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Music")
+        
+        do {
+            let result = try context.fetch(fetchRequest)
+            coreDataArray = result as! [Music]
+            sectionFirstViewCollection.reloadData()
+        } catch {
+            fatalError("Gagal mengambil data dari Core Data: \(error)")
         }
     }
 }
@@ -33,14 +31,14 @@ extension SectionFirstViewCell: UICollectionViewDataSource, UICollectionViewDele
         
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return data.count
+        return coreDataArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = sectionFirstViewCollection.dequeueReusableCell(withReuseIdentifier: "SectionFirstViewCollection", for: indexPath) as! SectionFirstViewCollection// Replace YourCollectionViewCell with the actual name of your cell class
-        let datum = data[indexPath.item]
-        cell.textFirstLabel?.text = datum.artist?.name?.rawValue
-        if let imageUrl = datum.album?.cover {
+        let datum = coreDataArray[indexPath.item]
+        cell.textFirstLabel?.text = datum.subtitle
+        if let imageUrl = datum.image {
             let url = URL(string: imageUrl)
             cell.imgViewFirstCollection?.kf.setImage(with: url)
         } else {

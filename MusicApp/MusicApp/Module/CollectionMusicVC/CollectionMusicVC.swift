@@ -1,14 +1,14 @@
 import UIKit
 import CoreData
+import Kingfisher
 class CollectionMusicVC: UIViewController {
     private let refreshControl = UIRefreshControl()
+    var coreDataArray: [Music] = []
     @IBOutlet weak var tableCmView: UITableView!
     @IBOutlet weak var deleteBt: UIButton!
-    var coreDataArray: [Music] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         delegateTable()
-       
         tableCmView.allowsSelection = true
         refreshCoreaData()
         
@@ -40,15 +40,18 @@ extension CollectionMusicVC: UITableViewDelegate, UITableViewDataSource{
         cell.subLabelCollection?.text = datum.subtitle
         if let imageUrlString = datum.image,
            let imageUrl = URL(string: imageUrlString) {
-            cell.imageView?.kf.setImage(with: imageUrl)
+            cell.imgCollection?.kf.setImage(with: imageUrl)
         } else {
-            cell.imageView?.image = UIImage(named: "placeholderImage")
+            cell.imgCollection?.image = UIImage(named: "placeholderImage")
         }
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         deleteSelectedData()
        
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
     }
 }
 

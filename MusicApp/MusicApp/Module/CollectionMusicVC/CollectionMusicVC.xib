@@ -20,40 +20,27 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Music History" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7nA-ro-mza">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Music History" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7nA-ro-mza">
                     <rect key="frame" x="16" y="59" width="145" height="29"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="24"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7FI-RA-Xjw">
-                    <rect key="frame" x="282" y="63" width="20" height="20"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="">
-                        <backgroundConfiguration key="background" image="magnifyingglass" catalog="system"/>
-                    </buttonConfiguration>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MfH-c8-LDx">
-                    <rect key="frame" x="340" y="63" width="20" height="20"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="">
-                        <backgroundConfiguration key="background" image="plus" catalog="system"/>
-                    </buttonConfiguration>
-                </button>
-                <tableView clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="100" estimatedSectionHeaderHeight="-1" sectionFooterHeight="100" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="tdf-II-fhG">
+                <tableView clipsSubviews="YES" contentMode="scaleAspectFit" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="100" estimatedSectionHeaderHeight="-1" sectionFooterHeight="100" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="tdf-II-fhG">
                     <rect key="frame" x="16" y="124" width="361" height="728"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="728" id="Nqh-15-sEk"/>
+                        <constraint firstAttribute="width" constant="361" id="oOy-45-gX9"/>
+                    </constraints>
                     <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8aH-CU-ris">
-                    <rect key="frame" x="310" y="63" width="20" height="20"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8aH-CU-ris">
+                    <rect key="frame" x="357" y="63" width="20" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="GJJ-mC-zRQ"/>
+                        <constraint firstAttribute="width" constant="20" id="SAz-p5-nUD"/>
+                    </constraints>
                     <color key="tintColor" systemColor="systemRedColor"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="">
@@ -63,12 +50,21 @@
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="8aH-CU-ris" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="4" id="0Hk-vQ-rEG"/>
+                <constraint firstItem="8aH-CU-ris" firstAttribute="leading" secondItem="7nA-ro-mza" secondAttribute="trailing" constant="196" id="1jO-1e-xsD"/>
+                <constraint firstItem="tdf-II-fhG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="HKt-5m-IB4"/>
+                <constraint firstItem="tdf-II-fhG" firstAttribute="top" secondItem="7nA-ro-mza" secondAttribute="bottom" constant="36" id="IHI-A1-pGz"/>
+                <constraint firstItem="7nA-ro-mza" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Nqj-In-xeP"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="8aH-CU-ris" secondAttribute="trailing" constant="16" id="bDe-ng-exC"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="tdf-II-fhG" secondAttribute="trailing" constant="16" id="dbT-Tb-8QS"/>
+                <constraint firstItem="7nA-ro-mza" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="hLj-dN-p82"/>
+                <constraint firstItem="tdf-II-fhG" firstAttribute="top" secondItem="7nA-ro-mza" secondAttribute="bottom" constant="36" id="jow-aO-vSr"/>
+            </constraints>
             <point key="canvasLocation" x="20.610687022900763" y="19.718309859154932"/>
         </view>
     </objects>
     <resources>
-        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
-        <image name="plus" catalog="system" width="128" height="113"/>
         <image name="trash.fill" catalog="system" width="119" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

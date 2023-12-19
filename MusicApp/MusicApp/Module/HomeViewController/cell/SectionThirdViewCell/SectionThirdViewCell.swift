@@ -1,13 +1,12 @@
 import UIKit
-
+import CoreData
 class SectionThirdViewCell: UITableViewCell {
-    var data: [Datum] = []
-    var apiModel = ColdplayApiModel()
+    var data: [Music] = []
     @IBOutlet weak var collectionSectionThird: UICollectionView!
     override func awakeFromNib() {
         super.awakeFromNib()
         delegateCollection()
-        fetchDataFromAPI()
+        fetchDataFromCoreData()
        
     }
 }
@@ -24,8 +23,8 @@ extension SectionThirdViewCell: UICollectionViewDelegate, UICollectionViewDataSo
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionSectionThird.dequeueReusableCell(withReuseIdentifier: "SectionThirdViewCollection", for: indexPath) as! SectionThirdViewCollection// Replace YourCollectionViewCell with the actual name of your cell class
         let datum = data[indexPath.item]
-        cell.textLabelCollectionThird?.text = datum.artist?.name?.rawValue
-        if let imageUrl = datum.album?.cover {
+        cell.textLabelCollectionThird?.text = datum.title
+        if let imageUrl = datum.image {
             let url = URL(string: imageUrl)
             cell.imgCollectionThird?.kf.setImage(with: url)
         } else {
@@ -38,15 +37,16 @@ extension SectionThirdViewCell: UICollectionViewDelegate, UICollectionViewDataSo
     
 }
 extension SectionThirdViewCell{
-    func fetchDataFromAPI(){
-        let musicViewModel = ColdplayApiModel()
-        musicViewModel.fetchData { [weak self] data in
-            if let data = data {
-                self?.data = data
-                DispatchQueue.main.async {
-                    self?.collectionSectionThird.reloadData()
-                }
-            }
+    func fetchDataFromCoreData() {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Music")
+        
+        do {
+            let result = try context.fetch(fetchRequest)
+           data = result as! [Music]
+          collectionSectionThird.reloadData()
+        } catch {
+            fatalError("Gagal mengambil data dari Core Data: \(error)")
         }
     }
 }

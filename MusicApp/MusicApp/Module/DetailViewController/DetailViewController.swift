@@ -4,8 +4,8 @@ import Kingfisher
 
 class DetailViewController: UIViewController {
 //    var customPopupView: PlayedMusicViewController?
-    var model = ColdplayApiModel()
-    var modelDatum: [Datum] = []
+   
+    var modelDatum: [Music] = []
     @IBAction func btBack(_ sender: Any) {
         navigate()
     }
@@ -18,7 +18,7 @@ class DetailViewController: UIViewController {
         borderImgDetailView()
         delegateTable()
         setupUI()
-        fetchDataFromAPI()
+        
     }
     override func viewDidAppear(_ animated: Bool) {
         navigationController?.isNavigationBarHidden = true
@@ -37,9 +37,9 @@ extension DetailViewController: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableDetailView.dequeueReusableCell(withIdentifier: "DetailViewCell", for: indexPath) as! DetailViewCell// Replace YourCollectionViewCell with the actual name of your cell class
         let datum = modelDatum[indexPath.item]
-        cell.labelDetail?.text = datum.artist?.name?.rawValue
+        cell.labelDetail?.text = datum.title
         cell.subLabelDetail?.text = datum.title
-        if let imageUrl = datum.album?.cover {
+        if let imageUrl = datum.image {
             let url = URL(string: imageUrl)
             cell.imgDetail?.kf.setImage(with: url)
         } else {
@@ -71,17 +71,7 @@ extension DetailViewController{
     
 }
 extension DetailViewController{
-    func fetchDataFromAPI(){
-        let musicViewModel = ColdplayApiModel()
-        musicViewModel.fetchData { [weak self] data in
-            if let data = data {
-                self?.modelDatum = data
-                DispatchQueue.main.async {
-                    self?.tableDetailView.reloadData()
-                }
-            }
-        }
-    }
+    
 }
 extension DetailViewController {
     func borderImgDetailView(){

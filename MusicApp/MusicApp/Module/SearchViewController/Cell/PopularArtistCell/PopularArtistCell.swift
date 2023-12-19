@@ -1,13 +1,13 @@
 import UIKit
+import CoreData
 
 class PopularArtistCell: UITableViewCell {
-    var data: [Datum] = []
-    var apiModel = ColdplayApiModel()
+    var data: [Music] = []
     @IBOutlet weak var collectionPopularArtist: UICollectionView!
     override func awakeFromNib() {
         super.awakeFromNib()
         delegateCollection()
-        fetchDataFromAPI()
+        fetchDataFromCoreData()
     }    
 }
 extension PopularArtistCell: UICollectionViewDelegate, UICollectionViewDataSource{
@@ -25,8 +25,8 @@ extension PopularArtistCell: UICollectionViewDelegate, UICollectionViewDataSourc
         let cell = collectionPopularArtist.dequeueReusableCell(withReuseIdentifier: "PopularArtistCollection", for: indexPath) as! PopularArtistCollection
         cell.modelImgViewModel = ModelImgViewModel()
         let datum = data[indexPath.item]
-        cell.labelPopularArtist?.text = datum.artist?.name?.rawValue
-        if let imageUrl = datum.album?.cover {
+        cell.labelPopularArtist?.text = datum.subtitle
+        if let imageUrl = datum.image{
             let url = URL(string: imageUrl)
             cell.imgPopularArtist?.kf.setImage(with: url)
         } else {
@@ -39,15 +39,16 @@ extension PopularArtistCell: UICollectionViewDelegate, UICollectionViewDataSourc
     
 }
 extension PopularArtistCell{
-    func fetchDataFromAPI(){
-        let musicViewModel = ColdplayApiModel()
-        musicViewModel.fetchData { [weak self] data in
-            if let data = data {
-                self?.data = data
-                DispatchQueue.main.async {
-                    self?.collectionPopularArtist.reloadData()
-                }
-            }
+    func fetchDataFromCoreData() {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Music")
+        
+        do {
+            let result = try context.fetch(fetchRequest)
+           data = result as! [Music]
+         collectionPopularArtist.reloadData()
+        } catch {
+            fatalError("Gagal mengambil data dari Core Data: \(error)")
         }
     }
 }

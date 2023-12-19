@@ -2,17 +2,16 @@ import UIKit
 import AVFoundation
 import Kingfisher
 import CoreData
+
 class MusicViewController: UIViewController {
-    var model = ColdplayApiModel()
-    
+    var model = ApiSearchModel()
     var modelDatum: [Datum] = []
     var player: AVPlayer?
     var playerItem: AVPlayerItem?
     var timer: Timer?
     var isPlaying = false
     var playbackTime: Double = 0.0
-    //satu
-    
+   
     @IBOutlet weak var viewSearch: UIView!
     @IBOutlet weak var startLabel: UILabel!
     @IBOutlet weak var finishLabel: UILabel!
@@ -49,7 +48,7 @@ class MusicViewController: UIViewController {
         playPause()
         borderViewHome()
         borderImageAb()
-        viewModel()
+        
     }
     override func viewDidAppear(_ animated: Bool) {
         navigationController?.isNavigationBarHidden = true
@@ -58,10 +57,10 @@ class MusicViewController: UIViewController {
     
 }
 extension MusicViewController{
-    func viewModel(){
-        let musicViewModel = ColdplayApiModel()
-        musicViewModel.fetchData { [weak self] data in
-            if let data = data {
+    func viewModel(searchTerm: String) {
+        let musicViewModel = ApiSearchModel()
+        musicViewModel.fetchData(for: searchTerm) { [weak self] searchResult in
+            if let data = searchResult?.data {
                 self?.modelDatum = data
                 DispatchQueue.main.async {
                     self?.tableMusic.reloadData()
@@ -79,16 +78,12 @@ extension MusicViewController{
                 let title = data.value(forKey: "title") as? String ?? ""
                 let subtitle = data.value(forKey: "subtitle") as? String ?? ""
                 let image = data.value(forKey: "image") as? String ?? ""
-                
-                // Lakukan sesuatu dengan data yang diambil, misalnya tampilkan atau gunakan sesuai kebutuhan Anda
                 print("Title: \(title), Subtitle: \(subtitle), Image: \(image)")
             }
         } catch {
             fatalError("Gagal mengambil data dari Core Data: \(error)")
         }
     }
-    
-    
 }
 
 extension MusicViewController{
@@ -155,17 +150,15 @@ extension MusicViewController: UITableViewDelegate, UITableViewDataSource{
         configureCell(cell, at: indexPath)
         return cell
     }
-    
     func configureCell(_ cell: MusicTableViewCell, at indexPath: IndexPath) {
         let deezerTrack = modelDatum[indexPath.row]
-        cell.titleLabel?.text = deezerTrack.artist?.name?.rawValue
+        cell.titleLabel?.text = deezerTrack.artist?.name?.stringValue
         cell.subTitleLabel?.text = deezerTrack.title
         if let imageUrl = deezerTrack.album?.cover {
             let url = URL(string: imageUrl)
             cell.imgView?.kf.setImage(with: url)
         } else {
-            // Handle case when album cover URL is not available
-            cell.imgView?.image = UIImage(named: "placeholderImage") // You can use a placeholder image
+            cell.imgView?.image = UIImage(named: "placeholderImage")
         }
     }
     func updateCell(at indexPath: IndexPath) {
@@ -199,7 +192,7 @@ extension MusicViewController {
             
         }
         let selectedSound = modelDatum[selectedIndexPath.row]
-        headLabel.text = selectedSound.artist?.name?.rawValue
+        headLabel.text = selectedSound.artist?.displayName
         subHeadLabel.text = selectedSound.title
         if let coverURLString = selectedSound.album?.cover,
            let coverURL = URL(string: coverURLString) {
@@ -207,65 +200,44 @@ extension MusicViewController {
         } else {
             imgAB.image = UIImage(named: "placeholderImage")
         }
-        
-        
         if let player = player {
             if player.rate > 0 {
-                // Musik sedang diputar, jadi pause
-                saveMusicToCoreData(title: selectedSound.artist?.name?.rawValue, subtitle: selectedSound.title, image: selectedSound.album?.cover)
+                saveMusicToCoreData(title: selectedSound.artist?.displayName, subtitle: selectedSound.title, image: selectedSound.album?.cover)
                 print("Lagu sedang diputar, di-pause")
                 pauseMusic()
                 
             } else {
-                // Musik sedang di-pause, jadi putar
                 print("Lagu di-pause, dilanjutkan pemutaran")
                 resumeMusic()
-                
-                // Periksa apakah ada lagu yang dipilih
                 if let selectedIndexPath = tableMusic.indexPathForSelectedRow {
                     let selectedSound = modelDatum[selectedIndexPath.row]
-                    
                     if let selectedPreview = selectedSound.preview, !selectedPreview.isEmpty {
-                        // Ada URL preview, putar lagu baru
                         print("Memutar lagu baru")
                         playSnd(soundName: selectedPreview, startTime: playbackTime)
                         
                     } else {
-                        // URL preview tidak tersedia
                         print("URL preview tidak tersedia")
                     }
                 } else {
-                    // Tidak ada lagu yang dipilih
                     print("Tidak ada lagu yang dipilih")
                 }
             }
         } else {
-            // Player nil, inisialisasi dan putar lagu yang sedang dipilih
             print("Player nil, inisialisasi dan putar lagu yang sedang dipilih")
             resumeMusic()
-            
-            // Periksa apakah ada lagu yang dipilih
             if let selectedIndexPath = tableMusic.indexPathForSelectedRow {
                 let selectedSound = modelDatum[selectedIndexPath.row]
-                
                 if let selectedPreview = selectedSound.preview, !selectedPreview.isEmpty {
-                    // Ada URL preview, putar lagu baru
                     print("Memutar lagu baru")
                     playSnd(soundName: selectedPreview, startTime: playbackTime)
                 } else {
-                    // URL preview tidak tersedia
                     print("URL preview tidak tersedia")
                 }
             } else {
-                // Tidak ada lagu yang dipilih
                 print("Tidak ada lagu yang dipilih")
             }
         }
-        
-        // Setel status pemutaran
         isPlaying = player?.rate ?? 0 > 0
-        
-        // Reset state
         stateReset()
         
         
@@ -472,29 +444,21 @@ extension MusicViewController{
 extension MusicViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
-        
-        return true
-    }
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        guard let updatedText = (textField.text as NSString?)?.replacingCharacters(in: range, with: string) else {
-            return true
-        }
-        if updatedText.isEmpty {
-            displayAllData()
+        if let searchTerm = textField.text, !searchTerm.isEmpty {
+            performSearch(with: searchTerm)
         } else {
-            performSearch(with: updatedText)
+            displayAllData()
         }
         
         return true
     }
+    
     func displayAllData() {
-        let musicViewModel = ColdplayApiModel()
-        tableMusic.reloadData()
+        viewModel(searchTerm: "")
     }
     func performSearch(with searchTerm: String) {
-        let searchModel = ColdplayApiModel()
-        model.searchData(searchTerm: searchTerm) { [weak self] data in
-            if let data = data as? [Datum] {
+        model.fetchData(for: searchTerm) { [weak self] searchResult in
+            if let data = searchResult?.data {
                 self?.modelDatum = data
                 DispatchQueue.main.async {
                     self?.tableMusic.reloadData()
