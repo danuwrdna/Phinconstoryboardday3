@@ -10,7 +10,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CollectionMusicVC" customModule="MusicApp" customModuleProvider="target">
             <connections>
-                <outlet property="deleteBt" destination="8aH-CU-ris" id="qyw-DZ-Vb1"/>
                 <outlet property="tableCmView" destination="tdf-II-fhG" id="gOR-ah-3Ol"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -46,6 +45,9 @@
                     <buttonConfiguration key="configuration" style="plain" title="">
                         <backgroundConfiguration key="background" image="trash.fill" catalog="system"/>
                     </buttonConfiguration>
+                    <connections>
+                        <action selector="deleteBt:" destination="-1" eventType="touchUpInside" id="DPy-hw-DTH"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

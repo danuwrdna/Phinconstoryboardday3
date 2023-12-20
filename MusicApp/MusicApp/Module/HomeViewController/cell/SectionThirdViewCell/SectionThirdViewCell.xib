@@ -68,6 +68,8 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="collectionSectionThird" destination="338-B1-eKD" id="wdB-N2-hNb"/>
+                <outlet property="imgCollectionSectionThird" destination="As8-MW-X3v" id="ciK-De-TOZ"/>
+                <outlet property="labelArtistImgCollectionThird" destination="650-yR-RI0" id="lVf-Ui-teh"/>
             </connections>
             <point key="canvasLocation" x="51.145038167938928" y="115.49295774647888"/>
         </tableViewCell>

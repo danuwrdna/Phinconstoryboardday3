@@ -1,7 +1,11 @@
 import UIKit
 import CoreData
 class BrowseCell: UITableViewCell {
-    var data: [Music] = []
+    private var coreDataArray: [Music] = [] {
+        didSet {
+           collectionBrowse.reloadData()
+        }
+    }
     var colorModel = ModelImgViewModel()
     @IBOutlet weak var collectionBrowse: UICollectionView!
     override func awakeFromNib() {
@@ -17,13 +21,13 @@ extension BrowseCell: UICollectionViewDelegate, UICollectionViewDataSource{
         collectionBrowse.registerCellWithNib(BrowseCollection.self)
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return data.count
+        return coreDataArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionBrowse.dequeueReusableCell(withReuseIdentifier: "BrowseCollection", for: indexPath) as! BrowseCollection// Replace YourCollectionViewCell with the actual name of your cell class
         cell.modelImgViewModel = ModelImgViewModel()
-        let datum = data[indexPath.item]
+        let datum = coreDataArray[indexPath.item]
         cell.labelBrowse?.text = datum.subtitle
         if let imageUrl = datum.image {
             let url = URL(string: imageUrl)
@@ -44,10 +48,15 @@ extension BrowseCell{
         
         do {
             let result = try context.fetch(fetchRequest)
-           data = result as! [Music]
+          coreDataArray = result as! [Music]
           collectionBrowse.reloadData()
         } catch {
             fatalError("Gagal mengambil data dari Core Data: \(error)")
         }
+    }
+}
+extension BrowseCell{
+    internal func passData(data: [Music]) {
+        self.coreDataArray = data
     }
 }

@@ -1,12 +1,20 @@
 import UIKit
 import CoreData
 class SectionThirdViewCell: UITableViewCell {
-    var data: [Music] = []
+    private var coreDataArray: [Music] = [] {
+        didSet {
+            collectionSectionThird.reloadData()
+            coreDataHead()
+        }
+    }
     @IBOutlet weak var collectionSectionThird: UICollectionView!
+    @IBOutlet weak var imgCollectionSectionThird: UIImageView!
+    @IBOutlet weak var labelArtistImgCollectionThird: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         delegateCollection()
-        fetchDataFromCoreData()
+        coreDataHead()
+        border()
        
     }
 }
@@ -17,13 +25,13 @@ extension SectionThirdViewCell: UICollectionViewDelegate, UICollectionViewDataSo
         collectionSectionThird.registerCellWithNib(SectionThirdViewCollection.self)
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return data.count
+        return coreDataArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionSectionThird.dequeueReusableCell(withReuseIdentifier: "SectionThirdViewCollection", for: indexPath) as! SectionThirdViewCollection// Replace YourCollectionViewCell with the actual name of your cell class
-        let datum = data[indexPath.item]
-        cell.textLabelCollectionThird?.text = datum.title
+        let datum = coreDataArray[indexPath.item]
+        cell.textLabelCollectionThird?.text = datum.subtitle
         if let imageUrl = datum.image {
             let url = URL(string: imageUrl)
             cell.imgCollectionThird?.kf.setImage(with: url)
@@ -37,16 +45,27 @@ extension SectionThirdViewCell: UICollectionViewDelegate, UICollectionViewDataSo
     
 }
 extension SectionThirdViewCell{
-    func fetchDataFromCoreData() {
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Music")
-        
-        do {
-            let result = try context.fetch(fetchRequest)
-           data = result as! [Music]
-          collectionSectionThird.reloadData()
-        } catch {
-            fatalError("Gagal mengambil data dari Core Data: \(error)")
+}
+extension SectionThirdViewCell{
+    func coreDataHead(){
+        if let firstMusicItem = coreDataArray.first{
+            labelArtistImgCollectionThird.text = firstMusicItem.title
+            
+            if let imageUrl = firstMusicItem.image {
+                let url = URL(string: imageUrl)
+                imgCollectionSectionThird.kf.setImage(with: url)
+            } else {
+                // Handle case when image URL is not available
+                imgCollectionSectionThird.image = UIImage(named: "placeholderImage")
+            }
         }
+    }
+    func border(){
+        imgCollectionSectionThird.layer.cornerRadius = 16
+    }
+}
+extension SectionThirdViewCell{
+    internal func passData(data: [Music]) {
+        self.coreDataArray = data
     }
 }

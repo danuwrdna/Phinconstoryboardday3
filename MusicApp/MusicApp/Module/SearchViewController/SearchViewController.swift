@@ -1,16 +1,24 @@
 import UIKit
-
+import CoreData
 class SearchViewController: UIViewController{
-
+    var data: [Music] = []
     @IBOutlet weak var tablePageSrchView: UITableView!
     @IBAction func btSearch(_ sender: Any) {
         navigate()
+    }
+    
+    @IBAction func btCamera(_ sender: Any) {
+        forBtCamera()
     }
     @IBOutlet weak var imgSearch: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         delegateTable()
         border()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        fetchDataFromCoreData()
     }
 }
 extension SearchViewController: UITableViewDelegate, UITableViewDataSource{
@@ -33,13 +41,15 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource{
         case 0:
             let topGenre = tableView.dequeueReusableCell(forIndexPath: indexPath) as TopGenresTableCell
             topGenre.delegate = self
+            topGenre.passData(data: data)
             return topGenre
         case 1:
             let popularArtist = tableView.dequeueReusableCell(forIndexPath: indexPath) as PopularArtistCell
-           
+            popularArtist.passData(data: data)
             return popularArtist
         case 2:
             let browse = tableView.dequeueReusableCell(forIndexPath: indexPath) as BrowseCell
+            browse.passData(data: data)
             return browse
         default:
             return UITableViewCell()
@@ -57,7 +67,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource{
             return 100
         }
     }
-
+    
     
 }
 extension SearchViewController: TopTableCell {
@@ -78,5 +88,33 @@ extension SearchViewController{
         let bt = MusicViewController()
         navigationItem.hidesBackButton = true
         navigationController?.pushViewController(bt, animated: true)
+    }
+}
+extension SearchViewController: UIImagePickerControllerDelegate,UINavigationControllerDelegate{
+    func forBtCamera(){
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.sourceType = .camera
+            imagePicker.allowsEditing = true
+            present(imagePicker, animated: true, completion: nil)
+        } else {
+            print("Camera not available")
+        }
+    }
+}
+extension SearchViewController{
+    func fetchDataFromCoreData() {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Music")
+        
+        do {
+            let result = try context.fetch(fetchRequest)
+            data = result as! [Music]
+            tablePageSrchView.reloadData()
+        } catch {
+            fatalError("Gagal mengambil data dari Core Data: \(error)")
+        }
+        
     }
 }

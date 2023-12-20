@@ -2,26 +2,19 @@ import UIKit
 import CoreData
 class SectionFirstViewCell: UITableViewCell {
     @IBOutlet weak var sectionFirstViewCollection: UICollectionView!
-    var coreDataArray: [Music] = []
+    private var coreDataArray: [Music] = [] {
+        didSet {
+            sectionFirstViewCollection.reloadData()
+        }
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         delegateCollection()
-        fetchDataFromCoreData()
+        
     }
 }
 extension SectionFirstViewCell{
-    func fetchDataFromCoreData() {
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Music")
-        
-        do {
-            let result = try context.fetch(fetchRequest)
-            coreDataArray = result as! [Music]
-            sectionFirstViewCollection.reloadData()
-        } catch {
-            fatalError("Gagal mengambil data dari Core Data: \(error)")
-        }
-    }
+
 }
 extension SectionFirstViewCell: UICollectionViewDataSource, UICollectionViewDelegate{
     func delegateCollection(){
@@ -37,7 +30,7 @@ extension SectionFirstViewCell: UICollectionViewDataSource, UICollectionViewDele
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = sectionFirstViewCollection.dequeueReusableCell(withReuseIdentifier: "SectionFirstViewCollection", for: indexPath) as! SectionFirstViewCollection// Replace YourCollectionViewCell with the actual name of your cell class
         let datum = coreDataArray[indexPath.item]
-        cell.textFirstLabel?.text = datum.subtitle
+        cell.textFirstLabel?.text = datum.title
         if let imageUrl = datum.image {
             let url = URL(string: imageUrl)
             cell.imgViewFirstCollection?.kf.setImage(with: url)
@@ -49,6 +42,12 @@ extension SectionFirstViewCell: UICollectionViewDataSource, UICollectionViewDele
     }
     
 }
+extension SectionFirstViewCell {
+    internal func passData(data: [Music]) {
+        self.coreDataArray = data
+    }
+}
+
 //extension SectionFirstViewCell{
 //    func layout(){
 //        let layout = UICollectionViewFlowLayout()

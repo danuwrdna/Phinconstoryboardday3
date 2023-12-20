@@ -4,13 +4,16 @@ protocol TopTableCell {
     func didSelectItemAt(text: String)
 }
 class TopGenresTableCell: UITableViewCell {
-    var data: [Music] = []
+    private var coreDataArray: [Music] = [] {
+        didSet {
+            topGenreCollectionCell.reloadData()
+        }
+    }
     var delegate: TopTableCell?
     @IBOutlet weak var topGenreCollectionCell: UICollectionView!
     override func awakeFromNib() {
         super.awakeFromNib()
         delegateCollection()
-        fetchDataFromCoreData()
     }    
 }
 extension TopGenresTableCell: UICollectionViewDelegate,UICollectionViewDataSource{
@@ -20,13 +23,13 @@ extension TopGenresTableCell: UICollectionViewDelegate,UICollectionViewDataSourc
         topGenreCollectionCell.registerCellWithNib(TopGenresCollection.self)
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return data.count
+        return coreDataArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = topGenreCollectionCell.dequeueReusableCell(withReuseIdentifier: "TopGenresCollection", for: indexPath) as! TopGenresCollection
         cell.modelImgViewModel = ModelImgViewModel()
-        let datum = data[indexPath.item]
+        let datum = coreDataArray[indexPath.item]
         cell.labelTextTopGenre?.text = datum.subtitle
         if let imageUrl = datum.image {
             let url = URL(string: imageUrl)
@@ -38,23 +41,14 @@ extension TopGenresTableCell: UICollectionViewDelegate,UICollectionViewDataSourc
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let selectedDatum = data[indexPath.item]
+        let selectedDatum = coreDataArray[indexPath.item]
         delegate?.didSelectItemAt(text: selectedDatum.subtitle ?? "")
     }
     
     
 }
 extension TopGenresTableCell{
-    func fetchDataFromCoreData() {
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Music")
-        
-        do {
-            let result = try context.fetch(fetchRequest)
-           data = result as! [Music]
-          topGenreCollectionCell.reloadData()
-        } catch {
-            fatalError("Gagal mengambil data dari Core Data: \(error)")
-        }
+    internal func passData(data: [Music]) {
+        self.coreDataArray = data
     }
 }

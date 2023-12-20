@@ -5,7 +5,9 @@ class CollectionMusicVC: UIViewController {
     private let refreshControl = UIRefreshControl()
     var coreDataArray: [Music] = []
     @IBOutlet weak var tableCmView: UITableView!
-    @IBOutlet weak var deleteBt: UIButton!
+    @IBAction func deleteBt(_ sender: Any) {
+        deleteAllData()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         delegateTable()
@@ -15,7 +17,6 @@ class CollectionMusicVC: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         fetchDataFromCoreData()
         UIView.animate(withDuration: 5) {
                self.view.alpha = 5.0
@@ -87,6 +88,21 @@ extension CollectionMusicVC{
             fatalError("Failed to delete data from Core Data: \(error)")
         }
     }
+    func deleteAllData() {
+           let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+
+           for data in coreDataArray {
+               context.delete(data)
+           }
+
+           do {
+               try context.save()
+               coreDataArray.removeAll()
+               tableCmView.reloadData()
+           } catch {
+               fatalError("Failed to delete all data from Core Data: \(error)")
+           }
+       }
 }
 extension CollectionMusicVC{
     func refreshCoreaData(){

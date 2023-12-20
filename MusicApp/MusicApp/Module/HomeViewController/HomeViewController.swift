@@ -1,12 +1,19 @@
 import UIKit
-
+import CoreData
 class HomeViewController: UIViewController {
-    
+    //var section = SectionFirstViewCell()
+    var data: [Music] = []
     @IBOutlet weak var homeTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         delegateTable()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        fetchDataFromCoreData()
+        
+    }
+    
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
@@ -30,16 +37,20 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
         switch indexPath.section {
         case 0:
             let first = tableView.dequeueReusableCell(forIndexPath: indexPath) as SectionFirstViewCell
+            first.passData(data: data)
             return first
         case 1:
             let second = tableView.dequeueReusableCell(forIndexPath: indexPath) as SectionSecondViewCell
+            second.passData(data: data)
             second.delegate = self
             return second
         case 2:
             let third = tableView.dequeueReusableCell(forIndexPath: indexPath) as SectionThirdViewCell
+            third.passData(data: data)
             return third
         case 3:
             let four = tableView.dequeueReusableCell(forIndexPath: indexPath) as SectionFourViewCell
+            four.passData(data: data)
             return four
         default:
             return UITableViewCell()
@@ -61,6 +72,21 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     
+}
+extension HomeViewController{
+    func fetchDataFromCoreData() {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Music")
+        
+        do {
+            let result = try context.fetch(fetchRequest)
+           data = result as! [Music]
+            homeTableView.reloadData()
+        } catch {
+            fatalError("Gagal mengambil data dari Core Data: \(error)")
+        }
+        
+    }
 }
 
 extension HomeViewController: SectionSecondViewCellDelegate {

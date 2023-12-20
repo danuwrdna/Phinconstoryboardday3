@@ -2,10 +2,12 @@ import UIKit
 import AVFoundation
 import Kingfisher
 import CoreData
+import SkeletonView
 
 class MusicViewController: UIViewController {
     var model = ApiSearchModel()
     var modelDatum: [Datum] = []
+    var modelPlaylist: [Music] = []
     var player: AVPlayer?
     var playerItem: AVPlayerItem?
     var timer: Timer?
@@ -171,6 +173,19 @@ extension MusicViewController: UITableViewDelegate, UITableViewDataSource{
         playy()
     }
 }
+extension MusicViewController: SkeletonTableViewDelegate{
+    func numSections(in collectionSkeletonView: UITableView) -> Int {
+            return 1
+        }
+
+        func collectionSkeletonView(_ skeletonView: UITableView, numberOfRowsInSection section: Int) -> Int {
+            return 5
+        }
+
+        func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier {
+            return "MusicTableViewCell"
+        }
+}
 
 extension MusicViewController {
     func playPause(){
@@ -192,7 +207,7 @@ extension MusicViewController {
             
         }
         let selectedSound = modelDatum[selectedIndexPath.row]
-        headLabel.text = selectedSound.artist?.displayName
+        headLabel.text = selectedSound.artist?.name?.stringValue
         subHeadLabel.text = selectedSound.title
         if let coverURLString = selectedSound.album?.cover,
            let coverURL = URL(string: coverURLString) {
@@ -202,7 +217,7 @@ extension MusicViewController {
         }
         if let player = player {
             if player.rate > 0 {
-                saveMusicToCoreData(title: selectedSound.artist?.displayName, subtitle: selectedSound.title, image: selectedSound.album?.cover)
+                saveMusicToCoreData(title: selectedSound.artist?.name?.stringValue, subtitle: selectedSound.title, image: selectedSound.album?.cover)
                 print("Lagu sedang diputar, di-pause")
                 pauseMusic()
                 
@@ -454,13 +469,15 @@ extension MusicViewController: UITextFieldDelegate {
     }
     
     func displayAllData() {
-        viewModel(searchTerm: "")
+        
     }
     func performSearch(with searchTerm: String) {
+        tableMusic.showSkeleton()
         model.fetchData(for: searchTerm) { [weak self] searchResult in
             if let data = searchResult?.data {
                 self?.modelDatum = data
                 DispatchQueue.main.async {
+                    self?.tableMusic.hideSkeleton()
                     self?.tableMusic.reloadData()
                 }
             }

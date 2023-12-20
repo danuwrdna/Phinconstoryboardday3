@@ -12,6 +12,7 @@ target 'MusicApp' do
   pod 'lottie-ios'
   pod 'Alamofire'
   pod 'netfox'
+  pod 'SkeletonView'
   # Pods for MusicApp
 
   # pod 'Alamofie'
