@@ -15,7 +15,6 @@
                 <outlet property="imgAB" destination="9Tl-ck-bEr" id="SaT-tw-z5q"/>
                 <outlet property="playPauseButton" destination="uA1-iJ-y0D" id="dDJ-kd-Pfs"/>
                 <outlet property="progressBar" destination="oaz-Ob-DEq" id="S15-yB-SDY"/>
-                <outlet property="searchBT" destination="O44-Hs-rvG" id="ewi-PI-ckd"/>
                 <outlet property="searchField" destination="pZd-y2-4aH" id="DEI-7Z-398"/>
                 <outlet property="startLabel" destination="jpB-DM-0Tf" id="nci-jp-3yz"/>
                 <outlet property="subHeadLabel" destination="7eX-nQ-Sh9" id="KyH-AP-oTj"/>
@@ -31,7 +30,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" indicatorStyle="white" bouncesZoom="NO" style="plain" separatorStyle="default" rowHeight="150" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="csE-rQ-HON">
-                    <rect key="frame" x="0.0" y="116" width="393" height="473"/>
+                    <rect key="frame" x="0.0" y="116" width="393" height="736"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -154,10 +153,10 @@
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" title="">
-                                <backgroundConfiguration key="background" image="magnifyingglass" catalog="system"/>
+                                <backgroundConfiguration key="background" image="camera" catalog="system"/>
                             </buttonConfiguration>
                             <connections>
-                                <action selector="searchBT:" destination="-1" eventType="touchUpInside" id="L8V-TF-cAy"/>
+                                <action selector="btCamera:" destination="-1" eventType="touchUpInside" id="rL7-IS-ikT"/>
                             </connections>
                         </button>
                     </subviews>
@@ -171,7 +170,7 @@
     </objects>
     <resources>
         <image name="arrowshape.turn.up.backward.circle" catalog="system" width="128" height="123"/>
-        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <image name="camera" catalog="system" width="128" height="93"/>
         <image name="skip-back" width="99" height="96"/>
         <image name="skip-forward-2" width="100" height="96"/>
         <systemColor name="systemBackgroundColor">

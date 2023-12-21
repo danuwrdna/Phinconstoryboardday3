@@ -5,15 +5,9 @@ import CoreData
 import SkeletonView
 
 class MusicViewController: UIViewController {
-    var model = ApiSearchModel()
-    var modelDatum: [Datum] = []
-    var modelPlaylist: [Music] = []
-    var player: AVPlayer?
-    var playerItem: AVPlayerItem?
-    var timer: Timer?
-    var isPlaying = false
-    var playbackTime: Double = 0.0
-   
+    private var subTitle = ""
+    private var artist = ""
+    var musicViewModel: LogicMusicViewModel!
     @IBOutlet weak var viewSearch: UIView!
     @IBOutlet weak var startLabel: UILabel!
     @IBOutlet weak var finishLabel: UILabel!
@@ -24,7 +18,10 @@ class MusicViewController: UIViewController {
     @IBOutlet weak var searchField: UITextField!
     @IBOutlet weak var progressBar: UIProgressView!
     @IBOutlet weak var tableMusic: UITableView!
-    @IBOutlet weak var searchBT: UIButton!
+    @IBOutlet weak var viewHome: UIView!
+    @IBAction func btCamera(_ sender: Any) {
+        forBtCamera()
+    }
     @IBAction func nextButton(_ sender: UIButton) {
         nextBT()
     }
@@ -39,400 +36,80 @@ class MusicViewController: UIViewController {
     @IBAction func backBT(_ sender: Any) {
         btBack()
     }
-    @IBOutlet weak var viewHome: UIView!
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.hidesBackButton = true
         searchField.delegate = self
+       setupFetchPassingData()
         delegateTable()
         viewSrch()
         progress()
         playPause()
         borderViewHome()
         borderImageAb()
-        
+        setupTextField()
+       
     }
     override func viewDidAppear(_ animated: Bool) {
         navigationController?.isNavigationBarHidden = true
         searchField.becomeFirstResponder()
     }
-    
-}
-extension MusicViewController{
-    func viewModel(searchTerm: String) {
-        let musicViewModel = ApiSearchModel()
-        musicViewModel.fetchData(for: searchTerm) { [weak self] searchResult in
-            if let data = searchResult?.data {
-                self?.modelDatum = data
-                DispatchQueue.main.async {
-                    self?.tableMusic.reloadData()
-                }
-            }
-        }
-        fetchDataFromCoreData()
-    }
-    func fetchDataFromCoreData() {
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext;     let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Music")
-        
-        do {
-            let result = try context.fetch(fetchRequest)
-            for data in result as! [NSManagedObject] {
-                let title = data.value(forKey: "title") as? String ?? ""
-                let subtitle = data.value(forKey: "subtitle") as? String ?? ""
-                let image = data.value(forKey: "image") as? String ?? ""
-                print("Title: \(title), Subtitle: \(subtitle), Image: \(image)")
-            }
-        } catch {
-            fatalError("Gagal mengambil data dari Core Data: \(error)")
-        }
-    }
-}
-
-extension MusicViewController{
-    func progress(){
-        let gestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(handlePanGesture(_:)))
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTapGesture(_:)))
-        progressBar.progress = 0.0
-        progressBar.addGestureRecognizer(tapGestureRecognizer)
-        progressBar.addGestureRecognizer(gestureRecognizer)
-    }
-    @objc func handlePanGesture(_ sender: UIPanGestureRecognizer) {
-        guard let player = player else { return }
-        switch sender.state {
-        case .began:
-            break
-        case .changed:
-            handlePanChanged(sender, player: player)
-        case .ended:
-            break
-        default:
-            break
-        }
-    }
-    @objc func handleTapGesture(_ sender: UITapGestureRecognizer) {
-        guard let player = player else { return }
-        let location = sender.location(in: progressBar)
-        let progressBarWidth = progressBar.bounds.width
-        let percentage = Float(location.x / progressBarWidth)
-        let duration = player.currentItem?.asset.duration.seconds ?? 1.0
-        let newTime = max(0, min(Double(percentage) * duration, duration))
-        player.seek(to: CMTime(seconds: newTime, preferredTimescale: 1000))
-        progressBar.progress = Float(newTime / duration)
-        startLabel.text = formattedTime(time: newTime)
-    }
-    
-    func handlePanChanged(_ sender: UIPanGestureRecognizer, player: AVPlayer) {
-        let translation = sender.translation(in: progressBar)
-        let progressBarWidth = progressBar.bounds.width
-        let percentage = Float(translation.x / progressBarWidth)
-        let currentTime = player.currentTime().seconds
-        let duration = player.currentItem?.asset.duration.seconds ?? 1.0
-        let newTime = max(0, min(currentTime + Double(percentage) * duration, duration))
-        player.seek(to: CMTime(seconds: newTime, preferredTimescale: 1000))
-        progressBar.progress = Float(newTime / duration)
-        startLabel.text = formattedTime(time: newTime)
-    }
-    
 }
 extension MusicViewController: UITableViewDelegate, UITableViewDataSource{
+    
     func delegateTable(){
         tableMusic.delegate = self
         tableMusic.dataSource = self
         tableMusic.register(UINib(nibName: "MusicTableViewCell", bundle: nil), forCellReuseIdentifier: "MusicTableViewCell")
     }
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Listen Your Way"
+        return musicViewModel.sectionIndexTitles[section]
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return modelDatum.count
+        return musicViewModel.numberOfRows(in: section)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableMusic.dequeueReusableCell(withIdentifier: "MusicTableViewCell", for: indexPath) as! MusicTableViewCell
-        configureCell(cell, at: indexPath)
+        musicViewModel.configureCell(cell, at: indexPath)
         return cell
     }
-    func configureCell(_ cell: MusicTableViewCell, at indexPath: IndexPath) {
-        let deezerTrack = modelDatum[indexPath.row]
-        cell.titleLabel?.text = deezerTrack.artist?.name?.stringValue
-        cell.subTitleLabel?.text = deezerTrack.title
-        if let imageUrl = deezerTrack.album?.cover {
-            let url = URL(string: imageUrl)
-            cell.imgView?.kf.setImage(with: url)
-        } else {
-            cell.imgView?.image = UIImage(named: "placeholderImage")
-        }
-    }
-    func updateCell(at indexPath: IndexPath) {
-        if let cell = tableMusic.cellForRow(at: indexPath) as? MusicTableViewCell {
-            configureCell(cell, at: indexPath)
-        }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        playPause()
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        playy()
-    }
 }
 extension MusicViewController: SkeletonTableViewDelegate{
     func numSections(in collectionSkeletonView: UITableView) -> Int {
-            return 1
-        }
-
-        func collectionSkeletonView(_ skeletonView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return 5
-        }
-
-        func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier {
-            return "MusicTableViewCell"
-        }
-}
-
-extension MusicViewController {
-    func playPause(){
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(imageTapped))
-        playPauseButton.addGestureRecognizer(tapGesture)
-        playPauseButton.isUserInteractionEnabled = true
-        
-        let defaultImage = UIImage(systemName: isPlaying ? "pause.fill" : "play.fill")
-        playPauseButton.setImage(defaultImage, for: .normal)
-    }
-    @objc func imageTapped() {
-        playy()
-    }
-    func playy() {
-        print("play sudah terpanggil")
-        
-        guard let selectedIndexPath = tableMusic.indexPathForSelectedRow else {
-            return
-            
-        }
-        let selectedSound = modelDatum[selectedIndexPath.row]
-        headLabel.text = selectedSound.artist?.name?.stringValue
-        subHeadLabel.text = selectedSound.title
-        if let coverURLString = selectedSound.album?.cover,
-           let coverURL = URL(string: coverURLString) {
-            imgAB.kf.setImage(with: coverURL)
-        } else {
-            imgAB.image = UIImage(named: "placeholderImage")
-        }
-        if let player = player {
-            if player.rate > 0 {
-                saveMusicToCoreData(title: selectedSound.artist?.name?.stringValue, subtitle: selectedSound.title, image: selectedSound.album?.cover)
-                print("Lagu sedang diputar, di-pause")
-                pauseMusic()
-                
-            } else {
-                print("Lagu di-pause, dilanjutkan pemutaran")
-                resumeMusic()
-                if let selectedIndexPath = tableMusic.indexPathForSelectedRow {
-                    let selectedSound = modelDatum[selectedIndexPath.row]
-                    if let selectedPreview = selectedSound.preview, !selectedPreview.isEmpty {
-                        print("Memutar lagu baru")
-                        playSnd(soundName: selectedPreview, startTime: playbackTime)
-                        
-                    } else {
-                        print("URL preview tidak tersedia")
-                    }
-                } else {
-                    print("Tidak ada lagu yang dipilih")
-                }
-            }
-        } else {
-            print("Player nil, inisialisasi dan putar lagu yang sedang dipilih")
-            resumeMusic()
-            if let selectedIndexPath = tableMusic.indexPathForSelectedRow {
-                let selectedSound = modelDatum[selectedIndexPath.row]
-                if let selectedPreview = selectedSound.preview, !selectedPreview.isEmpty {
-                    print("Memutar lagu baru")
-                    playSnd(soundName: selectedPreview, startTime: playbackTime)
-                } else {
-                    print("URL preview tidak tersedia")
-                }
-            } else {
-                print("Tidak ada lagu yang dipilih")
-            }
-        }
-        isPlaying = player?.rate ?? 0 > 0
-        stateReset()
-        
-        
-    }
-    func saveMusicToCoreData(title: String?, subtitle: String?, image: String?) {
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        let entity = NSEntityDescription.entity(forEntityName: "Music", in: context)
-        let music = NSManagedObject(entity: entity!, insertInto: context)
-        
-        music.setValue(title, forKey: "title")
-        music.setValue(subtitle, forKey: "subtitle")
-        music.setValue(image, forKey: "image")
-        
-        do {
-            try context.save()
-            print("Data berhasil disimpan di Core Data.")
-        } catch {
-            fatalError("Gagal menyimpan data ke Core Data: \(error)")
-        }
+        return 1
     }
     
-    
-    func playMusic() {
-        player?.play()
-        setPlayPauseImage(isPlaying: true)
-        startTimer()
+    func collectionSkeletonView(_ skeletonView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
     }
     
-    func pauseMusic() {
-        player?.pause()
-        setPlayPauseImage(isPlaying: false)
-        resetTimer()
-        savePlaybackTime()
-    }
-    func resumeMusic() {
-        isPlaying = true
-        setPlayPauseImage(isPlaying: true)
-    }
-    
-    func savePlaybackTime() {
-        if let player = player {
-            playbackTime = player.currentTime().seconds
-        }
-    }
-    
-    func setPlayPauseImage(isPlaying: Bool) {
-        print("pause sudah di panggil")
-        let imageName = isPlaying ? "pause.fill" : "play.fill"
-        let image = UIImage(systemName: imageName)
-        playPauseButton.setImage(image, for: .normal)
-    }
-    
-    func playSnd(soundName: String, startTime: Double) {
-        guard let url = URL(string: soundName) else {
-            print("Invalid URL.")
-            return
-        }
-        playerItem = AVPlayerItem(url: url)
-        player = AVPlayer(playerItem: playerItem)
-        player?.seek(to: CMTime(seconds: startTime, preferredTimescale: 1000))
-        playerItem?.addObserver(self, forKeyPath: #keyPath(AVPlayerItem.status), options: [.new], context: nil)
-        player?.play()
-        startTimer()
-    }
-    
-    func startTimer() {
-        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateProgress), userInfo: nil, repeats: true)
-    }
-    
-    @objc func updateProgress() {
-        guard let player = player else { return }
-        let currentTime = player.currentTime().seconds
-        let duration = player.currentItem?.asset.duration.seconds ?? 1.0
-        let progress = Float(currentTime / duration)
-        progressBar.progress = progress
-        startLabel.text = formattedTime(time: currentTime)
-        if progress >= 1.0 {
-            resetTimer()
-        }
-    }
-    
-    func resetTimer() {
-        timer?.invalidate()
-        timer = nil
-        progressBar.progress = 0.0
-        
-    }
-    func stateReset() {
-        guard let selectedIndexPath = tableMusic.indexPathForSelectedRow else {
-            playbackTime = 0.0
-            return
-        }
-        
-        let selectedSound = modelDatum[selectedIndexPath.row]
-        
-        if let player = player, let playerItem = player.currentItem {
-            if let currentSoundURL = (playerItem.asset as? AVURLAsset)?.url {
-                let selectedPreviewURLString = selectedSound.preview ?? ""
-                
-                if let selectedPreviewURL = URL(string: selectedPreviewURLString) {
-                    if selectedPreviewURL == currentSoundURL {
-                        // Jika trek yang dipilih sama dengan yang sedang diputar, gunakan waktu saat ini
-                        playbackTime = player.currentTime().seconds
-                    } else {
-                        // Jika trek yang dipilih berbeda, atur waktu putar ulang ke 0.0
-                        playbackTime = 0.0
-                    }
-                }
-            } else {
-                // Jika tidak ada trek yang diputar, atur waktu putar ulang ke 0.0
-                playbackTime = 0.0
-            }
-        }
-    }
-    
-    func formattedTime(time: Double) -> String {
-        let minutes = Int(time) / 60
-        let seconds = Int(time) % 60
-        return String(format: "%02d:%02d", minutes, seconds)
-    }
-    
-    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-        if keyPath == #keyPath(AVPlayerItem.status) {
-            if let statusNumber = change?[.newKey] as? NSNumber {
-                let status = AVPlayerItem.Status(rawValue: statusNumber.intValue)
-                switch status {
-                case .readyToPlay:
-                    print("AVPlayerItem ready to play")
-                case .failed:
-                    print("AVPlayerItem failed to load")
-                case .unknown:
-                    print("AVPlayerItem status unknown")
-                @unknown default:
-                    print("Unknown AVPlayerItem status")
-                }
-            }
-        }
-        else if keyPath == #keyPath(AVPlayerItem.duration) {
-            if let duration = playerItem?.asset.duration.seconds, duration.isFinite {
-                finishLabel.text = formattedTime(time: duration)
-            }
-        }
-        
+    func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier {
+        return "MusicTableViewCell"
     }
 }
 extension MusicViewController{
-    func nextBT() {
-        guard let selectedIndexPath = tableMusic.indexPathForSelectedRow else {
-            return
-        }
-        
-        var newIndexPath: IndexPath
-        if selectedIndexPath.row < modelDatum.count - 1 {
-            newIndexPath = IndexPath(row: selectedIndexPath.row + 1, section: selectedIndexPath.section)
-        } else {
-            newIndexPath = IndexPath(row: 0, section: selectedIndexPath.section)
-        }
-        
-        tableMusic.selectRow(at: newIndexPath, animated: true, scrollPosition: .none)
-        tableView(tableMusic, didSelectRowAt: newIndexPath)
+    func progress(){
+        musicViewModel.progress()
     }
-    
-    func previousBT() {
-        guard let selectedIndexPath = tableMusic.indexPathForSelectedRow else {
-            return
-        }
-        
-        var newIndexPath: IndexPath
-        if selectedIndexPath.row > 0 {
-            newIndexPath = IndexPath(row: selectedIndexPath.row - 1, section: selectedIndexPath.section)
-        } else {
-            newIndexPath = IndexPath(row: modelDatum.count - 1, section: selectedIndexPath.section)
-        }
-        
-        tableMusic.selectRow(at: newIndexPath, animated: true, scrollPosition: .none)
-        tableView(tableMusic, didSelectRowAt: newIndexPath)
-    }
-    
 }
-
+extension MusicViewController {
+    func playPause(){
+        musicViewModel.playPause()
+        musicViewModel.playy()
+    }
+    func nextBT(){
+        musicViewModel.nextBT()
+    }
+    func previousBT(){
+        musicViewModel.previousBT()
+    }
+}
 extension MusicViewController{
     func borderViewHome(){
         viewHome.layer.cornerRadius = 10
@@ -443,6 +120,7 @@ extension MusicViewController{
         viewHome.layer.shadowRadius = 4.0
         viewHome.layer.shouldRasterize = true
         viewHome.layer.rasterizationScale = UIScreen.main.scale
+        viewHome.isHidden = true
         
     }
     func borderImageAb(){
@@ -457,31 +135,13 @@ extension MusicViewController{
     }
 }
 extension MusicViewController: UITextFieldDelegate {
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        if let searchTerm = textField.text, !searchTerm.isEmpty {
-            performSearch(with: searchTerm)
-        } else {
-            displayAllData()
-        }
-        
-        return true
-    }
-    
-    func displayAllData() {
-        
-    }
-    func performSearch(with searchTerm: String) {
-        tableMusic.showSkeleton()
-        model.fetchData(for: searchTerm) { [weak self] searchResult in
-            if let data = searchResult?.data {
-                self?.modelDatum = data
-                DispatchQueue.main.async {
-                    self?.tableMusic.hideSkeleton()
-                    self?.tableMusic.reloadData()
-                }
-            }
-        }
+    func setupTextField(){
+        musicViewModel.setupTextField()
+        musicViewModel.viewModel(searchTerm: "")
+        musicViewModel.fetchDataFromCoreData()
+        musicViewModel.performSearch(with: "")
+        searchField?.text = subTitle + artist
+        //searchField?.text = artist
     }
     
 }
@@ -500,5 +160,28 @@ extension MusicViewController{
 extension MusicViewController{
     func btBack(){
         navigationController?.popViewController(animated: true)
+    }
+}
+extension MusicViewController{
+    func forBtCamera(){
+        musicViewModel.forBtCamera()
+    }
+}
+extension MusicViewController{
+    func setImage(subTitle: String) {
+        self.subTitle = subTitle
+        searchField?.text = subTitle // Set the text of the searchField
+                musicViewModel?.performSearch(with: subTitle)
+    }
+    func setImageSectionFirst(artist: String) {
+        self.artist = artist
+        searchField?.text = artist // Set the text of the searchField
+                musicViewModel?.performSearch(with: artist)
+    }
+}
+extension MusicViewController{
+    func setupFetchPassingData(){
+        musicViewModel = LogicMusicViewModel(viewController: self)
+        musicViewModel.performSearch(with: subTitle + artist)
     }
 }

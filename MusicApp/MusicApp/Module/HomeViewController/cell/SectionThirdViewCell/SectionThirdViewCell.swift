@@ -1,5 +1,8 @@
 import UIKit
 import CoreData
+protocol SectionThirdViewCellDelegate {
+    func didSelectItemAt(subTitle: String)
+}
 class SectionThirdViewCell: UITableViewCell {
     private var coreDataArray: [Music] = [] {
         didSet {
@@ -7,6 +10,7 @@ class SectionThirdViewCell: UITableViewCell {
             coreDataHead()
         }
     }
+    var delegate: SectionThirdViewCellDelegate?
     @IBOutlet weak var collectionSectionThird: UICollectionView!
     @IBOutlet weak var imgCollectionSectionThird: UIImageView!
     @IBOutlet weak var labelArtistImgCollectionThird: UILabel!
@@ -40,6 +44,13 @@ extension SectionThirdViewCell: UICollectionViewDelegate, UICollectionViewDataSo
             cell.imgCollectionThird?.image = UIImage(named: "placeholderImage") // You can use a placeholder image
         }
         return cell
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let selectedDatum = coreDataArray[indexPath.item]
+        if let subTitle = selectedDatum.subtitle{
+            delegate?.didSelectItemAt(subTitle: subTitle)
+            NotificationCenter.default.post(name: NSNotification.Name("CollectionViewItemSelected"), object: subTitle)
+        }
     }
     
     

@@ -31,7 +31,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Christ christ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="650-yR-RI0">
-                        <rect key="frame" x="69" y="35" width="128" height="29"/>
+                        <rect key="frame" x="69" y="35" width="272" height="29"/>
                         <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="24"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -58,7 +58,7 @@
                     <constraint firstItem="338-B1-eKD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Anb-1A-IEV"/>
                     <constraint firstItem="As8-MW-X3v" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="Clv-x0-yV1"/>
                     <constraint firstAttribute="trailing" secondItem="gCT-W5-jNS" secondAttribute="trailing" constant="233" id="D9Y-yb-OOI"/>
-                    <constraint firstAttribute="trailing" secondItem="650-yR-RI0" secondAttribute="trailing" constant="164" id="Rcu-zY-fn7"/>
+                    <constraint firstAttribute="trailing" secondItem="650-yR-RI0" secondAttribute="trailing" constant="20" id="Rcu-zY-fn7"/>
                     <constraint firstItem="650-yR-RI0" firstAttribute="leading" secondItem="As8-MW-X3v" secondAttribute="trailing" constant="8" symbolic="YES" id="Uqy-KG-qgk"/>
                     <constraint firstItem="gCT-W5-jNS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="eNQ-GL-rPm"/>
                     <constraint firstAttribute="trailing" secondItem="338-B1-eKD" secondAttribute="trailing" id="iN6-r3-Eno"/>

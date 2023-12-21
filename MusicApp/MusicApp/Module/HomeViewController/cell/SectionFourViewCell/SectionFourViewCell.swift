@@ -1,11 +1,15 @@
 import UIKit
 import CoreData
+protocol SectionFourViewCellDelegate {
+    func didSelectItemAt(subTitle: String)
+}
 class SectionFourViewCell: UITableViewCell {
     private var coreDataArray: [Music] = [] {
         didSet {
             collectionFourCell.reloadData()
         }
     }
+    var delegate: SectionFourViewCellDelegate?
     @IBOutlet weak var collectionFourCell: UICollectionView!
     
     override func awakeFromNib() {
@@ -35,6 +39,13 @@ extension SectionFourViewCell: UICollectionViewDelegate, UICollectionViewDataSou
             cell.imgCollectionFour?.image = UIImage(named: "placeholderImage") // You can use a placeholder image
         }
         return cell
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let selectedDatum = coreDataArray[indexPath.item]
+        if let subTitle = selectedDatum.subtitle{
+            delegate?.didSelectItemAt(subTitle: subTitle)
+            NotificationCenter.default.post(name: NSNotification.Name("CollectionViewItemSelected"), object: subTitle)
+        }
     }
     }
 extension SectionFourViewCell{

@@ -38,7 +38,7 @@ extension DetailViewController: UITableViewDataSource, UITableViewDelegate{
         let cell = tableDetailView.dequeueReusableCell(withIdentifier: "DetailViewCell", for: indexPath) as! DetailViewCell// Replace YourCollectionViewCell with the actual name of your cell class
         let datum = modelDatum[indexPath.item]
         cell.labelDetail?.text = datum.title
-        cell.subLabelDetail?.text = datum.title
+        cell.subLabelDetail?.text = datum.subtitle
         if let imageUrl = datum.image {
             let url = URL(string: imageUrl)
             cell.imgDetail?.kf.setImage(with: url)
@@ -55,7 +55,8 @@ extension DetailViewController: UITableViewDataSource, UITableViewDelegate{
     
 }
 extension DetailViewController{
-    func setImage(image: String) {
+    func setImage(image: String, title: String) {
+        self.title = title
         self.image = image
     }
     

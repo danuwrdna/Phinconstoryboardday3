@@ -1,7 +1,6 @@
 import UIKit
 import CoreData
 class HomeViewController: UIViewController {
-    //var section = SectionFirstViewCell()
     var data: [Music] = []
     @IBOutlet weak var homeTableView: UITableView!
     override func viewDidLoad() {
@@ -38,6 +37,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
         case 0:
             let first = tableView.dequeueReusableCell(forIndexPath: indexPath) as SectionFirstViewCell
             first.passData(data: data)
+            first.delegate = self
             return first
         case 1:
             let second = tableView.dequeueReusableCell(forIndexPath: indexPath) as SectionSecondViewCell
@@ -47,10 +47,12 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
         case 2:
             let third = tableView.dequeueReusableCell(forIndexPath: indexPath) as SectionThirdViewCell
             third.passData(data: data)
+            third.delegate = self
             return third
         case 3:
             let four = tableView.dequeueReusableCell(forIndexPath: indexPath) as SectionFourViewCell
             four.passData(data: data)
+            four.delegate = self
             return four
         default:
             return UITableViewCell()
@@ -59,7 +61,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.section {
         case 0:
-            return 270
+            return 290
         case 1:
             return 230
         case 2:
@@ -89,13 +91,20 @@ extension HomeViewController{
     }
 }
 
-extension HomeViewController: SectionSecondViewCellDelegate {
-    func didSelectItemAt(image: String) {
-        let vc = DetailViewController()
-        vc.setImage(image: image)
+extension HomeViewController: SectionSecondViewCellDelegate,SectionThirdViewCellDelegate,SectionFourViewCellDelegate{
+    func didSelectItemAt(subTitle: String) {
+        let vc = MusicViewController()
+        vc.setImage(subTitle: subTitle )
         navigationController?.navigationBar.isHidden = true
         navigationController?.pushViewController(vc, animated: true)
     }
-    
+}
+extension HomeViewController: SectionFirstViewCellDelegate{
+    func didSelectItemAt(artist: String) {
+        let vc = MusicViewController()
+        vc.setImageSectionFirst(artist: artist)
+        navigationController?.navigationBar.isHidden = true
+        navigationController?.pushViewController(vc, animated: true)
+    }
     
 }

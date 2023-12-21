@@ -1,7 +1,7 @@
 import UIKit
 import CoreData
 protocol SectionSecondViewCellDelegate {
-    func didSelectItemAt(image: String)
+    func didSelectItemAt(subTitle: String)
 }
 class SectionSecondViewCell: UITableViewCell {
     private var coreDataArray: [Music] = [] {
@@ -37,8 +37,7 @@ extension SectionSecondViewCell: UICollectionViewDelegate, UICollectionViewDataS
             let url = URL(string: imageUrl)
             cell.imgViewSecondCollection?.kf.setImage(with: url)
         } else {
-            // Handle case when album cover URL is not available
-            cell.imgViewSecondCollection?.image = UIImage(named: "placeholderImage") // You can use a placeholder image
+            cell.imgViewSecondCollection?.image = UIImage(named: "placeholderImage")
         }
         
         
@@ -46,8 +45,11 @@ extension SectionSecondViewCell: UICollectionViewDelegate, UICollectionViewDataS
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let selectedDatum = coreDataArray[indexPath.item]
-        delegate?.didSelectItemAt(image: selectedDatum.image ?? "")
-               
+        if let subTitle = selectedDatum.subtitle{
+            delegate?.didSelectItemAt(subTitle: subTitle)
+            NotificationCenter.default.post(name: NSNotification.Name("CollectionViewItemSelected"), object: subTitle)
+    
+        }
     }
     
     
