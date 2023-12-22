@@ -1,7 +1,7 @@
 import UIKit
 import CoreData
 protocol TopTableCell {
-    func didSelectItemAt(text: String)
+    func didSelectItemAt(subTitle: String)
 }
 class TopGenresTableCell: UITableViewCell {
     private var coreDataArray: [Music] = [] {
@@ -42,7 +42,9 @@ extension TopGenresTableCell: UICollectionViewDelegate,UICollectionViewDataSourc
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let selectedDatum = coreDataArray[indexPath.item]
-        delegate?.didSelectItemAt(text: selectedDatum.subtitle ?? "")
+        if let subTitle = selectedDatum.subtitle{
+            delegate?.didSelectItemAt(subTitle: subTitle)
+        }
     }
     
     

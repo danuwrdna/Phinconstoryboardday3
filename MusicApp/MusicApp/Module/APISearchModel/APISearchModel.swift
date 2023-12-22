@@ -222,7 +222,8 @@ enum DatumType: String, Codable {
 class ApiSearchModel {
     
     func fetchData(for query: String, completion: @escaping (Search?) -> Void) {
-        let urlString = "https://api.deezer.com/search?q=\(query)"
+        let encodedQuery = query.replacingOccurrences(of: " ", with: "%20")
+        let urlString = "https://api.deezer.com/search?q=\(encodedQuery)"
         
         guard let url = URL(string: urlString) else {
             print("Invalid URL")

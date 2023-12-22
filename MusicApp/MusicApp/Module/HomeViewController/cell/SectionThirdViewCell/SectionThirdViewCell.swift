@@ -7,7 +7,6 @@ class SectionThirdViewCell: UITableViewCell {
     private var coreDataArray: [Music] = [] {
         didSet {
             collectionSectionThird.reloadData()
-            coreDataHead()
         }
     }
     var delegate: SectionThirdViewCellDelegate?
@@ -17,7 +16,6 @@ class SectionThirdViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         delegateCollection()
-        coreDataHead()
         border()
        
     }
@@ -52,25 +50,8 @@ extension SectionThirdViewCell: UICollectionViewDelegate, UICollectionViewDataSo
             NotificationCenter.default.post(name: NSNotification.Name("CollectionViewItemSelected"), object: subTitle)
         }
     }
-    
-    
 }
 extension SectionThirdViewCell{
-}
-extension SectionThirdViewCell{
-    func coreDataHead(){
-        if let firstMusicItem = coreDataArray.first{
-            labelArtistImgCollectionThird.text = firstMusicItem.title
-            
-            if let imageUrl = firstMusicItem.image {
-                let url = URL(string: imageUrl)
-                imgCollectionSectionThird.kf.setImage(with: url)
-            } else {
-                // Handle case when image URL is not available
-                imgCollectionSectionThird.image = UIImage(named: "placeholderImage")
-            }
-        }
-    }
     func border(){
         imgCollectionSectionThird.layer.cornerRadius = 16
     }

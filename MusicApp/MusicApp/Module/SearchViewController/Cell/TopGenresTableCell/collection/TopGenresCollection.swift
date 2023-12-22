@@ -13,6 +13,7 @@ class TopGenresCollection: UICollectionViewCell {
         super.awakeFromNib()
         rotate()
         borderImg()
+        borderImgTopGenreCollection()
     }
     
 }
@@ -31,5 +32,16 @@ extension TopGenresCollection{
     }
     func borderImg(){
         imgBG.layer.cornerRadius = 5
+    }
+    func borderImgTopGenreCollection(){
+        imgTopGenreCollection.layer.cornerRadius = 10
+        imgTopGenreCollection.clipsToBounds = true
+        imgTopGenreCollection.layer.masksToBounds = true
+        imgTopGenreCollection.layer.shadowColor = UIColor.black.cgColor
+        imgTopGenreCollection.layer.shadowOpacity = 0.5
+        imgTopGenreCollection.layer.shadowOffset = CGSize(width: 0, height: 2)
+        imgTopGenreCollection.layer.shadowRadius = 4.0
+        imgTopGenreCollection.layer.shouldRasterize = true
+        imgTopGenreCollection.layer.rasterizationScale = UIScreen.main.scale
     }
 }

@@ -10,7 +10,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchViewController" customModule="MusicApp" customModuleProvider="target">
             <connections>
-                <outlet property="imgSearch" destination="Wht-sW-poY" id="pqf-tH-OaA"/>
                 <outlet property="tablePageSrchView" destination="BPI-22-WHI" id="lCa-ly-WL9"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -20,49 +19,30 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Search" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gAX-GJ-Q2U">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gAX-GJ-Q2U">
                     <rect key="frame" x="16" y="59" width="111" height="46"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="38"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RSZ-7W-NEZ">
-                    <rect key="frame" x="302" y="107" width="32" height="32"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="">
-                        <backgroundConfiguration key="background" image="mic.fill" catalog="system"/>
-                    </buttonConfiguration>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VfS-AM-qaV">
-                    <rect key="frame" x="342" y="106" width="35" height="32"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="">
-                        <backgroundConfiguration key="background" image="camera" catalog="system"/>
-                    </buttonConfiguration>
-                    <connections>
-                        <action selector="btCamera:" destination="-1" eventType="touchUpInside" id="8iq-3U-QYc"/>
-                    </connections>
-                </button>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="BPI-22-WHI">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="BPI-22-WHI">
                     <rect key="frame" x="16" y="154" width="361" height="698"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="361" id="Zwf-s4-L9s"/>
+                        <constraint firstAttribute="height" constant="698" id="dgG-1Q-AdE"/>
+                    </constraints>
                     <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="side-by-side-4e5f57-and-495e57-small" translatesAutoresizingMaskIntoConstraints="NO" id="Wht-sW-poY">
-                    <rect key="frame" x="16" y="106" width="278" height="47"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </imageView>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="phc-NA-qgT">
-                    <rect key="frame" x="16" y="107" width="278" height="46"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="phc-NA-qgT">
+                    <rect key="frame" x="16" y="107" width="361" height="46"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="46" id="pfq-xL-Xif"/>
+                        <constraint firstAttribute="width" constant="361" id="wgZ-26-3FQ"/>
+                    </constraints>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain">
+                        <backgroundConfiguration key="background" image="side-by-side-4e5f57-and-495e57-small"/>
                         <attributedString key="attributedTitle"/>
                     </buttonConfiguration>
                     <connections>
@@ -70,7 +50,7 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Search" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6t3-7R-127">
-                    <rect key="frame" x="132" y="121" width="46" height="19"/>
+                    <rect key="frame" x="173" y="120" width="46" height="19"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="16"/>
                     <color key="textColor" red="0.99019607840000001" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -79,12 +59,21 @@
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="BPI-22-WHI" firstAttribute="top" secondItem="phc-NA-qgT" secondAttribute="bottom" constant="1" id="2TY-mp-wdB"/>
+                <constraint firstItem="phc-NA-qgT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="6mO-ID-lEU"/>
+                <constraint firstItem="gAX-GJ-Q2U" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="7cr-K1-j68"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="phc-NA-qgT" secondAttribute="trailing" constant="16" id="BaW-OY-uI2"/>
+                <constraint firstAttribute="bottom" secondItem="BPI-22-WHI" secondAttribute="bottom" id="Gd3-Lb-1SY"/>
+                <constraint firstItem="phc-NA-qgT" firstAttribute="top" secondItem="gAX-GJ-Q2U" secondAttribute="bottom" constant="2" id="MuP-Mg-iXw"/>
+                <constraint firstItem="BPI-22-WHI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="XnW-h7-4wf"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gAX-GJ-Q2U" secondAttribute="trailing" constant="266" id="cB6-Er-ytv"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="BPI-22-WHI" secondAttribute="trailing" constant="16" id="rvv-Kh-Nmj"/>
+            </constraints>
             <point key="canvasLocation" x="20.610687022900763" y="19.718309859154932"/>
         </view>
     </objects>
     <resources>
-        <image name="camera" catalog="system" width="128" height="93"/>
-        <image name="mic.fill" catalog="system" width="110" height="128"/>
         <image name="side-by-side-4e5f57-and-495e57-small" width="1040" height="600"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

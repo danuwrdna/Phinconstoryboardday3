@@ -1,11 +1,15 @@
 import UIKit
 import CoreData
+protocol BrowseDelegateCell{
+    func didSelectItemAt(subTitle: String)
+}
 class BrowseCell: UITableViewCell {
     private var coreDataArray: [Music] = [] {
         didSet {
            collectionBrowse.reloadData()
         }
     }
+    var delegate: BrowseDelegateCell?
     var colorModel = ModelImgViewModel()
     @IBOutlet weak var collectionBrowse: UICollectionView!
     override func awakeFromNib() {
@@ -38,7 +42,12 @@ extension BrowseCell: UICollectionViewDelegate, UICollectionViewDataSource{
         }
         return cell
     }
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let selectedDatum = coreDataArray[indexPath.item]
+        if let subTitle = selectedDatum.subtitle{
+            delegate?.didSelectItemAt(subTitle: subTitle)
+        }
+    }
     
 }
 extension BrowseCell{

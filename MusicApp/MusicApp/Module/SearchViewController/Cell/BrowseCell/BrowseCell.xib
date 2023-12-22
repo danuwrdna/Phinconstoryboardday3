@@ -17,17 +17,19 @@
                 <rect key="frame" x="0.0" y="0.0" width="382" height="250"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Browse All" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IyS-7Y-8cs">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Browse All" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IyS-7Y-8cs">
                         <rect key="frame" x="20" y="6" width="74" height="19"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="wHk-JS-aW6">
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="wHk-JS-aW6">
                         <rect key="frame" x="0.0" y="33" width="382" height="217"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="217" id="23P-o2-6R7"/>
+                            <constraint firstAttribute="width" constant="382" id="UmR-rP-7cN"/>
+                        </constraints>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="sYc-J3-rYi">
                             <size key="itemSize" width="183" height="100"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -36,6 +38,12 @@
                         </collectionViewFlowLayout>
                     </collectionView>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="IyS-7Y-8cs" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="0WN-4i-cHl"/>
+                    <constraint firstItem="wHk-JS-aW6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="P2y-Ek-35a"/>
+                    <constraint firstItem="wHk-JS-aW6" firstAttribute="top" secondItem="IyS-7Y-8cs" secondAttribute="bottom" constant="8" symbolic="YES" id="TT9-Pn-BJO"/>
+                    <constraint firstItem="IyS-7Y-8cs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" symbolic="YES" id="cti-O5-cAI"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>

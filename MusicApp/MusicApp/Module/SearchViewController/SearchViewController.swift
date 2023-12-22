@@ -10,11 +10,10 @@ class SearchViewController: UIViewController{
     @IBAction func btCamera(_ sender: Any) {
         forBtCamera()
     }
-    @IBOutlet weak var imgSearch: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         delegateTable()
-        border()
+       
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -45,10 +44,12 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource{
             return topGenre
         case 1:
             let popularArtist = tableView.dequeueReusableCell(forIndexPath: indexPath) as PopularArtistCell
+            popularArtist.delegate = self
             popularArtist.passData(data: data)
             return popularArtist
         case 2:
             let browse = tableView.dequeueReusableCell(forIndexPath: indexPath) as BrowseCell
+            browse.delegate = self
             browse.passData(data: data)
             return browse
         default:
@@ -70,19 +71,16 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource{
     
     
 }
-extension SearchViewController: TopTableCell {
-    func didSelectItemAt(text: String) {
-        let categoryVC = CategoryViewController()
-        categoryVC.selectedText = text
-        self.navigationController?.pushViewController(categoryVC, animated: true)
+extension SearchViewController: TopTableCell,PopularArtistDelegateCell,BrowseDelegateCell {
+    func didSelectItemAt(subTitle: String) {
+        let vc = MusicViewController()
+        vc.setImage(subTitle: subTitle )
+        navigationController?.navigationBar.isHidden = true
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
-extension SearchViewController{
-    func border(){
-        imgSearch.layer.cornerRadius = 16
-    }
-}
+
 extension SearchViewController{
     func navigate(){
         let bt = MusicViewController()

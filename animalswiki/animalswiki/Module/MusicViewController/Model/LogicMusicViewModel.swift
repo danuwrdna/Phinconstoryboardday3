@@ -13,7 +13,7 @@ class LogicMusicViewModel: NSObject{
     private var isPlaying = false
     private var playbackTime: Double = 0.0
     var sectionIndexTitles: [String] {
-      
+        
         return ["Listen Your Way"]
     }
     
@@ -42,11 +42,22 @@ extension LogicMusicViewModel: UITableViewDelegate, UITableViewDataSource{
         let deezerTrack = modelDatum[indexPath.row]
         cell.titleLabel?.text = deezerTrack.artist?.name?.stringValue
         cell.subTitleLabel?.text = deezerTrack.title
+        if let duration = deezerTrack.duration {
+            switch duration {
+            case .int(let intValue):
+                let minutes = intValue / 60
+                cell.durationLabel?.text = "\(minutes) min"
+            case .string(let stringValue):
+                cell.durationLabel?.text = stringValue
+            }
+        } else {
+            cell.durationLabel?.text = nil
+        }
         if let imageUrl = deezerTrack.album?.cover {
             let url = URL(string: imageUrl)
             cell.imgView?.kf.setImage(with: url)
         } else {
-            cell.imgView?.image = UIImage(named: "placeholderImage")
+            cell.imgView?.image = UIImage(named: "Please Wait")
         }
     }
     func updateCell(at indexPath: IndexPath) {
@@ -55,6 +66,7 @@ extension LogicMusicViewModel: UITableViewDelegate, UITableViewDataSource{
         }
     }
 }
+// MARK: Logic Progress bar
 extension LogicMusicViewModel{
     func progress(){
         let gestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(handlePanGesture(_:)))
@@ -101,7 +113,7 @@ extension LogicMusicViewModel{
     }
     
 }
-
+// MARK: Logic Play Music, Pause, Reset
 extension LogicMusicViewModel{
     func playPause() {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(imageTapped))
@@ -129,7 +141,7 @@ extension LogicMusicViewModel{
            let coverURL = URL(string: coverURLString) {
             viewController.imgAB.kf.setImage(with: coverURL)
         } else {
-            viewController.imgAB.image = UIImage(named: "placeholderImage")
+            viewController.imgAB.image = UIImage(named: "Please Wait")
         }
         if let player = player {
             if player.rate > 0 {
@@ -170,23 +182,6 @@ extension LogicMusicViewModel{
         }
         isPlaying = player?.rate ?? 0 > 0
         stateReset()
-    }
-    
-    func saveMusicToCoreData(title: String?, subtitle: String?, image: String?) {
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        let entity = NSEntityDescription.entity(forEntityName: "Music", in: context)
-        let music = NSManagedObject(entity: entity!, insertInto: context)
-        
-        music.setValue(title, forKey: "title")
-        music.setValue(subtitle, forKey: "subtitle")
-        music.setValue(image, forKey: "image")
-        
-        do {
-            try context.save()
-            print("Data berhasil disimpan di Core Data.")
-        } catch {
-            fatalError("Gagal menyimpan data ke Core Data: \(error)")
-        }
     }
     
     func playMusic() {
@@ -289,16 +284,6 @@ extension LogicMusicViewModel{
         if keyPath == #keyPath(AVPlayerItem.status) {
             if let statusNumber = change?[.newKey] as? NSNumber {
                 let status = AVPlayerItem.Status(rawValue: statusNumber.intValue)
-                switch status {
-                case .readyToPlay:
-                    print("AVPlayerItem ready to play")
-                case .failed:
-                    print("AVPlayerItem failed to load")
-                case .unknown:
-                    print("AVPlayerItem status unknown")
-                @unknown default:
-                    print("Unknown AVPlayerItem status")
-                }
             }
         }
         else if keyPath == #keyPath(AVPlayerItem.duration) {
@@ -309,6 +294,7 @@ extension LogicMusicViewModel{
         
     }
 }
+// MARK: Logic nextBT Music & previous BT Music
 extension LogicMusicViewModel{
     func nextBT() {
         guard let selectedIndexPath = viewController.tableMusic.indexPathForSelectedRow else {
@@ -342,6 +328,7 @@ extension LogicMusicViewModel{
         viewController.tableView(viewController.tableMusic, didSelectRowAt: newIndexPath)
     }
 }
+// MARK: Logic Search & Text Field
 extension LogicMusicViewModel: UITextFieldDelegate{
     func setupTextField(){
         viewController.searchField.delegate = self
@@ -358,21 +345,7 @@ extension LogicMusicViewModel: UITextFieldDelegate{
         }
         fetchDataFromCoreData()
     }
-    func fetchDataFromCoreData() {
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext;     let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Music")
-        
-        do {
-            let result = try context.fetch(fetchRequest)
-            for data in result as! [NSManagedObject] {
-                let title = data.value(forKey: "title") as? String ?? ""
-                let subtitle = data.value(forKey: "subtitle") as? String ?? ""
-                let image = data.value(forKey: "image") as? String ?? ""
-                print("Title: \(title), Subtitle: \(subtitle), Image: \(image)")
-            }
-        } catch {
-            fatalError("Gagal mengambil data dari Core Data: \(error)")
-        }
-    }
+    
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         guard let updatedText = (textField.text as NSString?)?.replacingCharacters(in: range, with: string) else {
             return true
@@ -390,7 +363,6 @@ extension LogicMusicViewModel: UITextFieldDelegate{
         return true
     }
     
-    
     func displayAllData() {
         fetchDataFromCoreData()
         viewController.tableMusic.reloadData()
@@ -407,7 +379,56 @@ extension LogicMusicViewModel: UITextFieldDelegate{
             }
         }
     }
+    func filterData() {
+            let alertController = UIAlertController(title: "Filter Data", message: nil, preferredStyle: .actionSheet)
+
+            let filterByTitleAction = UIAlertAction(title: "Judul", style: .default) { [weak self] _ in
+                // Implementasi logika filter berdasarkan judul
+                self?.filterDataByTitle()
+            }
+
+            let filterByNewestAction = UIAlertAction(title: "Baru Dimuat", style: .default) { [weak self] _ in
+                // Implementasi logika filter berdasarkan baru dimuat
+                //self?.filterDataByNewest()
+            }
+
+            let filterByLongestDurationAction = UIAlertAction(title: "Durasi Paling Lama", style: .default) { [weak self] _ in
+                // Implementasi logika filter berdasarkan durasi paling lama
+                //self?.filterDataByLongestDuration()
+            }
+
+            let cancelAction = UIAlertAction(title: "Batal", style: .cancel, handler: nil)
+
+            alertController.addAction(filterByTitleAction)
+//            alertController.addAction(filterByNewestAction)
+//            alertController.addAction(filterByLongestDurationAction)
+            alertController.addAction(cancelAction)
+
+            viewController.present(alertController, animated: true, completion: nil)
+        }
+
+        func filterDataByTitle() {
+            // Implementasi logika filter berdasarkan judul
+            // Misalnya, urutkan modelDatum berdasarkan judul
+            modelDatum.sort { $0.title?.compare($1.title ?? "") == .orderedAscending }
+            viewController.tableMusic.reloadData()
+        }
+
+//        func filterDataByNewest() {
+//            // Implementasi logika filter berdasarkan baru dimuat
+//            // Misalnya, urutkan modelDatum berdasarkan tanggal dimuat
+//            modelDatum.sort { $0.id?.intValue ?? 0 > $1.id?.intValue ?? 0 }
+//            viewController.tableMusic.reloadData()
+//        }
+//
+//        func filterDataByLongestDuration() {
+//            // Implementasi logika filter berdasarkan durasi paling lama
+//            // Misalnya, urutkan modelDatum berdasarkan durasi
+//            modelDatum.sort { $0.duration?.int ?? 0 > $1.duration?.int ?? 0 }
+//            viewController.tableMusic.reloadData()
+//        }
 }
+// MARK: Logic BT Camera
 extension LogicMusicViewModel: UIImagePickerControllerDelegate,UINavigationControllerDelegate{
     func forBtCamera(){
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
@@ -418,6 +439,40 @@ extension LogicMusicViewModel: UIImagePickerControllerDelegate,UINavigationContr
             viewController.present(imagePicker, animated: true, completion: nil)
         } else {
             print("Camera not available")
+        }
+    }
+}
+// MARK: Core Data
+extension LogicMusicViewModel{
+    func saveMusicToCoreData(title: String?, subtitle: String?, image: String?) {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let entity = NSEntityDescription.entity(forEntityName: "Music", in: context)
+        let music = NSManagedObject(entity: entity!, insertInto: context)
+        
+        music.setValue(title, forKey: "title")
+        music.setValue(subtitle, forKey: "subtitle")
+        music.setValue(image, forKey: "image")
+        
+        do {
+            try context.save()
+            print("Data berhasil disimpan di Core Data.")
+        } catch {
+            fatalError("Gagal menyimpan data ke Core Data: \(error)")
+        }
+    }
+    func fetchDataFromCoreData() {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext;     let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Music")
+        
+        do {
+            let result = try context.fetch(fetchRequest)
+            for data in result as! [NSManagedObject] {
+                let title = data.value(forKey: "title") as? String ?? ""
+                let subtitle = data.value(forKey: "subtitle") as? String ?? ""
+                let image = data.value(forKey: "image") as? String ?? ""
+                print("Title: \(title), Subtitle: \(subtitle), Image: \(image)")
+            }
+        } catch {
+            fatalError("Gagal mengambil data dari Core Data: \(error)")
         }
     }
 }

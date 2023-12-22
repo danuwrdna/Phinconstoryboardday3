@@ -11,6 +11,7 @@
 		3624A2B82B33D23B009C8BAE /* LogicMusicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3624A2B72B33D23B009C8BAE /* LogicMusicViewModel.swift */; };
 		3624A2BA2B33F2D1009C8BAE /* CoreDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3624A2B92B33F2D1009C8BAE /* CoreDataModel.swift */; };
 		3624A2BC2B33F92D009C8BAE /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3624A2BB2B33F92D009C8BAE /* CoreDataHelper.swift */; };
+		3624A2C32B353401009C8BAE /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3624A2C22B353401009C8BAE /* HomeViewModel.swift */; };
 		36405C402B20142F008EB012 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36405C3F2B20142F008EB012 /* ApiManager.swift */; };
 		36405C442B20148A008EB012 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36405C422B20148A008EB012 /* LoginViewController.swift */; };
 		36405C452B20148A008EB012 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36405C432B20148A008EB012 /* LoginViewController.xib */; };
@@ -142,6 +143,7 @@
 		3624A2B72B33D23B009C8BAE /* LogicMusicViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogicMusicViewModel.swift; sourceTree = "<group>"; };
 		3624A2B92B33F2D1009C8BAE /* CoreDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataModel.swift; sourceTree = "<group>"; };
 		3624A2BB2B33F92D009C8BAE /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
+		3624A2C22B353401009C8BAE /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		36405C3F2B20142F008EB012 /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApiManager.swift; path = ../../../../animalswiki/animalswiki/Common/Network/ApiManager.swift; sourceTree = "<group>"; };
 		36405C422B20148A008EB012 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		36405C432B20148A008EB012 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
@@ -287,6 +289,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3624A2C12B3533BC009C8BAE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3624A2C22B353401009C8BAE /* HomeViewModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		36405C3B2B20136F008EB012 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -393,6 +403,7 @@
 		36405C672B2172EA008EB012 /* HomeViewController */ = {
 			isa = PBXGroup;
 			children = (
+				3624A2C12B3533BC009C8BAE /* Model */,
 				36405C6C2B217440008EB012 /* cell */,
 				36405C682B217304008EB012 /* HomeViewController.swift */,
 				36405C692B217304008EB012 /* HomeViewController.xib */,
@@ -437,7 +448,6 @@
 			children = (
 				36405C822B2177BA008EB012 /* collection */,
 				36405C7E2B2177B6008EB012 /* SectionSecondViewCell.swift */,
-				36405C7F2B2177B6008EB012 /* SectionSecondViewCell.xib */,
 			);
 			path = SectionSecondViewCell;
 			sourceTree = "<group>";
@@ -445,8 +455,9 @@
 		36405C822B2177BA008EB012 /* collection */ = {
 			isa = PBXGroup;
 			children = (
-				36405C832B2177E0008EB012 /* SectionSecondViewCollection.swift */,
 				36405C842B2177E0008EB012 /* SectionSecondViewCollection.xib */,
+				36405C832B2177E0008EB012 /* SectionSecondViewCollection.swift */,
+				36405C7F2B2177B6008EB012 /* SectionSecondViewCell.xib */,
 			);
 			path = collection;
 			sourceTree = "<group>";
@@ -756,8 +767,8 @@
 		366EF19E2B2B01BF00FA28FE /* PlayedViewController */ = {
 			isa = PBXGroup;
 			children = (
-				366EF19F2B2B01F500FA28FE /* PlayedViewController.swift */,
 				366EF1A02B2B01F500FA28FE /* PlayedViewController.xib */,
+				366EF19F2B2B01F500FA28FE /* PlayedViewController.swift */,
 			);
 			path = PlayedViewController;
 			sourceTree = "<group>";
@@ -1213,6 +1224,7 @@
 				36405C5E2B215B75008EB012 /* ProfileTableViewCell.swift in Sources */,
 				36405C802B2177B6008EB012 /* SectionSecondViewCell.swift in Sources */,
 				36405C7C2B21767A008EB012 /* ExtTable.swift in Sources */,
+				3624A2C32B353401009C8BAE /* HomeViewModel.swift in Sources */,
 				36405CF72B284627008EB012 /* BodyViewCell.swift in Sources */,
 				36405C502B201587008EB012 /* constrant.swift in Sources */,
 				36405C9C2B218622008EB012 /* ExtCollection.swift in Sources */,

@@ -19,6 +19,9 @@ class MusicViewController: UIViewController {
     @IBOutlet weak var progressBar: UIProgressView!
     @IBOutlet weak var tableMusic: UITableView!
     @IBOutlet weak var viewHome: UIView!
+    @IBAction func fiterMusicBT(_ sender: Any) {
+        musicViewModel.filterData()
+    }
     @IBAction func btCamera(_ sender: Any) {
         forBtCamera()
     }

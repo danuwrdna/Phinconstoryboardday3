@@ -62,7 +62,8 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
         return viewModel.sectionTitles[section]
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        viewModel.didSelectIcon(section: indexPath.section, row: indexPath.row, navigationController: navigationController)
+        viewModel.didSelectIcon(section: indexPath.section , row: indexPath.row , navigationController: navigationController)
+        
     }
 }
 extension ProfileViewController{

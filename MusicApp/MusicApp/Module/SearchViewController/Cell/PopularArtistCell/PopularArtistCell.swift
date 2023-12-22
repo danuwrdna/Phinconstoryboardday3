@@ -1,12 +1,15 @@
 import UIKit
 import CoreData
-
+protocol PopularArtistDelegateCell {
+    func didSelectItemAt(subTitle: String)
+}
 class PopularArtistCell: UITableViewCell {
     private var coreDataArray: [Music] = [] {
         didSet {
            collectionPopularArtist.reloadData()
         }
     }
+    var delegate: PopularArtistDelegateCell?
     @IBOutlet weak var collectionPopularArtist: UICollectionView!
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -38,6 +41,12 @@ extension PopularArtistCell: UICollectionViewDelegate, UICollectionViewDataSourc
             cell.imgPopularArtist?.image = UIImage(named: "placeholderImage") // You can use a placeholder image
         }
         return cell
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let selectedDatum = coreDataArray[indexPath.item]
+        if let subTitle = selectedDatum.subtitle{
+            delegate?.didSelectItemAt(subTitle: subTitle)
+        }
     }
     
     

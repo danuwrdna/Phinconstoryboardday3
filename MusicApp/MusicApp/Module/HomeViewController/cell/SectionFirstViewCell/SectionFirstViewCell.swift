@@ -7,7 +7,7 @@ protocol SectionFirstViewCellDelegate {
 }
 class SectionFirstViewCell: UITableViewCell {
     @IBOutlet weak var sectionFirstViewCollection: UICollectionView!
-    var textFieldPassData: LogicMusicViewModel!
+  
     var delegate: SectionFirstViewCellDelegate?
     private var coreDataArray: [Music] = [] {
         didSet {

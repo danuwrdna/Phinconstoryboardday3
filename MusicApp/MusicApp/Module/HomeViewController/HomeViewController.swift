@@ -1,18 +1,17 @@
 import UIKit
 import CoreData
 class HomeViewController: UIViewController {
-    var data: [Music] = []
+    var homeViewModel: HomeViewModel!
     @IBOutlet weak var homeTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         delegateTable()
+       
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        fetchDataFromCoreData()
-        
+       fetchDataFromCoreData()
     }
-    
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
@@ -36,22 +35,22 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
         switch indexPath.section {
         case 0:
             let first = tableView.dequeueReusableCell(forIndexPath: indexPath) as SectionFirstViewCell
-            first.passData(data: data)
+            first.passData(data: homeViewModel.data)
             first.delegate = self
             return first
         case 1:
             let second = tableView.dequeueReusableCell(forIndexPath: indexPath) as SectionSecondViewCell
-            second.passData(data: data)
+            second.passData(data: homeViewModel.data)
             second.delegate = self
             return second
         case 2:
             let third = tableView.dequeueReusableCell(forIndexPath: indexPath) as SectionThirdViewCell
-            third.passData(data: data)
+            third.passData(data: homeViewModel.data )
             third.delegate = self
             return third
         case 3:
             let four = tableView.dequeueReusableCell(forIndexPath: indexPath) as SectionFourViewCell
-            four.passData(data: data)
+            four.passData(data: homeViewModel.data)
             four.delegate = self
             return four
         default:
@@ -61,11 +60,11 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.section {
         case 0:
-            return 290
+            return 270
         case 1:
-            return 230
+            return 200
         case 2:
-            return 250
+            return 230
         case 3:
             return 240
         default:
@@ -76,18 +75,9 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
     
 }
 extension HomeViewController{
-    func fetchDataFromCoreData() {
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Music")
-        
-        do {
-            let result = try context.fetch(fetchRequest)
-           data = result as! [Music]
-            homeTableView.reloadData()
-        } catch {
-            fatalError("Gagal mengambil data dari Core Data: \(error)")
-        }
-        
+    func fetchDataFromCoreData(){
+        homeViewModel = HomeViewModel(viewController: self)
+        homeViewModel.fetchDataFromCoreData()
     }
 }
 
@@ -95,6 +85,7 @@ extension HomeViewController: SectionSecondViewCellDelegate,SectionThirdViewCell
     func didSelectItemAt(subTitle: String) {
         let vc = MusicViewController()
         vc.setImage(subTitle: subTitle )
+        vc.hidesBottomBarWhenPushed = true
         navigationController?.navigationBar.isHidden = true
         navigationController?.pushViewController(vc, animated: true)
     }

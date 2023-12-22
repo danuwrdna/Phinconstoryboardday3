@@ -13,6 +13,7 @@ class PopularArtistCollection: UICollectionViewCell {
         super.awakeFromNib()
         rotate()
         borderImg()
+        borderImgPopularArtist()
     }
     
 }
@@ -31,5 +32,16 @@ extension PopularArtistCollection{
     }
     func borderImg(){
         imgBG.layer.cornerRadius = 5
+    }
+    func borderImgPopularArtist(){
+        imgPopularArtist.layer.cornerRadius = 10
+        imgPopularArtist.clipsToBounds = true
+        imgPopularArtist.layer.masksToBounds = true
+        imgPopularArtist.layer.shadowColor = UIColor.black.cgColor
+        imgPopularArtist.layer.shadowOpacity = 0.5
+        imgPopularArtist.layer.shadowOffset = CGSize(width: 0, height: 2)
+        imgPopularArtist.layer.shadowRadius = 4.0
+        imgPopularArtist.layer.shouldRasterize = true
+        imgPopularArtist.layer.rasterizationScale = UIScreen.main.scale
     }
 }
