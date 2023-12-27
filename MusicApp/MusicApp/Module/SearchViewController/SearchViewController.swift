@@ -2,6 +2,7 @@ import UIKit
 import CoreData
 class SearchViewController: UIViewController{
     var data: [Music] = []
+    var genre: [DataGenre] = []
     @IBOutlet weak var tablePageSrchView: UITableView!
     @IBAction func btSearch(_ sender: Any) {
         navigate()
@@ -13,19 +14,19 @@ class SearchViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         delegateTable()
+        fetchDataForGenre()
        
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         fetchDataFromCoreData()
+        
     }
 }
 extension SearchViewController: UITableViewDelegate, UITableViewDataSource{
     func delegateTable(){
         tablePageSrchView.delegate = self
         tablePageSrchView.dataSource = self
-        tablePageSrchView.registerCellWithNib(TopGenresTableCell.self)
-        tablePageSrchView.registerCellWithNib(PopularArtistCell.self)
         tablePageSrchView.registerCellWithNib(BrowseCell.self)
     }
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -37,20 +38,12 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.section {
+       
         case 0:
-            let topGenre = tableView.dequeueReusableCell(forIndexPath: indexPath) as TopGenresTableCell
-            topGenre.delegate = self
-            topGenre.passData(data: data)
-            return topGenre
-        case 1:
-            let popularArtist = tableView.dequeueReusableCell(forIndexPath: indexPath) as PopularArtistCell
-            popularArtist.delegate = self
-            popularArtist.passData(data: data)
-            return popularArtist
-        case 2:
             let browse = tableView.dequeueReusableCell(forIndexPath: indexPath) as BrowseCell
             browse.delegate = self
-            browse.passData(data: data)
+            browse.genre(data: genre)
+            
             return browse
         default:
             return UITableViewCell()
@@ -59,11 +52,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.section {
         case 0:
-            return 148
-        case 1:
-            return 148
-        case 2:
-            return 300
+            return 670
         default:
             return 100
         }
@@ -71,7 +60,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource{
     
     
 }
-extension SearchViewController: TopTableCell,PopularArtistDelegateCell,BrowseDelegateCell {
+extension SearchViewController: BrowseDelegateCell {
     func didSelectItemAt(subTitle: String) {
         let vc = MusicViewController()
         vc.setImage(subTitle: subTitle )
@@ -115,4 +104,26 @@ extension SearchViewController{
         }
         
     }
+    func fetchDataForGenre() {
+        let genreApiModel = GenreApiModel()
+        genreApiModel.fetchData { [weak self] result in
+            switch result {
+            case .success(let genre):
+                self?.genre = genre.data ?? []
+                print("Fetched Genre Data: \(self?.genre)")
+                
+                // Reload the table view on the main thread
+                print("Before reloadData")
+                DispatchQueue.main.async {
+                    self?.tablePageSrchView.reloadData()
+                }
+                print("aft reloadData")
+
+            case .failure(let error):
+                // Handle the error
+                print("Error: \(error)")
+            }
+        }
+    }
+
 }

@@ -23,6 +23,13 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Data kskng" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rmD-QY-DCV">
+                        <rect key="frame" x="211" y="6" width="86" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="oEj-4x-Bv4">
                         <rect key="frame" x="0.0" y="37" width="361" height="154"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -50,6 +57,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="collectionSecondCell" destination="oEj-4x-Bv4" id="Fju-M3-fuS"/>
+                <outlet property="labeldtaksng" destination="rmD-QY-DCV" id="rXj-Ud-jIr"/>
             </connections>
             <point key="canvasLocation" x="51.145038167938928" y="71.83098591549296"/>
         </tableViewCell>

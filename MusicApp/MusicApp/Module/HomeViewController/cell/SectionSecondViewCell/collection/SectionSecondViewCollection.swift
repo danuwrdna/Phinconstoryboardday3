@@ -3,6 +3,7 @@ import UIKit
 class SectionSecondViewCollection: UICollectionViewCell {
     @IBOutlet weak var imgViewSecondCollection: UIImageView!
     @IBOutlet weak var textLabelSecondCollection: UILabel!
+    @IBOutlet weak var labelDataksng: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         border()
@@ -18,8 +19,7 @@ class SectionSecondViewCollection: UICollectionViewCell {
         imgViewSecondCollection.layer.shadowRadius = 4.0
         imgViewSecondCollection.layer.shouldRasterize = true
         imgViewSecondCollection.layer.rasterizationScale = UIScreen.main.scale
-        
-       
+    
     }
 
 }

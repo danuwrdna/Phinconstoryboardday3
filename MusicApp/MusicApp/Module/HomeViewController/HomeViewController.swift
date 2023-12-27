@@ -10,7 +10,7 @@ class HomeViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-       fetchDataFromCoreData()
+        fetchDataFromCoreDataAndAPI()
     }
 }
 
@@ -36,6 +36,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
         case 0:
             let first = tableView.dequeueReusableCell(forIndexPath: indexPath) as SectionFirstViewCell
             first.passData(data: homeViewModel.data)
+            first.passApiData(dataApi: homeViewModel.apiData)
             first.delegate = self
             return first
         case 1:
@@ -46,11 +47,13 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
         case 2:
             let third = tableView.dequeueReusableCell(forIndexPath: indexPath) as SectionThirdViewCell
             third.passData(data: homeViewModel.data )
+            third.passApiData(dataPlaylist: homeViewModel.dataPlaylist)
             third.delegate = self
             return third
         case 3:
             let four = tableView.dequeueReusableCell(forIndexPath: indexPath) as SectionFourViewCell
             four.passData(data: homeViewModel.data)
+            four.passApiData(dataApi: homeViewModel.apiData)
             four.delegate = self
             return four
         default:
@@ -75,9 +78,11 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
     
 }
 extension HomeViewController{
-    func fetchDataFromCoreData(){
+    func fetchDataFromCoreDataAndAPI(){
         homeViewModel = HomeViewModel(viewController: self)
         homeViewModel.fetchDataFromCoreData()
+        homeViewModel.fetchDataApiArtist()
+        homeViewModel.fetchDataPlaylistHappyMusic()
     }
 }
 
@@ -94,6 +99,7 @@ extension HomeViewController: SectionFirstViewCellDelegate{
     func didSelectItemAt(artist: String) {
         let vc = MusicViewController()
         vc.setImageSectionFirst(artist: artist)
+        vc.hidesBottomBarWhenPushed = true
         navigationController?.navigationBar.isHidden = true
         navigationController?.pushViewController(vc, animated: true)
     }

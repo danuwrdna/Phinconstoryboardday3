@@ -9,6 +9,11 @@ class BrowseCell: UITableViewCell {
            collectionBrowse.reloadData()
         }
     }
+    private var genre: [DataGenre] = [] {
+        didSet {
+            collectionBrowse.reloadData()
+        }
+    }
     var delegate: BrowseDelegateCell?
     var colorModel = ModelImgViewModel()
     @IBOutlet weak var collectionBrowse: UICollectionView!
@@ -25,15 +30,15 @@ extension BrowseCell: UICollectionViewDelegate, UICollectionViewDataSource{
         collectionBrowse.registerCellWithNib(BrowseCollection.self)
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return coreDataArray.count
+        return genre.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionBrowse.dequeueReusableCell(withReuseIdentifier: "BrowseCollection", for: indexPath) as! BrowseCollection// Replace YourCollectionViewCell with the actual name of your cell class
         cell.modelImgViewModel = ModelImgViewModel()
-        let datum = coreDataArray[indexPath.item]
-        cell.labelBrowse?.text = datum.subtitle
-        if let imageUrl = datum.image {
+        let datum = genre[indexPath.item]
+        cell.labelBrowse?.text = datum.name
+        if let imageUrl = datum.picture{
             let url = URL(string: imageUrl)
             cell.imgBrowse?.kf.setImage(with: url)
         } else {
@@ -43,8 +48,8 @@ extension BrowseCell: UICollectionViewDelegate, UICollectionViewDataSource{
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let selectedDatum = coreDataArray[indexPath.item]
-        if let subTitle = selectedDatum.subtitle{
+        let selectedDatum = genre[indexPath.item]
+        if let subTitle = selectedDatum.name{
             delegate?.didSelectItemAt(subTitle: subTitle)
         }
     }
@@ -67,5 +72,8 @@ extension BrowseCell{
 extension BrowseCell{
     internal func passData(data: [Music]) {
         self.coreDataArray = data
+    }
+    internal func genre(data: [DataGenre]) {
+        self.genre = data
     }
 }

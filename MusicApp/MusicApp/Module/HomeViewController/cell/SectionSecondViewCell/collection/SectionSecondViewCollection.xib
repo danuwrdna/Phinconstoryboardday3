@@ -33,6 +33,13 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Data kosng" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H7c-bW-sNn">
+                        <rect key="frame" x="159" y="67" width="86" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
@@ -46,6 +53,7 @@
             </constraints>
             <connections>
                 <outlet property="imgViewSecondCollection" destination="H34-8J-FJT" id="PSA-8Z-OXL"/>
+                <outlet property="labelDataksng" destination="H7c-bW-sNn" id="FVK-eb-Jbt"/>
                 <outlet property="textLabelSecondCollection" destination="znR-CG-nao" id="Pdv-6d-Cbu"/>
             </connections>
             <point key="canvasLocation" x="20.610687022900763" y="19.718309859154932"/>

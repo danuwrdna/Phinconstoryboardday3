@@ -9,6 +9,11 @@ class SectionFourViewCell: UITableViewCell {
             collectionFourCell.reloadData()
         }
     }
+    private var apiData: [ArtistApi] = [] {
+        didSet {
+            collectionFourCell.reloadData()
+        }
+    }
     var delegate: SectionFourViewCellDelegate?
     @IBOutlet weak var collectionFourCell: UICollectionView!
     
@@ -24,14 +29,14 @@ extension SectionFourViewCell: UICollectionViewDelegate, UICollectionViewDataSou
        collectionFourCell.registerCellWithNib(SectionFourViewCollection.self)
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return coreDataArray.count
+        return apiData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionFourCell.dequeueReusableCell(withReuseIdentifier: "SectionFourViewCollection", for: indexPath) as! SectionFourViewCollection// Replace YourCollectionViewCell with the actual name of your cell class
-        let datum = coreDataArray[indexPath.item]
-        cell.labelTextCollectionFour.text = datum.subtitle
-        if let imageUrl = datum.image {
+        let datum = apiData[indexPath.item]
+        cell.labelTextCollectionFour.text = datum.name
+        if let imageUrl = datum.picture {
             let url = URL(string: imageUrl)
             cell.imgCollectionFour?.kf.setImage(with: url)
         } else {
@@ -41,8 +46,8 @@ extension SectionFourViewCell: UICollectionViewDelegate, UICollectionViewDataSou
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let selectedDatum = coreDataArray[indexPath.item]
-        if let subTitle = selectedDatum.subtitle{
+        let selectedDatum = apiData[indexPath.item]
+        if let subTitle = selectedDatum.name{
             delegate?.didSelectItemAt(subTitle: subTitle)
             NotificationCenter.default.post(name: NSNotification.Name("CollectionViewItemSelected"), object: subTitle)
         }
@@ -51,5 +56,9 @@ extension SectionFourViewCell: UICollectionViewDelegate, UICollectionViewDataSou
 extension SectionFourViewCell{
     internal func passData(data: [Music]) {
         self.coreDataArray = data
+    }
+    internal func passApiData(dataApi: [ArtistApi]) {
+        self.apiData = dataApi
+       collectionFourCell.reloadData()
     }
 }

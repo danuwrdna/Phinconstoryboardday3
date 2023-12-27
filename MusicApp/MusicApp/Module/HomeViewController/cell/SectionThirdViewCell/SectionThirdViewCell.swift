@@ -9,6 +9,11 @@ class SectionThirdViewCell: UITableViewCell {
             collectionSectionThird.reloadData()
         }
     }
+    private var apiData: [PlaylistAPI] = [] {
+        didSet {
+            collectionSectionThird.reloadData()
+        }
+    }
     var delegate: SectionThirdViewCellDelegate?
     @IBOutlet weak var collectionSectionThird: UICollectionView!
     @IBOutlet weak var imgCollectionSectionThird: UIImageView!
@@ -17,7 +22,7 @@ class SectionThirdViewCell: UITableViewCell {
         super.awakeFromNib()
         delegateCollection()
         border()
-       
+        
     }
 }
 extension SectionThirdViewCell: UICollectionViewDelegate, UICollectionViewDataSource{
@@ -27,14 +32,14 @@ extension SectionThirdViewCell: UICollectionViewDelegate, UICollectionViewDataSo
         collectionSectionThird.registerCellWithNib(SectionThirdViewCollection.self)
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return coreDataArray.count
+        return apiData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionSectionThird.dequeueReusableCell(withReuseIdentifier: "SectionThirdViewCollection", for: indexPath) as! SectionThirdViewCollection// Replace YourCollectionViewCell with the actual name of your cell class
-        let datum = coreDataArray[indexPath.item]
-        cell.textLabelCollectionThird?.text = datum.subtitle
-        if let imageUrl = datum.image {
+        let playlistDat = apiData[indexPath.item]
+        cell.textLabelCollectionThird?.text = playlistDat.title
+        if let imageUrl = playlistDat.picture {
             let url = URL(string: imageUrl)
             cell.imgCollectionThird?.kf.setImage(with: url)
         } else {
@@ -44,10 +49,9 @@ extension SectionThirdViewCell: UICollectionViewDelegate, UICollectionViewDataSo
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let selectedDatum = coreDataArray[indexPath.item]
-        if let subTitle = selectedDatum.subtitle{
+        let playlist = apiData[indexPath.item]
+        if let subTitle = playlist.title{
             delegate?.didSelectItemAt(subTitle: subTitle)
-            NotificationCenter.default.post(name: NSNotification.Name("CollectionViewItemSelected"), object: subTitle)
         }
     }
 }
@@ -60,4 +64,12 @@ extension SectionThirdViewCell{
     internal func passData(data: [Music]) {
         self.coreDataArray = data
     }
+internal func passApiData(dataPlaylist: [PlaylistAPI]) {
+    self.apiData = dataPlaylist
+    collectionSectionThird.reloadData()
+    }
 }
+extension SectionThirdViewCell{
+    
+}
+
