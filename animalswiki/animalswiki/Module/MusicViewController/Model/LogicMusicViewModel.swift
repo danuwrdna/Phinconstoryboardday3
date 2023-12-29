@@ -5,7 +5,7 @@ import UIKit
 class LogicMusicViewModel: NSObject{
     private var viewController = MusicViewController()
     private var model = ApiSearchModel()
-    private var modelDatum: [Datum] = []
+    private var modelDataSearch: [DataSearch] = []
     private var modelPlaylist: [Music] = []
     private var player: AVPlayer?
     private var playerItem: AVPlayerItem?
@@ -13,13 +13,11 @@ class LogicMusicViewModel: NSObject{
     private var isPlaying = false
     private var playbackTime: Double = 0.0
     var sectionIndexTitles: [String] {
-        
         return ["Listen Your Way"]
     }
     
     init(viewController: MusicViewController) {
         self.viewController = viewController
-        
     }
 }
 extension LogicMusicViewModel: UITableViewDelegate, UITableViewDataSource{
@@ -27,10 +25,10 @@ extension LogicMusicViewModel: UITableViewDelegate, UITableViewDataSource{
         return "Listen Your Way"
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return modelDatum.count
+        return modelDataSearch.count
     }
     func numberOfRows(in section: Int) -> Int {
-        return modelDatum.count
+        return modelDataSearch.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -39,7 +37,7 @@ extension LogicMusicViewModel: UITableViewDelegate, UITableViewDataSource{
         return cell
     }
     func configureCell(_ cell: MusicTableViewCell, at indexPath: IndexPath) {
-        let deezerTrack = modelDatum[indexPath.row]
+        let deezerTrack = modelDataSearch[indexPath.row]
         cell.titleLabel?.text = deezerTrack.artist?.name?.stringValue
         cell.subTitleLabel?.text = deezerTrack.title
         if let duration = deezerTrack.duration {
@@ -134,7 +132,7 @@ extension LogicMusicViewModel{
             return
             
         }
-        let selectedSound = modelDatum[selectedIndexPath.row]
+        let selectedSound = modelDataSearch[selectedIndexPath.row]
         viewController.headLabel.text = selectedSound.artist?.name?.stringValue
         viewController.subHeadLabel.text = selectedSound.title
         if let coverURLString = selectedSound.album?.cover,
@@ -153,7 +151,7 @@ extension LogicMusicViewModel{
                 print("Lagu di-pause, dilanjutkan pemutaran")
                 resumeMusic()
                 if let selectedIndexPath = viewController.tableMusic.indexPathForSelectedRow {
-                    let selectedSound = modelDatum[selectedIndexPath.row]
+                    let selectedSound = modelDataSearch[selectedIndexPath.row]
                     if let selectedPreview = selectedSound.preview, !selectedPreview.isEmpty {
                         print("Memutar lagu baru")
                         playSnd(soundName: selectedPreview, startTime: playbackTime)
@@ -169,7 +167,7 @@ extension LogicMusicViewModel{
             print("Player nil, inisialisasi dan putar lagu yang sedang dipilih")
             resumeMusic()
             if let selectedIndexPath = viewController.tableMusic.indexPathForSelectedRow {
-                let selectedSound = modelDatum[selectedIndexPath.row]
+                let selectedSound = modelDataSearch[selectedIndexPath.row]
                 if let selectedPreview = selectedSound.preview, !selectedPreview.isEmpty {
                     print("Memutar lagu baru")
                     playSnd(soundName: selectedPreview, startTime: playbackTime)
@@ -256,7 +254,7 @@ extension LogicMusicViewModel{
             return
         }
         
-        let selectedSound = modelDatum[selectedIndexPath.row]
+        let selectedSound = modelDataSearch[selectedIndexPath.row]
         if let player = player, let playerItem = player.currentItem {
             if let currentSoundURL = (playerItem.asset as? AVURLAsset)?.url {
                 let selectedPreviewURLString = selectedSound.preview ?? ""
@@ -302,7 +300,7 @@ extension LogicMusicViewModel{
         }
         
         var newIndexPath: IndexPath
-        if selectedIndexPath.row < modelDatum.count - 1 {
+        if selectedIndexPath.row < modelDataSearch.count - 1 {
             newIndexPath = IndexPath(row: selectedIndexPath.row + 1, section: selectedIndexPath.section)
         } else {
             newIndexPath = IndexPath(row: 0, section: selectedIndexPath.section)
@@ -321,7 +319,7 @@ extension LogicMusicViewModel{
         if selectedIndexPath.row > 0 {
             newIndexPath = IndexPath(row: selectedIndexPath.row - 1, section: selectedIndexPath.section)
         } else {
-            newIndexPath = IndexPath(row: modelDatum.count - 1, section: selectedIndexPath.section)
+            newIndexPath = IndexPath(row: modelDataSearch.count - 1, section: selectedIndexPath.section)
         }
         
         viewController.tableMusic.selectRow(at: newIndexPath, animated: true, scrollPosition: .none)
@@ -337,7 +335,7 @@ extension LogicMusicViewModel: UITextFieldDelegate{
         let musicViewModel = ApiSearchModel()
         musicViewModel.fetchData(for: searchTerm) { [weak self] searchResult in
             if let data = searchResult?.data {
-                self?.modelDatum = data
+                self?.modelDataSearch = data
                 DispatchQueue.main.async {
                     self?.viewController.tableMusic.reloadData()
                 }
@@ -368,13 +366,17 @@ extension LogicMusicViewModel: UITextFieldDelegate{
         viewController.tableMusic.reloadData()
     }
     func performSearch(with searchTerm: String) {
+        viewController.activityLoading.startAnimating()
+        viewController.activityLoading.isHidden = false
         viewController.tableMusic.showSkeleton()
         model.fetchData(for: searchTerm) { [weak self] searchResult in
             if let data = searchResult?.data {
-                self?.modelDatum = data
+                self?.modelDataSearch = data
                 DispatchQueue.main.async {
                     self?.viewController.tableMusic.hideSkeleton()
                     self?.viewController.tableMusic.reloadData()
+                    self?.viewController.activityLoading.isHidden = true
+                    self?.viewController.activityLoading.stopAnimating()
                 }
             }
         }
@@ -410,7 +412,7 @@ extension LogicMusicViewModel: UITextFieldDelegate{
         func filterDataByTitle() {
             // Implementasi logika filter berdasarkan judul
             // Misalnya, urutkan modelDatum berdasarkan judul
-            modelDatum.sort { $0.title?.compare($1.title ?? "") == .orderedAscending }
+            modelDataSearch.sort { $0.title?.compare($1.title ?? "") == .orderedAscending }
             viewController.tableMusic.reloadData()
         }
 

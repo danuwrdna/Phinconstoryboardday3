@@ -17,7 +17,6 @@ extension SectionFirstViewCollection{
         imgViewCollection.clipsToBounds = true
         imgViewFirstCollection.layer.cornerRadius = 10
      
-       
     }
 
 }

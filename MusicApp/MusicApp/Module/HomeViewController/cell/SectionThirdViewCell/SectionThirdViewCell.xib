@@ -43,7 +43,7 @@
                             <constraint firstAttribute="height" constant="200" id="jpn-P8-bnE"/>
                             <constraint firstAttribute="width" constant="361" id="vDi-yb-8IH"/>
                         </constraints>
-                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="WzD-Q7-ekC">
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="WzD-Q7-ekC">
                             <size key="itemSize" width="126" height="155"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>

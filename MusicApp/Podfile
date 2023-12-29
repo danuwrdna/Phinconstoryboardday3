@@ -9,6 +9,8 @@ target 'MusicApp' do
   pod "RxCocoa"
   pod "Firebase/Core"
   pod "Firebase/Auth"
+  pod "Firebase/Storage"
+  pod 'Firebase/Database'
   pod 'lottie-ios'
   pod 'Alamofire'
   pod 'netfox'

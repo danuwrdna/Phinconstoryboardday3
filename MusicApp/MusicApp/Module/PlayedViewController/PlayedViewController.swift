@@ -14,7 +14,7 @@ class PlayedViewController: UIViewController {
     var audioItem: AVPlayerItem?
     var audioPlayer: AVPlayer?
     var track: String = ""
-    var trackList : [Datum] = []
+    var trackList : [DataSearch] = []
   
     @IBAction func btBack(_ sender: Any) {
         navigate()

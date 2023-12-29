@@ -11,6 +11,7 @@ class HomeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         fetchDataFromCoreDataAndAPI()
+        navigationController?.isNavigationBarHidden = true
     }
 }
 
@@ -46,8 +47,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
             return second
         case 2:
             let third = tableView.dequeueReusableCell(forIndexPath: indexPath) as SectionThirdViewCell
-            third.passData(data: homeViewModel.data )
-            third.passApiData(dataPlaylist: homeViewModel.dataPlaylist)
+            third.apiData = homeViewModel.dataPlaylist
             third.delegate = self
             return third
         case 3:
@@ -67,7 +67,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
         case 1:
             return 200
         case 2:
-            return 230
+            return 235
         case 3:
             return 240
         default:

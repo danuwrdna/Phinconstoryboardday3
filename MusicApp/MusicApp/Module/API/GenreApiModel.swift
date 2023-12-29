@@ -8,12 +8,11 @@ import Foundation
 // MARK: - Genre
 struct Genre: Codable {
     let data: [DataGenre]?
-
+    
     enum CodingKeys: String, CodingKey {
         case data = "data"
     }
 }
-
 // MARK: - Datum
 struct DataGenre: Codable {
     let id: Int?
@@ -24,7 +23,7 @@ struct DataGenre: Codable {
     let pictureBig: String?
     let pictureXl: String?
     let type: TypeEnum?
-
+    
     enum CodingKeys: String, CodingKey {
         case id = "id"
         case name = "name"
@@ -42,22 +41,34 @@ enum TypeEnum: String, Codable {
 }
 class GenreApiModel {
     func fetchData(completion: @escaping (Result<Genre, Error>) -> Void) {
+        if let cachedData = URLCache.shared.cachedResponse(for: URLRequest(url: URL(string: "https://api.deezer.com/genre")!))?.data {
+            do {
+                let decoder = JSONDecoder()
+                let genre = try decoder.decode(Genre.self, from: cachedData)
+                completion(.success(genre))
+                return
+            } catch {
+                completion(.failure(error))
+            }
+        }
         guard let url = URL(string: "https://api.deezer.com/genre") else {
             completion(.failure(NSError(domain: "Invalid URL", code: 0, userInfo: nil)))
             return
         }
-
+        
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             if let error = error {
                 completion(.failure(error))
                 return
             }
-
+            
             guard let data = data else {
                 completion(.failure(NSError(domain: "No data received", code: 1, userInfo: nil)))
                 return
             }
-
+            let cachedResponse = CachedURLResponse(response: response!, data: data)
+            URLCache.shared.storeCachedResponse(cachedResponse, for: URLRequest(url: url))
+            
             do {
                 let decoder = JSONDecoder()
                 let genre = try decoder.decode(Genre.self, from: data)
@@ -67,4 +78,5 @@ class GenreApiModel {
             }
         }.resume()
     }
+    
 }

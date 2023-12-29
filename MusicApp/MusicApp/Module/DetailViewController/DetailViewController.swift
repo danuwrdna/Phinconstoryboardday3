@@ -4,6 +4,7 @@ import Kingfisher
 
 class DetailViewController: UIViewController {
 //    var customPopupView: PlayedMusicViewController?
+    private var imageTitle = ""
    
     var modelDatum: [Music] = []
     @IBAction func btBack(_ sender: Any) {

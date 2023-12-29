@@ -3,6 +3,7 @@ import AVFoundation
 import Kingfisher
 import CoreData
 import SkeletonView
+import Lottie
 
 class MusicViewController: UIViewController {
     private var subTitle = ""
@@ -19,6 +20,8 @@ class MusicViewController: UIViewController {
     @IBOutlet weak var progressBar: UIProgressView!
     @IBOutlet weak var tableMusic: UITableView!
     @IBOutlet weak var viewHome: UIView!
+
+    @IBOutlet weak var activityLoading: UIActivityIndicatorView!
     @IBAction func fiterMusicBT(_ sender: Any) {
         musicViewModel.filterData()
     }
@@ -115,26 +118,14 @@ extension MusicViewController {
 }
 extension MusicViewController{
     func borderViewHome(){
-        viewHome.layer.cornerRadius = 10
-        viewHome.layer.masksToBounds = false
-        viewHome.layer.shadowColor = UIColor.black.cgColor
-        viewHome.layer.shadowOpacity = 0.5
-        viewHome.layer.shadowOffset = CGSize(width: 0, height: 2)
-        viewHome.layer.shadowRadius = 4.0
-        viewHome.layer.shouldRasterize = true
-        viewHome.layer.rasterizationScale = UIScreen.main.scale
-        viewHome.isHidden = true
+    viewHome.applyShadowWithCornerRadius(cornerRadius: 10, shadowColor: UIColor.black, shadowOpacity: 0.5, shadowOffset: CGSize(width: 0, height: 2), shadowRadius: 4.0)
+    viewHome.isHidden = true
+    viewHome.clipsToBounds = false
         
     }
     func borderImageAb(){
-        imgAB.layer.cornerRadius = 16
-        imgAB.layer.shadowColor = UIColor.black.cgColor
-        imgAB.layer.shadowOpacity = 0.5
-        imgAB.layer.shadowOffset = CGSize(width: 0, height: 2)
-        imgAB.layer.shadowRadius = 4.0
-        imgAB.layer.cornerRadius = 16
-        imgAB.layer.masksToBounds = false
-        imgAB.clipsToBounds = true
+        imgAB.applyShadowWithCornerRadius(cornerRadius: 16, shadowColor: UIColor.black, shadowOpacity: 0.5, shadowOffset: CGSize(width: 0, height: 2), shadowRadius: 4.0)
+        imgAB.clipsToBounds = false
     }
 }
 extension MusicViewController: UITextFieldDelegate {
@@ -144,20 +135,14 @@ extension MusicViewController: UITextFieldDelegate {
         musicViewModel.fetchDataFromCoreData()
         musicViewModel.performSearch(with: "")
         searchField?.text = subTitle + artist
-        //searchField?.text = artist
     }
     
 }
 extension MusicViewController{
     func viewSrch(){
-        viewSearch.layer.cornerRadius = 16
-        viewSearch.layer.masksToBounds = false
-        viewSearch.layer.shadowColor = UIColor.black.cgColor
-        viewSearch.layer.shadowOpacity = 0.5
-        viewSearch.layer.shadowOffset = CGSize(width: 0, height: 2)
-        viewSearch.layer.shadowRadius = 4.0
-        viewSearch.layer.shouldRasterize = true
-        viewSearch.layer.rasterizationScale = UIScreen.main.scale
+        viewSearch.applyShadowWithCornerRadius(cornerRadius: 16, shadowColor: UIColor.black, shadowOpacity: 0.5, shadowOffset: CGSize(width: 0, height: 2), shadowRadius: 4.0)
+        viewSearch.clipsToBounds = false
+
     }
 }
 extension MusicViewController{
@@ -173,12 +158,12 @@ extension MusicViewController{
 extension MusicViewController{
     func setImage(subTitle: String) {
         self.subTitle = subTitle
-        searchField?.text = subTitle // Set the text of the searchField
+        searchField?.text = subTitle
                 musicViewModel?.performSearch(with: subTitle)
     }
     func setImageSectionFirst(artist: String) {
         self.artist = artist
-        searchField?.text = artist // Set the text of the searchField
+        searchField?.text = artist
                 musicViewModel?.performSearch(with: artist)
     }
 }

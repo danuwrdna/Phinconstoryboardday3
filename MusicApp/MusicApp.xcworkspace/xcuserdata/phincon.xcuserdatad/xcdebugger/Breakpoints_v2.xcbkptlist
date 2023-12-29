@@ -115,17 +115,65 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "AFE683FE-9788-4F75-A078-FD44F33EAFB5"
+            uuid = "E219F6E4-577F-4A9A-BF0A-D0838927C886"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MusicApp/Module/API/RadioApiModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "RadioElement"
+            landmarkType = "14">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2CF089C4-31B4-4927-82C5-FA4612D72107"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MusicApp/Module/HomeViewController/cell/SectionFirstViewCell/SectionFirstViewCell.swift"
+            filePath = "MusicApp/Module/API/RadioApiModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
-            landmarkName = "collectionView(_:didSelectItemAt:)"
-            landmarkType = "7">
+            startingLineNumber = "9"
+            endingLineNumber = "9"
+            landmarkName = "Radio"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "2CF089C4-31B4-4927-82C5-FA4612D72107 - d586162bd607d8a2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MusicApp.Radio.CodingKeys.init(rawValue: Swift.String) -&gt; Swift.Optional&lt;MusicApp.Radio.CodingKeys&gt;"
+                  moduleName = "MusicApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/phincon/Documents/test/Bootcampswiftphinconbatch3/Phinconstoryboardday3/MusicApp/MusicApp/Module/API/RadioApiModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "76">
+               </Location>
+               <Location
+                  uuid = "2CF089C4-31B4-4927-82C5-FA4612D72107 - 120bd64741322c69"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MusicApp.Radio.CodingKeys.rawValue.getter : Swift.String"
+                  moduleName = "MusicApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/phincon/Documents/test/Bootcampswiftphinconbatch3/Phinconstoryboardday3/MusicApp/MusicApp/Module/API/RadioApiModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

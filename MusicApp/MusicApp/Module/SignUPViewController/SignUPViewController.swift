@@ -6,6 +6,7 @@ import RxCocoa
 import Lottie
 class SignUPViewController: UIViewController {
     let musicAnimationView = LottieAnimationView(name: "musicAnimate")
+    let loadingAnimationView = LottieAnimationView(name: "loginLoad")
     @IBOutlet weak var emailSign: UITextField!
     @IBOutlet weak var passwordSign: UITextField!
     @IBOutlet weak var erorText: UILabel!
@@ -30,7 +31,7 @@ class SignUPViewController: UIViewController {
         navigationController?.isNavigationBarHidden = true
     }
 }
-    extension SignUPViewController{
+extension SignUPViewController{
     func animate() {
         musicAnimationView.frame = CGRect(x: 0, y: 0, width: 352, height: 330)
         musicAnimationView.center = CGPoint(x: view.frame.width / 2, y: view.frame.height / 4)
@@ -39,6 +40,19 @@ class SignUPViewController: UIViewController {
         view.addSubview(musicAnimationView)
         musicAnimationView.play()
     }
+    func addLoginLoadAnimation() {
+        loadingAnimationView.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
+        loadingAnimationView.center = CGPoint(x: view.frame.width / 2, y: view.frame.height / 2)
+        loadingAnimationView.contentMode = .scaleAspectFit
+        view.addSubview(loadingAnimationView)
+        loadingAnimationView.loopMode = .loop
+        loadingAnimationView.play()
+    }
+    func removeLoginLoadAnimation() {
+        loadingAnimationView.removeFromSuperview()
+    }
+}
+extension SignUPViewController{
     func setupImageButton() {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(backTapped))
         backImage.isUserInteractionEnabled = true
@@ -49,7 +63,8 @@ class SignUPViewController: UIViewController {
         print("Back button tapped!")
         navigationController?.popViewController(animated: true)
     }
-    
+}
+extension SignUPViewController{
     func setupEyeButton() {
         let eyeImage = UIImage(systemName: "eye.fill")
         let eyeSlashImage = UIImage(systemName: "eye.slash.fill")
@@ -89,14 +104,18 @@ extension SignUPViewController{
     func setupSign() {
         navigationItem.hidesBackButton = true
         signButton.rx.tap
-            .bind(to: login)
-            .disposed(by: disposeBag)
-        login
-            .subscribe(onNext: { [weak self] in
-                self?.signUp()
+            .do(onNext: { [weak self] in
+                self?.addLoginLoadAnimation()
             })
-            .disposed(by: disposeBag)
-    }
+                .bind(to: login)
+                .disposed(by: disposeBag)
+                login
+                .subscribe(onNext: { [weak self] in
+                    self?.signUp()
+                })
+                .disposed(by: disposeBag)
+                }
+    
     func signUp() {
         guard let email = emailSign.text, let password = passwordSign.text else {
             return
@@ -116,6 +135,7 @@ extension SignUPViewController{
                 })
                 alertController.addAction(okAction)
                 self?.present(alertController, animated: true, completion: nil)
+                self?.removeLoginLoadAnimation()
             }
         }
     }

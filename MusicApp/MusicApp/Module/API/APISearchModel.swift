@@ -7,13 +7,13 @@ import Foundation
 
 // MARK: - Search
 struct Search: Codable {
-    let data: [Datum]?
+    let data: [DataSearch]?
     let total: Int?
     let next: String?
 }
 
 // MARK: - Datum
-struct Datum: Codable {
+struct DataSearch: Codable {
     let id: StringOrInt?
     let readable: Bool?
     let title, titleShort: String?
@@ -213,9 +213,6 @@ enum TitleVersion: Codable {
         
     }
 }
-
-
-
 enum DatumType: String, Codable {
     case track = "track"
 }

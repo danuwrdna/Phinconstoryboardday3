@@ -12,6 +12,8 @@
             <connections>
                 <outlet property="editView" destination="S2m-7j-ATk" id="HdM-Lb-h3g"/>
                 <outlet property="profileImg" destination="82C-ka-aJ8" id="oOl-1g-zVC"/>
+                <outlet property="textFieldPassword" destination="Ygi-2p-f8E" id="HVt-oP-aj3"/>
+                <outlet property="textFieldemail" destination="wSr-o3-dhb" id="UgV-Rn-FKe"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -93,6 +95,9 @@
                                     </fragment>
                                 </attributedString>
                             </buttonConfiguration>
+                            <connections>
+                                <action selector="btEditProfile:" destination="-1" eventType="touchUpInside" id="034-J5-hcC"/>
+                            </connections>
                         </button>
                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wSr-o3-dhb">
                             <rect key="frame" x="20" y="45" width="318" height="34"/>

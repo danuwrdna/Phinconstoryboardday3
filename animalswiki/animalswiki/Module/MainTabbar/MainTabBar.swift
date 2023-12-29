@@ -8,7 +8,6 @@ class MainTabBarViewController: UITabBarController {
     let history = UINavigationController(rootViewController: CollectionMusicVC())
     let profile = UINavigationController(rootViewController: ProfileViewController())
    
-
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUITabBarItems()
@@ -18,23 +17,18 @@ class MainTabBarViewController: UITabBarController {
         navigationController?.isNavigationBarHidden = true
     }
     func configureUITabBarItems() {
-        // Konfigurasi homeVC
-         
 
         homeVC.tabBarItem = UITabBarItem(title: "Home", image: TabBar.icon1, tag: 0)
         search.tabBarItem = UITabBarItem(title: "Search", image: TabBar.icon2, tag: 1)
         history.tabBarItem = UITabBarItem(title: "History", image: TabBar.icon3, tag: 2)
         profile.tabBarItem = UITabBarItem(title: "Profile", image: TabBar.icon4, tag: 3)
        
-
-        // Konfigurasi warna teks
         let normalTextAttributes: [NSAttributedString.Key: Any] = [NSAttributedString.Key.foregroundColor: UIColor.white]
         let selectedTextAttributes: [NSAttributedString.Key: Any] = [NSAttributedString.Key.foregroundColor: UIColor.white]
 
         UITabBarItem.appearance().setTitleTextAttributes(normalTextAttributes, for: .normal)
         UITabBarItem.appearance().setTitleTextAttributes(selectedTextAttributes, for: .selected)
-
-        // Konfigurasi warna tab bar
+        
         let red = CGFloat(73) / 255.0
         let green = CGFloat(94) / 255.0
         let blue = CGFloat(87) / 255.0
@@ -42,10 +36,7 @@ class MainTabBarViewController: UITabBarController {
         UITabBar.appearance().backgroundColor = tabBarColor
         UITabBar.appearance().tintColor = UIColor.white
         UITabBar.appearance().barTintColor = tabBarColor
-        
-       
-        
-        // Warna latar belakang tab bar
+    
     }
 
     func setViewControllers() {

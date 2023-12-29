@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MusicViewController" customModule="MusicApp" customModuleProvider="target">
             <connections>
+                <outlet property="activityLoading" destination="qQ0-bX-M49" id="6Dt-qc-9HS"/>
                 <outlet property="finishLabel" destination="XjL-OZ-mZS" id="VVb-sF-DQE"/>
                 <outlet property="headLabel" destination="0bc-y8-uV3" id="F6u-pZ-1ul"/>
                 <outlet property="imgAB" destination="9Tl-ck-bEr" id="SaT-tw-z5q"/>
@@ -242,6 +243,13 @@
                         <action selector="fiterMusicBT:" destination="-1" eventType="touchUpInside" id="XO8-8s-D43"/>
                     </connections>
                 </button>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="qQ0-bX-M49">
+                    <rect key="frame" x="46" y="268" width="300" height="300"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="300" id="Ucg-aR-Gfq"/>
+                    </constraints>
+                    <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -256,10 +264,13 @@
                 <constraint firstItem="csE-rQ-HON" firstAttribute="top" secondItem="Lsa-GV-BXc" secondAttribute="bottom" constant="5" id="MQM-tC-03u"/>
                 <constraint firstItem="csE-rQ-HON" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="OcZ-6L-fUQ"/>
                 <constraint firstItem="BLK-fj-29w" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Tdw-es-zLR"/>
+                <constraint firstItem="qQ0-bX-M49" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="209" id="WaM-tK-FEe"/>
                 <constraint firstItem="N4X-4J-W53" firstAttribute="centerY" secondItem="Lsa-GV-BXc" secondAttribute="centerY" id="YBm-rf-gpd"/>
                 <constraint firstItem="Lsa-GV-BXc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="aZ2-R3-UeI"/>
                 <constraint firstItem="Lsa-GV-BXc" firstAttribute="top" secondItem="BLK-fj-29w" secondAttribute="bottom" constant="20" id="ek8-Pc-D0S"/>
                 <constraint firstItem="jjg-4c-HO6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="jvu-RJ-ATH"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qQ0-bX-M49" secondAttribute="trailing" constant="47" id="p6X-hF-Lgv"/>
+                <constraint firstItem="qQ0-bX-M49" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="46" id="rcs-AQ-cET"/>
                 <constraint firstAttribute="bottom" secondItem="csE-rQ-HON" secondAttribute="bottom" id="x2n-wA-og2"/>
             </constraints>
             <point key="canvasLocation" x="6.8702290076335872" y="19.718309859154932"/>

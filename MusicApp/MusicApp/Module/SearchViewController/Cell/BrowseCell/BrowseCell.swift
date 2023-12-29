@@ -6,7 +6,7 @@ protocol BrowseDelegateCell{
 class BrowseCell: UITableViewCell {
     private var coreDataArray: [Music] = [] {
         didSet {
-           collectionBrowse.reloadData()
+            collectionBrowse.reloadData()
         }
     }
     private var genre: [DataGenre] = [] {
@@ -34,16 +34,15 @@ extension BrowseCell: UICollectionViewDelegate, UICollectionViewDataSource{
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionBrowse.dequeueReusableCell(withReuseIdentifier: "BrowseCollection", for: indexPath) as! BrowseCollection// Replace YourCollectionViewCell with the actual name of your cell class
+        let cell = collectionBrowse.dequeueReusableCell(withReuseIdentifier: "BrowseCollection", for: indexPath) as! BrowseCollection
         cell.modelImgViewModel = ModelImgViewModel()
-        let datum = genre[indexPath.item]
-        cell.labelBrowse?.text = datum.name
-        if let imageUrl = datum.picture{
+        let dataGenre = genre[indexPath.item]
+        cell.labelBrowse?.text = dataGenre.name
+        if let imageUrl = dataGenre.picture{
             let url = URL(string: imageUrl)
             cell.imgBrowse?.kf.setImage(with: url)
         } else {
-            // Handle case when album cover URL is not available
-            cell.imgBrowse?.image = UIImage(named: "placeholderImage") // You can use a placeholder image
+            cell.imgBrowse?.image = UIImage(named: "placeholderImage")
         }
         return cell
     }
@@ -62,8 +61,8 @@ extension BrowseCell{
         
         do {
             let result = try context.fetch(fetchRequest)
-          coreDataArray = result as! [Music]
-          collectionBrowse.reloadData()
+            coreDataArray = result as! [Music]
+            collectionBrowse.reloadData()
         } catch {
             fatalError("Gagal mengambil data dari Core Data: \(error)")
         }

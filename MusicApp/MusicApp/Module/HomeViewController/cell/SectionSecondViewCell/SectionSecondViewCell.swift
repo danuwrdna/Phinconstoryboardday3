@@ -8,13 +8,12 @@ class SectionSecondViewCell: UITableViewCell {
     private var coreDataArray: [Music] = [] {
             didSet {
                 if coreDataArray.isEmpty {
-                    labeldtaksng.isHidden = false
-                    
-                 
+                    collectionSecondCell.isHidden = true
+                    self.isHidden = true
                 } else {
-                   
-                    labeldtaksng.isHidden = true
+                    collectionSecondCell.isHidden = false
                     collectionSecondCell.reloadData()
+                    self.isHidden = false
                 }
             }
         }

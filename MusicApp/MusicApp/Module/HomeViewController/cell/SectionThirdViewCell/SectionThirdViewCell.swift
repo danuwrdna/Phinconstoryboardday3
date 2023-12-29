@@ -4,20 +4,24 @@ protocol SectionThirdViewCellDelegate {
     func didSelectItemAt(subTitle: String)
 }
 class SectionThirdViewCell: UITableViewCell {
+
+    @IBOutlet weak var collectionSectionThird: UICollectionView!
+    @IBOutlet weak var imgCollectionSectionThird: UIImageView!
+    @IBOutlet weak var labelArtistImgCollectionThird: UILabel!
+    
     private var coreDataArray: [Music] = [] {
         didSet {
             collectionSectionThird.reloadData()
         }
     }
-    private var apiData: [PlaylistAPI] = [] {
+    
+    var apiData: [DataTracksItem] = [] {
         didSet {
             collectionSectionThird.reloadData()
         }
     }
     var delegate: SectionThirdViewCellDelegate?
-    @IBOutlet weak var collectionSectionThird: UICollectionView!
-    @IBOutlet weak var imgCollectionSectionThird: UIImageView!
-    @IBOutlet weak var labelArtistImgCollectionThird: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         delegateCollection()
@@ -34,17 +38,15 @@ extension SectionThirdViewCell: UICollectionViewDelegate, UICollectionViewDataSo
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return apiData.count
     }
-    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionSectionThird.dequeueReusableCell(withReuseIdentifier: "SectionThirdViewCollection", for: indexPath) as! SectionThirdViewCollection// Replace YourCollectionViewCell with the actual name of your cell class
+        let cell = collectionSectionThird.dequeueReusableCell(withReuseIdentifier: "SectionThirdViewCollection", for: indexPath) as! SectionThirdViewCollection
         let playlistDat = apiData[indexPath.item]
         cell.textLabelCollectionThird?.text = playlistDat.title
-        if let imageUrl = playlistDat.picture {
+        if let imageUrl = playlistDat.album?.cover {
             let url = URL(string: imageUrl)
             cell.imgCollectionThird?.kf.setImage(with: url)
         } else {
-            // Handle case when album cover URL is not available
-            cell.imgCollectionThird?.image = UIImage(named: "placeholderImage") // You can use a placeholder image
+            cell.imgCollectionThird?.image = UIImage(named: "placeholderImage")
         }
         return cell
     }
@@ -64,9 +66,10 @@ extension SectionThirdViewCell{
     internal func passData(data: [Music]) {
         self.coreDataArray = data
     }
-internal func passApiData(dataPlaylist: [PlaylistAPI]) {
-    self.apiData = dataPlaylist
-    collectionSectionThird.reloadData()
+    
+    internal func passApiData(dataPlaylist: [DataTracksItem]) {
+        self.apiData = dataPlaylist
+        collectionSectionThird.reloadData()
     }
 }
 extension SectionThirdViewCell{

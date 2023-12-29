@@ -62,7 +62,8 @@ extension LoginViewController{
         
         passwordLogin.isSecureTextEntry = !isPasswordVisible
     }
-    
+}
+extension LoginViewController{
     func setupLogin() {
         guard let email = emailLogin.text, let password = passwordLogin.text else {
             return

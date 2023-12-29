@@ -31,7 +31,7 @@ extension SplashViewController{
         NotificationCenter.default.addObserver(self, selector: #selector(animationDidFinish), name: .init("AnimationDidFinish"), object: nil)
     }
     @objc func animationDidFinish() {
-        let ng = MainTabBarViewController()
+        let ng = LoginViewController()
         ng.navigationItem.hidesBackButton = true
         navigationController?.pushViewController(ng, animated: true)
     }

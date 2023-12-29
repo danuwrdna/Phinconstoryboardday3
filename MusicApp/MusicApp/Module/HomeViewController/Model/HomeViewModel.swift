@@ -7,10 +7,10 @@ class HomeViewModel{
     var apiArtist = ArtistApiModel()
     var apiData: [ArtistApi] = []
     var apiPlaylist = PlaylistHappyApiModel()
-    var dataPlaylist: [PlaylistAPI] = []
+    var dataPlaylist: [DataTracksItem] = []
+    
     init(viewController: HomeViewController) {
         self.viewController = viewController
-        
     }
 }
 extension HomeViewModel{
@@ -70,17 +70,17 @@ extension HomeViewModel{
             case .success(let playlist):
                 DispatchQueue.main.async {
                     print("Playlist Title: \(playlist.title ?? "N/A")")
-                    // Update your data source with the new playlist data
-                    // Example: self.dataSourceArray = playlist.data
-                    // Assuming self.tableView is your UITableView instance
+                    self.dataPlaylist = playlist.tracks?.data ?? []
                     self.viewController.homeTableView.reloadData()
                 }
             case .failure(let error):
                 print("Error fetching playlist data: \(error.localizedDescription)")
-                // Handle the failure, e.g., show an error message
             }
         }
     }
 
 
+}
+extension HomeViewModel{
+    
 }

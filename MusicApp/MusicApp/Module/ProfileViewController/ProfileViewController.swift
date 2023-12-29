@@ -1,10 +1,12 @@
 import UIKit
+import FirebaseStorage
 
 class ProfileViewController: UIViewController, ProfileViewModelDelegate {
     func didSelectIcon(section: Int, row: Int) {
 //        viewModel.didSelectIcon(section: section, row: row, navigationController: navigationController)
     }
     @IBOutlet weak var profileTable: UITableView!
+    @IBOutlet weak var imgProfile: UIImageView!
     @IBAction func navigateToEdit(_ sender: Any) {
         navigateEdit()
     }
@@ -14,6 +16,12 @@ class ProfileViewController: UIViewController, ProfileViewModelDelegate {
         super.viewDidLoad()
         delegateTable()
         viewModel.delegate = self
+        borderBottomOnly()
+        loadProfileImage()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.isNavigationBarHidden = true
     }
 }
 
@@ -39,8 +47,6 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
         }
         let data = viewModel.sectionData[indexPath.section][indexPath.row]
         cell.textLabel?.text = data.title
-
-           // Mengatur ikon cell dengan nama ikon dari data
            cell.imageView?.image = UIImage(systemName: data.iconName)
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(iconTapped(_:)))
            cell.imageView?.addGestureRecognizer(tapGesture)
@@ -53,8 +59,6 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
               let indexPath = profileTable.indexPath(for: tappedCell) else {
             return
         }
-
-        // Memanggil metode delegasi ketika ikon di tekan
         viewModel.delegate?.didSelectIcon(section: indexPath.section, row: indexPath.row)
     }
     
@@ -71,4 +75,25 @@ extension ProfileViewController{
         let bt = EditViewController()
         self.navigationController?.pushViewController(bt, animated: true)
     }
+}
+extension ProfileViewController{
+    func borderBottomOnly(){
+               imgProfile.layer.cornerRadius = 20
+               imgProfile.layer.masksToBounds = true
+    }
+}
+extension ProfileViewController{
+    func loadProfileImage() {
+            viewModel.fetchProfileImage { result in
+                switch result {
+                case .success(let imageData):
+                    DispatchQueue.main.async {
+                        self.imgProfile.image = UIImage(data: imageData)
+                    }
+                case .failure(let error):
+                    print("Failed to fetch profile image: \(error.localizedDescription)")
+                }
+            }
+        }
+
 }

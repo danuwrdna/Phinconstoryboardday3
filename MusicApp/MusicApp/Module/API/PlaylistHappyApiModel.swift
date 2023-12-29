@@ -35,8 +35,8 @@ struct PlaylistAPI: Codable {
     let pictureType: String?
     let creator: Creator?
     let type: String?
-    let tracks: dataTracks?
-
+    let tracks: DataTracks?
+    
     enum CodingKeys: String, CodingKey {
         case id = "id"
         case title = "title"
@@ -72,7 +72,7 @@ struct Creator: Codable {
     let tracklist: String?
     let type: CreatorType?
     let link: String?
-
+    
     enum CodingKeys: String, CodingKey {
         case id = "id"
         case name = "name"
@@ -88,10 +88,10 @@ enum CreatorType: String, Codable {
 }
 
 // MARK: - Tracks
-struct dataTracks: Codable {
-    let data: [Datumm]?
+struct DataTracks: Codable {
+    let data: [DataTracksItem]?
     let checksum: String?
-
+    
     enum CodingKeys: String, CodingKey {
         case data = "data"
         case checksum = "checksum"
@@ -99,7 +99,7 @@ struct dataTracks: Codable {
 }
 
 // MARK: - Datum
-struct Datumm: Codable {
+struct DataTracksItem: Codable {
     let id: Int?
     let readable: Bool?
     let title: String?
@@ -117,7 +117,7 @@ struct Datumm: Codable {
     let artist: Creator?
     let album: Albumm?
     let type: DatumTypee?
-
+    
     enum CodingKeys: String, CodingKey {
         case id = "id"
         case readable = "readable"
@@ -150,7 +150,7 @@ struct Albumm: Codable {
     let md5Image: String?
     let tracklist: String?
     let type: AlbumTypee?
-
+    
     enum CodingKeys: String, CodingKey {
         case id = "id"
         case title = "title"
@@ -168,7 +168,6 @@ struct Albumm: Codable {
 enum AlbumTypee: String, Codable {
     case album = "album"
 }
-
 enum TitleVersionn: String, Codable {
     case edit = "(Edit)"
     case empty = ""
@@ -176,52 +175,61 @@ enum TitleVersionn: String, Codable {
     case pnauRemix = "(PNAU Remix)"
     case radioEdit = "(Radio Edit)"
     case remix = "(Remix)"
+    case unknown
+    init(from decoder: Decoder) throws {
+        let container = try decoder.singleValueContainer()
+        let rawValue = try container.decode(String.self)
+        
+        if let titleVersion = TitleVersionn(rawValue: rawValue) {
+            self = titleVersion
+        } else {
+            self = .unknown
+        }
+    }
 }
 
 enum DatumTypee: String, Codable {
     case track = "track"
 }
-
-
-
 class PlaylistHappyApiModel {
-    let deezerAPIURL = URL(string: "https://api.deezer.com/playlist/1479458365")!
-
+    let deezerAPIURL = URL(string: "https://api.deezer.com/playlist/9773460082")!
+    
     func fetchData(completion: @escaping (Result<PlaylistAPI, Error>) -> Void) {
-        // Create a data task to fetch the data
+        if let cachedResponse = URLCache.shared.cachedResponse(for: URLRequest(url: deezerAPIURL)) {
+            do {
+                let playlist = try JSONDecoder().decode(PlaylistAPI.self, from: cachedResponse.data)
+                completion(.success(playlist))
+                return
+            } catch {
+                print("Error decoding cached playlist data: \(error)")
+            }
+        }
+        
         let task = URLSession.shared.dataTask(with: deezerAPIURL) { (data, response, error) in
-            // Check for errors
             if let error = error {
                 completion(.failure(error))
                 return
             }
-            
-            // Check if data is available
             guard let data = data else {
                 completion(.failure(YourErrorType.dataNotAvailable))
                 return
             }
             
             do {
-                // Decode the JSON data into PlaylistAPI object
-                let playlist = try JSONDecoder().decode(PlaylistAPI.self, from: data)
+                let cachedData = CachedURLResponse(response: response!, data: data)
+                URLCache.shared.storeCachedResponse(cachedData, for: URLRequest(url: self.deezerAPIURL))
                 
-                // Invoke the completion handler with the result
+                let playlist = try JSONDecoder().decode(PlaylistAPI.self, from: data)
                 completion(.success(playlist))
             } catch {
-                // Invoke the completion handler with the decoding error
                 print("Error decoding playlist data: \(error)")
                 completion(.failure(error))
             }
         }
-        
-        // Resume the data task
         task.resume()
     }
+    
 }
-
-// Define a custom error type for better error handling
 enum YourErrorType: Error {
     case dataNotAvailable
-    // Add other error cases as needed
 }
