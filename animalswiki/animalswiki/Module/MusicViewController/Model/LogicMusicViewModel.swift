@@ -57,6 +57,7 @@ extension LogicMusicViewModel: UITableViewDelegate, UITableViewDataSource{
         } else {
             cell.imgView?.image = UIImage(named: "Please Wait")
         }
+      
     }
     func updateCell(at indexPath: IndexPath) {
         if let cell = viewController.tableMusic.cellForRow(at: indexPath) as? MusicTableViewCell {

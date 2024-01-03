@@ -19,10 +19,10 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
     func delegateTable(){
         homeTableView.delegate = self
         homeTableView.dataSource = self
-        homeTableView.registerCellWithNib(SectionFirstViewCell.self)
-        homeTableView.registerCellWithNib(SectionSecondViewCell.self)
-        homeTableView.registerCellWithNib(SectionThirdViewCell.self)
-        homeTableView.registerCellWithNib(SectionFourViewCell.self)
+        homeTableView.registerCellWithNib(ListenYourWayViewCell.self)
+        homeTableView.registerCellWithNib(RecentlyPlayedCell.self)
+        homeTableView.registerCellWithNib(EnjoyYourMusicViewCell.self)
+        homeTableView.registerCellWithNib(NewReleaseViewCell.self)
         
     }
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -35,23 +35,23 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.section {
         case 0:
-            let first = tableView.dequeueReusableCell(forIndexPath: indexPath) as SectionFirstViewCell
+            let first = tableView.dequeueReusableCell(forIndexPath: indexPath) as ListenYourWayViewCell
             first.passData(data: homeViewModel.data)
             first.passApiData(dataApi: homeViewModel.apiData)
             first.delegate = self
             return first
         case 1:
-            let second = tableView.dequeueReusableCell(forIndexPath: indexPath) as SectionSecondViewCell
+            let second = tableView.dequeueReusableCell(forIndexPath: indexPath) as RecentlyPlayedCell
             second.passData(data: homeViewModel.data)
             second.delegate = self
             return second
         case 2:
-            let third = tableView.dequeueReusableCell(forIndexPath: indexPath) as SectionThirdViewCell
+            let third = tableView.dequeueReusableCell(forIndexPath: indexPath) as EnjoyYourMusicViewCell
             third.apiData = homeViewModel.dataPlaylist
             third.delegate = self
             return third
         case 3:
-            let four = tableView.dequeueReusableCell(forIndexPath: indexPath) as SectionFourViewCell
+            let four = tableView.dequeueReusableCell(forIndexPath: indexPath) as NewReleaseViewCell
             four.passData(data: homeViewModel.data)
             four.passApiData(dataApi: homeViewModel.apiData)
             four.delegate = self
@@ -86,7 +86,7 @@ extension HomeViewController{
     }
 }
 
-extension HomeViewController: SectionSecondViewCellDelegate,SectionThirdViewCellDelegate,SectionFourViewCellDelegate{
+extension HomeViewController: EnjoyYourMusicViewCellDelegate,NewReleaseViewCellDelegate {
     func didSelectItemAt(subTitle: String) {
         let vc = MusicViewController()
         vc.setImage(subTitle: subTitle )
@@ -95,7 +95,17 @@ extension HomeViewController: SectionSecondViewCellDelegate,SectionThirdViewCell
         navigationController?.pushViewController(vc, animated: true)
     }
 }
-extension HomeViewController: SectionFirstViewCellDelegate{
+extension HomeViewController: RecentlyPlayedViewCellDelegate {
+    func didSelectItemAtSectionSecond(subTitle: String) {
+//        let vc = PlayedViewController()
+//        vc.query = subTitle
+//        vc.hidesBottomBarWhenPushed = true
+//        navigationController?.navigationBar.isHidden = true
+//        navigationController?.present(vc, animated: true)
+    }
+}
+
+extension HomeViewController: ListenYourWayViewCellDelegate{
     func didSelectItemAt(artist: String) {
         let vc = MusicViewController()
         vc.setImageSectionFirst(artist: artist)

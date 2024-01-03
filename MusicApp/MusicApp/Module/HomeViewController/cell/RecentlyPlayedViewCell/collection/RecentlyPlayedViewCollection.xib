@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RecentlyPlayedViewCollection" id="gTV-IL-0wX" customClass="RecentlyPlayedViewCollection" customModule="MusicApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="361" height="154"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="361" height="154"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="H34-8J-FJT">
+                        <rect key="frame" x="1" y="1" width="126" height="126"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="126" id="3AQ-bL-jpz"/>
+                            <constraint firstAttribute="width" constant="126" id="Mw2-y9-h2x"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="znR-CG-nao">
+                        <rect key="frame" x="1" y="128" width="349" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="349" id="Zx8-vq-5Os"/>
+                            <constraint firstAttribute="height" constant="21" id="mH0-FY-Bu7"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="H34-8J-FJT" secondAttribute="trailing" constant="234" id="7lM-dP-PFY"/>
+                <constraint firstItem="H34-8J-FJT" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="1" id="87g-6S-yQw"/>
+                <constraint firstItem="H34-8J-FJT" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="1" id="GhE-CJ-TdC"/>
+                <constraint firstAttribute="trailing" secondItem="znR-CG-nao" secondAttribute="trailing" constant="11" id="Pix-X1-ngV"/>
+                <constraint firstItem="znR-CG-nao" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="1" id="b8H-62-0HV"/>
+                <constraint firstItem="znR-CG-nao" firstAttribute="top" secondItem="H34-8J-FJT" secondAttribute="bottom" constant="1" id="cBE-V8-55C"/>
+            </constraints>
+            <connections>
+                <outlet property="imgViewRecentlyPlayed" destination="H34-8J-FJT" id="ykZ-9J-gXb"/>
+                <outlet property="labelRecentlyPlayed" destination="znR-CG-nao" id="opN-Fy-udm"/>
+            </connections>
+            <point key="canvasLocation" x="20.610687022900763" y="19.718309859154932"/>
+        </collectionViewCell>
+    </objects>
+</document>

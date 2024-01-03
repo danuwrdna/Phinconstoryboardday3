@@ -42,7 +42,7 @@ extension BrowseCell: UICollectionViewDelegate, UICollectionViewDataSource{
             let url = URL(string: imageUrl)
             cell.imgBrowse?.kf.setImage(with: url)
         } else {
-            cell.imgBrowse?.image = UIImage(named: "placeholderImage")
+            cell.imgBrowse?.image = UIImage(named: "doc.text.image.fill")
         }
         return cell
     }

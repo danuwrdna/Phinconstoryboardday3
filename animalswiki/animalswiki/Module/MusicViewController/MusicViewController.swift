@@ -4,10 +4,18 @@ import Kingfisher
 import CoreData
 import SkeletonView
 import Lottie
-
+protocol MusicViewDelegate{
+    func didSelectItemAt(image: String, title: String, subtitle: String, previewTrack: String)
+}
 class MusicViewController: UIViewController {
     private var subTitle = ""
     private var artist = ""
+    private var searchData: [DataSearch] = [] {
+        didSet {
+            tableMusic.reloadData()
+        }
+    }
+    var delegate: MusicViewDelegate?
     var musicViewModel: LogicMusicViewModel!
     @IBOutlet weak var viewSearch: UIView!
     @IBOutlet weak var startLabel: UILabel!
@@ -20,7 +28,6 @@ class MusicViewController: UIViewController {
     @IBOutlet weak var progressBar: UIProgressView!
     @IBOutlet weak var tableMusic: UITableView!
     @IBOutlet weak var viewHome: UIView!
-
     @IBOutlet weak var activityLoading: UIActivityIndicatorView!
     @IBAction func fiterMusicBT(_ sender: Any) {
         musicViewModel.filterData()
@@ -56,7 +63,9 @@ class MusicViewController: UIViewController {
         borderImageAb()
         setupTextField()
        
+       
     }
+    
     override func viewDidAppear(_ animated: Bool) {
         navigationController?.isNavigationBarHidden = true
         searchField.becomeFirstResponder()
@@ -171,5 +180,27 @@ extension MusicViewController{
     func setupFetchPassingData(){
         musicViewModel = LogicMusicViewModel(viewController: self)
         musicViewModel.performSearch(with: subTitle + artist)
+    }
+}
+extension MusicViewController: MusicViewDelegate{
+    func didSelectItemAt(image: String, title: String, subtitle: String, previewTrack: String) {
+        
+    }
+    
+    func navigatePlayed(){
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
+        viewHome.addGestureRecognizer(tapGesture)
+    }
+   
+        @objc func handleTap(_ sender: UITapGestureRecognizer) {
+//            let playedView = PlayedViewController()
+//            playedView.query = searchField.text!
+//            navigationController?.present(playedView, animated: true)
+            
+        }
+    }
+extension MusicViewController{
+    internal func passData(data: [DataSearch]) {
+        self.searchData = data
     }
 }

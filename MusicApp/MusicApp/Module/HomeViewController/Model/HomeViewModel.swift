@@ -30,14 +30,14 @@ extension HomeViewModel{
 }
 extension HomeViewModel{
     func fetchDataApiArtist() {
-        let allArtistIDs = (1...100).map { $0 }
+        let allArtistIDs = (1...10).map { $0 }
         let dispatchGroup = DispatchGroup()
         var allArtists: [ArtistApi] = []
         var errorOccurred: Error?
         
         for artistID in allArtistIDs {
             dispatchGroup.enter()
-
+            
             apiArtist.fetchArtist(withID: artistID) { result in
                 switch result {
                 case .success(let artist):
@@ -64,7 +64,7 @@ extension HomeViewModel{
 extension HomeViewModel{
     func fetchDataPlaylistHappyMusic() {
         let playlistAPIModel = PlaylistHappyApiModel()
-
+        
         playlistAPIModel.fetchData { result in
             switch result {
             case .success(let playlist):
@@ -78,8 +78,8 @@ extension HomeViewModel{
             }
         }
     }
-
-
+    
+    
 }
 extension HomeViewModel{
     
