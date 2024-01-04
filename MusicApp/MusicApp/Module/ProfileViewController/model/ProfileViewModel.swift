@@ -52,7 +52,7 @@ extension ProfileViewModel{
        }
 
        private func navigateToFavoriteMusic(_ navigationController: UINavigationController?) {
-           let favoriteMusicVC = MusicViewController()
+           let favoriteMusicVC = CollectionMusicVC()
            favoriteMusicVC.navigationItem.setHidesBackButton(true, animated: true)
            navigationController?.pushViewController(favoriteMusicVC, animated: true)
        }

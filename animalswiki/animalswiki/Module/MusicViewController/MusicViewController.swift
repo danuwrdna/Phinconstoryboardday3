@@ -193,10 +193,7 @@ extension MusicViewController: MusicViewDelegate{
     }
    
         @objc func handleTap(_ sender: UITapGestureRecognizer) {
-//            let playedView = PlayedViewController()
-//            playedView.query = searchField.text!
-//            navigationController?.present(playedView, animated: true)
-            
+
         }
     }
 extension MusicViewController{

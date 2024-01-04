@@ -63,9 +63,9 @@ extension RecentlyPlayedCell: UICollectionViewDelegate, UICollectionViewDataSour
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let selectedDatum = coreDataArray[indexPath.item]
-//        if let subTitle = selectedDatum.subtitle{
-//            delegate?.didSelectItemAt(subTitle: subTitle)
-//        }
+      if let subTitle = selectedDatum.subtitle{
+          delegate?.didSelectItemAt(subTitle: subTitle)
+     }
     }
 }
 extension RecentlyPlayedCell{
